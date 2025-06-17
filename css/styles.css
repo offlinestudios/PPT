@@ -873,4 +873,23 @@ a:hover {
         justify-content: center;
     }
 }
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    margin-left: auto !important;
+    display: block;
+  }
 
+  .nav-menu {
+    display: none; /* hides nav items on mobile */
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    margin-right: auto;
+  }
+}
