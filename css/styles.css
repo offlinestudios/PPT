@@ -888,3 +888,16 @@ a:hover {
     margin-left: 10px;
   }
 }
+/* ============================
+   Responsive Fixes for Pricing
+   ============================ */
+@media (max-width: 768px) {
+  .pricing-container {
+    padding: 0 15px;
+    grid-template-columns: 1fr; /* Stack cards vertically on mobile */
+  }
+
+  .pricing-card {
+    width: 100%;
+  }
+}
