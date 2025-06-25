@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   All Photo Services – Passport, Visa, ID, &amp; License Photos in Toronto
+  </title>
+  <meta content="Professional photo services for passports, visas, IDs, and licenses in Toronto. Guaranteed compliance with all official requirements." name="description"/>
+  <!-- Canonical URL -->
+  <link href="https://passportphototoronto.com/services.html" rel="canonical"/>
+  <!-- Open Graph Tags -->
+  <meta content="Professional Photo Services - Passport Photo Toronto" property="og:title"/>
+  <meta content="Complete photo services for passports, visas, and ID cards in downtown Toronto. Government compliant with same-day service." property="og:description"/>
+  <meta content="website" property="og:type"/>
+  <meta content="https://passportphototoronto.com/services.html" property="og:url"/>
+  <meta content="https://passportphototoronto.com/images/logo.png" property="og:image"/>
+  <meta content="Passport Photo Toronto" property="og:site_name"/>
+  <meta content="en_CA" property="og:locale"/>
+  <!-- Twitter Card Tags -->
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="Professional Photo Services - Passport Photo Toronto" name="twitter:title"/>
+  <meta content="Complete photo services for passports, visas, and ID cards in downtown Toronto. Government compliant with same-day service." name="twitter:description"/>
+  <meta content="https://passportphototoronto.com/images/logo.png" name="twitter:image"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="css/styles.css" rel="stylesheet"/>
+  <!-- Favicon -->
+  <link href="images/favicon.ico" rel="icon"/>
+  <!-- Additional Layout Styles -->
+  <style>
+   /* Services specific layout styles */
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .service-icon {
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-icon img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+        
+        .service-title {
+            margin-bottom: 1rem;
+        }
+        
+        .service-description {
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Service list layout styles */
+        .service-list-container {
+            display: grid;
+            gap: 1.5rem;
+        }
+        
+        .service-list-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: 80px 1fr auto auto;
+            gap: 1rem;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .service-list-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .service-list-icon img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+        
+        .service-list-content h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .service-list-content p {
+            font-size: 0.9rem;
+        }
+        
+        .service-list-price {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        /* Process layout styles */
+        .process-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .process-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+        
+        .process-number {
+            width: 60px;
+            height: 60px;
+            background-color: #f1c40f;
+            color: #333;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+        
+        .process-content h3 {
+            margin-bottom: 1rem;
+        }
+        
+        /* Guarantee layout styles */
+        .guarantee-container {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .guarantee-content h2 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .guarantee-content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .guarantee-badge {
+            display: inline-flex;
+            align-items: center;
+            background-color: #f1c40f;
+            color: #333;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+        
+        .guarantee-badge i {
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        /* CTA layout styles */
+        .cta {
+            text-align: center;
+            padding: 3rem 0;
+        }
+        
+        .cta-title {
+            margin-bottom: 1rem;
+        }
+        
+        .cta-subtitle {
+            margin-bottom: 2rem;
+        }
+        
+        /* Responsive design for layout elements */
+        @media (max-width: 768px) {
+            .service-list-item {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            .services-container {
+                grid-template-columns: 1fr;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <!-- Header -->
+  <header class="header">
+   <div class="container header-container">
+    <a class="logo" href="index.html">
+     <img alt="Passport Photo Toronto Logo" src="images/logo.png"/>
+     <span class="logo-text">
+      PASSPORT PHOTO
+     </span>
+    </a>
+    <nav>
+     <ul class="nav-menu">
+      <li class="nav-item">
+       <a class="nav-link" href="index.html">
+        Home
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="services.html">
+        Services
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="pricing.html">
+        Pricing
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="reviews.html">
+        Reviews
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="faq.html">
+        FAQ
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="location.html">
+        Location
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="about.html">
+        About
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="contact.html">
+        Contact
+       </a>
+      </li>
+     </ul>
+     <button class="mobile-menu-btn">
+      <i class="fas fa-bars">
+      </i>
+     </button>
+    </nav>
+   </div>
+  </header>
+  <!-- Page Banner -->
+  <section class="page-banner">
+   <div class="container">
+    <h1>
+     Passport, Visa, and ID Photo Services in Toronto
+    </h1>
+    <p>
+     Professional, compliant photos for all your identification needs
+    </p>
+   </div>
+  </section>
+  <!-- Services Categories Section -->
+  <section class="section services-categories">
+   <div class="container">
+    <h2 class="section-title">
+     Photo Service Categories
+    </h2>
+    <p class="section-subtitle">
+     We offer a comprehensive range of photo services to meet all your identification document requirements. Each photo is taken by professionals who understand the specific requirements for different documents and countries.
+    </p>
+    <div class="services-container">
+     <!-- Passport Photo Services -->
+     <div class="service-card">
+      <div class="service-icon">
+       <img alt="Passport Photo Services Icon" src="images/passport-icon.png"/>
+      </div>
+      <div class="service-content">
+       <h3 class="service-title">
+        Passport Photo Services
+       </h3>
+       <p class="service-description">
+        Professional passport photos that meet the exact specifications for various countries including Canada, US, UK, India, and China.
+       </p>
+       <a class="btn btn-secondary" href="#passport-photos">
+        View Services
+       </a>
+      </div>
+     </div>
+     <!-- Visa & Immigration Photos -->
+     <div class="service-card">
+      <div class="service-icon">
+       <img alt="Visa &amp; Immigration Photos Icon" src="images/visa-icon.png"/>
+      </div>
+      <div class="service-content">
+       <h3 class="service-title">
+        Visa &amp; Immigration Photos
+       </h3>
+       <p class="service-description">
+        Specialized photos for PR cards, citizenship applications, Schengen visas, and various international immigration documents.
+       </p>
+       <a class="btn btn-secondary" href="#visa-immigration">
+        View Services
+       </a>
+      </div>
+     </div>
+     <!-- ID & License Photos -->
+     <div class="service-card">
+      <div class="service-icon">
+       <img alt="ID &amp; License Photos Icon" src="images/id-icon.png"/>
+      </div>
+      <div class="service-content">
+       <h3 class="service-title">
+        ID &amp; License Photos
+       </h3>
+       <p class="service-description">
+        Compliant photos for various identification cards, school IDs, university cards, firearms licenses, professional certifications, and driving permits.
+       </p>
+       <a class="btn btn-secondary" href="#id-license">
+        View Services
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Passport Photos Section -->
+  <section class="section service-list" id="passport-photos">
+   <div class="container">
+    <h2 class="section-title">
+     Passport Photo Services
+    </h2>
+    <p class="section-subtitle">
+     Professional passport photos that meet the exact specifications for various countries.
+    </p>
+    <div class="service-list-container">
+     <!-- Canadian Passport Photos -->
+     <div class="service-list-item">
+      <div class="service-list-icon">
+       <img alt="Canadian Passport Photos Icon" src="images/canada-icon.png"/>
+      </div>
+      <div class="service-list-content">
+       <h3>
+        Canadian Passport Photos
+       </h3>
+       <p>
+        Get compliant Canadian passport photos taken in minutes. Guaranteed acceptance, printed and digital copies.
+       </p>
+      </div>
+      <div class="service-list-price">
+       <span>
+        $24.99
+       </span>
+      </div>
+      <div class="service-list-action">
+       <a class="btn btn-secondary" href="canadian-passport-photos.html">
+        View Details
+       </a>
+      </div>
+     </div>
+     <!-- U.S. Passport Photos -->
+     <div class="service-list-item">
+      <div class="service-list-icon">
+       <img alt="U.S. Passport Photos Icon" src="images/usa-icon.png"/>
+      </div>
+      <div class="service-list-content">
+       <h3>
+        U.S. Passport Photos
+       </h3>
+       <p>
+        U.S. passport photos done to U.S. State Department specs. Fast turnaround, digital and printed options.
+       </p>
+      </div>
+      <div class="service-list-price">
+       <span>
+        $24.99
+       </span>
+      </div>
+      <div class="service-list-action">
+       <a class="btn btn-secondary" href="us-passport-photos.html">
+        View Details
+       </a>
+      </div>
+     </div>
+     <!-- UK Passport Photos -->
+     <div class="service-list-item">
+      <div class="service-list-icon">
+       <img alt="UK Passport Photos Icon" src="images/uk-icon.png"/>
+      </div>
+      <div class="service-list-content">
+       <h3>
+        UK Passport Photos
+       </h3>
+       <p>
+        UK passport photos that meet British government requirements. Available for in-person and online applications.
+       </p>
+      </div>
+      <div class="service-list-price">
+       <span>
+        $24.99
+       </span>
+      </div>
+      <div class="service-list-action">
+       <a class="btn btn-secondary" href="uk-passport-photos.html">
+        View Details
+       </a>
+      </div>
+     </div>
+     <!-- Indian Passport Photos -->
+     <div class="service-list-item">
+      <div class="service-list-icon">
+       <img alt="Indian Passport Photos Icon" src="images/india-icon.png"/>
+      </div>
+      <div class="service-list-content">
+       <h3>
+        Indian Passport Photos
+       </h3>
+       <p>
+        High-resolution Indian passport photos, sized for Indian consulate and embassy guidelines.
+       </p>
+      </div>
+      <div class="service-list-price">
+       <span>
+        $24.99
+       </span>
+      </div>
+      <div class="service-list-action">
+       <a class="btn btn-secondary" href="indian-passport-photos.html">
+        View Details
+       </a>
+      </div>
+     </div>
+     <!-- Chinese Passport Photos -->
+     <div class="service-list-item">
+      <div class="service-list-icon">
+       <img alt="Chinese Passport Photos Icon" src="images/china-icon.png"/>
+      </div>
+      <div class="service-list-content">
+       <h3>
+        Chinese Passport Photos
+       </h3>
+       <p>
+        Toronto's reliable provider for Chinese passport photos—printed or digital copies with guaranteed acceptance.
+       </p>
+      </div>
+      <div class="service-list-price">
+       <span>
+        $24.99
+       </span>
+      </div>
+      <div class="service-list-action">
+       <a class="btn btn-secondary" href="chinese-passport-photos.html">
+        View Details
+       </a>
+      </div>
+     </div>
+     <!-- Digital Passport Photos -->
+     <div class="service-list-item">
+      <div class="service-list-icon">
+       <img alt="Digital Passport Photos Icon" src="images/digital-icon.png"/>
+      </div>
+      <div class="service-list-content">
+       <h3>
+        Digital Passport Photos
+       </h3>
+       <p>
+        Receive your passport photo via email—perfect for online applications or remote visa processing.
+       </p>
+      </div>
+      <div class="service-list-price">
+       <span>
+        $24.99
+       </span>
+      </div>
+      <div class="service-list-action">
+       <a class="btn btn-secondary" href="digital-passport-photos.html">
+        View Details
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Visa & Immigration Photos Section -->
+  <section class="section service-list bg-light" id="visa-immigration">
+   <div class="container">
+    <h2 class="section-title">
+     Visa &amp; Immigration Photos
+    </h2>
+    <p class="section-subtitle">
+     Specialized photos for PR cards, citizenship applications, and various international immigration documents.
+    </p>
+    <div class="service-list-container">
+     <!-- PR Card Photos -->
+     <div class="service-list-item">
+      <div class="service-list-icon">
+       <img alt="PR Card Photos Icon" src="images/pr-card-icon.png"/>
+      </div>
+      <div class="service-list-content">
+       <h3>
+        PR Card Photos (Canada Permanent Resident)
+       </h3>
+       <p>
+        Photos formatted to IRCC standards for Permanent Resident cards. Trusted by Toronto's immigrant community.
+       </p>
+      </div>
+      <div class="service-list-price">
+       <span>
+        $24.99
+       </span>
+      </div>
+      <div class="service-list-action">
+       <a class="btn btn-secondary" href="pr-card-photos.html">
+        View Details
+       </a>
+      </div>
+     </div>
+     <!-- Canadian Citizenship Photo -->
+     <div class="service-list-item">
+      <div class="service-list-icon">
+       <img alt="Canadian Citizenship Photo Icon" src="images/citizenship-icon.png"/>
+      </div>
+      <div class="service-list-content">
+       <h3>
+        Canadian Citizenship Photo
+       </h3>
+       <p>
+        Government-compliant Canadian citizenship photo service. Quick, clean, and accurate.
+       </p>
+      </div>
+      <div class="service-list-price">
+       <span>
+        $24.99
+       </span>
+      </div>
+      <div class="service-list-action">
+       <a class="btn btn-secondary" href="canadian-citizenship-photo.html">
+        View Details
+       </a>
+      </div>
+     </div>
+     <!-- Visa Photos for Schengen Countries -->
+     <div class="service-list-item">
+      <div class="service-list-icon">
+       <img alt="Visa Photos for Schengen Countries Icon" src="images/schengen-icon.png"/>
+      </div>
+      <div class="service-list-content">
+       <h3>
+        Visa Photos for Schengen Countries
+       </h3>
+       <p>
+        Photos for Schengen visas including France, Germany, and other EU countries. Sized to exact specifications.
+       </p>
+      </div>
+      <div class="service-list-price">
+       <span>
+        $24.99
+       </span>
+      </div>
+      <div class="service-list-action">
+       <a class="btn btn-secondary" href="schengen-visa-photos.html">
+        View Details
+       </a>
+      </div>
+     </div>
+     <!-- Visa Photos for Indian Visa -->
+     <div class="service-list-item">
+      <div class="service-list-icon">
+       <img alt="Visa Photos for Indian Visa Icon" src="images/india-visa-icon.png"/>
+      </div>
+      <div class="service-list-content">
+       <h3>
+        Visa Photos for Indian Visa
+       </h3>
+       <p>
+        We provide Indian visa photos that pass embassy approval—ideal for both tourist and business visas.
+       </p>
+      </div>
+      <div class="service-list-price">
+       <span>
+        $24.99
+       </span>
+      </div>
+      <div class="service-list-action">
+       <a class="btn btn-secondary" href="indian-visa-photos.html">
+        View Details
+       </a>
+      </div>
+     </div>
+     <!-- Visa Photos for Chinese Visa -->
+     <div class="service-list-item">
+      <div class="service-list-icon">
+       <img alt="Visa Photos for Chinese Visa Icon" src="images/china-visa-icon.png"/>
+      </div>
+      <div class="service-list-content">
+       <h3>
+        Visa Photos for Chinese Visa
+       </h3>
+       <p>
+        China visa photo services in downtown Toronto. Embassy-compliant with proper lighting and sizing.
+       </p>
+      </div>
+      <div class="service-list-price">
+       <span>
+        $24.99
+       </span>
+      </div>
+      <div class="service-list-action">
+       <a class="btn btn-secondary" href="chinese-visa-photos.html">
+        View Details
+       </a>
+      </div>
+     </div>
+     <!-- Visa Photos for U.S. Immigration -->
+     <div class="service-list-item">
+      <div class="service-list-icon">
+       <img alt="Visa Photos for U.S. Immigration Icon" src="images/us-immigration-icon.png"/>
+      </div>
+      <div class="service-list-content">
+       <h3>
+        Visa Photos for U.S. Immigration
+       </h3>
+       <p>
+        Get your U.S. visa photo right the first time. Formatted to DS-160 standards with print and digital options.
+       </p>
+      </div>
+      <div class="service-list-price">
+       <span>
+        $24.99
+       </span>
+      </div>
+      <div class="service-list-action">
+       <a class="btn btn-secondary" href="us-immigration-photos.html">
+        View Details
+       </a>
+      </div>
+     </div>
+     <!-- Work Permit Photo (Canada) -->
+     <div class="service-list-item">
+      <div class="service-list-icon">
+       <img alt="Work Permit Photo Icon" src="images/work-permit-icon.png"/>
+      </div>
+      <div class="service-list-content">
+       <h3>
+        Work Permit Photo (Canada)
+       </h3>
+       <p>
+        IRCC-approved photos for Canadian work permit applications. Taken and printed while you wait.
+       </p>
+      </div>
+      <div class="service-list-price">
+       <span>
+        $24.99
+       </span>
+      </div>
+      <div class="service-list-action">
+       <a class="btn btn-secondary" href="work-permit-photo.html">
+        View Details
+       </a>
+      </div>
+     </div>
+     <!-- Study Permit Photo (Canada) -->
+     <div class="service-list-item">
+      <div class="service-list-icon">
+       <img alt="Study Permit Photo Icon" src="images/study-permit-icon.png"/>
+      </div>
+      <div class="service-list-content">
+       <h3>
+        Study Permit Photo (Canada)
+       </h3>
+       <p>
+        Student visa and study permit photo service tailored to Canadian requirements. Fast and reliable.
+       </p>
+      </div>
+      <div class="service-list-price">
+       <span>
+        $24.99
+       </span>
+      </div>
+      <div class="service-list-action">
+       <a class="btn btn-secondary" href="#">
+        View Details
+       </a>
+      </div>
+     </div>
+     <!-- Green Card Application Photo -->
+     <div class="service-list-item">
+      <div class="service-list-icon">
+       <img alt="Green Card Application Photo Icon" src="images/green-card-icon.png"/>
+      </div>
+      <div class="service-list-content">
+       <h3>
+        Green Card Application Photo
+       </h3>
+       <p>
+        Get USCIS-ready green card photos taken with precision. Ideal for I-485 and immigration lottery applications.
+       </p>
+      </div>
+      <div class="service-list-price">
+       <span>
+        $24.99
+       </span>
+      </div>
+      <div class="service-list-action">
+       <a class="btn btn-secondary" href="green-card-application-photo.html">
+        View Details
+       </a>
+      </div>
+     </div>
+     <!-- OCI Photo (Overseas Citizenship of India) -->
+     <div class="service-list-item">
+      <div class="service-list-icon">
+       <img alt="OCI Photo Icon" src="images/oci-icon.png"/>
+      </div>
+      <div class="service-list-content">
+       <h3>
+        OCI Photo (Overseas Citizenship of India)
+       </h3>
+       <p>
+        OCI card photo services meeting Indian government specs. Includes digital format and printed copies.
+       </p>
+      </div>
+      <div class="service-list-price">
+       <span>
+        $24.99
+       </span>
+      </div>
+      <div class="service-list-action">
+       <a class="btn btn-secondary" href="oci-photo.html">
+        View Details
+       </a>
+      </div>
+     </div>
+     <!-- Student Visa Photos -->
+     <div class="service-list-item">
+      <div class="service-list-icon">
+       <img alt="Student Visa Photos Icon" src="images/student-visa-icon.png"/>
+      </div>
+      <div class="service-list-content">
+       <h3>
+        Student Visa Photos
+       </h3>
+       <p>
+        Student visa photo service for all major destination countries. Compliant with embassy requirements.
+       </p>
+      </div>
+      <div class="service-list-price">
+       <span>
+        $24.99
+       </span>
+      </div>
+      <div class="service-list-action">
+       <a class="btn btn-secondary" href="student-visa-photos.html">
+        View Details
+       </a>
+      </div>
+     </div>
+     <!-- Refugee Travel Document Photo -->
+     <div class="service-list-item">
+      <div class="service-list-icon">
+       <img alt="Refugee Travel Document Photo Icon" src="images/refugee-icon.png"/>
+      </div>
+      <div class="service-list-content">
+       <h3>
+        Refugee Travel Document Photo
+       </h3>
+       <p>
+        Photos that meet Canadian refugee travel document specs. Processed quickly and accurately.
+       </p>
+      </div>
+      <div class="service-list-price">
+       <span>
+        $24.99
+       </span>
+      </div>
+      <div class="service-list-action">
+       <a class="btn btn-secondary" href="#">
+        View Details
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- ID & License Photos Section -->
+  <section class="section service-list" id="id-license">
+   <div class="container">
+    <h2 class="section-title">
+     ID &amp; License Photos
+    </h2>
+    <p class="section-subtitle">
+     Compliant photos for various identification cards, licenses, and permits.
+    </p>
+    <div class="service-list-container">
+     <!-- Digital ID Photos for Online Applications -->
+     <div class="service-list-item">
+      <div class="service-list-icon">
+       <img alt="Digital ID Photos Icon" src="images/digital-id-icon.png"/>
+      </div>
+      <div class="service-list-content">
+       <h3>
+        Digital ID Photos for Online Applications
+       </h3>
+       <p>
+        Need ID photos for online job or visa applications? Get precise sizing and instant digital delivery.
+       </p>
+      </div>
+      <div class="service-list-price">
+       <span>
+        $24.99
+       </span>
+      </div>
+      <div class="service-list-action">
+       <a class="btn btn-secondary" href="digital-id-photos.html">
+        View Details
+       </a>
+      </div>
+     </div>
+     <!-- School ID Photo (Passport Size) -->
+     <div class="service-list-item">
+      <div class="service-list-icon">
+       <img alt="School ID Photo Icon" src="images/school-id-icon.png"/>
+      </div>
+      <div class="service-list-content">
+       <h3>
+        School ID Photo (Passport Size)
+       </h3>
+       <p>
+        Standard-size school ID photo service for kids and teens. Ideal for yearbooks, records, and school IDs.
+       </p>
+      </div>
+      <div class="service-list-price">
+       <span>
+        $24.99
+       </span>
+      </div>
+      <div class="service-list-action">
+       <a class="btn btn-secondary" href="school-id-photo.html">
+        View Details
+       </a>
+      </div>
+     </div>
+     <!-- University Application Photo (Passport Format) -->
+     <div class="service-list-item">
+      <div class="service-list-icon">
+       <img alt="University Application Photo Icon" src="images/university-icon.png"/>
+      </div>
+      <div class="service-list-content">
+       <h3>
+        University Application Photo (Passport Format)
+       </h3>
+       <p>
+        Passport-style photo for academic programs, internships, or university IDs. High-quality and professional.
+       </p>
+      </div>
+      <div class="service-list-price">
+       <span>
+        $24.99
+       </span>
+      </div>
+      <div class="service-list-action">
+       <a class="btn btn-secondary" href="university-application-photo.html">
+        View Details
+       </a>
+      </div>
+     </div>
+     <!-- Firearms (PAL) License Photos -->
+     <div class="service-list-item">
+      <div class="service-list-icon">
+       <img alt="Firearms License Photos Icon" src="images/firearms-icon.png"/>
+      </div>
+      <div class="service-list-content">
+       <h3>
+        Firearms (PAL) License Photos
+       </h3>
+       <p>
+        Photo service for Possession and Acquisition Licence (PAL). Meets Canadian Firearms Program requirements.
+       </p>
+      </div>
+      <div class="service-list-price">
+       <span>
+        $24.99
+       </span>
+      </div>
+      <div class="service-list-action">
+       <a class="btn btn-secondary" href="#">
+        View Details
+       </a>
+      </div>
+     </div>
+     <!-- International Driver's Permit Photos -->
+     <div class="service-list-item">
+      <div class="service-list-icon">
+       <img alt="International Driver's Permit Photos Icon" src="images/drivers-permit-icon.png"/>
+      </div>
+      <div class="service-list-content">
+       <h3>
+        International Driver's Permit Photos
+       </h3>
+       <p>
+        Photos printed and sized for international driving permits and IDP applications.
+       </p>
+      </div>
+      <div class="service-list-price">
+       <span>
+        $24.99
+       </span>
+      </div>
+      <div class="service-list-action">
+       <a class="btn btn-secondary" href="international-drivers-permit-photos.html">
+        View Details
+       </a>
+      </div>
+     </div>
+     <!-- Security Guard License Photos (Ontario / CPIC-compliant) -->
+     <div class="service-list-item">
+      <div class="service-list-icon">
+       <img alt="Security Guard License Photos Icon" src="images/security-guard-icon.png"/>
+      </div>
+      <div class="service-list-content">
+       <h3>
+        Security Guard License Photos (Ontario / CPIC-compliant)
+       </h3>
+       <p>
+        Professional photos for Ontario security guard license and CPIC background check applications.
+       </p>
+      </div>
+      <div class="service-list-price">
+       <span>
+        $24.99
+       </span>
+      </div>
+      <div class="service-list-action">
+       <a class="btn btn-secondary" href="#">
+        View Details
+       </a>
+      </div>
+     </div>
+     <!-- Professional License Photos -->
+     <div class="service-list-item">
+      <div class="service-list-icon">
+       <img alt="Professional License Photos Icon" src="images/professional-license-icon.png"/>
+      </div>
+      <div class="service-list-content">
+       <h3>
+        Professional License Photos
+       </h3>
+       <p>
+        Photos for nursing, real estate, and professional licensing bodies, including digital formats.
+       </p>
+      </div>
+      <div class="service-list-price">
+       <span>
+        $24.99
+       </span>
+      </div>
+      <div class="service-list-action">
+       <a class="btn btn-secondary" href="professional-license-photos.html">
+        View Details
+       </a>
+      </div>
+     </div>
+     <!-- Photo Services for Immigration Medicals -->
+     <div class="service-list-item">
+      <div class="service-list-icon">
+       <img alt="Photo Services for Immigration Medicals Icon" src="images/medical-icon.png"/>
+      </div>
+      <div class="service-list-content">
+       <h3>
+        Photo Services for Immigration Medicals
+       </h3>
+       <p>
+        IRCC-compliant photos for immigration medical appointments. Accepted at designated panel physicians.
+       </p>
+      </div>
+      <div class="service-list-price">
+       <span>
+        $24.99
+       </span>
+      </div>
+      <div class="service-list-action">
+       <a class="btn btn-secondary" href="immigration-medical-photos.html">
+        View Details
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Process Section -->
+  <section class="section process bg-light">
+   <div class="container">
+    <h2 class="section-title">
+     Our Photo Process
+    </h2>
+    <div class="process-container">
+     <div class="process-item">
+      <div class="process-number">
+       1
+      </div>
+      <div class="process-content">
+       <h3>
+        Consultation
+       </h3>
+       <p>
+        We begin by understanding your specific photo requirements based on the document type and country. Our experts are familiar with the latest regulations for all major passport and visa types.
+       </p>
+      </div>
+     </div>
+     <div class="process-item">
+      <div class="process-number">
+       2
+      </div>
+      <div class="process-content">
+       <h3>
+        Professional Photography
+       </h3>
+       <p>
+        Our photographers use professional equipment and proper lighting to capture your photo according to the specific requirements. We ensure correct posture, expression, and background.
+       </p>
+      </div>
+     </div>
+     <div class="process-item">
+      <div class="process-number">
+       3
+      </div>
+      <div class="process-content">
+       <h3>
+        Verification &amp; Editing
+       </h3>
+       <p>
+        We carefully verify that your photo meets all technical specifications including size, background, head position, and facial expression. Minor adjustments are made if necessary.
+       </p>
+      </div>
+     </div>
+     <div class="process-item">
+      <div class="process-number">
+       4
+      </div>
+      <div class="process-content">
+       <h3>
+        Printing &amp; Digital Delivery
+       </h3>
+       <p>
+        Your photos are printed on high-quality photo paper at the exact dimensions required. We also provide a digital copy that can be used for online applications.
+       </p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Guarantee Section -->
+  <section class="section guarantee">
+   <div class="container">
+    <div class="guarantee-container">
+     <div class="guarantee-content">
+      <h2>
+       Our Compliance Guarantee
+      </h2>
+      <p>
+       At Passport Photo Toronto, we stand behind the quality and compliance of our photos. We guarantee that all photos taken at our studio will meet the official requirements for your specific document type.
+      </p>
+      <p>
+       If your photo is rejected by any official agency due to non-compliance with their photo requirements, we will retake your photos at no additional cost. This guarantee applies to all passport, visa, ID, and license photos taken at our studio.
+      </p>
+      <p>
+       Our photographers stay up-to-date with the latest requirements from embassies, consulates, and government agencies to ensure your photos are always compliant with current regulations.
+      </p>
+      <div class="guarantee-badge">
+       <i class="fas fa-check-circle">
+       </i>
+       <span>
+        100% Acceptance Guarantee
+       </span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- CTA Section -->
+  <section class="section cta">
+   <div class="container">
+    <h2 class="cta-title">
+     Ready to Get Your Photos?
+    </h2>
+    <p class="cta-subtitle">
+     Book an appointment or visit our studio today for fast, professional photo services.
+    </p>
+    <a class="btn btn-secondary btn-lg" href="scheduling.html">
+     BOOK APPOINTMENT
+    </a>
+   </div>
+  </section>
+  <!-- Footer -->
+  <footer class="footer">
+   <div class="container">
+    <div class="footer-container">
+     <div class="footer-about">
+      <div class="footer-logo">
+       <img alt="Passport Photo Toronto Logo" src="images/logo-white.png"/>
+      </div>
+      <p>
+       Professional passport and ID photo services in downtown Toronto. We guarantee compliance with all official requirements.
+      </p>
+     </div>
+     <div class="footer-links">
+      <h3 class="footer-title">
+       Quick Links
+      </h3>
+      <ul class="footer-links">
+       <li class="footer-link">
+        <a href="index.html">
+         Home
+        </a>
+       </li>
+       <li class="footer-link">
+        <a href="services.html">
+         Services
+        </a>
+       </li>
+       <li class="footer-link">
+        <a href="pricing.html">
+         Pricing
+        </a>
+       </li>
+       <li class="footer-link">
+        <a href="reviews.html">
+         Reviews
+        </a>
+       </li>
+       <li class="footer-link">
+        <a href="about.html">
+         About
+        </a>
+       </li>
+       <li class="footer-link">
+        <a href="faq.html">
+         FAQ
+        </a>
+       </li>
+       <li class="footer-link">
+        <a href="location.html">
+         Location
+        </a>
+       </li>
+       <li class="footer-link">
+        <a href="contact.html">
+         Contact
+        </a>
+       </li>
+       <li class="footer-link">
+        <a href="sitemap.html">
+         Sitemap
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div class="footer-services">
+      <h3 class="footer-title">
+       Our Services
+      </h3>
+      <ul class="footer-links">
+       <li class="footer-link">
+        <a href="canadian-passport-photos.html">
+         Canadian Passport
+        </a>
+       </li>
+       <li class="footer-link">
+        <a href="pr-card-photos.html">
+         Canadian PR Card
+        </a>
+       </li>
+       <li class="footer-link">
+        <a href="us-immigration-photos.html">
+         US Visa
+        </a>
+       </li>
+       <li class="footer-link">
+        <a href="#">
+         Chinese Visa
+        </a>
+       </li>
+       <li class="footer-link">
+        <a href="#">
+         Schengen Visa
+        </a>
+       </li>
+       <li class="footer-link">
+        <a href="us-passport-photos.html">
+         US Passport
+        </a>
+       </li>
+       <li class="footer-link">
+        <a href="oci-photo.html">
+         Indian OCI
+        </a>
+       </li>
+       <li class="footer-link">
+        <a href="study-permit-photos.html">
+         Study Permit
+        </a>
+       </li>
+       <li class="footer-link">
+        <a href="work-permit-photo.html">
+         Work Permit
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div class="footer-contact">
+      <h3 class="footer-title">
+       Contact Us
+      </h3>
+      <div class="footer-contact-item">
+       <i class="fas fa-map-marker-alt footer-contact-icon">
+       </i>
+       <div>
+        <p>
+         63 McCaul St
+        </p>
+        <p>
+         Toronto, ON M5T 2W7
+        </p>
+       </div>
+      </div>
+      <div class="footer-contact-item">
+       <i class="fas fa-phone footer-contact-icon">
+       </i>
+       <p>
+        (416) 986-2677
+       </p>
+      </div>
+      <div class="footer-contact-item">
+       <i class="fas fa-clock footer-contact-icon">
+       </i>
+       <p>
+        Daily: 12:00 PM - 6:00 PM
+       </p>
+      </div>
+     </div>
+    </div>
+    <div class="footer-bottom">
+     <div class="footer-social">
+      <h4>
+       Follow Us
+      </h4>
+      <div class="social-links">
+       <a class="social-link" href="https://facebook.com/passportphototoronto" rel="noopener noreferrer" target="_blank">
+        <i class="fab fa-facebook-f">
+        </i>
+       </a>
+       <a class="social-link" href="https://instagram.com/passportphototoronto" rel="noopener noreferrer" target="_blank">
+        <i class="fab fa-instagram">
+        </i>
+       </a>
+       <a class="social-link" href="https://twitter.com/passportphotoTO" rel="noopener noreferrer" target="_blank">
+        <i class="fab fa-twitter">
+        </i>
+       </a>
+       <a class="social-link" href="https://linkedin.com/company/passport-photo-toronto" rel="noopener noreferrer" target="_blank">
+        <i class="fab fa-linkedin-in">
+        </i>
+       </a>
+       <a class="social-link" href="https://youtube.com/@passportphototoronto" rel="noopener noreferrer" target="_blank">
+        <i class="fab fa-youtube">
+        </i>
+       </a>
+      </div>
+     </div>
+     <p>
+      © 2025 Passport Photo Toronto. All Rights Reserved.
+     </p>
+    </div>
+   </div>
+  </footer>
+  <!-- JavaScript -->
+  <script src="js/main.js">
+  </script>
+  <script>
+   document.addEventListener("DOMContentLoaded", function () {
+    const menuIcon = document.querySelector(".menu-icon");
+    const navLinks = document.querySelector(".nav-links");
+
+    if (menuIcon && navLinks) {
+      menuIcon.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    }
+  });
+  </script>
+  <script>
+   document.addEventListener("DOMContentLoaded", function () {
+    const currentPath = location.pathname.split("/").pop() || "index.html";
+    const links = document.querySelectorAll(".nav-link");
+    links.forEach(link => {
+      const href = link.getAttribute("href");
+      if (href === currentPath) {
+        link.classList.add("active");
+      }
+    });
+  });
+  </script>
+  <script>
+   document.addEventListener("DOMContentLoaded", function () {
+  // Highlight current page link
+  const currentPath = location.pathname.split("/").pop() || "index.html";
+  const links = document.querySelectorAll(".nav-link");
+  links.forEach(link => {
+    const href = link.getAttribute("href");
+    if (href === currentPath) {
+      link.classList.add("active");
+    }
+  });
+
+  // Toggle mobile menu
+  const menuBtn = document.querySelector(".mobile-menu-btn");
+  const navMenu = document.querySelector(".nav-menu");
+  if (menuBtn && navMenu) {
+    menuBtn.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
+  }
+});
+  </script>
+ </body>
+</html>
