@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Passport Photo Samples – Professional Examples | Passport Photo Toronto</title>
+<meta content="View professional passport photo samples from our Toronto studio. See examples of compliant Canadian passport photos, visa photos, and ID photos." name="description"/>
+<!-- Canonical URL -->
+<link href="https://passportphototoronto.com/samples.html" rel="canonical"/>
+<!-- Open Graph Tags -->
+<meta content="Passport Photo Samples – Professional Examples | Passport Photo Toronto" property="og:title"/>
+<meta content="View professional passport photo samples from our Toronto studio. See examples of compliant Canadian passport photos, visa photos, and ID photos." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://passportphototoronto.com/samples.html" property="og:url"/>
+<meta content="https://passportphototoronto.com/images/logo.png" property="og:image"/>
+<meta content="Passport Photo Toronto" property="og:site_name"/>
+<meta content="en_CA" property="og:locale"/>
+<!-- Twitter Card Tags -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Passport Photo Samples – Professional Examples | Passport Photo Toronto" name="twitter:title"/>
+<meta content="View professional passport photo samples from our Toronto studio. See examples of compliant Canadian passport photos, visa photos, and ID photos." name="twitter:description"/>
+<meta content="https://passportphototoronto.com/images/logo.png" name="twitter:image"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="css/styles.css" rel="stylesheet"/>
+<!-- Favicon -->
+<link href="images/favicon.ico" rel="icon"/>
+<style>
+        /* Samples Page Specific Styles */
+        .samples-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .sample-item {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .sample-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .sample-image {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            border: 2px solid #e9ecef;
+        }
+        
+        .sample-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .sample-description {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .samples-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+        
+        .samples-intro h2 {
+            margin-bottom: 20px;
+        }
+        
+        .samples-intro p {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .quality-features {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+            margin-top: 60px;
+        }
+        
+        .quality-features-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .quality-feature {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .quality-feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .quality-feature h3 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .quality-feature p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* Portfolio Section Styles */
+        .portfolio-container {
+            margin-top: 40px;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        
+        .portfolio-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: white;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .portfolio-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+            padding: 20px 15px 15px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+        }
+        
+        .portfolio-info h4 {
+            margin: 0 0 5px 0;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        
+        .portfolio-info p {
+            margin: 0;
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 1200px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .samples-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .samples-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .sample-item {
+                padding: 15px;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .portfolio-image {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+<div class="container header-container">
+<a class="logo" href="index.html">
+<img alt="Passport Photo Toronto Logo" src="images/logo.png"/>
+<span class="logo-text">PASSPORT PHOTO</span>
+</a>
+<nav>
+<ul class="nav-menu">
+<li class="nav-item">
+<a class="nav-link" href="index.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="services.html">Services</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="pricing.html">Pricing</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="reviews.html">Reviews</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="faq.html">FAQ</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="location.html">Location</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="about.html">About</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="contact.html">Contact</a>
+</li>
+</ul>
+<button class="mobile-menu-btn">
+<i class="fas fa-bars"></i>
+</button>
+</nav>
+</div>
+</header>
+<!-- Page Banner -->
+<section class="page-banner">
+<div class="container">
+<h1>Passport Photo Samples</h1>
+<p>Professional examples of our compliant passport and ID photos</p>
+</div>
+</section>
+<!-- Samples Section -->
+<section class="section">
+<div class="container">
+<div class="samples-intro">
+<h2>Professional Photo Examples</h2>
+<p>Browse our collection of professional passport and ID photos that meet all official requirements. Each photo demonstrates proper lighting, positioning, and compliance with Canadian and international standards.</p>
+</div>
+<div class="samples-container">
+<!-- Sample 1 -->
+<div class="sample-item">
+<img alt="Professional Male Passport Photo" class="sample-image" src="images/sample1.jpg"/>
+<h3 class="sample-title">Canadian Passport Photo</h3>
+<p class="sample-description">Professional male passport photo with proper neutral expression, correct lighting, and plain background meeting IRCC requirements.</p>
+</div>
+<!-- Sample 2 -->
+<div class="sample-item">
+<img alt="Professional Female Passport Photo" class="sample-image" src="images/sample2.jpg"/>
+<h3 class="sample-title">Standard ID Photo</h3>
+<p class="sample-description">High-quality female ID photo with professional studio lighting and compliant positioning for various identification documents.</p>
+</div>
+<!-- Sample 3 -->
+<div class="sample-item">
+<img alt="Government Compliant Photo" class="sample-image" src="images/sample3.jpg"/>
+<h3 class="sample-title">Government Compliant</h3>
+<p class="sample-description">Official government-standard photo demonstrating proper head positioning, facial expression, and background requirements.</p>
+</div>
+<!-- Sample 4 -->
+<div class="sample-item">
+<img alt="Visa Application Photo" class="sample-image" src="images/sample4.webp"/>
+<h3 class="sample-title">Visa Application Photo</h3>
+<p class="sample-description">Professional photo suitable for visa applications with precise measurements and international compliance standards.</p>
+</div>
+<!-- Sample 5 -->
+<div class="sample-item">
+<img alt="Digital Passport Photo" class="sample-image" src="images/sample5.webp"/>
+<h3 class="sample-title">Digital Format Ready</h3>
+<p class="sample-description">High-resolution digital photo optimized for online applications and digital submissions with perfect clarity.</p>
+</div>
+<!-- Sample 6 -->
+<div class="sample-item">
+<img alt="US Passport Photo" class="sample-image" src="images/sample6.png"/>
+<h3 class="sample-title">US Passport Photo</h3>
+<p class="sample-description">Professional photo meeting US State Department requirements with proper dimensions and background specifications.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- More Samples Portfolio Section -->
+<section class="section" style="background-color: #f8f9fa;">
+<div class="container">
+<div class="samples-intro">
+<h2>More Samples</h2>
+<p>Explore our extensive portfolio of professional passport and ID photos. Each image showcases our commitment to quality and compliance with various document requirements.</p>
+</div>
+<div class="portfolio-container">
+<div class="portfolio-grid">
+<div class="portfolio-item">
+<img alt="Professional Passport Photo Sample" class="portfolio-image" src="images/portfolio1.jpg"/>
+<div class="portfolio-overlay">
+<div class="portfolio-info">
+<h4>Professional Portrait</h4>
+<p>Standard passport photo</p>
+</div>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="ID Photo Sample" class="portfolio-image" src="images/portfolio2.jpg"/>
+<div class="portfolio-overlay">
+<div class="portfolio-info">
+<h4>ID Photo</h4>
+<p>Government compliant</p>
+</div>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="Driver License Photo" class="portfolio-image" src="images/portfolio3.jpg"/>
+<div class="portfolio-overlay">
+<div class="portfolio-info">
+<h4>Driver License</h4>
+<p>DMV approved format</p>
+</div>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="State ID Photo" class="portfolio-image" src="images/portfolio4.jpg"/>
+<div class="portfolio-overlay">
+<div class="portfolio-info">
+<h4>State ID</h4>
+<p>Official requirements met</p>
+</div>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="Visa Photo Sample" class="portfolio-image" src="images/portfolio5.jpg"/>
+<div class="portfolio-overlay">
+<div class="portfolio-info">
+<h4>Visa Photo</h4>
+<p>International standards</p>
+</div>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="Professional Headshot" class="portfolio-image" src="images/portfolio6.jpg"/>
+<div class="portfolio-overlay">
+<div class="portfolio-info">
+<h4>Professional Headshot</h4>
+<p>Business quality</p>
+</div>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="Corporate ID Photo" class="portfolio-image" src="images/portfolio7.jpg"/>
+<div class="portfolio-overlay">
+<div class="portfolio-info">
+<h4>Corporate ID</h4>
+<p>Professional standard</p>
+</div>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="Passport Style Photo" class="portfolio-image" src="images/portfolio8.jpg"/>
+<div class="portfolio-overlay">
+<div class="portfolio-info">
+<h4>Passport Style</h4>
+<p>Multiple formats available</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Quality Features Section -->
+<section class="quality-features" style="background-color: #ffffff;">
+<div class="container">
+<h2 class="section-title">Why Our Photos Stand Out</h2>
+<div class="quality-features-container">
+<div class="quality-feature">
+<div class="quality-feature-icon">
+<i class="fas fa-camera"></i>
+</div>
+<h3>Professional Equipment</h3>
+<p>We use high-end cameras and professional studio lighting to ensure perfect image quality and compliance with all requirements.</p>
+</div>
+<div class="quality-feature">
+<div class="quality-feature-icon">
+<i class="fas fa-ruler"></i>
+</div>
+<h3>Precise Measurements</h3>
+<p>Every photo is carefully measured and cropped to meet exact specifications for different document types and countries.</p>
+</div>
+<div class="quality-feature">
+<div class="quality-feature-icon">
+<i class="fas fa-shield-alt"></i>
+</div>
+<h3>Guaranteed Acceptance</h3>
+<p>Our photos are guaranteed to be accepted by government agencies. If rejected due to photo quality, we'll retake them for free.</p>
+</div>
+<div class="quality-feature">
+<div class="quality-feature-icon">
+<i class="fas fa-clock"></i>
+</div>
+<h3>Same-Day Service</h3>
+<p>Get your professional photos printed and digital copies delivered immediately. No waiting for processing or development.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="section" style="background-color: #3b5998; color: white; margin-top: 0;">
+<div class="container">
+<div class="text-center">
+<h2 style="color: white;">Ready to Get Your Professional Photos?</h2>
+<p style="margin-bottom: 30px; font-size: 1.1rem;">Book an appointment today and get the same professional quality you see in our samples.</p>
+<a class="btn btn-secondary btn-lg" href="scheduling.html">BOOK APPOINTMENT</a>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="footer">
+<div class="container">
+<div class="footer-container">
+<div class="footer-about">
+<div class="footer-logo">
+<img alt="Passport Photo Toronto Logo" src="images/logo-white.png"/>
+</div>
+<p>Professional passport and ID photo services in downtown Toronto. We guarantee compliance with all official requirements.</p>
+</div>
+<div class="footer-links">
+<h3 class="footer-title">Quick Links</h3>
+<ul class="footer-links">
+<li class="footer-link"><a href="index.html">Home</a></li>
+<li class="footer-link"><a href="services.html">Services</a></li>
+<li class="footer-link"><a href="pricing.html">Pricing</a></li>
+<li class="footer-link"><a href="reviews.html">Reviews</a></li>
+<li class="footer-link"><a href="about.html">About</a></li>
+<li class="footer-link"><a href="faq.html">FAQ</a></li>
+<li class="footer-link"><a href="location.html">Location</a></li>
+<li class="footer-link"><a href="contact.html">Contact</a></li>
+<li class="footer-link"><a href="sitemap.html">Sitemap</a></li>
+</ul>
+</div>
+<div class="footer-services">
+<h3 class="footer-title">Our Services</h3>
+<ul class="footer-links">
+<li class="footer-link"><a href="canadian-passport-photos.html">Canadian Passport</a></li>
+<li class="footer-link"><a href="pr-card-photos.html">Canadian PR Card</a></li>
+<li class="footer-link"><a href="us-immigration-photos.html">US Visa</a></li>
+<li class="footer-link"><a href="#">Chinese Visa</a></li>
+<li class="footer-link"><a href="#">Schengen Visa</a></li>
+<li class="footer-link"><a href="us-passport-photos.html">US Passport</a></li>
+<li class="footer-link"><a href="oci-photo.html">Indian OCI</a></li>
+<li class="footer-link"><a href="study-permit-photos.html">Study Permit</a></li>
+<li class="footer-link"><a href="work-permit-photo.html">Work Permit</a></li>
+</ul>
+</div>
+<div class="footer-contact">
+<h3 class="footer-title">Contact Us</h3>
+<div class="footer-contact-item">
+<i class="fas fa-map-marker-alt footer-contact-icon"></i>
+<div>
+<p>63 McCaul St</p>
+<p>Toronto, ON M5T 2W7</p>
+</div>
+</div>
+<div class="footer-contact-item">
+<i class="fas fa-phone footer-contact-icon"></i>
+<p>(416) 986-2677</p>
+</div>
+<div class="footer-contact-item">
+<i class="fas fa-clock footer-contact-icon"></i>
+<p>Daily: 12:00 PM - 6:00 PM</p>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="footer-social">
+<h4>Follow Us</h4>
+<div class="social-links">
+<a class="social-link" href="https://facebook.com/passportphototoronto" rel="noopener noreferrer" target="_blank">
+<i class="fab fa-facebook-f"></i>
+</a>
+<a class="social-link" href="https://instagram.com/passportphototoronto" rel="noopener noreferrer" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+<a class="social-link" href="https://twitter.com/passportphotoTO" rel="noopener noreferrer" target="_blank">
+<i class="fab fa-twitter"></i>
+</a>
+<a class="social-link" href="https://linkedin.com/company/passport-photo-toronto" rel="noopener noreferrer" target="_blank">
+<i class="fab fa-linkedin-in"></i>
+</a>
+<a class="social-link" href="https://youtube.com/@passportphototoronto" rel="noopener noreferrer" target="_blank">
+<i class="fab fa-youtube"></i>
+</a>
+</div>
+</div>
+<p>© 2025 Passport Photo Toronto. All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+<!-- JavaScript -->
+<script src="js/main.js"></script>
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Highlight current page link
+            const currentPath = location.pathname.split("/").pop() || "index.html";
+            const links = document.querySelectorAll(".nav-link");
+            links.forEach(link => {
+                const href = link.getAttribute("href");
+                if (href === currentPath) {
+                    link.classList.add("active");
+                }
+            });
+
+            // Toggle mobile menu
+            const menuBtn = document.querySelector(".mobile-menu-btn");
+            const navMenu = document.querySelector(".nav-menu");
+            if (menuBtn && navMenu) {
+                menuBtn.addEventListener("click", () => {
+                    navMenu.classList.toggle("active");
+                });
+            }
+        });
+    </script>
+</body>
+</html>
