@@ -1223,3 +1223,153 @@ a:hover {
   line-height:1 !important;
   margin-top:2px !important; /* nudge upward to align with first text line */
 }
+
+/* Add-On Service Section */
+.add-on-service {
+  background-color: #f8f9fa;
+}
+
+.add-on-container {
+  display: grid;
+  grid-template-columns: 45fr 55fr;
+  gap: 50px;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.add-on-image {
+  order: 1;
+}
+
+.headshot-sample-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  display: block;
+}
+
+.add-on-card {
+  order: 2;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+}
+
+.add-on-card-content {
+  text-align: left;
+}
+
+.add-on-description {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.add-on-description strong {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.add-on-features {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.add-on-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.add-on-feature i {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.add-on-feature h4 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: var(--primary-color);
+}
+
+.add-on-feature p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.add-on-cta {
+  margin-top: 30px;
+  text-align: center;
+  padding-top: 25px;
+  border-top: 1px solid #e9ecef;
+}
+
+.add-on-price {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.add-on-price span {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+/* Responsive Design for Add-On Section */
+@media (max-width: 992px) {
+  .add-on-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .add-on-image {
+    order: 1;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .add-on-card {
+    order: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .add-on-card {
+    padding: 30px 25px;
+  }
+  
+  .add-on-description {
+    font-size: 1rem;
+  }
+  
+  .add-on-feature i {
+    font-size: 1.3rem;
+  }
+  
+  .add-on-feature h4 {
+    font-size: 0.95rem;
+  }
+  
+  .add-on-feature p {
+    font-size: 0.85rem;
+  }
+  
+  .add-on-price {
+    font-size: 1.1rem;
+  }
+  
+  .add-on-price span {
+    font-size: 1.3rem;
+  }
+}
