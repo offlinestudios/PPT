@@ -1373,3 +1373,17 @@ a:hover {
     font-size: 1.3rem;
   }
 }
+
+/* Fix button layout on mobile for add-on section */
+@media (max-width: 768px) {
+  .add-on-cta .btn {
+    display: block;
+    width: 100%;
+    margin-left: 0 !important;
+    margin-bottom: 15px;
+  }
+  
+  .add-on-cta .btn:last-child {
+    margin-bottom: 0;
+  }
+}
