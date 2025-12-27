@@ -172,6 +172,148 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             vertical-align: middle;
         }
         
+        /* Pricing Cards Styles */
+        .pricing-cards-section {
+            margin: 40px 0;
+            padding: 30px 0;
+            background-color: var(--light-color);
+            border-radius: 8px;
+        }
+        
+        .pricing-cards-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+        
+        .pricing-card.featured {
+            border: 3px solid var(--primary-color);
+        }
+        
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-8px);
+        }
+        
+        .pricing-card-badge {
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background: var(--secondary-color);
+            color: var(--dark-color);
+            padding: 5px 40px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            transform: rotate(45deg);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+        
+        .pricing-card-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 20px 20px;
+            text-align: center;
+        }
+        
+        .pricing-card-header h3 {
+            color: white;
+            font-size: 1.3rem;
+            margin: 0;
+            font-weight: 700;
+        }
+        
+        .pricing-card-price {
+            background: white;
+            padding: 20px 20px;
+            text-align: center;
+            border-bottom: 2px solid var(--light-color);
+        }
+        
+        .price-amount {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            font-family: var(--font-primary);
+        }
+        
+        .pricing-card-content {
+            padding: 20px 20px;
+            flex-grow: 1;
+            min-height: 200px;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .pricing-features li {
+            padding: 8px 0;
+            color: var(--text-color);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid var(--light-color);
+        }
+        
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-features li i {
+            color: var(--success-color);
+            margin-right: 10px;
+            font-size: 0.9rem;
+            min-width: 18px;
+        }
+        
+        .pricing-card-footer {
+            padding: 15px 20px;
+            text-align: center;
+            background: var(--light-color);
+        }
+        
+        .btn-pricing {
+            display: block;
+            width: 100%;
+            padding: 12px 20px;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-pricing:hover {
+            background: var(--accent-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
         /* Responsive design */
         @media (max-width: 768px) {
             .page-banner {
@@ -192,6 +334,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             .photo-specs img {
                 margin-bottom: 20px;
+            }
+            
+            .pricing-cards-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+            
+            .pricing-card.featured:hover {
+                transform: translateY(-8px);
             }
         }
   </style>
@@ -482,6 +637,79 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         Professional photographer signature on back of one photo (as required)
        </li>
 </ul>
+
+<!-- Pricing Cards Section -->
+<div class="pricing-cards-section">
+  <h2 style="text-align: center; margin-bottom: 2rem;">Choose Your Package</h2>
+  <div class="pricing-cards-container">
+    <!-- Printed Copies Card -->
+    <div class="pricing-card">
+      <div class="pricing-card-header">
+        <h3>Printed Copies</h3>
+      </div>
+      <div class="pricing-card-price">
+        <span class="price-amount">$24.99</span>
+      </div>
+      <div class="pricing-card-content">
+        <ul class="pricing-features">
+          <li><i class="fas fa-check"></i> Two identical printed photos</li>
+          <li><i class="fas fa-check"></i> High-quality photographic paper</li>
+          <li><i class="fas fa-check"></i> Government compliant</li>
+          <li><i class="fas fa-check"></i> Photographer signature included</li>
+        </ul>
+      </div>
+      <div class="pricing-card-footer">
+        <a href="scheduling.html" class="btn btn-pricing">Book Appointment</a>
+      </div>
+    </div>
+
+    <!-- Digital Copy Card -->
+    <div class="pricing-card">
+      <div class="pricing-card-header">
+        <h3>Digital Copy</h3>
+      </div>
+      <div class="pricing-card-price">
+        <span class="price-amount">$24.99</span>
+      </div>
+      <div class="pricing-card-content">
+        <ul class="pricing-features">
+          <li><i class="fas fa-check"></i> High-resolution digital file</li>
+          <li><i class="fas fa-check"></i> Sent via email</li>
+          <li><i class="fas fa-check"></i> Government compliant</li>
+          <li><i class="fas fa-check"></i> Perfect for online applications</li>
+        </ul>
+      </div>
+      <div class="pricing-card-footer">
+        <a href="scheduling.html" class="btn btn-pricing">Book Appointment</a>
+      </div>
+    </div>
+
+    <!-- Printed + Digital Card (Featured) -->
+    <div class="pricing-card featured">
+      <div class="pricing-card-badge">Best Value</div>
+      <div class="pricing-card-header">
+        <h3>Printed + Digital</h3>
+      </div>
+      <div class="pricing-card-price">
+        <span class="price-amount">$39.99</span>
+      </div>
+      <div class="pricing-card-content">
+        <ul class="pricing-features">
+          <li><i class="fas fa-check"></i> Two identical printed photos</li>
+          <li><i class="fas fa-check"></i> High-resolution digital file</li>
+          <li><i class="fas fa-check"></i> Government compliant</li>
+          <li><i class="fas fa-check"></i> Photographer signature included</li>
+          <li><i class="fas fa-check"></i> Complete package for all needs</li>
+        </ul>
+      </div>
+      <div class="pricing-card-footer">
+        <a href="scheduling.html" class="btn btn-pricing">Book Appointment</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Pricing Cards Section -->
+
 <h2>
        Canadian Passport Application Information
       </h2>
