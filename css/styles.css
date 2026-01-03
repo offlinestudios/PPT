@@ -232,6 +232,14 @@ a:hover {
   margin-top: 70px; /* Account for fixed header */
 }
 
+/* Mobile page-banner spacing */
+@media (max-width: 768px) {
+  .page-banner {
+    padding: 15px 0 40px;
+    margin-top: 60px;
+  }
+}
+
 .page-banner h1 {
   font-size: 2.5rem;
   color: var(--primary-color);

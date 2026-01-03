@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-55RV84CT');</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Trusted Vendors & Partners - Passport Photo Toronto</title>
+<meta content="Discover our trusted local business partners in Toronto. Quality services recommended by Passport Photo Toronto including photography, web design, and professional services." name="description"/>
+<!-- Canonical URL -->
+<link href="https://www.passportphototoronto.com/trusted-vendors.html" rel="canonical"/>
+<!-- Open Graph Tags -->
+<meta content="Trusted Vendors & Partners - Passport Photo Toronto" property="og:title"/>
+<meta content="Discover our trusted local business partners in Toronto. Quality services recommended by Passport Photo Toronto." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://www.passportphototoronto.com/trusted-vendors.html" property="og:url"/>
+<meta content="https://www.passportphototoronto.com/images/logo.png" property="og:image"/>
+<meta content="Passport Photo Toronto" property="og:site_name"/>
+<meta content="en_CA" property="og:locale"/>
+<!-- Twitter Card Tags -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Trusted Vendors & Partners - Passport Photo Toronto" name="twitter:title"/>
+<meta content="Discover our trusted local business partners in Toronto. Quality services recommended by Passport Photo Toronto." name="twitter:description"/>
+<meta content="https://www.passportphototoronto.com/images/logo.png" name="twitter:image"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="css/styles.css" rel="stylesheet"/>
+<!-- Favicon -->
+<link href="images/favicon.ico" rel="icon"/>
+<style>
+/* Trusted Vendors Page Specific Styles */
+
+.vendors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.vendor-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-top: 4px solid var(--primary-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.vendor-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    border-top-color: var(--secondary-color);
+}
+
+.vendor-header {
+    margin-bottom: 1.5rem;
+}
+
+.vendor-name {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.vendor-category {
+    color: #666;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.vendor-description {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.vendor-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--light-color);
+    border-radius: 6px;
+    align-self: flex-start;
+}
+
+.vendor-link:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateX(4px);
+}
+
+.vendor-link i {
+    font-size: 1rem;
+}
+
+.intro-section {
+    background-color: #f8f9fa;
+    padding: 3rem 0;
+    margin-bottom: 3rem;
+}
+
+.intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro-content h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.intro-content p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+    .vendors-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .vendor-card {
+        padding: 1.5rem;
+    }
+    
+    .vendor-name {
+        font-size: 1.3rem;
+    }
+}
+
+/* Dropdown Navigation Menu Styles */
+.nav-item.dropdown {
+    position: relative;
+}
+
+.nav-link.dropdown-toggle {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 250px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    padding: 0.5rem 0;
+    z-index: 1000;
+    margin-top: 0.5rem;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block !important;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: var(--transition);
+    font-size: 0.95rem;
+}
+
+.dropdown-item:hover {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    padding-left: 2rem;
+}
+
+/* Mobile dropdown styles */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        background: var(--light-color);
+        margin-left: 20px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    
+    .nav-item.dropdown .dropdown-menu {
+        display: none !important;
+    }
+    
+    .nav-item.dropdown.active .dropdown-menu {
+        display: block !important;
+    }
+}
+
+/* Responsive design for tight breadcrumb spacing */
+@media (max-width: 768px) {
+    .page-banner {
+        padding: 15px 0 40px;
+    }
+}
+
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55RV84CT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Header -->
+<header class="header">
+<div class="container">
+<div class="header-content">
+<a class="logo" href="index.html">
+<img alt="Passport Photo Toronto Logo" src="images/logo.png"/>
+<span class="logo-text">PASSPORT PHOTO</span>
+</a>
+<nav class="nav">
+<div class="menu-icon">
+<i class="fas fa-bars"></i>
+</div>
+<ul class="nav-links">
+<li class="nav-item">
+<a class="nav-link" href="index.html">HOME</a>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="services.html">SERVICES</a>
+<ul class="dropdown-menu">
+<li><a class="dropdown-item" href="passport-photos-international.html">Passport Photos</a></li>
+<li><a class="dropdown-item" href="visa-photos-international.html">Visa Photos</a></li>
+<li><a class="dropdown-item" href="professional-license-photos-hub.html">Professional License Photos</a></li>
+<li><a class="dropdown-item" href="services.html">View All Services</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="pricing.html">PRICING</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="reviews.html">REVIEWS</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="faq.html">FAQ</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="location.html">LOCATION</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="about.html">ABOUT</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="contact.html">CONTACT</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+
+<!-- Page Banner -->
+<section class="page-banner">
+<div class="container">
+        <nav class="breadcrumb-nav">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item">Trusted Vendors</li>
+            </ol>
+        </nav>
+        <h1>Trusted Vendors & Partners</h1>
+<p>Quality local businesses we trust and recommend to our customers</p>
+</div>
+</section>
+
+<!-- Intro Section -->
+<section class="intro-section">
+<div class="container">
+<div class="intro-content">
+<h2>Building Toronto's Business Community</h2>
+<p>At Passport Photo Toronto, we believe in supporting quality local businesses. These are trusted partners and vendors we personally recommend to our customers. Each business has been carefully selected for their professionalism, quality of service, and commitment to customer satisfaction.</p>
+</div>
+</div>
+</section>
+
+<!-- Vendors Grid -->
+<section class="section">
+<div class="container">
+<div class="vendors-grid">
+
+<!-- Vendor 1: Julian Ross Personal -->
+<div class="vendor-card">
+<div class="vendor-header">
+<h3 class="vendor-name">Julian Ross</h3>
+<p class="vendor-category">Personal Brand & Portfolio</p>
+</div>
+<p class="vendor-description">
+Julian Ross is a professional photographer and creative director based in Toronto. His personal website showcases his diverse portfolio, creative vision, and professional journey in the photography industry.
+</p>
+<a href="https://www.iamjulianross.com" target="_blank" rel="noopener noreferrer" class="vendor-link">
+Visit Website <i class="fas fa-external-link-alt"></i>
+</a>
+</div>
+
+<!-- Vendor 2: Julian Ross Photography -->
+<div class="vendor-card">
+<div class="vendor-header">
+<h3 class="vendor-name">Julian Ross Photography</h3>
+<p class="vendor-category">Professional Photography Services</p>
+</div>
+<p class="vendor-description">
+Specializing in professional photography services including headshots, corporate photography, and creative portraits. Julian Ross Photography delivers exceptional quality and attention to detail for all your professional photography needs.
+</p>
+<a href="https://www.julianrossphotography.com" target="_blank" rel="noopener noreferrer" class="vendor-link">
+Visit Website <i class="fas fa-external-link-alt"></i>
+</a>
+</div>
+
+<!-- Vendor 3: Offline Studios -->
+<div class="vendor-card">
+<div class="vendor-header">
+<h3 class="vendor-name">Offline Studios</h3>
+<p class="vendor-category">Web Design & Development</p>
+</div>
+<p class="vendor-description">
+A full-service digital agency specializing in web design, development, and digital strategy. Offline Studios creates beautiful, functional websites and digital experiences for businesses across Toronto and beyond.
+</p>
+<a href="https://www.offlinestudios.ca" target="_blank" rel="noopener noreferrer" class="vendor-link">
+Visit Website <i class="fas fa-external-link-alt"></i>
+</a>
+</div>
+
+<!-- Vendor 4: PredicSure -->
+<div class="vendor-card">
+<div class="vendor-header">
+<h3 class="vendor-name">PredicSure</h3>
+<p class="vendor-category">Insurance & Risk Management</p>
+</div>
+<p class="vendor-description">
+PredicSure offers innovative insurance solutions and risk management services. Their technology-driven approach helps businesses and individuals make informed decisions about their insurance needs with confidence.
+</p>
+<a href="https://www.predicsure.com" target="_blank" rel="noopener noreferrer" class="vendor-link">
+Visit Website <i class="fas fa-external-link-alt"></i>
+</a>
+</div>
+
+<!-- Vendor 5: Headshot Photo Toronto -->
+<div class="vendor-card">
+<div class="vendor-header">
+<h3 class="vendor-name">Headshot Photo Toronto</h3>
+<p class="vendor-category">Professional Headshot Photography</p>
+</div>
+<p class="vendor-description">
+Specializing in professional headshots for actors, corporate professionals, and LinkedIn profiles. Headshot Photo Toronto delivers high-quality, professional headshots that make a lasting impression.
+</p>
+<a href="https://www.headshotphototoronto.com" target="_blank" rel="noopener noreferrer" class="vendor-link">
+Visit Website <i class="fas fa-external-link-alt"></i>
+</a>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- CTA Section -->
+<section class="section cta">
+<div class="container">
+<h2 class="cta-title">Need Professional Passport Photos?</h2>
+<p class="cta-subtitle">Visit our downtown Toronto studio for fast, professional passport and visa photos. Walk-ins welcome!</p>
+<a class="btn btn-secondary btn-lg" href="scheduling.html">BOOK YOUR APPOINTMENT</a>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+<div class="container">
+<div class="footer-container">
+<div class="footer-about">
+<div class="footer-logo">
+<img alt="Passport Photo Toronto Logo" loading="lazy" src="images/logo-white.png"/>
+</div>
+<p>
+       Professional passport and ID photo services in downtown Toronto. We guarantee compliance with all official requirements.
+      </p>
+</div>
+<div class="footer-links">
+<h3 class="footer-title">
+       Quick Links
+      </h3>
+<ul class="footer-links">
+<li class="footer-link">
+<a href="index.html">
+         Home
+        </a>
+</li>
+<li class="footer-link">
+<a href="services.html">
+         Services
+        </a>
+</li>
+<li class="footer-link">
+<a href="pricing.html">
+         Pricing
+        </a>
+</li>
+<li class="footer-link">
+<a href="reviews.html">
+         Reviews
+        </a>
+</li>
+<li class="footer-link">
+<a href="about.html">
+         About
+        </a>
+</li>
+<li class="footer-link">
+<a href="faq.html">
+         FAQ
+        </a>
+</li>
+<li class="footer-link">
+<a href="location.html">
+         Location
+        </a>
+</li>
+<li class="footer-link">
+<a href="contact.html">
+         Contact
+        </a>
+</li>
+<li class="footer-link">
+<a href="sitemap.html">
+         Sitemap
+        </a>
+</li>
+</ul>
+</div>
+<div class="footer-services">
+<h3 class="footer-title">
+       Our Services
+      </h3>
+<ul class="footer-links">
+<li class="footer-link">
+<a href="canadian-passport-photos.html">
+         Canadian Passport
+        </a>
+</li>
+<li class="footer-link">
+<a href="pr-card-photos.html">
+         Canadian PR Card
+        </a>
+</li>
+<li class="footer-link">
+<a href="us-immigration-photos.html">
+         US Visa
+        </a>
+</li>
+<li class="footer-link">
+<a href="chinese-visa-photos.html">
+         Chinese Visa
+        </a>
+</li>
+<li class="footer-link">
+<a href="schengen-visa-photos.html">
+         Schengen Visa
+        </a>
+</li>
+<li class="footer-link">
+<a href="us-passport-photos.html">
+         US Passport
+        </a>
+</li>
+<li class="footer-link">
+<a href="oci-photo.html">
+         Indian OCI
+        </a>
+</li>
+<li class="footer-link">
+<a href="study-permit-photos.html">
+         Study Permit
+        </a>
+</li>
+<li class="footer-link">
+<a href="work-permit-photo.html">
+         Work Permit
+        </a>
+</li>
+</ul>
+</div>
+<div class="footer-contact">
+<h3 class="footer-title">
+       Contact Us
+      </h3>
+<div class="footer-contact-item">
+<i class="fas fa-map-marker-alt footer-contact-icon">
+</i>
+<div class="footer-contact-text">
+<p>
+         63 McCaul St
+        </p>
+<p>
+         Toronto, ON M5T 2W7
+        </p>
+</div>
+</div>
+<div class="footer-contact-item">
+<i class="fas fa-phone footer-contact-icon">
+</i>
+<div class="footer-contact-text">
+<p>
+         (416) 986-2677
+        </p>
+</div>
+</div>
+<div class="footer-contact-item">
+<i class="fas fa-clock footer-contact-icon">
+</i>
+<div class="footer-contact-text">
+<p>
+         Daily: 12:00 PM - 6:00 PM
+        </p>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="footer-social">
+<h4>
+       Follow Us
+      </h4>
+<div class="social-links">
+<a class="social-link" href="https://www.facebook.com/profile.php?id=61558387694726" rel="noopener noreferrer" target="_blank">
+<i class="fab fa-facebook-f">
+</i>
+</a>
+<a class="social-link" href="https://instagram.com/passportphototoronto" rel="noopener noreferrer" target="_blank">
+<i class="fab fa-instagram">
+</i>
+</a>
+<a class="social-link" href="https://twitter.com/passportphotoTO" rel="noopener noreferrer" target="_blank">
+<i class="fab fa-twitter">
+</i>
+</a>
+<a class="social-link" href="https://linkedin.com/company/passport-photo-toronto" rel="noopener noreferrer" target="_blank">
+<i class="fab fa-linkedin-in">
+</i>
+</a>
+<a class="social-link" href="https://youtube.com/@passportphototoronto" rel="noopener noreferrer" target="_blank">
+<i class="fab fa-youtube">
+</i>
+</a>
+</div>
+</div>
+<p>
+      © 2025 Passport Photo Toronto. All Rights Reserved.
+     </p>
+</div>
+</div>
+</footer>
+
+<!-- JavaScript -->
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+    const menuIcon = document.querySelector(".menu-icon");
+    const navLinks = document.querySelector(".nav-links");
+
+    if (menuIcon && navLinks) {
+      menuIcon.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    }
+  });
+  </script>
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+    const currentPath = location.pathname.split("/").pop() || "index.html";
+    const links = document.querySelectorAll(".nav-link");
+    links.forEach(link => {
+      const href = link.getAttribute("href");
+      if (href === currentPath) {
+        link.classList.add("active");
+      }
+    });
+  });
+  </script>
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+  // Highlight current page link
+  const currentPath = location.pathname.split("/").pop() || "index.html";
+  const links = document.querySelectorAll(".nav-link");
+  links.forEach(link => {
+    const href = link.getAttribute("href");
+    if (href === currentPath) {
+      link.classList.add("active");
+    }
+  });
+
+  // Toggle mobile menu
+  const menuBtn = document.querySelector(".mobile-menu-btn");
+  const navMenu = document.querySelector(".nav-menu");
+  if (menuBtn && navMenu) {
+    menuBtn.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
+  }
+});
+  </script>
+</body>
+</html>
