@@ -23,7 +23,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    /* Page-specific styles for U.S. Passport Photos page */
         .page-banner {
             background-color: var(--light-color);
-            padding: 85px 0 50px;  /* Reduced from 120px/80px for tighter spacing */
+            padding: 25px 0 50px;  /* Minimal top padding for tight header-to-breadcrumb spacing */
             text-align: center;
             margin-top: 70px; /* Account for fixed header */
         }
@@ -340,7 +340,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         /* Breadcrumb Navigation Styles - Professional Spacing Pattern */
         .breadcrumb-nav {
-            margin-top: -10px;  /* Pull closer to header */
+            margin-top: 0;  /* No negative margin needed with reduced padding */
             margin-bottom: 10px;  /* Tight spacing to title (was 20px) */
             text-align: left;
         }
