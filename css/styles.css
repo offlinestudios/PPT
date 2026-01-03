@@ -1398,13 +1398,15 @@ a:hover {
 
 .breadcrumb {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   list-style: none;
   padding: 0;
   margin: 0;
   background-color: transparent;
   font-size: 0.9rem;
-  justify-content: center;
+  justify-content: flex-start;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .breadcrumb-item {
@@ -1438,11 +1440,16 @@ a:hover {
 /* Mobile breadcrumb styles */
 @media (max-width: 768px) {
   .breadcrumb {
-    font-size: 0.85rem;
-    justify-content: center;
+    font-size: 0.8rem;
+    justify-content: flex-start;
+  }
+  
+  .breadcrumb-item {
+    white-space: nowrap;
   }
   
   .breadcrumb-item + .breadcrumb-item::before {
-    padding: 0 6px;
+    padding: 0 4px;
+    font-size: 1rem;
   }
 }
