@@ -1439,6 +1439,10 @@ a:hover {
 
 /* Mobile breadcrumb styles */
 @media (max-width: 768px) {
+  .breadcrumb-nav {
+    margin-bottom: 12px;
+  }
+  
   .breadcrumb {
     font-size: 0.8rem;
     justify-content: flex-start;
