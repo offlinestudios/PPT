@@ -216,7 +216,70 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 grid-template-columns: 1fr;
             }
         }
-  </style>
+  
+/* Dropdown Navigation Menu Styles */
+.nav-item.dropdown {
+    position: relative;
+}
+
+.nav-link.dropdown-toggle {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 250px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 4px;
+    padding: 8px 0;
+    margin-top: 0;
+    z-index: 1000;
+    list-style: none;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block !important;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.dropdown-item:hover {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+}
+
+/* Mobile dropdown styles */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        background: var(--light-color);
+        margin-left: 20px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    
+    .nav-item.dropdown .dropdown-menu {
+        display: none !important;
+    }
+    
+    .nav-item.dropdown.active .dropdown-menu {
+        display: block;
+    }
+}
+
+</style>
 <meta content="All Photo Services – Passport, Visa, ID, &amp; License Photos..." property="og:title"/><meta content="Professional passport, visa, and ID photos in downtown Toronto." property="og:description"/><meta content="website" property="og:type"/><meta content="https://www.passportphototoronto.com/services.html" property="og:url"/><meta content="https://www.passportphototoronto.com/images/og-image.jpg" property="og:image"/><meta content="summary_large_image" property="twitter:card"/><meta content="All Photo Services – Passport, Visa, ID, &amp; License Photos..." property="twitter:title"/><meta content="Professional passport, visa, and ID photos in downtown Toronto." property="twitter:description"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Passport Photo Toronto", "image": "https://www.passportphototoronto.com/images/logo.png", "address": {"@type": "PostalAddress", "streetAddress": "63 McCaul St.", "addressLocality": "Toronto", "addressRegion": "ON", "postalCode": "M5T 2W7", "addressCountry": "CA"}, "url": "https://www.passportphototoronto.com", "telephone": "+1-416-986-2677", "openingHours": "Mo-Su 12:00-18:00"}</script></head>
 <body>
 <!-- Google Tag Manager (noscript) -->
