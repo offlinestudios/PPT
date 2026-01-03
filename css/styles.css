@@ -1387,3 +1387,62 @@ a:hover {
     margin-bottom: 0;
   }
 }
+
+/* ========================================================
+   Breadcrumb Navigation Styles
+   ========================================================= */
+
+.breadcrumb-nav {
+  margin-bottom: 20px;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  font-size: 0.9rem;
+  justify-content: center;
+}
+
+.breadcrumb-item {
+  display: inline-flex;
+  align-items: center;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "›";
+  padding: 0 8px;
+  color: #999;
+  font-size: 1.1rem;
+}
+
+.breadcrumb-item a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.breadcrumb-item a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.breadcrumb-item:last-child {
+  color: #666;
+  font-weight: 500;
+}
+
+/* Mobile breadcrumb styles */
+@media (max-width: 768px) {
+  .breadcrumb {
+    font-size: 0.85rem;
+    justify-content: center;
+  }
+  
+  .breadcrumb-item + .breadcrumb-item::before {
+    padding: 0 6px;
+  }
+}
