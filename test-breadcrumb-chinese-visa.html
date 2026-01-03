@@ -382,8 +382,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             font-weight: 500;
         }
 
-        /* Mobile responsive breadcrumbs */
+        /* Mobile responsive breadcrumbs and spacing */
         @media (max-width: 768px) {
+            .page-banner {
+                padding: 15px 0 30px;  /* Even tighter on mobile */
+                margin-top: 60px;  /* Adjust for mobile header */
+            }
+            
+            .page-banner h1 {
+                font-size: 1.8rem;  /* Smaller title on mobile */
+            }
+            
+            .page-banner p {
+                font-size: 0.95rem;  /* Smaller description on mobile */
+            }
+            
             .breadcrumb {
                 font-size: 0.8rem;
             }
