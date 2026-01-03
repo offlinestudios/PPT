@@ -22,11 +22,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <style>
    /* Page-specific styles for U.S. Passport Photos page */
         .page-banner {
-            background-color: var(--light-color);
-            padding: 120px 0 80px;
-            text-align: center;
-            margin-top: 70px; /* Account for fixed header */
-        }
+    background-color: var(--light-color);
+    padding: 25px 0 50px;  /* Minimal top padding for tight header-to-breadcrumb spacing */
+    text-align: center;
+    margin-top: 70px; /* Account for fixed header */
+}
+
+.page-banner h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-top: 0;  /* Remove default top margin for tight spacing */
+    margin-bottom: 1rem;
+}
         
         .page-banner h1 {
             font-size: 2.5rem;
@@ -404,10 +411,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         Home
        </a>
 </li>
-<li class="nav-item">
-<a class="nav-link" href="services.html">
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="services.html">
         Services
        </a>
+<ul class="dropdown-menu">
+<li><a class="dropdown-item" href="services.html">All Services</a></li>
+<li><a class="dropdown-item" href="passport-photos-international.html">Passport Photos by Country</a></li>
+<li><a class="dropdown-item" href="visa-photos-international.html">Visa Photos by Country</a></li>
+<li><a class="dropdown-item" href="professional-license-photos-hub.html">Professional Licenses &amp; IDs</a></li>
+</ul>
 </li>
 <li class="nav-item">
 <a class="nav-link" href="pricing.html">
@@ -450,6 +463,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Page Banner -->
 <section class="page-banner">
 <div class="container">
+        <nav class="breadcrumb-nav">
+            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="services.html">Services</a></li>
+                <li class="breadcrumb-item">Digital Passport Photos</li>
+            </ol>
+        </nav>
 <h1>
      Digital Passport Photos
     </h1>
