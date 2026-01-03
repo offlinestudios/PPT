@@ -44,73 +44,47 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Favicon -->
 <link href="images/favicon.ico" rel="icon"/>
 <style>
-/* Hub page specific styles */
+/* Hub page specific styles - Consistent with passport/visa hubs */
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
     margin-top: 2rem;
 }
 
 .service-card {
     background: white;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    border-top: 4px solid var(--primary-color);
+    border-left: 4px solid var(--primary-color);
 }
 
 .service-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    border-top-color: var(--secondary-color);
-}
-
-.service-icon {
-    font-size: 3rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
+    border-left-color: var(--secondary-color);
 }
 
 .service-card h3 {
     color: var(--primary-color);
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
 }
 
 .service-card p {
     color: #666;
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
     line-height: 1.6;
-}
-
-.service-card ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 1.5rem;
-}
-
-.service-card ul li {
-    padding: 0.5rem 0;
-    color: #555;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-.service-card ul li:last-child {
-    border-bottom: none;
-}
-
-.service-card ul li i {
-    color: var(--secondary-color);
-    margin-right: 0.5rem;
 }
 
 .service-card .btn {
     width: 100%;
     text-align: center;
     padding: 0.75rem;
+    font-size: 0.9rem;
 }
 
 .section-header {
@@ -205,47 +179,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 <div class="service-grid">
 <div class="service-card">
-<div class="service-icon">
-<i class="fas fa-shield-alt"></i>
-</div>
 <h3>Security Guard License Photos</h3>
 <p>Professional photos meeting Ontario Ministry of Community Safety requirements for security guard licenses.</p>
-<ul>
-<li><i class="fas fa-check"></i> Compliant with Ontario regulations</li>
-<li><i class="fas fa-check"></i> Plain background required</li>
-<li><i class="fas fa-check"></i> Professional appearance</li>
-<li><i class="fas fa-check"></i> Digital copies included</li>
-</ul>
 <a href="security-guard-license-photo.html" class="btn btn-primary">Learn More →</a>
 </div>
 
 <div class="service-card">
-<div class="service-icon">
-<i class="fas fa-crosshairs"></i>
-</div>
 <h3>Firearms (PAL) License Photos</h3>
 <p>Photos meeting RCMP specifications for Possession and Acquisition License (PAL) applications.</p>
-<ul>
-<li><i class="fas fa-check"></i> RCMP compliant specifications</li>
-<li><i class="fas fa-check"></i> Neutral expression required</li>
-<li><i class="fas fa-check"></i> Specific size requirements</li>
-<li><i class="fas fa-check"></i> Guaranteed acceptance</li>
-</ul>
 <a href="firearms-pal-license-photos.html" class="btn btn-primary">Learn More →</a>
 </div>
 
 <div class="service-card">
-<div class="service-icon">
-<i class="fas fa-user-tie"></i>
-</div>
 <h3>Professional License Photos</h3>
 <p>Photos for all professional licenses including medical, legal, engineering, and trade certifications.</p>
-<ul>
-<li><i class="fas fa-check"></i> All professional bodies accepted</li>
-<li><i class="fas fa-check"></i> Industry-specific requirements</li>
-<li><i class="fas fa-check"></i> Professional quality guaranteed</li>
-<li><i class="fas fa-check"></i> Fast turnaround time</li>
-</ul>
 <a href="professional-license-photos.html" class="btn btn-primary">Learn More →</a>
 </div>
 </div>
@@ -256,47 +203,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 <div class="service-grid">
 <div class="service-card">
-<div class="service-icon">
-<i class="fas fa-id-badge"></i>
-</div>
 <h3>PR Card Photos</h3>
 <p>Photos meeting IRCC specifications for Permanent Resident card applications and renewals.</p>
-<ul>
-<li><i class="fas fa-check"></i> IRCC compliant (50mm × 70mm)</li>
-<li><i class="fas fa-check"></i> Biometric quality</li>
-<li><i class="fas fa-check"></i> Neutral expression</li>
-<li><i class="fas fa-check"></i> Same-day service</li>
-</ul>
 <a href="pr-card-photos.html" class="btn btn-primary">Learn More →</a>
 </div>
 
 <div class="service-card">
-<div class="service-icon">
-<i class="fas fa-passport"></i>
-</div>
 <h3>Citizenship Photos</h3>
 <p>Photos for Canadian citizenship applications meeting all IRCC biometric requirements.</p>
-<ul>
-<li><i class="fas fa-check"></i> IRCC citizenship specifications</li>
-<li><i class="fas fa-check"></i> Biometric photo standards</li>
-<li><i class="fas fa-check"></i> Digital copies provided</li>
-<li><i class="fas fa-check"></i> Expert photography</li>
-</ul>
-<a href="citizenship-photos.html" class="btn btn-primary">Learn More →</a>
+<a href="canadian-citizenship-photo.html" class="btn btn-primary">Learn More →</a>
 </div>
 
 <div class="service-card">
-<div class="service-icon">
-<i class="fas fa-globe"></i>
-</div>
 <h3>Refugee Travel Document Photos</h3>
 <p>Photos for refugee travel document applications meeting all Canadian government requirements.</p>
-<ul>
-<li><i class="fas fa-check"></i> Government compliant</li>
-<li><i class="fas fa-check"></i> Biometric standards</li>
-<li><i class="fas fa-check"></i> Compassionate service</li>
-<li><i class="fas fa-check"></i> Multilingual assistance</li>
-</ul>
 <a href="refugee-travel-document-photos.html" class="btn btn-primary">Learn More →</a>
 </div>
 </div>
@@ -307,33 +227,69 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 <div class="service-grid">
 <div class="service-card">
-<div class="service-icon">
-<i class="fas fa-briefcase"></i>
-</div>
 <h3>Work Permit Photos</h3>
 <p>Photos for Canadian work permit applications meeting all IRCC specifications.</p>
-<ul>
-<li><i class="fas fa-check"></i> IRCC work permit compliant</li>
-<li><i class="fas fa-check"></i> Biometric quality photos</li>
-<li><i class="fas fa-check"></i> Digital copies included</li>
-<li><i class="fas fa-check"></i> Same-day service</li>
-</ul>
-<a href="work-permit-photos.html" class="btn btn-primary">Learn More →</a>
+<a href="work-permit-photo.html" class="btn btn-primary">Learn More →</a>
 </div>
 
 <div class="service-card">
-<div class="service-icon">
-<i class="fas fa-graduation-cap"></i>
-</div>
 <h3>Study Permit Photos</h3>
 <p>Photos for Canadian study permit applications for international students.</p>
-<ul>
-<li><i class="fas fa-check"></i> IRCC study permit specs</li>
-<li><i class="fas fa-check"></i> Student-friendly pricing</li>
-<li><i class="fas fa-check"></i> Digital delivery available</li>
-<li><i class="fas fa-check"></i> Expert guidance</li>
-</ul>
 <a href="study-permit-photos.html" class="btn btn-primary">Learn More →</a>
+</div>
+
+<div class="service-card">
+<h3>Green Card Photos</h3>
+<p>USCIS-compliant photos for U.S. green card and immigration applications.</p>
+<a href="green-card-application-photo.html" class="btn btn-primary">Learn More →</a>
+</div>
+
+<div class="service-card">
+<h3>OCI Card Photos</h3>
+<p>Photos for Overseas Citizenship of India (OCI) card applications meeting Indian government specifications.</p>
+<a href="oci-photo.html" class="btn btn-primary">Learn More →</a>
+</div>
+
+<div class="service-card">
+<h3>US Immigration Photos</h3>
+<p>Photos for all U.S. immigration applications including I-485, I-130, and naturalization forms.</p>
+<a href="us-immigration-photos.html" class="btn btn-primary">Learn More →</a>
+</div>
+
+<div class="service-card">
+<h3>Immigration Medical Photos</h3>
+<p>Photos for immigration medical examinations and health assessments.</p>
+<a href="immigration-medical-photos.html" class="btn btn-primary">Learn More →</a>
+</div>
+</div>
+
+<!-- Additional ID & Special Services -->
+<div class="section-header">
+<h2><i class="fas fa-id-card-alt"></i> Additional ID & Special Services</h2>
+</div>
+<div class="service-grid">
+<div class="service-card">
+<h3>International Driver's Permit Photos</h3>
+<p>Photos for International Driving Permit (IDP) applications meeting ICAO standards.</p>
+<a href="international-drivers-permit-photos.html" class="btn btn-primary">Learn More →</a>
+</div>
+
+<div class="service-card">
+<h3>School ID Photos</h3>
+<p>Professional ID photos for school identification cards and student records.</p>
+<a href="school-id-photo.html" class="btn btn-primary">Learn More →</a>
+</div>
+
+<div class="service-card">
+<h3>University Application Photos</h3>
+<p>Photos for university and college applications meeting institutional requirements.</p>
+<a href="university-application-photo.html" class="btn btn-primary">Learn More →</a>
+</div>
+
+<div class="service-card">
+<h3>Digital ID Photos</h3>
+<p>High-resolution digital ID photos for online applications and digital credentials.</p>
+<a href="digital-id-photos.html" class="btn btn-primary">Learn More →</a>
 </div>
 </div>
 
