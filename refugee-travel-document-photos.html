@@ -170,14 +170,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             vertical-align: middle;
         }
         
-        /* Responsive design */
-        
-            
-            .main-layout {
-                grid-template-columns: 1fr;
-            }
-            
-            .photo-specs {
+                    .photo-specs {
                 flex-direction: column;
             }
             
@@ -188,11 +181,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
         @media (max-width: 768px) {
             .page-banner {
-                padding: 100px 0 60px;
+                padding: 15px 0 40px;
             }
             
             .page-banner h1 {
                 font-size: 2rem;
+            }
+            
+            .main-layout {
+                grid-template-columns: 1fr !important;
             }
         }
 
