@@ -227,7 +227,7 @@ a:hover {
 /* Page Banner Section */
 .page-banner {
   background-color: var(--light-color);
-  padding: 25px 0 50px;
+  padding: 15px 0 50px;
   text-align: center;
   margin-top: 70px; /* Account for fixed header */
 }
@@ -1402,7 +1402,7 @@ a:hover {
    ========================================================= */
 
 .breadcrumb-nav {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .breadcrumb {
