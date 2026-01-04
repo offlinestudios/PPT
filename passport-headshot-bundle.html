@@ -30,7 +30,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 /* Main content layout */
 .main-layout {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 1fr !important;
     gap: 30px;
     margin-top: 30px;
 }
@@ -265,8 +265,8 @@ ul li {
     }
 }
         .pricing-cards-section {
-            margin: 40px 0;
-            padding: 30px 0;
+            margin: 30px 0;
+            padding: 20px 0;
             background-color: var(--light-color);
             border-radius: 8px;
         }
@@ -274,10 +274,10 @@ ul li {
         .pricing-cards-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            max-width: 1100px;
+            gap: 20px;
+            max-width: 100%;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 10px;
         }
         
         .pricing-card {
@@ -396,9 +396,13 @@ ul li {
         /* Responsive design for pricing cards */
         @media (max-width: 768px) {
             .pricing-cards-container {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
             
             .pricing-card.featured {
                 transform: scale(1);
