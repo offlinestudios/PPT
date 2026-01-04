@@ -23,6 +23,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="images/favicon.ico" rel="icon"/>
 <style>
    /* Page-specific styles for U.S. Passport Photos page */
+        .page-banner {
+            background-color: var(--light-color);
+            padding: 120px 0 80px;
+            text-align: center;
+            margin-top: 70px; /* Account for fixed header */
+        }
+        
         .page-banner h1 {
             font-size: 2.5rem;
             color: var(--primary-color);
@@ -325,7 +332,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
         }
 
-  </style>
+  
+        @media (max-width: 768px) {
+            .page-banner {
+                padding: 100px 0 60px;
+            }
+            
+            .page-banner h1 {
+                font-size: 2rem;
+            }
+        }
+
+</style>
 <style>
    /* Full header and nav alignment fix */
 .header-container {
