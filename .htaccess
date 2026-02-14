@@ -1,0 +1,6 @@
+# 301 Permanent Redirects for removed pages
+# This ensures search engines update their indexes and users are redirected to relevant pages
+
+# Redirect headshot bundle pages to services page
+Redirect 301 /passport-headshot-bundle.html /services.html
+Redirect 301 /bundle-scheduling.html /scheduling.html
