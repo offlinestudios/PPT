@@ -533,7 +533,8 @@ a:hover {
 
 .hours-item {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 20px;
   padding: 5px 0;
   border-bottom: 1px solid var(--border-color);
 }
