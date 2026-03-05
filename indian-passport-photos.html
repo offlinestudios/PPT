@@ -342,6 +342,120 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
         }
 
+        /* ICAO Notice Box */
+        .icao-notice-box {
+            background: #fff8e1;
+            border-left: 5px solid #f59e0b;
+            border-radius: 8px;
+            padding: 24px 28px;
+            margin: 28px 0;
+        }
+        .icao-notice-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+        .icao-notice-header i {
+            color: #f59e0b;
+            font-size: 1.4rem;
+            flex-shrink: 0;
+        }
+        .icao-notice-header h3 {
+            color: #92400e;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+        .icao-notice-box p {
+            color: #444;
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+        .icao-comparison-table {
+            margin: 20px 0 16px;
+        }
+        .icao-comparison-table h4 {
+            color: #92400e;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+        .icao-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+            background: white;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        }
+        .icao-table thead tr {
+            background: var(--primary-color);
+            color: white;
+        }
+        .icao-table th {
+            padding: 10px 14px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .icao-table td {
+            padding: 9px 14px;
+            border-bottom: 1px solid #f0f0f0;
+            color: #444;
+        }
+        .icao-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+        .icao-table tbody tr:nth-child(even) {
+            background: #fafafa;
+        }
+        .icao-table td.new-rule {
+            color: #166534;
+            font-weight: 600;
+        }
+        .icao-sources {
+            margin-top: 18px;
+            padding-top: 16px;
+            border-top: 1px solid #fde68a;
+        }
+        .icao-sources h4 {
+            color: #92400e;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+        .icao-sources h4 i {
+            margin-right: 6px;
+        }
+        .icao-source-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .icao-source-list li {
+            margin-bottom: 6px;
+        }
+        .icao-source-list a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .icao-source-list a:hover {
+            text-decoration: underline;
+        }
+        .icao-source-list a i {
+            margin-right: 6px;
+            font-size: 0.8rem;
+        }
+        @media (max-width: 768px) {
+            .icao-table th:nth-child(2),
+            .icao-table td:nth-child(2) {
+                display: none;
+            }
+        }
 </style>
 <style>
    /* Full header and nav alignment fix */
@@ -572,7 +686,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li>
 <i class="fas fa-check">
 </i>
-          Size: 51mm x 51mm (2 inches x 2 inches)
+          Size: 35mm x 45mm (ICAO standard — updated Sept 2025)
          </li>
 <li>
 <i class="fas fa-check">
@@ -620,7 +734,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </p>
 <ul>
 <li>
-        Size: 51mm x 51mm (2 inches x 2 inches)
+        Size: 35mm x 45mm (ICAO standard — updated September 2025)
        </li>
 <li>
         Recent photograph taken within the last 6 months
@@ -641,7 +755,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         No shadows on the face or background
        </li>
 <li>
-        No glasses (unless medically required)
+        No glasses — must be removed (ICAO rule, updated September 2025)
        </li>
 <li>
         No head coverings (except for religious reasons)
@@ -654,6 +768,78 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
        </li>
 
 
+<!-- ICAO Rule Change Notice -->
+<div class="icao-notice-box">
+  <div class="icao-notice-header">
+    <i class="fas fa-exclamation-triangle"></i>
+    <h3>Important: New ICAO Photo Requirements &mdash; Effective September 1, 2025</h3>
+  </div>
+  <p>The Government of India has updated its passport photo requirements for all applications submitted through Indian embassies and consulates worldwide. Effective <strong>September 1, 2025</strong>, only <strong>ICAO-compliant photographs</strong> are accepted. A second enforcement notice issued on <strong>December 1, 2025</strong> made digital photo upload mandatory before any online application can be submitted.</p>
+  <p>This change was driven by India&rsquo;s transition to <strong>electronic chip-based (e-passports)</strong>, which require biometric-grade facial data meeting international ICAO Document 9303 standards &mdash; the same standard used by over 190 countries for machine-readable travel documents.</p>
+  <div class="icao-comparison-table">
+    <h4>What Changed: Old Rules vs. New ICAO Rules</h4>
+    <table class="icao-table">
+      <thead>
+        <tr>
+          <th>Requirement</th>
+          <th>Old Rules (Pre-Sept 2025)</th>
+          <th>New ICAO Rules (From Sept 2025)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Physical size</strong></td>
+          <td>2 &times; 2 inches (51 &times; 51 mm)</td>
+          <td class="new-rule">35 &times; 45 mm (portrait format)</td>
+        </tr>
+        <tr>
+          <td><strong>Digital dimensions</strong></td>
+          <td>Not consistently enforced</td>
+          <td class="new-rule">630 &times; 810 pixels (mandatory)</td>
+        </tr>
+        <tr>
+          <td><strong>Background</strong></td>
+          <td>White or light-coloured</td>
+          <td class="new-rule">Strictly plain white only</td>
+        </tr>
+        <tr>
+          <td><strong>Face coverage</strong></td>
+          <td>70&ndash;80% of the frame</td>
+          <td class="new-rule">80&ndash;85% of the frame</td>
+        </tr>
+        <tr>
+          <td><strong>Glasses</strong></td>
+          <td>Allowed if no glare</td>
+          <td class="new-rule">Not permitted &mdash; must be removed</td>
+        </tr>
+        <tr>
+          <td><strong>Digital upload</strong></td>
+          <td>Optional in many cases</td>
+          <td class="new-rule">Mandatory before online submission</td>
+        </tr>
+        <tr>
+          <td><strong>Photo editing</strong></td>
+          <td>Minor edits sometimes tolerated</td>
+          <td class="new-rule">Zero editing &mdash; no filters, no retouching</td>
+        </tr>
+        <tr>
+          <td><strong>Camera distance</strong></td>
+          <td>Not specified</td>
+          <td class="new-rule">Must be taken from 1.5 metres</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="icao-sources">
+    <h4><i class="fas fa-link"></i> Official Government Sources</h4>
+    <ul class="icao-source-list">
+      <li><a href="https://www.cgitoronto.gov.in/news_detail/?newsid=180" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> CGI Toronto &mdash; Original ICAO Notice (August 22, 2025)</a></li>
+      <li><a href="https://www.cgitoronto.gov.in/alert_detail/?alertid=345" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> CGI Toronto &mdash; Mandatory Digital Upload Alert (December 1, 2025)</a></li>
+      <li><a href="https://www.eoisaotome.gov.in/page/guidelines-for-icao-compliant-photographs-for-passport-applications/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Embassy of India &mdash; ICAO Photo Guidelines</a></li>
+      <li><a href="https://www.blsindia-canada.com/passport.php" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> BLS International Canada &mdash; Passport Application Portal</a></li>
+    </ul>
+  </div>
+</div>
 <!-- Pricing Cards Section -->
 <div class="pricing-cards-section">
   <h2 style="text-align: center; margin-bottom: 2rem;">Choose Your Package</h2>
@@ -728,6 +914,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 </ul>
 <h2>
+       How Passport Photo Toronto Meets the New ICAO Standards
+      </h2>
+<p>
+       Our studio is fully equipped to produce ICAO-compliant Indian passport photos that meet the updated September 2025 requirements. Every photo is taken at the correct 1.5-metre distance, against a pure white background, with professional lighting that eliminates shadows and red-eye. We provide both the <strong>printed 35 &times; 45 mm photos</strong> and a <strong>630 &times; 810 pixel digital file</strong> ready for upload to the Passport Seva portal or BLS application system.
+      </p>
+<h2>
        Our Indian Passport Photo Service
       </h2>
 <p>
@@ -798,7 +990,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         Standard adult passports are valid for 10 years
        </li>
 <li>
-        Four identical photos are typically required for the application
+        Two printed photos (35 x 45 mm) are required, plus a digital upload (630 x 810 px) to the Passport Seva portal
        </li>
 </ul>
 <p>
@@ -886,6 +1078,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </i>
 <span>
          PR Card Photos
+        </span>
+</a>
+<a class="related-service" href="oci-photo.html">
+<i class="fas fa-id-card icon">
+</i>
+<span>
+         Indian OCI Card Photos
+        </span>
+</a>
+<a class="related-service" href="indian-police-clearance-photos.html">
+<i class="fas fa-shield-alt icon">
+</i>
+<span>
+         Indian PCC Photos
         </span>
 </a>
 <a class="related-service" href="https://www.passportphototoronto.com/digital-id-photos.html">
