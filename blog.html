@@ -80,13 +80,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .blog-card-image-placeholder {
     width: 100%;
     height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 4rem;
+    overflow: hidden;
+    position: relative;
+    background: var(--primary-color);
 }
-.blog-card-image-placeholder.uk { background: linear-gradient(135deg, #012169 0%, #C8102E 100%); }
-.blog-card-image-placeholder.india { background: linear-gradient(135deg, #FF9933 0%, #138808 100%); }
+.blog-card-image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+.blog-card:hover .blog-card-image-placeholder img {
+    transform: scale(1.05);
+}
 .blog-card-body {
     padding: 1.5rem;
     flex: 1;
@@ -247,8 +254,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <!-- Post 1: UK Dual Citizenship -->
         <div class="blog-card">
-            <div class="blog-card-image-placeholder uk">
-                <span style="font-size:3.5rem;">🇬🇧</span>
+            <div class="blog-card-image-placeholder">
+                <img src="images/uk-flag.png" alt="United Kingdom Flag" loading="lazy"/>
             </div>
             <div class="blog-card-body">
                 <span class="blog-card-badge">UK Travel</span>
@@ -268,8 +275,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <!-- Post 2: India ICAO Changes -->
         <div class="blog-card">
-            <div class="blog-card-image-placeholder india">
-                <span style="font-size:3.5rem;">🇮🇳</span>
+            <div class="blog-card-image-placeholder">
+                <img src="images/india-flag.jpg" alt="India Flag" loading="lazy"/>
             </div>
             <div class="blog-card-body">
                 <span class="blog-card-badge">India Travel</span>
