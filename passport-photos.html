@@ -105,7 +105,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   /* ── Page banner — matches site standard (grey/light) ── */
   .page-banner {
     background-color: var(--light-color);
-    padding: 15px 0 50px;
+    padding: 15px 0 30px;
     text-align: center;
     margin-top: 70px;
   }
@@ -119,9 +119,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .page-banner .banner-subtitle {
     font-size: 1.1rem;
     color: #666;
-    margin-bottom: 28px;
+    margin-bottom: 10px;
     font-weight: 500;
     letter-spacing: 0.02em;
+  }
+  .banner-location-line {
+    font-size: 0.95rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 22px;
+  }
+  .banner-location-line i {
+    margin-right: 5px;
   }
 
   /* ── Trust bullets (above fold) ── */
@@ -201,7 +210,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 30px;
-    margin-top: 40px;
+    margin-top: 20px;
   }
   .main-content {
     background-color: white;
@@ -239,7 +248,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   /* ── Proof / photo gallery ── */
   /* On mobile the setup-block uses order to put image first */
-  .proof-section { margin: 36px 0 28px; }
+  .proof-section { margin: 0 0 28px; }
   .proof-section h2 {
     font-size: 1.5rem;
     color: var(--primary-color);
@@ -612,23 +621,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </nav>
 
     <h1>Passport Photos in Toronto</h1>
-    <p class="banner-subtitle">Done in Minutes &nbsp;•&nbsp; Guaranteed Acceptance</p>
+    <p class="banner-subtitle">Ready in 10 Minutes &nbsp;•&nbsp; Guaranteed Acceptance</p>
+    <p class="banner-location-line">
+      <i class="fas fa-map-marker-alt"></i>
+      Conveniently located in Downtown Toronto &nbsp;—&nbsp; Walk in today, no appointment needed
+    </p>
 
     <!-- Trust Bullets -->
     <div class="trust-bullets">
       <span class="trust-bullet"><i class="fas fa-check-circle"></i> Walk-ins welcome</span>
       <span class="trust-bullet"><i class="fas fa-check-circle"></i> Digital copy available</span>
       <span class="trust-bullet"><i class="fas fa-check-circle"></i> Meets all government requirements</span>
-      <span class="trust-bullet"><i class="fas fa-check-circle"></i> Ready in 10 minutes</span>
+      <span class="trust-bullet"><i class="fas fa-check-circle"></i> Ready in 10 minutes — no waiting</span>
     </div>
 
     <!-- CTAs -->
     <div class="banner-ctas">
       <a class="btn-cta-primary" href="scheduling.html">
-        <i class="fas fa-calendar-check"></i> Book Appointment
+        <i class="fas fa-camera"></i> Get Your Passport Photo Now
       </a>
       <a class="btn-cta-secondary" href="tel:4169862677">
-        <i class="fas fa-phone"></i> (416) 986-2677
+        <i class="fas fa-phone"></i> Call Now
       </a>
     </div>
   </div>
@@ -648,14 +661,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <!-- Photo Samples -->
         <div class="proof-section">
-          <h2><i class="fas fa-images"></i> Our Work</h2>
+          <h2><i class="fas fa-images"></i> Real Passport Photos Taken Here</h2>
           <div class="photo-gallery">
             <img src="images/passport-sample-man.jpg"    alt="Professional male passport photo – Passport Photo Toronto" loading="lazy"/>
             <img src="images/passport-sample-female.jpg" alt="Professional female passport photo – Passport Photo Toronto" loading="lazy"/>
             <img src="images/passport-sample-14.jpg"     alt="Passport photo sample – Passport Photo Toronto" loading="lazy"/>
           </div>
           <p style="font-size:0.88rem;color:#888;margin-top:8px;text-align:center;">
-            Real photos taken in our studio. Professional lighting. Natural skin tones. Every time.
+            Actual passport photo examples from our studio — professional lighting, natural skin tones, accepted every time.
           </p>
         </div>
 
@@ -899,17 +912,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 ══════════════════════════════════════════════ -->
 <section class="section cta">
   <div class="container" style="text-align:center;">
-    <h2 class="cta-title">Ready for Your Passport Photos?</h2>
+    <h2 class="cta-title">Get Your Passport Photos Today</h2>
     <p class="cta-subtitle">
-      Walk in or book an appointment at 63 McCaul St, downtown Toronto.<br/>
-      Done in 10 minutes. Accepted the first time — guaranteed.
+      Walk in or book at 63 McCaul St, downtown Toronto.<br/>
+      Ready in 10 minutes — no waiting. Guaranteed acceptance.
     </p>
     <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:24px;">
       <a class="btn-cta-primary" href="scheduling.html">
-        <i class="fas fa-calendar-check"></i> Book Appointment
+        <i class="fas fa-camera"></i> Get Your Passport Photo Now
       </a>
       <a class="btn-cta-secondary" href="tel:4169862677">
-        <i class="fas fa-phone"></i> (416) 986-2677
+        <i class="fas fa-phone"></i> Call Now
       </a>
     </div>
   </div>
