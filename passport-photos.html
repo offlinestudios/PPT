@@ -530,13 +530,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   /* ── CTA section ── uses global .cta styles from styles.css ── */
 
+  /* ── Quick reassurance strip ── */
+  .reassurance-strip {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 24px;
+    background: var(--light-color);
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin: 24px 0 20px;
+  }
+  .reassurance-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #333;
+  }
+  .reassurance-item i { color: var(--primary-color); }
+
+  /* ── Mid-page CTA bar ── */
+  .mid-cta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    margin: 20px 0 32px;
+  }
+
   /* ── Responsive ── */
   @media (max-width: 768px) {
     .page-banner { padding: 15px 0 36px; }
     .page-banner h1 { font-size: 2rem; }
     .page-banner .banner-subtitle { font-size: 1rem; }
     .trust-bullets { gap: 10px 18px; }
+    /* On mobile: main content first, sidebar stacks below */
     .main-layout { grid-template-columns: 1fr; }
+    .main-content { order: 1; }
+    .sidebar { order: 2; }
     /* Photo gallery: 2-col on mobile for better sizing */
     .photo-gallery { grid-template-columns: repeat(2, 1fr); gap: 8px; }
     .photo-gallery img { aspect-ratio: 3/4; }
@@ -547,6 +580,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .process-steps { grid-template-columns: 1fr; }
     .req-grid { grid-template-columns: 1fr; }
     .location-details { grid-template-columns: 1fr; }
+    .reassurance-strip { gap: 8px 16px; padding: 14px 16px; }
+    .reassurance-item { font-size: 0.88rem; }
     .dropdown-menu { position: static; box-shadow: none; background: var(--light-color); margin-left: 20px; }
     .nav-item.dropdown .dropdown-menu { display: none !important; }
     .nav-item.dropdown.active .dropdown-menu { display: block !important; }
@@ -657,9 +692,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <!-- ── LEFT: Main Content ── -->
       <div class="main-content">
 
-        <!-- ══ 4. PROOF / DETAILS ══ -->
-
-        <!-- Photo Samples -->
+        <!-- ══ SECTION 2: PROOF — Real photos immediately after CTAs ══ -->
         <div class="proof-section">
           <h2><i class="fas fa-images"></i> Real Passport Photos Taken Here</h2>
           <div class="photo-gallery">
@@ -671,6 +704,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             Actual passport photo examples from our studio — professional lighting, natural skin tones, accepted every time.
           </p>
         </div>
+
+        <!-- ══ SECTION 3: QUICK REASSURANCE — reinforce decision before they scroll further ══ -->
+        <div class="reassurance-strip">
+          <span class="reassurance-item"><i class="fas fa-check-circle"></i> Done in 10 minutes</span>
+          <span class="reassurance-item"><i class="fas fa-check-circle"></i> Guaranteed acceptance</span>
+          <span class="reassurance-item"><i class="fas fa-check-circle"></i> Walk-ins welcome</span>
+          <span class="reassurance-item"><i class="fas fa-check-circle"></i> Digital copy available</span>
+          <span class="reassurance-item"><i class="fas fa-check-circle"></i> No appointment needed</span>
+        </div>
+
+        <!-- ══ SECTION 4: MID-PAGE CTA — convert before explaining ══ -->
+        <div class="mid-cta">
+          <a class="btn-cta-primary" href="scheduling.html">
+            <i class="fas fa-camera"></i> Get Your Passport Photo Now
+          </a>
+          <a class="btn-cta-secondary" href="tel:4169862677">
+            <i class="fas fa-phone"></i> Call Now
+          </a>
+        </div>
+
+        <!-- ══ SECTION 5: EXPLAIN — studio, process, requirements, location (post-decision) ══ -->
 
         <!-- Studio Setup — image always first on mobile via order CSS -->
         <div class="setup-block">
@@ -689,7 +743,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
 
         <!-- Process Steps -->
-        <h2 style="font-size:1.5rem;color:var(--primary-color);margin-bottom:18px;display:flex;align-items:center;gap:10px;">
+        <h2 style="font-size:1.5rem;color:var(--primary-color);margin-bottom:18px;margin-top:32px;display:flex;align-items:center;gap:10px;">
           <i class="fas fa-list-ol"></i> How It Works
         </h2>
         <div class="process-steps">
