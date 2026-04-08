@@ -124,34 +124,36 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     letter-spacing: 0.02em;
   }
 
-    /* ── Trust bullets (above fold) ── */
+    /* ── Trust bullets — 2×2 pill grid ── */
   .trust-bullets {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 10px;
-    margin: 0 auto 20px auto;
-    max-width: 280px;
+    margin: 0 auto 24px auto;
+    max-width: 420px;
+    width: 100%;
   }
   .trust-bullet {
     display: flex;
     align-items: center;
-    gap: 10px;
-    color: #444;
-    font-size: 0.97rem;
+    gap: 8px;
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 8px;
+    padding: 10px 14px;
+    color: #222;
+    font-size: 0.88rem;
     font-weight: 600;
-    line-height: 1;
+    line-height: 1.2;
+    white-space: normal;
   }
   .trust-bullet i {
     color: var(--primary-color);
-    font-size: 0.95rem;
+    font-size: 1rem;
     flex-shrink: 0;
-    line-height: 1;
-    vertical-align: middle;
   }
   .trust-bullet span {
-    vertical-align: middle;
-    line-height: 1;
+    line-height: 1.2;
   }
   /* ── Keyword sentence under bullets ── */
   .banner-keyword {
@@ -626,9 +628,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .page-banner { padding: 12px 0 28px; }
     .page-banner h1 { font-size: 1.85rem; line-height: 1.2; }
     .page-banner .banner-subtitle { font-size: 0.95rem; margin-bottom: 18px; }
-    /* Trust bullets: 2 per row on mobile */
-    .trust-bullets { gap: 8px; max-width: 260px; }
-    .trust-bullet { font-size: 0.9rem; }
+    /* Trust bullets: 2x2 grid on mobile */
+    .trust-bullets { gap: 8px; max-width: 100%; }
+    .trust-bullet { font-size: 0.82rem; padding: 9px 10px; }
     /* CTAs: full-width stacked on mobile */
     .banner-ctas { flex-direction: column; align-items: center; gap: 10px; }
     .btn-cta-primary,
