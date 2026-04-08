@@ -627,6 +627,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     /* Mobile sidebar CTA */
     .mobile-sidebar-cta { display: block; margin: 20px 0; }
+    /* Hide the CTA and Location boxes in the sidebar on mobile (they appear in main content instead) */
+    .sidebar .sidebar-box-cta-hidden { display: none; }
     /* Layout */
     .main-layout { grid-template-columns: 1fr; }
     .main-content { order: 1; padding: 22px 18px; }
@@ -825,7 +827,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
         </div>
 
-        <!-- Mobile-only: sidebar CTA box between How It Works and Requirements -->
+        <!-- Mobile-only: CTA box + Location box moved here between How It Works and Requirements -->
         <div class="mobile-sidebar-cta">
           <div class="sidebar-box blue">
             <h3><i class="fas fa-camera"></i> Get Your Passport Photos</h3>
@@ -838,6 +840,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </a>
             <a class="btn-block btn-outline-white" href="tel:4169862677" style="margin-top:8px;">
               <i class="fas fa-phone" style="margin-right:6px;"></i> Call Now
+            </a>
+          </div>
+          <div class="sidebar-box" style="margin-top:16px;">
+            <h3><i class="fas fa-map-marker-alt"></i> Our Location</h3>
+            <div class="location-info">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>63 McCaul St, Toronto, ON M5T 2W7</span>
+            </div>
+            <div class="location-info">
+              <i class="fas fa-phone"></i>
+              <span><a href="tel:4169862677" style="color:inherit;text-decoration:none;">(416) 986-2677</a></span>
+            </div>
+            <div class="location-info">
+              <i class="fas fa-clock"></i>
+              <span>Mon&ndash;Fri: 9 AM &ndash; 6 PM<br/>Sat&ndash;Sun: 12 PM &ndash; 6 PM</span>
+            </div>
+            <a class="btn-block btn-outline-blue" href="location.html" style="margin-top:14px;">
+              View Map &amp; Directions
             </a>
           </div>
         </div>
@@ -946,7 +966,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="sidebar">
 
         <!-- CTA Box -->
-        <div class="sidebar-box blue">
+        <div class="sidebar-box blue sidebar-box-cta-hidden">
           <h3><i class="fas fa-camera"></i> Get Your Passport Photos</h3>
           <p>
             Professional photos that meet every government requirement.
@@ -961,7 +981,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
 
         <!-- Location Box -->
-        <div class="sidebar-box">
+        <div class="sidebar-box sidebar-box-cta-hidden">
           <h3><i class="fas fa-map-marker-alt"></i> Our Location</h3>
           <div class="location-info">
             <i class="fas fa-map-marker-alt"></i>
