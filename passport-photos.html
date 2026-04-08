@@ -340,13 +340,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     margin-left: 16px;
   }
   .pricing-row.best {
-    border: 2px solid var(--primary-color);
+    border: none;
+    border-left: 4px solid var(--primary-color);
     background: #fff;
+    padding-left: 16px;
   }
   .pricing-row.best .pricing-row-label::after {
     content: " — Best Value";
     font-size: 0.78rem;
-    color: #b8860b;
+    color: var(--primary-color);
     font-weight: 700;
     margin-left: 6px;
   }
