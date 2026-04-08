@@ -217,6 +217,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     color: #fff;
     transform: translateY(-2px);
   }
+  /* Bottom CTA section — gold primary, white secondary */
+  .btn-cta-gold {
+    background: #f4c430 !important;
+    color: #fff !important;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+  }
+  .btn-cta-gold:hover,
+  .btn-cta-gold:active {
+    background: #d4a820 !important;
+    color: #fff !important;
+  }
+  .btn-cta-white {
+    background: transparent !important;
+    color: #fff !important;
+    border-color: #fff !important;
+  }
+  .btn-cta-white:hover,
+  .btn-cta-white:active {
+    background: rgba(255,255,255,0.15) !important;
+    color: #fff !important;
+  }
 
   /* ── Main layout ── */
   .main-layout {
@@ -984,11 +1005,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       Walk in or book at 63 McCaul St, downtown Toronto.<br/>
       Guaranteed acceptance — or we retake them free of charge.
     </p>
-    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:24px;">
-      <a href="scheduling.html" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#f4c430;color:#1a1a1a;padding:15px 36px;border-radius:6px;font-weight:700;font-size:1rem;text-decoration:none;text-transform:uppercase;letter-spacing:0.5px;box-shadow:0 4px 14px rgba(0,0,0,0.2);transition:all 0.3s ease;min-width:220px;">
-        <i class="fas fa-camera"></i> Book Appointment
+    <div class="banner-ctas">
+      <a class="btn-cta-primary btn-cta-gold" href="scheduling.html">
+        <i class="fas fa-camera" style="color:#ccc;"></i> Book Appointment
       </a>
-      <a href="tel:4169862677" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;background:transparent;color:#fff;padding:14px 36px;border-radius:6px;font-weight:700;font-size:1rem;text-decoration:none;text-transform:uppercase;letter-spacing:0.5px;border:2px solid #fff;transition:all 0.3s ease;min-width:220px;">
+      <a class="btn-cta-secondary btn-cta-white" href="tel:4169862677">
         <i class="fas fa-phone"></i> Call Now
       </a>
     </div>
