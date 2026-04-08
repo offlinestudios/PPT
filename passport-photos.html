@@ -124,36 +124,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     letter-spacing: 0.02em;
   }
 
-    /* ── Trust bullets — 2×2 pill grid ── */
-  .trust-bullets {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin: 0 auto 24px auto;
+    /* ── Trust sentence (above fold) ── */
+  .trust-sentence {
+    color: #666;
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: center;
     max-width: 420px;
-    width: 100%;
-  }
-  .trust-bullet {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(255,255,255,0.18);
-    border: 1px solid rgba(255,255,255,0.35);
-    border-radius: 8px;
-    padding: 10px 14px;
-    color: #222;
-    font-size: 0.88rem;
-    font-weight: 600;
-    line-height: 1.2;
-    white-space: normal;
-  }
-  .trust-bullet i {
-    color: var(--primary-color);
-    font-size: 1rem;
-    flex-shrink: 0;
-  }
-  .trust-bullet span {
-    line-height: 1.2;
+    margin: 0 auto 24px auto;
   }
   /* ── Keyword sentence under bullets ── */
   .banner-keyword {
@@ -628,9 +607,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .page-banner { padding: 12px 0 28px; }
     .page-banner h1 { font-size: 1.85rem; line-height: 1.2; }
     .page-banner .banner-subtitle { font-size: 0.95rem; margin-bottom: 18px; }
-    /* Trust bullets: 2x2 grid on mobile */
-    .trust-bullets { gap: 8px; max-width: 100%; }
-    .trust-bullet { font-size: 0.82rem; padding: 9px 10px; }
+    .trust-sentence { font-size: 0.88rem; }
     /* CTAs: full-width stacked on mobile */
     .banner-ctas { flex-direction: column; align-items: center; gap: 10px; }
     .btn-cta-primary,
@@ -734,12 +711,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <h1>Passport Photos in Toronto</h1>
     <!-- Trust Bullets — 4 bullets -->
-    <div class="trust-bullets">
-      <span class="trust-bullet"><i class="fas fa-check-circle"></i><span> Walk-ins welcome</span></span>
-      <span class="trust-bullet"><i class="fas fa-check-circle"></i><span> Government compliant</span></span>
-      <span class="trust-bullet"><i class="fas fa-check-circle"></i><span> Ready in 10 minutes</span></span>
-      <span class="trust-bullet"><i class="fas fa-check-circle"></i><span> Guaranteed acceptance</span></span>
-    </div>
+    <p class="trust-sentence">Ready in 10 minutes, guaranteed acceptance, walk-ins welcome &mdash; digital options available.</p>
     <!-- CTAs — equal width, stacked on mobile -->
     <div class="banner-ctas">
       <a class="btn-cta-primary" href="scheduling.html">
