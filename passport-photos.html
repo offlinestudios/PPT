@@ -127,19 +127,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     /* ── Trust bullets (above fold) ── */
   .trust-bullets {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px 24px;
-    margin-bottom: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 0 auto 20px auto;
+    max-width: 280px;
   }
   .trust-bullet {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    gap: 7px;
+    gap: 10px;
     color: #444;
-    font-size: 0.95rem;
+    font-size: 0.97rem;
     font-weight: 600;
-    white-space: nowrap;
     line-height: 1;
   }
   .trust-bullet i {
@@ -627,8 +627,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .page-banner h1 { font-size: 1.85rem; line-height: 1.2; }
     .page-banner .banner-subtitle { font-size: 0.95rem; margin-bottom: 18px; }
     /* Trust bullets: 2 per row on mobile */
-    .trust-bullets { gap: 8px 16px; }
-    .trust-bullet { font-size: 0.88rem; }
+    .trust-bullets { gap: 8px; max-width: 260px; }
+    .trust-bullet { font-size: 0.9rem; }
     /* CTAs: full-width stacked on mobile */
     .banner-ctas { flex-direction: column; align-items: center; gap: 10px; }
     .btn-cta-primary,
