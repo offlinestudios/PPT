@@ -277,12 +277,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .pricing-row-label { font-weight: 600; font-size: 0.97rem; color: #333; }
   .pricing-row-sub { font-size: 0.82rem; color: #888; margin-top: 2px; }
   .pricing-row-price { font-weight: 800; font-size: 1.15rem; color: var(--primary-color); white-space: nowrap; }
-  .pricing-row.best { border: 2px solid var(--primary-color); background: #eef2fb; }
+  .pricing-row.best {
+    border: none;
+    border-left: 4px solid var(--primary-color);
+    background: #fff;
+    padding-left: 16px;
+  }
   .pricing-row.best .pricing-row-label::after {
     content: " — Best Value";
     font-size: 0.78rem;
     color: var(--primary-color);
-    font-weight: 600;
+    font-weight: 700;
     margin-left: 6px;
   }
 
