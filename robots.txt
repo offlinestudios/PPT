@@ -2,7 +2,6 @@
 # https://www.passportphototoronto.com
 
 User-agent: *
-Disallow: /photos.html
 Disallow: /photos/
 
 # Sitemap
