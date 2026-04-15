@@ -1,0 +1,9 @@
+# robots.txt – Passport Photo Toronto
+# https://www.passportphototoronto.com
+
+User-agent: *
+Disallow: /photos.html
+Disallow: /photos/
+
+# Sitemap
+Sitemap: https://www.passportphototoronto.com/sitemap.xml
