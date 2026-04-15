@@ -873,6 +873,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 .then(data => {
                     // Success message
                     bookButton.innerHTML = '<i class="fas fa-check"></i> Booking Confirmed!';
+
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        event: 'booking_request_submitted',
+                        booking_platform: 'square_or_custom_form',
+                        booking_source: 'website_scheduling_page',
+                        booking_email: bookingData.email || '',
+                        booking_phone: bookingData.phone || '',
+                        booking_name: bookingData.fullName || '',
+                        booking_date: bookingData.appointmentDate || '',
+                        booking_time: bookingData.timeSlot || '',
+                        booking_datetime: bookingData.dateTime || '',
+                        booking_value: 1,
+                        booking_currency: 'CAD'
+                    });
                     
                     // Show success message to user
                     const formContainer = document.querySelector('.booking-container');
