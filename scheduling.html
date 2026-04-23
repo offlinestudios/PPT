@@ -16,6 +16,77 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    Book Your Appointment – Passport Photos in Downtown Toronto
   </title>
 <meta content="Schedule your passport photo appointment online. Fast, professional service with guaranteed compliance for Canadian passports, visas, and ID cards. Walk-ins." name="description"/>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11397258552"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-11397258552');
+
+  (function () {
+    const STORAGE_KEY = 'pptAttribution';
+    const CLICK_ID_KEYS = ['gclid', 'gbraid', 'wbraid'];
+    const CAMPAIGN_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+
+    function getParams() {
+      try {
+        return new URLSearchParams(window.location.search || '');
+      } catch (error) {
+        return new URLSearchParams();
+      }
+    }
+
+    function readStored() {
+      try {
+        return JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null') || {};
+      } catch (error) {
+        return {};
+      }
+    }
+
+    function writeStored(payload) {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+      } catch (error) {
+        console.warn('Unable to persist attribution data', error);
+      }
+    }
+
+    const params = getParams();
+    const stored = readStored();
+    const next = {
+      ...stored,
+      firstLandingPage: stored.firstLandingPage || window.location.href,
+      latestLandingPage: window.location.href,
+      firstSeenAt: stored.firstSeenAt || new Date().toISOString(),
+      lastSeenAt: new Date().toISOString(),
+      referrer: stored.referrer || document.referrer || ''
+    };
+
+    let hasNewAttribution = false;
+
+    CLICK_ID_KEYS.concat(CAMPAIGN_KEYS).forEach((key) => {
+      const value = params.get(key);
+      if (value) {
+        next[key] = value;
+        hasNewAttribution = true;
+      }
+    });
+
+    if (!next.utm_source && next.gclid) {
+      next.utm_source = 'google';
+    }
+    if (!next.utm_medium && (next.gclid || next.gbraid || next.wbraid)) {
+      next.utm_medium = 'cpc';
+    }
+
+    if (hasNewAttribution || !stored.firstLandingPage) {
+      writeStored(next);
+    }
+
+    window.pptAttribution = next;
+  })();
+</script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="css/styles.css" rel="stylesheet"/>
@@ -838,6 +909,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 
                 // Collect form data
                 const formData = new FormData(form);
+                const attribution = window.pptAttribution || {};
                 const bookingData = {
                     firstName: formData.get('firstName'),
                     lastName: formData.get('lastName'),
@@ -851,12 +923,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     dateTime: formData.get('appointmentDate') + 'T' + formData.get('timeSlot') + ':00',
                     // Add metadata
                     submittedAt: new Date().toISOString(),
-                    source: 'Website Booking Form'
+                    source: 'Website Booking Form',
+                    landingPage: attribution.firstLandingPage || window.location.href,
+                    latestLandingPage: attribution.latestLandingPage || window.location.href,
+                    referrer: attribution.referrer || document.referrer || '',
+                    gclid: attribution.gclid || '',
+                    gbraid: attribution.gbraid || '',
+                    wbraid: attribution.wbraid || '',
+                    utmSource: attribution.utm_source || '',
+                    utmMedium: attribution.utm_medium || '',
+                    utmCampaign: attribution.utm_campaign || '',
+                    utmTerm: attribution.utm_term || '',
+                    utmContent: attribution.utm_content || ''
                 };
                 
                 console.log('Sending booking data to Zapier:', bookingData);
                 // Send to your Zapier webhook
-                fetch('https://e157d9f0-8474-4185-a677-9f6298d4762c-00-qzkh0xebsfsa.spock.replit.dev/submit-booking', {
+                fetch('https://hooks.zapier.com/hooks/catch/27340760/uj7g887/', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -872,7 +955,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 })
                 .then(data => {
                     // Success message
-                    bookButton.innerHTML = '<i class="fas fa-check"></i> Booking Confirmed!';
+                    bookButton.innerHTML = '<i class="fas fa-check"></i> Booking Request Received!';
 
                     window.dataLayer = window.dataLayer || [];
                     window.dataLayer.push({
@@ -886,7 +969,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         booking_time: bookingData.timeSlot || '',
                         booking_datetime: bookingData.dateTime || '',
                         booking_value: 1,
-                        booking_currency: 'CAD'
+                        booking_currency: 'CAD',
+                        gclid: bookingData.gclid || '',
+                        gbraid: bookingData.gbraid || '',
+                        wbraid: bookingData.wbraid || '',
+                        utm_source: bookingData.utmSource || '',
+                        utm_medium: bookingData.utmMedium || '',
+                        utm_campaign: bookingData.utmCampaign || '',
+                        utm_term: bookingData.utmTerm || '',
+                        utm_content: bookingData.utmContent || '',
+                        landing_page: bookingData.landingPage || '',
+                        latest_landing_page: bookingData.latestLandingPage || '',
+                        referrer: bookingData.referrer || '',
+                        conversion_tracking_mode: 'offline_import_required'
                     });
                     
                     // Show success message to user
@@ -899,6 +994,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <h3>Booking Request Submitted!</h3>
                         <p>Thank you, ${bookingData.firstName}! Your appointment request for <strong>${new Date(bookingData.appointmentDate).toLocaleDateString('en-US', {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}</strong> at <strong>${formatTime(bookingData.timeSlot)}</strong> has been received.</p>
                         <p>We'll send a confirmation email to <strong>${bookingData.email}</strong> within 2 hours.</p>
+                        <p>Your ad attribution details were saved so confirmed Square bookings can be imported back into Google Ads as offline conversions.</p>
                         <button class="btn-book" onclick="location.reload()">Book Another Appointment</button>
                     `;
                     
