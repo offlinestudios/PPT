@@ -85,10 +85,16 @@
   }
 
   function sendPayload(payload) {
+    const formBody = new URLSearchParams();
+
+    Object.entries(payload).forEach(([key, value]) => {
+      if (value === undefined || value === null) return;
+      formBody.append(key, String(value));
+    });
+
     return fetch(WEBHOOK_URL, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
+      body: formBody,
       mode: 'cors',
       keepalive: true
     })
