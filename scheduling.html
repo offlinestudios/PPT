@@ -22,71 +22,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'AW-11397258552');
-
-  (function () {
-    const STORAGE_KEY = 'pptAttribution';
-    const CLICK_ID_KEYS = ['gclid', 'gbraid', 'wbraid'];
-    const CAMPAIGN_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
-
-    function getParams() {
-      try {
-        return new URLSearchParams(window.location.search || '');
-      } catch (error) {
-        return new URLSearchParams();
-      }
-    }
-
-    function readStored() {
-      try {
-        return JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null') || {};
-      } catch (error) {
-        return {};
-      }
-    }
-
-    function writeStored(payload) {
-      try {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
-      } catch (error) {
-        console.warn('Unable to persist attribution data', error);
-      }
-    }
-
-    const params = getParams();
-    const stored = readStored();
-    const next = {
-      ...stored,
-      firstLandingPage: stored.firstLandingPage || window.location.href,
-      latestLandingPage: window.location.href,
-      firstSeenAt: stored.firstSeenAt || new Date().toISOString(),
-      lastSeenAt: new Date().toISOString(),
-      referrer: stored.referrer || document.referrer || ''
-    };
-
-    let hasNewAttribution = false;
-
-    CLICK_ID_KEYS.concat(CAMPAIGN_KEYS).forEach((key) => {
-      const value = params.get(key);
-      if (value) {
-        next[key] = value;
-        hasNewAttribution = true;
-      }
-    });
-
-    if (!next.utm_source && next.gclid) {
-      next.utm_source = 'google';
-    }
-    if (!next.utm_medium && (next.gclid || next.gbraid || next.wbraid)) {
-      next.utm_medium = 'cpc';
-    }
-
-    if (hasNewAttribution || !stored.firstLandingPage) {
-      writeStored(next);
-    }
-
-    window.pptAttribution = next;
-  })();
 </script>
+<script defer src="js/attribution.js"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="css/styles.css" rel="stylesheet"/>
@@ -826,6 +763,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             const bookButton = document.getElementById('bookButton');
             const bookingSummary = document.getElementById('bookingSummary');
             const dateInput = document.getElementById('appointmentDate');
+
+            if (!form || !bookButton || !bookingSummary || !dateInput) {
+                return;
+            }
             
             // Set minimum date to today
             const today = new Date();

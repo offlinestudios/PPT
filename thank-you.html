@@ -20,7 +20,9 @@
   gtag('js', new Date());
 
   gtag('config', 'G-EFSCQB4RF3');
+  gtag('config', 'AW-11397258552');
 </script>
+<script defer src="js/attribution.js"></script>
 </head>
 <body>
 <!-- Header -->
@@ -137,10 +139,14 @@
 </footer>
 <!-- Event snippet for Book appointment conversion page -->
 <script>
-  gtag('event', 'conversion', {
-      'send_to': 'AW-11397258552/uMCxCNCrtOgaELi60boq',
-      'value': 1.0,
-      'currency': 'CAD'
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+      event: 'booking_conversion_page_view',
+      booking_platform: 'website_thank_you_page',
+      booking_source: 'thank_you_page',
+      booking_value: 1,
+      booking_currency: 'CAD',
+      conversion_tracking_mode: 'offline_import_required'
   });
 </script>
 </body>
