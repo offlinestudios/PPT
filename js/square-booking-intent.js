@@ -85,22 +85,10 @@
   }
 
   function sendPayload(payload) {
-    const body = JSON.stringify(payload);
-
-    try {
-      if (navigator.sendBeacon) {
-        const blob = new Blob([body], { type: 'application/json' });
-        const ok = navigator.sendBeacon(WEBHOOK_URL, blob);
-        if (ok) return Promise.resolve(true);
-      }
-    } catch (error) {
-      console.warn('sendBeacon failed for Square booking payload', error);
-    }
-
     return fetch(WEBHOOK_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body,
+      body: JSON.stringify(payload),
       mode: 'cors',
       keepalive: true
     })
