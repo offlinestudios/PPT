@@ -1,5 +1,5 @@
 (function () {
-  const WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/27340760/uj7g887/';
+  const WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/27340760/uvu4hlz/';
   const SQUARE_BOOKING_URL = 'https://app.squareup.com/appointments/book/5fkwsauqjb7usp/L7T8SMADNB80P/start';
   const SESSION_KEY = 'pptSquareBookingSessionId';
   const STATE_KEY = 'pptSquareBookingIntentState';
