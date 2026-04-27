@@ -2,6 +2,7 @@
   const STORAGE_KEY = 'pptAttribution';
   const CLICK_ID_KEYS = ['gclid', 'gbraid', 'wbraid'];
   const CAMPAIGN_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+  const ATTRIBUTION_KEYS = CLICK_ID_KEYS.concat(CAMPAIGN_KEYS);
 
   function getParams() {
     try {
@@ -27,26 +28,33 @@
     }
   }
 
+  function buildIncomingAttribution(params) {
+    const incoming = {};
+    ATTRIBUTION_KEYS.forEach((key) => {
+      const value = params.get(key);
+      if (value) incoming[key] = value;
+    });
+    return incoming;
+  }
+
+  function hasNewAttributionContext(stored, incoming) {
+    return ATTRIBUTION_KEYS.some((key) => incoming[key] && incoming[key] !== (stored[key] || ''));
+  }
+
   const params = getParams();
   const stored = readStored();
+  const incoming = buildIncomingAttribution(params);
+  const now = new Date().toISOString();
+  const shouldReset = hasNewAttributionContext(stored, incoming);
   const next = {
-    ...stored,
-    firstLandingPage: stored.firstLandingPage || window.location.href,
+    ...(shouldReset ? {} : stored),
+    ...incoming,
+    firstLandingPage: shouldReset ? window.location.href : (stored.firstLandingPage || window.location.href),
     latestLandingPage: window.location.href,
-    firstSeenAt: stored.firstSeenAt || new Date().toISOString(),
-    lastSeenAt: new Date().toISOString(),
-    referrer: stored.referrer || document.referrer || ''
+    firstSeenAt: shouldReset ? now : (stored.firstSeenAt || now),
+    lastSeenAt: now,
+    referrer: shouldReset ? (document.referrer || '') : (stored.referrer || document.referrer || '')
   };
-
-  let hasNewAttribution = false;
-
-  CLICK_ID_KEYS.concat(CAMPAIGN_KEYS).forEach((key) => {
-    const value = params.get(key);
-    if (value) {
-      next[key] = value;
-      hasNewAttribution = true;
-    }
-  });
 
   if (!next.utm_source && next.gclid) {
     next.utm_source = 'google';
@@ -56,7 +64,7 @@
     next.utm_medium = 'cpc';
   }
 
-  if (hasNewAttribution || !stored.firstLandingPage) {
+  if (shouldReset || Object.keys(incoming).length || !stored.firstLandingPage) {
     writeStored(next);
   }
 
