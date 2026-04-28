@@ -639,7 +639,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <header class="header">
   <div class="container header-container">
     <a class="logo" href="index.html">
-      <img alt="Passport Photo Toronto Logo" loading="lazy" src="images/logo.png"/>
+      <picture><source srcset="images/logo.webp" type="image/webp"/><img alt="Passport Photo Toronto Logo" loading="lazy" src="images/logo.png" width="150" height="100"/></picture>
       <span class="logo-text">PASSPORT PHOTO</span>
     </a>
     <nav>
@@ -704,6 +704,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <h2><i class="fas fa-images"></i> Real Japan Visa Photo Taken Here</h2>
           <div class="proof-frame">
             <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="images/passport-scan-sample.webp">
+              <source type="image/webp" media="(max-width: 767px)" srcset="images/passport-scan-sample-square.jpg">
               <source media="(min-width: 768px)" srcset="images/passport-scan-sample.jpg">
               <source media="(max-width: 767px)" srcset="images/passport-scan-sample-square.jpg">
               <img
@@ -756,7 +758,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <!-- STUDIO SETUP -->
         <div class="setup-block">
-          <img src="images/offline-website-5.jpg" alt="Passport Photo Toronto studio setup at 63 McCaul St" loading="lazy"/>
+          <picture><source srcset="images/offline-website-5.webp" type="image/webp"/><img src="images/offline-website-5.jpg" alt="Passport Photo Toronto studio setup at 63 McCaul St" loading="lazy"/></picture>
           <div class="setup-text">
             <h3><i class="fas fa-camera" style="color:var(--primary-color);margin-right:8px;"></i> Professional Studio Setup</h3>
             <p>Located inside Offline Studios at 63 McCaul St in downtown Toronto, our dedicated photo station produces embassy-compliant japan visa photo using professional-grade lighting and a calibrated camera — correct size, white background, no shadows, accurate colour rendering.</p>
@@ -1005,7 +1007,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="footer-container">
       <div class="footer-about">
         <div class="footer-logo">
-          <img alt="Passport Photo Toronto Logo" loading="lazy" src="images/logo-white.png"/>
+          <picture><source srcset="images/logo-white.webp" type="image/webp"/><img alt="Passport Photo Toronto Logo" loading="lazy" src="images/logo-white.png" width="150" height="100"/></picture>
         </div>
         <p>Professional passport and ID photo services in downtown Toronto. We guarantee compliance with all official requirements.</p>
       </div>
