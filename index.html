@@ -294,6 +294,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .pricing-note a { color: var(--primary-color); text-decoration: none; font-weight: 600; }
 
   /* ── Process steps ── */
+  /* ── Studio Setup ── */
+  .setup-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: center;
+    margin: 4px 0 0;
+  }
+  .setup-block img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .setup-text h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 12px;
+  }
+  .setup-text p { font-size: 0.95rem; color: #555; line-height: 1.65; }
+
   .process-steps {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -639,6 +661,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .content-card { padding: 20px 16px; }
     .content-card h2 { font-size: 1.2rem; }
     .process-steps { grid-template-columns: 1fr; gap: 12px; }
+    .setup-block { grid-template-columns: 1fr; }
+    .setup-block img { height: 200px; order: -1; }
+    .setup-text { order: 1; }
     .why-grid { grid-template-columns: 1fr; gap: 12px; }
     .services-grid { grid-template-columns: 1fr; gap: 10px; }
     .testimonials-grid { grid-template-columns: 1fr; }
@@ -766,7 +791,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   gtag('js', new Date());
   gtag('config', 'G-EFSCQB4RF3');
 </script>
-<script defer src="js/attribution.js"></script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -914,7 +938,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-        <!-- 5. OUR SERVICES -->
+        <!-- 5. STUDIO SETUP -->
+        <div class="content-card">
+          <h2><i class="fas fa-camera"></i> Professional Studio Setup</h2>
+          <div class="setup-block">
+            <img src="images/offline-website-5.jpg" alt="Passport Photo Toronto professional studio setup at 63 McCaul St" loading="lazy"/>
+            <div class="setup-text">
+              <h3><i class="fas fa-camera" style="color:var(--primary-color);margin-right:8px;"></i> Real Studio. Real Results.</h3>
+              <p>Located inside Offline Studios at 63 McCaul St in downtown Toronto, our dedicated photo station uses professional-grade lighting and a calibrated camera to ensure your photo meets every technical requirement — correct size, white background, no shadows, accurate colour rendering.</p>
+              <p style="margin-top:10px;">No phone cameras. No drugstore booths. A real photographer who gets it right the first time.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. OUR SERVICES -->
         <div class="content-card">
           <h2><i class="fas fa-th"></i> Our Services</h2>
           <div class="services-grid">
