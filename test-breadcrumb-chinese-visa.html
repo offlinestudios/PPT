@@ -380,32 +380,36 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </style>
 <!-- Service-specific Schema.org JSON-LD -->
 <script type="application/ld+json">
-   {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Chinese Visa Photos",
-        "description": "Professional Chinese visa photos compliant with Chinese consulate requirements for all visa types.",
-        "provider": {
-            "@type": "LocalBusiness",
-            "name": "Passport Photo Toronto",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "63 McCaul St",
-                "addressLocality": "Toronto",
-                "addressRegion": "ON",
-                "postalCode": "M5T 2W7",
-                "addressCountry": "CA"
-            },
-            "telephone": "(416) 986-2677"
-        },
-        "areaServed": {
-            "@type": "City",
-            "name": "Toronto"
-        },
-        "serviceType": "Photography Service",
-        "category": "Passport Photo Service"
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Chinese Visa Photos",
+  "description": "Professional Chinese visa photos compliant with Chinese consulate requirements for all visa types.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Passport Photo Toronto",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "63 McCaul St",
+      "addressLocality": "Toronto",
+      "addressRegion": "ON",
+      "postalCode": "M5T 2W7",
+      "addressCountry": "CA"
+    },
+    "telephone": "(416) 986-2677"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Toronto",
+    "containedInPlace": {
+      "@type": "AdministrativeArea",
+      "name": "ON, CA"
     }
-  </script>
+  },
+  "serviceType": "Photography Service",
+  "category": "Passport Photo Service"
+}
+</script>
 <style>
    /* Full header and nav alignment fix */
 .header-container {

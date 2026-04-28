@@ -351,32 +351,36 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </style>
 <!-- Service-specific Schema.org JSON-LD -->
 <script type="application/ld+json">
-   {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Canadian Citizenship Photos",
-        "description": "Professional citizenship photos compliant with IRCC requirements for Canadian citizenship applications.",
-        "provider": {
-            "@type": "LocalBusiness",
-            "name": "Passport Photo Toronto",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "63 McCaul St",
-                "addressLocality": "Toronto",
-                "addressRegion": "ON",
-                "postalCode": "M5T 2W7",
-                "addressCountry": "CA"
-            },
-            "telephone": "(416) 986-2677"
-        },
-        "areaServed": {
-            "@type": "City",
-            "name": "Toronto"
-        },
-        "serviceType": "Photography Service",
-        "category": "Passport Photo Service"
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Canadian Citizenship Photos",
+  "description": "Professional citizenship photos compliant with IRCC requirements for Canadian citizenship applications.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Passport Photo Toronto",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "63 McCaul St",
+      "addressLocality": "Toronto",
+      "addressRegion": "ON",
+      "postalCode": "M5T 2W7",
+      "addressCountry": "CA"
+    },
+    "telephone": "(416) 986-2677"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Toronto",
+    "containedInPlace": {
+      "@type": "AdministrativeArea",
+      "name": "ON, CA"
     }
-  </script>
+  },
+  "serviceType": "Photography Service",
+  "category": "Passport Photo Service"
+}
+</script>
 <style>
    .sidebar-box.blue a.btn-secondary {
     color: var(--dark-color) !important;
