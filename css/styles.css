@@ -1515,3 +1515,31 @@ a:hover {
 .header.scrolled {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
+
+/* === LOGO PICTURE ELEMENT ALIGNMENT FIX ===
+   The <picture> wrapper is inline by default which can cause baseline gaps.
+   Make it flex so the <img> inside aligns properly with .logo-text. */
+.logo picture {
+  display: flex;
+  align-items: center;
+}
+
+/* === MOBILE NAV MENU POSITIONING FIX ===
+   The inline style sets justify-content: flex-end on .nav-menu (correct for desktop).
+   On mobile (flex-direction: column), flex-end pushes items to the bottom.
+   Override to flex-start so items appear at the top of the panel. */
+@media (max-width: 768px) {
+  .nav-menu {
+    justify-content: flex-start !important;
+  }
+}
+
+/* === LOGO TEXT FLEX ALIGNMENT FIX ===
+   Inline styles set display:inline-block; vertical-align:middle on .logo-text.
+   In a flex container, vertical-align has no effect. Reset to flex-friendly values. */
+.logo .logo-text {
+  display: flex;
+  align-items: center;
+  line-height: 1.2;
+  vertical-align: unset;
+}
