@@ -147,6 +147,7 @@ a:hover {
 
 .logo img {
   height: 50px;
+  width: auto;
   margin-right: 10px;
 }
 
@@ -587,6 +588,7 @@ a:hover {
 
 .footer-logo img {
   height: 40px;
+  width: auto;
 }
 
 .footer-about p {
@@ -729,6 +731,7 @@ a:hover {
   
   .logo img {
     height: 40px;
+    width: auto;
   }
   
   .logo-text {
@@ -961,6 +964,7 @@ a:hover {
   
   .logo img {
     height: 40px;
+    width: auto;
   }
   
   .logo-text {
