@@ -1527,10 +1527,10 @@ a:hover {
 /* === MOBILE NAV MENU POSITIONING FIX ===
    The inline style sets justify-content: flex-end on .nav-menu (correct for desktop).
    On mobile (flex-direction: column), flex-end pushes items to the bottom.
-   Override to flex-start so items appear at the top of the panel. */
+   Override to center so items are vertically centred in the panel. */
 @media (max-width: 768px) {
   .nav-menu {
-    justify-content: flex-start !important;
+    justify-content: center !important;
   }
 }
 
