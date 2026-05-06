@@ -6,7 +6,8 @@
     studioName: "Offline Studios",
     address: "63 McCaul St, Toronto, ON M5T 2W7",
     phone: "(416) 986-2677",
-    website: "www.passportphototoronto.com"
+    website: "www.passportphototoronto.com",
+    logoSrc: "/images/logo.png"
   };
 
   var styles = [
@@ -70,7 +71,6 @@
 
   function receiptHtml(details) {
     var isPr = details.type === "pr";
-    var isCitizenship = details.type === "citizenship";
     var title = isPr ? "Permanent Resident Card Photo Receipt" : "Canadian Citizenship Photo Receipt";
     var requirementLine = isPr
       ? "Customer name and date of birth recorded for PR card photo studio information requirements."
@@ -84,13 +84,13 @@
       '<meta name="viewport" content="width=device-width, initial-scale=1.0">\n' +
       "<title>" + escapeHtml(title) + "</title>\n" +
       "<style>\n" +
-      "body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f3f4f6;color:#111827}.page{max-width:760px;margin:32px auto;padding:24px}.receipt{background:#fff;border:1px solid #d1d5db;border-radius:8px;padding:28px;box-shadow:0 10px 24px rgba(15,23,42,.08)}.top{display:flex;justify-content:space-between;gap:24px;border-bottom:2px solid #111827;padding-bottom:18px;margin-bottom:22px}.brand h1{font-size:24px;margin:0 0 4px}.brand p,.meta p{font-size:13px;line-height:1.45;margin:0;color:#4b5563}.meta{text-align:right}.section{margin-top:20px}.section h2{font-size:15px;text-transform:uppercase;letter-spacing:.08em;margin:0 0 10px;color:#374151}.row{display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid #e5e7eb;padding:10px 0;font-size:15px}.row span{color:#4b5563}.row strong{text-align:right}.note{background:#fffbeb;border:1px solid #fcd34d;border-radius:6px;padding:12px;margin-top:18px;font-size:13px;line-height:1.5}.signature{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:34px}.line{border-top:1px solid #111827;padding-top:8px;font-size:12px;color:#4b5563}@media print{body{background:#fff}.page{margin:0;max-width:none}.receipt{box-shadow:none;border:0}}@media(max-width:640px){.top,.signature{display:block}.meta{text-align:left;margin-top:14px}.line{margin-top:28px}}\n" +
+      "body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f3f4f6;color:#111827}.page{max-width:760px;margin:32px auto;padding:24px}.receipt{background:#fff;border:1px solid #d1d5db;border-radius:8px;padding:28px;box-shadow:0 10px 24px rgba(15,23,42,.08)}.top{display:flex;justify-content:space-between;gap:24px;border-bottom:2px solid #111827;padding-bottom:18px;margin-bottom:22px}.brand{display:flex;align-items:flex-start;gap:14px}.logo{width:72px;height:auto;object-fit:contain;flex:0 0 auto}.brand h1{font-size:24px;margin:0 0 4px}.brand p,.meta p{font-size:13px;line-height:1.45;margin:0;color:#4b5563}.meta{text-align:right}.section{margin-top:20px}.section h2{font-size:15px;text-transform:uppercase;letter-spacing:.08em;margin:0 0 10px;color:#374151}.row{display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid #e5e7eb;padding:10px 0;font-size:15px}.row span{color:#4b5563}.row strong{text-align:right}.note{background:#fffbeb;border:1px solid #fcd34d;border-radius:6px;padding:12px;margin-top:18px;font-size:13px;line-height:1.5}.signature{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:34px}.line{border-top:1px solid #111827;min-height:1px}@media print{body{background:#fff}.page{margin:0;max-width:none}.receipt{box-shadow:none;border:0}}@media(max-width:640px){.top,.signature{display:block}.meta{text-align:left;margin-top:14px}.line{margin-top:28px}}\n" +
       "</style>\n</head>\n<body>\n" +
       '<main class="page"><article class="receipt">\n' +
-      '<div class="top"><div class="brand"><h1>' + escapeHtml(STUDIO.businessName) + "</h1>" +
+      '<div class="top"><div class="brand"><img class="logo" src="' + escapeHtml(STUDIO.logoSrc) + '" alt="' + escapeHtml(STUDIO.businessName) + ' logo"><div><h1>' + escapeHtml(STUDIO.businessName) + "</h1>" +
       "<p>" + escapeHtml(STUDIO.studioName) + "</p>" +
       "<p>" + escapeHtml(STUDIO.address) + "</p>" +
-      "<p>" + escapeHtml(STUDIO.phone) + " | " + escapeHtml(STUDIO.website) + "</p></div>" +
+      "<p>" + escapeHtml(STUDIO.phone) + " | " + escapeHtml(STUDIO.website) + "</p></div></div>" +
       '<div class="meta"><p><strong>' + escapeHtml(title) + "</strong></p>" +
       "<p>Issued: " + escapeHtml(todayForReceipt()) + "</p>" +
       "<p>Receipt ID: PPT-" + escapeHtml(Date.now()) + "</p></div></div>\n" +
@@ -104,7 +104,7 @@
       '<div class="row"><span>Photo date</span><strong>' + escapeHtml(todayForReceipt()) + "</strong></div>" +
       "</section>\n" +
       '<div class="note">' + escapeHtml(requirementLine) + " This receipt confirms that the photo was produced by the studio listed above.</div>" +
-      '<div class="signature"><div class="line">Studio representative</div><div class="line">Customer</div></div>' +
+      '<div class="signature"><div class="line"></div><div class="line"></div></div>' +
       "\n</article></main>\n</body>\n</html>\n";
   }
 
@@ -143,8 +143,22 @@
     return y + 76;
   }
 
-  function receiptCanvas(details) {
+  function loadLogoImage() {
+    return new Promise(function (resolve) {
+      var image = new Image();
+      image.onload = function () {
+        resolve(image);
+      };
+      image.onerror = function () {
+        resolve(null);
+      };
+      image.src = STUDIO.logoSrc;
+    });
+  }
+
+  async function receiptCanvas(details) {
     var isPr = details.type === "pr";
+    var logo = await loadLogoImage();
     var canvas = document.createElement("canvas");
     canvas.width = 1600;
     canvas.height = 2200;
@@ -159,14 +173,17 @@
     ctx.lineWidth = 2;
     ctx.strokeRect(64, 64, 1472, 2072);
 
+    if (logo) {
+      ctx.drawImage(logo, 96, 112, 108, 72);
+    }
     ctx.fillStyle = "#111827";
     ctx.font = "bold 52px Arial, Helvetica, sans-serif";
-    ctx.fillText(STUDIO.businessName, 96, 156);
+    ctx.fillText(STUDIO.businessName, logo ? 232 : 96, 156);
     ctx.fillStyle = "#4b5563";
     ctx.font = "28px Arial, Helvetica, sans-serif";
-    ctx.fillText(STUDIO.studioName, 96, 204);
-    ctx.fillText(STUDIO.address, 96, 244);
-    ctx.fillText(STUDIO.phone + " | " + STUDIO.website, 96, 284);
+    ctx.fillText(STUDIO.studioName, logo ? 232 : 96, 204);
+    ctx.fillText(STUDIO.address, logo ? 232 : 96, 244);
+    ctx.fillText(STUDIO.phone + " | " + STUDIO.website, logo ? 232 : 96, 284);
 
     ctx.textAlign = "right";
     ctx.fillStyle = "#111827";
@@ -224,16 +241,12 @@
     ctx.moveTo(888, 1950);
     ctx.lineTo(1504, 1950);
     ctx.stroke();
-    ctx.fillStyle = "#4b5563";
-    ctx.font = "24px Arial, Helvetica, sans-serif";
-    ctx.fillText("Studio representative", 96, 1992);
-    ctx.fillText("Customer", 888, 1992);
 
     return canvas;
   }
 
-  function downloadJpg(filename, details) {
-    var canvas = receiptCanvas(details);
+  async function downloadJpg(filename, details) {
+    var canvas = await receiptCanvas(details);
     var url = canvas.toDataURL("image/jpeg", 0.96);
     var link = document.createElement("a");
     link.href = url;
@@ -293,13 +306,23 @@
       return { type: type, name: name, dob: dob };
     }
 
-    card.querySelector("[data-ppt-download-receipt]").addEventListener("click", function () {
+    card.querySelector("[data-ppt-download-receipt]").addEventListener("click", async function () {
       var details = collectDetails();
       if (!details) return;
+      var button = card.querySelector("[data-ppt-download-receipt]");
+      var status = card.querySelector("[data-ppt-receipt-status]");
       var slug = details.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "customer";
       var kind = details.type === "pr" ? "pr-card" : "citizenship";
-      downloadJpg("ppt-" + kind + "-receipt-" + slug + "-" + todayForFilename() + ".jpg", details);
-      card.querySelector("[data-ppt-receipt-status]").textContent = "Receipt JPG downloaded.";
+      button.disabled = true;
+      status.textContent = "Preparing receipt JPG...";
+      try {
+        await downloadJpg("ppt-" + kind + "-receipt-" + slug + "-" + todayForFilename() + ".jpg", details);
+        status.textContent = "Receipt JPG downloaded.";
+      } catch (error) {
+        status.textContent = "Receipt JPG could not be created. Try Open / Save PDF.";
+      } finally {
+        button.disabled = false;
+      }
     });
 
     card.querySelector("[data-ppt-preview-receipt]").addEventListener("click", function () {
