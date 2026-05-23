@@ -11,9 +11,9 @@
   };
 
   var styles = [
-    "[data-ppt-receipt-host]{position:relative}",
-    "[data-ppt-receipt-host] .ppt-receipt-card{position:absolute;left:12px;right:12px;bottom:12px;z-index:20}",
-    ".ppt-receipt-card{border:1px solid var(--border,#e5e7eb);background:var(--card,#fff);border-radius:8px;box-shadow:0 10px 24px rgba(15,23,42,.12);overflow:hidden}",
+    "[data-ppt-receipt-host]{position:static}",
+    "[data-ppt-receipt-host] .ppt-receipt-card{position:static;margin-top:12px;z-index:auto}",
+    ".ppt-receipt-card{border:1px solid var(--border,#e5e7eb);background:var(--card,#fff);border-radius:8px;box-shadow:0 6px 18px rgba(15,23,42,.08);overflow:hidden}",
     ".ppt-receipt-card summary{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;cursor:pointer;list-style:none}",
     ".ppt-receipt-card summary::-webkit-details-marker{display:none}",
     ".ppt-receipt-card summary:after{content:'Open';font-size:11px;font-weight:700;color:var(--muted-foreground,#6b7280);text-transform:uppercase;letter-spacing:.04em}",
@@ -376,9 +376,10 @@
       return;
     }
     var card = existing || buildReceiptCard();
-    exportControls.parentElement.setAttribute("data-ppt-receipt-host", "true");
-    if (card.parentElement !== exportControls.parentElement || card.previousElementSibling !== exportControls) {
-      exportControls.insertAdjacentElement("afterend", card);
+    var host = exportControls.parentElement;
+    host.setAttribute("data-ppt-receipt-host", "true");
+    if (card.parentElement !== host || card.nextElementSibling !== null) {
+      host.appendChild(card);
     }
   }
 
