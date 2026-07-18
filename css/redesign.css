@@ -1231,8 +1231,7 @@ body.book-open { overflow: hidden; }
   .area-link,
   .site-footer a,
   .drawer-contact a,
-  .sitemap-col a,
-  .header-phone {
+  .sitemap-col a {
     min-height: 44px;
     display: inline-flex;
     align-items: center;
@@ -1282,4 +1281,31 @@ body.book-open { overflow: hidden; }
 
   /* Footer link rows were flush at 44px with no separation. */
   .site-footer .links { gap: 2px 16px; }
+}
+
+/* ==========================================================================
+   Mobile header sizing + flat canvas (prototype 2a)
+   ========================================================================== */
+@media (max-width: 899px) {
+  /* Belt and braces: the phone number and header CTA live in the drawer and
+     the sticky bar on mobile, never the header bar. */
+  .header-phone, .header-right .btn { display: none !important; }
+
+  /* The 2a sizes were drawn in a 402px device frame and read small on a real
+     handset; scaled to sit in the range modern mobile headers use. */
+  .brand img { height: 34px; }
+  .brand span { font-size: 15px; letter-spacing: 0.03em; }
+  .hamburger { font-size: 22px; }
+
+  /* 2a is a flat #f8f9fa canvas with white cards — it has none of the
+     full-width white bands the desktop design uses. */
+  .band, .band-b {
+    background: transparent;
+    border-top: 0;
+    border-bottom: 0;
+  }
+
+  /* A 6px bottom left content hugging the next section; 14px gives the page a
+     steadier rhythm (38px between sections) without drifting from the design. */
+  .section { padding: 24px 20px 14px; }
 }
