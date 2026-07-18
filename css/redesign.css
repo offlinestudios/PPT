@@ -111,7 +111,11 @@ h1, h2, h3 { font-family: var(--font-head); color: var(--navy); margin: 0; }
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  max-width: none;
+  /* The prototype's desktop frame is exactly 1440px with 44px gutters. Capping
+     at that width keeps the design intact at 1440 and stops the logo drifting
+     to the far edge of wider monitors while the content stays centred at 1180. */
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 0 44px;
 }
 .brand { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
@@ -1215,4 +1219,43 @@ body.book-open { overflow: hidden; }
     backdrop-filter: blur(14px);
     padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
   }
+}
+
+/* ==========================================================================
+   Touch target sizing — 44x44 minimum (Apple HIG; WCAG 2.2 SC 2.5.8 asks 24)
+   ========================================================================== */
+@media (max-width: 899px) {
+  .btn,
+  .chip,
+  .drawer a.drawer-link,
+  .area-link,
+  .site-footer a,
+  .drawer-contact a,
+  .sitemap-col a,
+  .header-phone {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+  .btn-block, .area-link { justify-content: center; }
+  .drawer a.drawer-link { justify-content: space-between; }
+
+  /* Footer and sitemap link lists: keep them readable but tappable. */
+  .site-footer .links { gap: 0 16px; }
+  .site-footer .links a { padding: 4px 0; }
+  .site-footer .ig { padding: 6px 0; }
+  .sitemap-col a { padding: 4px 0; }
+
+  /* Icon buttons need a real target even though the mark is small. */
+  .hamburger { width: 44px; height: 44px; }
+  .drawer-close, .book-close { width: 44px; height: 44px; font-size: 16px; }
+
+  /* The brand lockup is a link back to home. */
+  .brand { min-height: 44px; }
+
+  /* Sticky bar CTA is the primary conversion control — keep it comfortable. */
+  .sticky-bar .btn { min-height: 48px; padding: 14px 22px; }
+
+  /* Chips read as pills, so give them height without stretching the label. */
+  .chiplist .chip { padding: 12px 16px; }
 }

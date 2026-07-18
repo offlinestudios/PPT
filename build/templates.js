@@ -96,7 +96,7 @@ function footer() {
   return `<footer class="site-footer">
   <div class="shell">
     <div class="col brand-col">
-      <img class="flogo" src="images/logo-gold.png" alt="Passport Photo Toronto">
+      <img class="flogo" src="images/logo-white-transparent.png" alt="Passport Photo Toronto">
       <span class="blurb">Professional passport and ID photo services in downtown Toronto. We guarantee compliance with all official requirements.</span>
       <a class="ig" href="${IG}" target="_blank" rel="noopener noreferrer">Follow us on Instagram</a>
     </div>
