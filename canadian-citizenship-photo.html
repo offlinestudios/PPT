@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <!-- Google Tag Manager -->
@@ -15,444 +14,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta content="Professional Canadian citizenship photos in downtown Toronto. IRCC-compliant with guaranteed acceptance. Same-day service with digital copies. Walk-ins welcome." name="description"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="css/styles.css" rel="stylesheet"/>
+<link href="css/redesign.css" rel="stylesheet"/>
 <!-- Favicon -->
 <link href="images/favicon.ico" rel="icon"/>
-<style>
-   /* Page-specific styles for U.S. Passport Photos page */
-        .page-banner {
-            background-color: var(--light-color);
-            padding: 15px 0 50px;
-            text-align: center;
-            margin-top: 70px; /* Account for fixed header */
-        }
-        
-        .page-banner h1 {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-        
-        .page-banner p {
-            font-size: 1.1rem;
-            color: #666;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        /* Main content layout */
-        .main-layout {
-            display: grid;
-            grid-template-columns: 2fr 1fr !important;
-            gap: 30px;
-            margin-top: 30px;
-        }
-        
-        .main-content {
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: var(--box-shadow);
-        }
-        
-        .sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        
-        .sidebar-box {
-            background-color: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: var(--box-shadow);
-        }
-        
-        .sidebar-box.blue {
-            background: linear-gradient(to bottom, rgba(43, 75, 140, 0.9), rgba(43, 75, 140, 0.9));
-            color: white;
-        }
-        
-        .sidebar-box.blue h3 {
-            color: white;
-        }
-        
-        /* Photo specs styles */
-        .photo-specs {
-            display: flex;
-            align-items: flex-start;
-            margin: 30px 0;
-            gap: 30px;
-        }
-        
-        .photo-specs img {
-            max-width: 250px;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: var(--box-shadow);
-        }
-        
-        .photo-specs-text {
-            flex: 1;
-        }
-        
-        /* Lists */
-        ul {
-            margin-left: 20px;
-            margin-bottom: 20px;
-        }
-        
-        ul li {
-            margin-bottom: 8px;
-        }
-        
-        ol {
-            margin-left: 20px;
-            margin-bottom: 20px;
-        }
-        
-        ol li {
-            margin-bottom: 12px;
-        }
-        
-        /* Related services */
-        .related-service {
-            display: flex;
-            align-items: center;
-            padding: 12px;
-            margin-bottom: 8px;
-            border-bottom: 1px solid var(--border-color);
-            text-decoration: none;
-            color: var(--text-color);
-            transition: var(--transition);
-            border-radius: 4px;
-        }
-        
-        .related-service:last-child {
-            margin-bottom: 0;
-            border-bottom: none;
-        }
-        
-        .related-service:hover {
-            background-color: var(--light-color);
-            color: var(--primary-color);
-        }
-        
-        .icon {
-            margin-right: 12px;
-            color: #666;
-            width: 24px;
-            text-align: center;
-        }
-        
-        /* Location info */
-        .location-info {
-            display: flex;
-            align-items: center;
-            margin-bottom: 8px;
-        }
-        
-        .location-info .icon {
-            margin-right: 8px;
-            color: #666;
-            width: 20px;
-            text-align: center;
-        }
-        
-        /* Grey icons */
-        .grey-icon {
-            display: inline-block;
-            width: 24px;
-            height: 24px;
-            margin-right: 10px;
-            color: #666;
-            vertical-align: middle;
-        }
-        
-                    .photo-specs {
-                flex-direction: column;
-            }
-            
-            .photo-specs img {
-                margin-bottom: 20px;
-            }
-        }
-    
-.sidebar-box.blue h3,
-.sidebar-box.blue p,
-.sidebar-box.blue a {
-    color: white;
-}
-        .pricing-cards-section {
-            margin: 30px 0;
-            padding: 20px 0;
-            background-color: var(--light-color);
-            border-radius: 8px;
-        }
-        
-        .pricing-cards-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            max-width: 100%;
-            margin: 0 auto;
-            padding: 0 10px;
-        }
-        
-        .pricing-card {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            overflow: visible;
-        }
-        
-        .pricing-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-        }
-        
-        .pricing-card.featured {
-            border: 3px solid var(--primary-color);
-        }
-        
-        .pricing-card.featured:hover {
-            transform: scale(1.05) translateY(-8px);
-        }
-        
-        
-        .pricing-card-header {
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            color: white;
-            padding: 20px 20px;
-            text-align: center;
-        }
-        
-        .pricing-card-header h3 {
-            color: white;
-            font-size: 1.3rem;
-            margin: 0;
-            font-weight: 700;
-        }
-        
-        .pricing-card-price {
-            background: white;
-            padding: 20px 20px;
-            text-align: center;
-            border-bottom: 2px solid var(--light-color);
-        }
-        
-        .price-amount {
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: var(--primary-color);
-            font-family: var(--font-primary);
-        }
-        
-        .pricing-card-content {
-            padding: 20px 20px;
-            flex-grow: 1;
-            min-height: 200px;
-        }
-        
-        .pricing-features {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .pricing-features li {
-            padding: 8px 0;
-            color: var(--text-color);
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            border-bottom: 1px solid var(--light-color);
-        }
-        
-        .pricing-features li:last-child {
-            border-bottom: none;
-        }
-        
-        .pricing-features li i {
-            color: var(--success-color);
-            margin-right: 10px;
-            font-size: 0.9rem;
-            min-width: 18px;
-        }
-        
-        .pricing-card-footer {
-            padding: 20px 20px 20px 20px;
-            text-align: center;
-            background: var(--light-color);
-        }
-        
-        .btn-pricing {
-            display: block;
-            width: 100%;
-            padding: 12px 20px;
-            background: var(--primary-color);
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            margin-bottom: 0;
-            margin-bottom: 0;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-pricing:hover {
-            background: var(--accent-color);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        }
-        
-        /* Responsive design for pricing cards */
-        @media (max-width: 768px) {
-            .pricing-cards-container {
-            display: grid;
-            grid-template-columns:  1fr;
-            gap: 20px;
-            max-width: 100%;
-            margin: 0 auto;
-            padding: 0 10px;
-        }
-            
-            .pricing-card.featured {
-                transform: scale(1);
-            }
-            
-            .pricing-card.featured:hover {
-                transform: translateY(-8px);
-            }
-        }
 
-  
-        @media (max-width: 768px) {
-            .page-banner {
-                padding: 15px 0 40px;
-            }
-            
-            .page-banner h1 {
-                font-size: 2rem;
-            }
-            
-            .main-layout {
-                grid-template-columns: 1fr !important;
-            }
-        }
-
-</style>
 <!-- Service-specific Schema.org JSON-LD -->
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Canadian Citizenship Photos", "description": "Professional citizenship photos compliant with IRCC requirements for Canadian citizenship applications.", "provider": {"@type": "LocalBusiness", "name": "Passport Photo Toronto", "address": {"@type": "PostalAddress", "streetAddress": "63 McCaul St", "addressLocality": "Toronto", "addressRegion": "ON", "postalCode": "M5T 2W7", "addressCountry": "CA"}, "telephone": "(416) 986-2677"}, "areaServed": {"@type": "City", "name": "Toronto", "containedInPlace": {"@type": "AdministrativeArea", "name": "ON, CA"}}, "serviceType": "Photography Service", "category": "Passport Photo Service", "offers": {"url": "https://www.passportphototoronto.com/canadian-citizenship-photo.html"}}</script>
-<style>
-   .sidebar-box.blue a.btn-secondary {
-    color: var(--dark-color) !important;
-}
-  </style>
-<style>
-   /* Full header and nav alignment fix */
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.logo {
-  margin-right: auto;
-  padding: 0;
-  margin-left: 0;
-}
-
-.logo-text {
-  margin: 0;
-  padding: 0;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.header nav {
-  margin: 0;
-  padding: 0;
-  flex-grow: 1;
-}
-
-.nav-menu {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  justify-content: flex-end;
-}
-  
-/* Dropdown Navigation Menu Styles */
-.nav-item.dropdown {
-    position: relative;
-}
-
-.nav-link.dropdown-toggle {
-    cursor: pointer;
-}
-
-.dropdown-menu {
-    display: none !important;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: white;
-    min-width: 250px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    border-radius: 4px;
-    padding: 8px 0;
-    margin-top: 0;
-    z-index: 1000;
-    list-style: none;
-}
-
-.nav-item.dropdown:hover .dropdown-menu {
-    display: block !important;
-}
-
-.dropdown-item {
-    display: block;
-    padding: 10px 20px;
-    color: #333;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    font-size: 0.95rem;
-}
-
-.dropdown-item:hover {
-    background-color: var(--light-color);
-    color: var(--primary-color);
-}
-
-/* Mobile dropdown styles */
-@media (max-width: 768px) {
-    .dropdown-menu {
-        position: static;
-        box-shadow: none;
-        background: var(--light-color);
-        margin-left: 20px;
-        margin-top: 8px;
-        margin-bottom: 8px;
-    }
-    
-    .nav-item.dropdown .dropdown-menu {
-        display: none !important;
-    }
-    
-    .nav-item.dropdown.active .dropdown-menu {
-        display: block;
-    }
-}
-
-</style>
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-11397258552"></script>
 <script>
@@ -473,766 +41,227 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </script>
 <script defer="" src="js/attribution.js"></script>
 </head>
-<body>
-<!-- Google Tag Manager (noscript) -->
+<body class="has-sticky-bar">
 <noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-55RV84CT" style="display:none;visibility:hidden" width="0"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<!-- Header -->
-<header class="header">
-<div class="container header-container">
-<a class="logo" href="/">
-<picture><source srcset="images/logo.webp" type="image/webp"/><img alt="Passport Photo Toronto Logo" loading="lazy" src="images/logo.png"/></picture>
-<span class="logo-text">
-      PASSPORT PHOTO
-     </span>
-</a>
-<nav>
-<ul class="nav-menu">
-<li class="nav-item">
-<a class="nav-link" href="/">
-        Home
-       </a>
-</li>
-<li class="nav-item dropdown">
-<a class="nav-link dropdown-toggle" href="services.html">
-        Services
-       </a>
-<ul class="dropdown-menu">
-<li><a class="dropdown-item" href="services.html">All Services</a></li>
-<li><a class="dropdown-item" href="passport-photos-international.html">Passport Photos by Country</a></li>
-<li><a class="dropdown-item" href="visa-photos-international.html">Visa Photos by Country</a></li>
-<li><a class="dropdown-item" href="professional-license-photos-hub.html">Professional Licenses &amp; IDs</a></li>
-<li><a class="dropdown-item" href="document-services.html">Printing, Scanning &amp; Photocopying</a></li>
-</ul>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="pricing.html">
-        Pricing
-       </a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="reviews.html">
-        Reviews
-       </a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="faq.html">
-        FAQ
-       </a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="location.html">
-        Location
-       </a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="about.html">
-        About
-       </a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="blog.html">
-        Blog
-       </a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="contact.html">
-        Contact
-       </a>
-</li>
-</ul>
-<button class="mobile-menu-btn">
-<i class="fas fa-bars">
-</i>
-</button>
-</nav>
-</div>
-</header>
-<!-- Page Banner -->
-<section class="page-banner">
-<div class="container">
-<nav class="breadcrumb-nav">
-<ol class="breadcrumb">
-<li class="breadcrumb-item"><a href="/">Home</a></li>
-<li class="breadcrumb-item"><a href="services.html">Services</a></li>
-<li class="breadcrumb-item"><a href="professional-license-photos-hub.html">Immigration Documents</a></li>
-<li class="breadcrumb-item">Canadian Citizenship Photos</li>
-</ol>
-</nav>
-<h1>
-     Canadian Citizenship Photo
-    </h1>
-<p>
-     Professional, IRCC-compliant citizenship photos with guaranteed acceptance for all Canadian citizenship applications.
-    </p>
-</div>
-</section>
-<!-- Main Content -->
-<section class="section">
-<div class="container">
-<div class="main-layout">
-<div class="main-content">
-<h2>
-       Canadian Citizenship Photos in Downtown Toronto
-      </h2>
-<p>
-       Need photos for your Canadian citizenship application? Passport Photo Toronto provides professional citizenship photos that strictly adhere to all Immigration, Refugees and Citizenship Canada (IRCC) requirements. Our expert photographers ensure your photos will be accepted for your citizenship application the first time.
-      </p>
-<!-- Photo Requirements Section -->
-<div class="photo-requirements-container">
-<div class="photo-requirements-image">
-<picture><source srcset="images/canadian-citizenship-photo-spec.webp" type="image/webp"/><img alt="Canadian Citizenship Photo Requirements" class="img-fluid" loading="lazy" src="images/canadian-citizenship-photo-spec.jpg"/></picture>
-<div class="measurement-line horizontal-line">
-</div>
-<div class="measurement-line vertical-line">
-</div>
-</div>
-<div class="photo-requirements-list">
-<h3>
-         Key Photo Requirements
-        </h3>
-<ul class="requirements-checklist">
-<li>
-<i class="fas fa-check">
-</i>
-          Size: 50mm x 70mm
-         </li>
-<li>
-<i class="fas fa-check">
-</i>
-          White background
-         </li>
-<li>
-<i class="fas fa-check">
-</i>
-          Full face view directly facing camera
-         </li>
-<li>
-<i class="fas fa-check">
-</i>
-          Neutral facial expression
-         </li>
-<li>
-<i class="fas fa-check">
-</i>
-          Eyes open and clearly visible
-         </li>
-<li>
-<i class="fas fa-check">
-</i>
-          No shadows on face or background
-         </li>
-<li>
-<i class="fas fa-check">
-</i>
-          No glasses (as of 2021 IRCC regulations)
-         </li>
-<li>
-<i class="fas fa-check">
-</i>
-          Recent photo (within 6 months)
-         </li>
-</ul>
-</div>
-</div>
-<h2>
-       Canadian Citizenship Photo Requirements
-      </h2>
-<p>
-       IRCC has specific requirements for citizenship photos. Our service ensures your photos will comply with all these requirements:
-      </p>
-<ul>
-<li>
-        Size: 50mm x 70mm (standard Canadian citizenship photo size)
-       </li>
-<li>
-        Recent photograph taken within the last 6 months
-       </li>
-<li>
-        Color photo with a white or light-colored background
-       </li>
-<li>
-        Full face view directly facing the camera
-       </li>
-<li>
-        Neutral facial expression with mouth closed
-       </li>
-<li>
-        Eyes open and clearly visible
-       </li>
-<li>
-        No shadows on the face or background
-       </li>
-<li>
-        No glasses (as of 2021 IRCC regulations)
-       </li>
-<li>
-        No head coverings (except for religious reasons)
-       </li>
-<li>
-        Proper lighting with no red-eye effect
-       </li>
-<!-- Pricing Cards Section -->
-<div class="pricing-cards-section">
-<h2 style="text-align: center; margin-bottom: 2rem;">Choose Your Package</h2>
-<div class="pricing-cards-container">
-<!-- Printed Copies Card -->
-<div class="pricing-card">
-<div class="pricing-card-header">
-<h3>Printed Photo Copies</h3>
-</div>
-<div class="pricing-card-price">
-<span class="price-amount">$24.99</span>
-</div>
-<div class="pricing-card-content">
-<ul class="pricing-features">
-<li><i class="fas fa-check"></i> Two identical printed photos</li>
-<li><i class="fas fa-check"></i> High-quality photographic paper</li>
-<li><i class="fas fa-check"></i> Government compliant</li>
-</ul>
-</div>
-<div class="pricing-card-footer">
-<a class="btn btn-pricing" href="scheduling.html">Book Appointment</a>
-</div>
-</div>
-<!-- Digital Copy Card -->
-<div class="pricing-card">
-<div class="pricing-card-header">
-<h3>Digital Photo Copy</h3>
-</div>
-<div class="pricing-card-price">
-<span class="price-amount">$24.99</span>
-</div>
-<div class="pricing-card-content">
-<ul class="pricing-features">
-<li><i class="fas fa-check"></i> High-resolution digital file</li>
-<li><i class="fas fa-check"></i> Sent via email</li>
-<li><i class="fas fa-check"></i> Government compliant</li>
-<li><i class="fas fa-check"></i> Perfect for online applications</li>
-</ul>
-</div>
-<div class="pricing-card-footer">
-<a class="btn btn-pricing" href="scheduling.html">Book Appointment</a>
-</div>
-</div>
-<!-- Printed + Digital Card (Featured) -->
-<div class="pricing-card featured">
-<div class="pricing-card-header">
-<h3>Printed + Digital</h3>
-</div>
-<div class="pricing-card-price">
-<span class="price-amount">$39.99</span>
-</div>
-<div class="pricing-card-content">
-<ul class="pricing-features">
-<li><i class="fas fa-check"></i> Two identical printed photos</li>
-<li><i class="fas fa-check"></i> High-resolution digital file</li>
-<li><i class="fas fa-check"></i> Government compliant</li>
-<li><i class="fas fa-check"></i> Complete package for all needs</li>
-</ul>
-</div>
-<div class="pricing-card-footer">
-<a class="btn btn-pricing" href="scheduling.html">Book Appointment</a>
-</div>
-</div>
-</div>
-</div>
-<!-- End Pricing Cards Section -->
-</ul>
-<h2>
-       Our Canadian Citizenship Photo Service
-      </h2>
-<p>
-       Our professional citizenship photo service includes:
-      </p>
-<ul>
-<li>
-        Expert photography with proper lighting and positioning
-       </li>
-<li>
-        Verification that your photos meet all IRCC requirements
-       </li>
-<li>
-        Two printed photos on high-quality photo paper
-       </li>
-<li>
-        Digital copy of your photo sent via email
-       </li>
-<li>
-        100% acceptance guarantee or we'll retake your photos for free
-       </li>
-<li>
-        Fast service - most customers are in and out within 15 minutes
-       </li>
-</ul>
-<h2>
-       Canadian Citizenship Application Information
-      </h2>
-<p>
-       While we specialize in citizenship photos, here's some general information about Canadian citizenship applications:
-      </p>
-<ul>
-<li>
-        You must be a permanent resident and have lived in Canada for at least 3 out of the last 5 years (1,095 days)
-       </li>
-<li>
-        You must have filed your taxes for at least 3 years during the 5-year period
-       </li>
-<li>
-        You must pass a citizenship test if you're between 18 and 54 years old
-       </li>
-<li>
-        You must prove your language skills in English or French
-       </li>
-<li>
-        Processing times vary, but typically take 12-18 months for standard applications
-       </li>
-<li>
-        Two identical photos are required for the application
-       </li>
-<li>
-        The photographer must sign, date, and print their name on the back of one photo
-       </li>
-</ul>
-<h2>
-       Why Choose Our Canadian Citizenship Photo Service?
-      </h2>
-<p>
-       There are many reasons why Toronto residents trust us for their citizenship photos:
-      </p>
-<ul>
-<li>
-<strong>
-         Guaranteed Acceptance:
-        </strong>
-        If your photos are rejected by IRCC for any reason related to our service, we'll retake them at no additional cost.
-       </li>
-<li>
-<strong>
-         Experienced Photographers:
-        </strong>
-        Our photographers are trained specifically in IRCC photo requirements and stay up-to-date with the latest regulations.
-       </li>
-<li>
-<strong>
-         Convenient Downtown Location:
-        </strong>
-        Our studio is centrally located in downtown Toronto, easily accessible by public transit.
-       </li>
-<li>
-<strong>
-         No Appointment Necessary:
-        </strong>
-        Walk-ins are welcome, though appointments are recommended during busy periods.
-       </li>
-</ul>
-<h2>
-       Common Citizenship Photo Mistakes to Avoid
-      </h2>
-<p>
-       Many citizenship applications are delayed or rejected due to photo issues. Common mistakes include:
-      </p>
-<ul>
-<li>
-        Incorrect photo size
-       </li>
-<li>
-        Shadows on face or background
-       </li>
-<li>
-        Wearing glasses (no longer permitted in citizenship photos)
-       </li>
-<li>
-        Improper facial expression (smiling, frowning, etc.)
-       </li>
-<li>
-        Poor lighting or contrast
-       </li>
-<li>
-        Photos taken too long ago (must be within 6 months)
-       </li>
-<li>
-        Missing photographer information on the back of the photo
-       </li>
-</ul>
-<p>
-       Our professional service helps you avoid these common pitfalls, ensuring your application proceeds smoothly.
-      </p>
-<p>
-       For the most current information about Canadian citizenship applications, please visit the official
-       <a href="#" target="_blank">
-        IRCC website
-       </a>
-       .
-      </p>
-</div>
-<div class="sidebar">
-<div class="sidebar-box blue">
-<h3>
-<i class="fas fa-camera grey-icon">
-</i>
-        Get Your Canadian Citizenship Photo
-       </h3>
-<p>
-        Professional canadian citizenship photo that meet all official requirements. Guaranteed acceptance or we'll retake them for free.
-       </p>
-<a class="btn btn-secondary btn-lg" href="scheduling.html">
-        BOOK NOW - $24.99
-       </a>
-</div>
-<div class="sidebar-box">
-<h3>
-<i class="fas fa-map-marker-alt grey-icon">
-</i>
-        Our Location
-       </h3>
-<div class="location-info">
-<i class="fas fa-map-marker-alt icon">
-</i>
-<span>
-         63 McCaul St, Toronto, ON
-        </span>
-</div>
-<div class="location-info">
-<i class="fas fa-phone icon">
-</i>
-<span>
-         (416) 986-2677
-        </span>
-</div>
-<div class="location-info">
-<i class="fas fa-clock icon">
-</i>
-<span>
-         Mon-Fri: 9:00 AM - 6:00 PM<br/>Sat-Sun: 12:00 PM - 6:00 PM
-        </span>
-</div>
-<a class="btn btn-secondary" href="location.html">
-        VIEW MAP
-       </a>
-</div>
-<div class="sidebar-box">
-<h3>
-<i class="fas fa-list grey-icon">
-</i>
-        Related Services
-       </h3>
-<a class="related-service" href="canadian-passport-photos.html">
-<i class="fas fa-passport icon">
-</i>
-<span>
-         Canadian Passport Photos
-        </span>
-</a>
-<a class="related-service" href="https://www.passportphototoronto.com/us-immigration-photos.html">
-<i class="fas fa-id-card icon">
-</i>
-<span>
-         U.S Visa Photos
-        </span>
-</a>
-<a class="related-service" href="schengen-visa-photos">
-<i class="fas fa-certificate icon">
-</i>
-<span>
-         Schengen Visa Photos
-        </span>
-</a>
-<a class="related-service" href="pr-card-photos">
-<i class="fas fa-id-badge icon">
-</i>
-<span>
-         PR Card Photos
-        </span>
-</a>
-<a class="related-service" href="https://www.passportphototoronto.com/digital-id-photos.html">
-<i class="fas fa-download icon">
-</i>
-<span>
-         Digital Photo Services
-        </span>
-</a>
-</div>
-<div class="sidebar-box">
-<h3>
-<i class="fas fa-question-circle grey-icon">
-</i>
-        Need Help?
-       </h3>
-<p>
-        Have questions about Canadian Citizenship photo requirements? Our experts are here to help ensure your photos meet all specifications.
-       </p>
-<a class="btn btn-secondary" href="contact.html">
-        CONTACT US
-       </a>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- CTA Section -->
-<section class="section cta">
-<div class="container">
-<h2 class="cta-title">
-     Ready for Your Canadian Citizenship Photos?
-    </h2>
-<p class="cta-subtitle">
-     Visit our downtown Toronto studio for professional canadian citizenship photo photos that meet all requirements. No appointment necessary.
-    </p>
-<a class="btn btn-secondary btn-lg" href="scheduling.html">
-     GET YOUR PHOTOS TODAY
+<header class="site-header">
+  <div class="shell">
+    <a class="brand" href="index.html">
+      <img src="images/logo.png" alt="Passport Photo Toronto">
+      <span>PASSPORT PHOTO</span>
     </a>
-</div>
-</section>
-<!-- Footer -->
-<footer class="footer">
-<div class="container">
-<div class="footer-container">
-<div class="footer-about">
-<div class="footer-logo">
-<picture><source srcset="images/logo-white.webp" type="image/webp"/><img alt="Passport Photo Toronto Logo" loading="lazy" src="images/logo-white.png"/></picture>
-</div>
-<p>
-       Professional passport and ID photo services in downtown Toronto. We guarantee compliance with all official requirements.
-      </p>
-</div>
-<div class="footer-links">
-<h3 class="footer-title">
-       Quick Links
-      </h3>
-<ul class="footer-links">
-<li class="footer-link">
-<a href="/">
-         Home
-        </a>
-</li>
-<li class="footer-link">
-<a href="services.html">
-         Services
-        </a>
-</li>
-<li class="footer-link">
-<a href="pricing.html">
-         Pricing
-        </a>
-</li>
+    <nav class="nav-links" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="services.html" class="active" aria-current="page">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="samples.html">Samples</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="faq.html">FAQ</a>
+        <a href="location.html">Location</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-right">
+      <a class="header-phone" href="tel:4169862677">(416) 986-2677</a>
+      <button type="button" class="btn btn-gold" data-book>Book Appointment</button>
+      <button type="button" class="hamburger" aria-label="Open menu">&#9776;</button>
+    </div>
+  </div>
+</header>
+<div class="drawer-backdrop"></div>
+<nav class="drawer" aria-label="Mobile">
+  <button type="button" class="drawer-close" aria-label="Close menu">&#10005;</button>
+  <a class="drawer-link" href="index.html">Home</a>
+  <a class="drawer-link" href="services.html">Services</a>
+  <a class="drawer-link" href="pricing.html">Pricing</a>
+  <a class="drawer-link" href="samples.html">Samples</a>
+  <a class="drawer-link" href="reviews.html">Reviews</a>
+  <a class="drawer-link" href="faq.html">FAQ</a>
+  <a class="drawer-link" href="location.html">Location</a>
+  <a class="drawer-link" href="blog.html">Blog</a>
+  <a class="drawer-link" href="contact.html">Contact</a>
+  <div class="drawer-contact">
+    <a href="tel:4169862677">(416) 986-2677</a>
+    <a href="mailto:info@passportphototoronto.com">info@passportphototoronto.com</a>
+    <span>Mon–Fri: 9:00 AM – 6:00 PM<br>Sat–Sun: 12:00 PM – 6:00 PM</span>
+    <button type="button" class="btn btn-gold btn-block" data-book>Book Appointment</button>
+  </div>
+</nav>
+<main>
+<div class="page detail-page">
+  <div class="breadcrumb"><a href="index.html">Home</a> / <a href="services.html">Services</a> / Canadian Citizenship</div>
+  <div class="detail">
+    <div class="detail-main">
+      <div class="hero-col s-hero" style="gap:12px">
+        <h1>Canadian Citizenship Photos</h1>
+        <p class="lede">Government-compliant photos, ready in 10 minutes — guaranteed acceptance, walk-ins welcome.</p>
+        <button type="button" class="btn btn-gold" data-book>Book Appointment</button>
+      </div>
 
-<li class="footer-link">
-<a href="reviews.html">
-         Reviews
-        </a>
-</li>
-<li class="footer-link">
-<a href="about.html">
-         About
-        </a>
-</li>
-<li class="footer-link">
-<a href="faq.html">
-         FAQ
-        </a>
-</li>
-<li class="footer-link">
-<a href="location.html">
-         Location
-        </a>
-</li>
-<li class="footer-link">
-<a href="contact.html">
-         Contact
-        </a>
-</li>
-<li class="footer-link">
-<a href="jobs.html">
-         Careers
-        </a>
-</li>
-<li class="footer-link">
-<a href="trusted-vendors.html">
-         Trusted Vendors
-        </a>
-</li>
-<li class="footer-link">
-<a href="blog.html">
-         Blog
-        </a>
-</li>
-<li class="footer-link">
-<a href="refund-policy.html">
-         Refund Policy
-        </a>
-</li>
-<li class="footer-link">
-<a href="digital-photo-payment.html">
-         Digital Photo Payment
-        </a>
-</li>
-<li class="footer-link">
-<a href="sitemap.html">
-         Sitemap
-        </a>
-</li>
-</ul>
-</div>
-<div class="footer-services">
-<h3 class="footer-title">
-       Our Services
-      </h3>
-<ul class="footer-links">
-<li class="footer-link">
-<a href="canadian-passport-photos.html">
-         Canadian Passport
-        </a>
-</li>
-<li class="footer-link">
-<a href="pr-card-photos.html">
-         Canadian PR Card
-        </a>
-</li>
-<li class="footer-link">
-<a href="us-immigration-photos.html">
-         US Visa
-        </a>
-</li>
-<li class="footer-link">
-<a href="chinese-visa-photos.html">
-         Chinese Visa
-        </a>
-</li>
-<li class="footer-link">
-<a href="schengen-visa-photos.html">
-         Schengen Visa
-        </a>
-</li>
-<li class="footer-link">
-<a href="us-passport-photos.html">
-         US Passport
-        </a>
-</li>
-<li class="footer-link">
-<a href="oci-photo.html">
-         Indian OCI
-        </a>
-</li>
-<li class="footer-link">
-<a href="study-permit-photos.html">
-         Study Permit
-        </a>
-</li>
-<li class="footer-link">
-<a href="work-permit-photo.html">
-         Work Permit
-        </a>
-</li>
-</ul>
-</div>
-<div class="footer-contact">
-<h3 class="footer-title">
-       Contact Us
-      </h3>
-<div class="footer-contact-item">
-<i class="fas fa-map-marker-alt footer-contact-icon">
-</i>
-<div>
-<p>
-         63 McCaul St
-        </p>
-<p>
-         Toronto, ON M5T 2W7
-        </p>
-</div>
-</div>
-<div class="footer-contact-item">
-<i class="fas fa-phone footer-contact-icon">
-</i>
-<p>
-        (416) 986-2677
-       </p>
-</div>
-<div class="footer-contact-item">
-<i class="fas fa-envelope footer-contact-icon">
-</i>
-<p>
-<a href="mailto:info@passportphototoronto.com" style="color: rgba(255, 255, 255, 0.7); text-decoration: none;">info@passportphototoronto.com</a>
-</p>
-</div>
-<div class="footer-contact-item">
-<i class="fas fa-clock footer-contact-icon">
-</i>
-<p>
-        Mon-Fri: 9:00 AM - 6:00 PM<br/>Sat-Sun: 12:00 PM - 6:00 PM
-       </p>
-</div>
-</div>
-</div>
-<div class="footer-bottom">
-<div class="footer-social">
-<h4>
-       Follow Us
-      </h4>
-<div class="social-links">
-<a class="social-link" href="https://instagram.com/passportphototoronto" rel="noopener noreferrer" target="_blank">
-<i class="fab fa-instagram">
-</i>
-</a>
+      <div class="panel s-req">
+        <span class="ptitle">Photo requirements</span>
+        <div class="req-grid">
+      <div class="req">Size: 50mm × 70mm</div>
+      <div class="req">Plain white or light background</div>
+      <div class="req">Full face view, facing camera</div>
+      <div class="req">Neutral facial expression</div>
+      <div class="req">Eyes open and clearly visible</div>
+      <div class="req">No shadows on face or background</div>
+      <div class="req">Face height 31–36mm chin to crown</div>
+      <div class="req">Recent photo (within 6 months)</div>
+        </div>
+      </div>
 
+      <div class="panel s-price">
+      <span class="ptitle">Pricing</span>
+      <div class="price-row"><span>Printed photos (×2)</span><span>$24.99</span></div>
+      <div class="price-row"><span>Digital copy</span><span>$24.99</span></div>
+      <div class="price-row total"><span>Prints + digital</span><span>$39.99</span></div>
+    </div>
 
+      <div class="panel studio-panel s-studio">
+        <img src="images/offline-website-5.jpg" alt="Passport Photo Toronto studio setup at 63 McCaul St" loading="lazy">
+        <div>
+          <span class="t">Professional studio setup</span>
+          <p>Located inside Offline Studios at 63 McCaul St in downtown Toronto, our dedicated photo station uses professional-grade lighting and a calibrated camera to ensure your Canadian Citizenship photo meets every technical requirement — correct size, white background, no shadows, accurate colour rendering.</p>
+          <p>No phone cameras. No drugstore booths. A real photographer who gets it right the first time.</p>
+        </div>
+      </div>
 
+      <div class="s-reviews">
+        <span class="ptitle">What customers say</span>
+        <div class="grid-2" style="margin-top:12px">
+      <div class="card">
+        <span class="stars">★★★★★</span>
+        <span class="txt" style="font-size:13.5px;line-height:1.6;color:#444">“I randomly stopped by after landing from a 21-hour flight. I needed a photo on my way to the hotel. The guy is stylish, calm and professional. Loved the place — reminded me of an old Ethiopian art based interior with vintage objects.”</span>
+        <span class="who" style="font-size:12.5px;font-weight:700;color:#888">DwDw DT · May 2026</span>
+      </div>
+      <div class="card">
+        <span class="stars">★★★★★</span>
+        <span class="txt" style="font-size:13.5px;line-height:1.6;color:#444">“Love my photo — which is rare. Good service, quick, felt comfortable, liked that it was a studio environment and quiet, plus we redid the photos until we got it right. Got to choose the photo I liked! No complaints and loved supporting a local business!”</span>
+        <span class="who" style="font-size:12.5px;font-weight:700;color:#888">Kimberley Brown · April 2026</span>
+      </div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="detail-side">
+      <div class="sample-card s-sample">
+        <img src="images/passport-scan-sample-square.jpg" alt="Real Canadian Citizenship photo taken here">
+        <div class="cap">Actual photo from our studio — accepted every time</div>
+      </div>
+      <div class="side-cta s-cta">
+        <span class="t">Need your Canadian Citizenship photo today?</span>
+        <span class="s">Walk in or book online — ready in 10 minutes, guaranteed accepted.</span>
+        <button type="button" class="btn btn-gold btn-block" data-book>Book Appointment</button>
+      </div>
+      <div class="s-related">
+        <span class="ptitle">Related services</span>
+        <div class="chiplist" style="margin-top:12px">
+      <a class="chip" href="us-passport-photos.html">US Passport →</a>
+      <a class="chip" href="uk-passport-photos.html">UK Passport →</a>
+      <a class="chip" href="irish-passport-photo.html">Irish Passport →</a>
+      <a class="chip" href="indian-passport-photos.html">Indian Passport →</a>
+      <a class="chip" href="chinese-passport-photos.html">Chinese Passport →</a>
+        </div>
+      </div>
+      <div class="map-card s-map">
+  <div class="frame"><iframe src="https://www.google.com/maps?q=63+McCaul+St,+Toronto,+ON+M5T+2W7&amp;output=embed" loading="lazy" title="Map — 63 McCaul St"></iframe></div>
+  <div class="body">
+    <div>
+      <div class="addr">63 McCaul St, Toronto</div>
+      <div class="transit">St Patrick station · 505 Dundas &amp; 501 Queen streetcars · Green P on McCaul</div>
+    </div>
+    <a class="btn btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=63+McCaul+St,+Toronto,+ON+M5T+2W7" target="_blank" rel="noopener noreferrer">Get directions</a>
+  </div>
 </div>
+    </aside>
+  </div>
 </div>
-<p>
-      © 2025 Passport Photo Toronto. All Rights Reserved.
-     </p>
-</div>
-</div>
+</main>
+<footer class="site-footer">
+  <div class="shell">
+    <div class="col brand-col">
+      <img class="flogo" src="images/logo-gold.png" alt="Passport Photo Toronto">
+      <span class="blurb">Professional passport and ID photo services in downtown Toronto. We guarantee compliance with all official requirements.</span>
+      <a class="ig" href="https://instagram.com/passportphototoronto" target="_blank" rel="noopener noreferrer">Follow us on Instagram</a>
+    </div>
+    <div class="col">
+      <h3>Quick links</h3>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="services.html">All services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="samples.html">Sample photos</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="faq.html">FAQ</a>
+        <a href="location.html">Location</a>
+        <a href="about.html">About us</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="jobs.html">Careers</a>
+        <a href="trusted-vendors.html">Trusted vendors</a>
+        <a href="refund-policy.html">Refund policy</a>
+        <a href="digital-photo-payment.html">Digital photo payment</a>
+        <a href="passport-photos-chinatown.html">Service areas</a>
+        <a href="sitemap.html">Sitemap</a>
+      </div>
+    </div>
+    <div class="col">
+      <h3>Our services</h3>
+      <div class="links">
+        <a href="passport-photos.html">Passport Photos in Toronto</a>
+        <a href="visa-photos.html">Visa Photos in Toronto</a>
+        <a href="canadian-passport-photos.html">Canadian Passport</a>
+        <a href="us-visa-photos.html">US Visa</a>
+        <a href="us-passport-photos.html">US Passport</a>
+        <a href="uk-passport-photos.html">UK Passport</a>
+        <a href="indian-passport-photos.html">Indian Passport</a>
+        <a href="chinese-passport-photos.html">Chinese Passport</a>
+        <a href="schengen-visa-photos.html">Schengen Visa</a>
+        <a href="chinese-visa-photos.html">Chinese Visa</a>
+        <a href="indian-visa-photos.html">Indian Visa</a>
+        <a href="pr-card-photos.html">PR Card</a>
+        <a href="canadian-citizenship-photo.html">Canadian Citizenship</a>
+        <a href="study-permit-photos.html">Study Permit</a>
+        <a href="work-permit-photo.html">Work Permit</a>
+        <a href="oci-photo.html">Indian OCI</a>
+        <a href="digital-passport-photos.html">Digital Photos</a>
+        <a href="document-services.html">Printing, Scanning &amp; Photocopying</a>
+      </div>
+    </div>
+    <div class="col">
+      <h3>Contact</h3>
+      <span class="contact-line">63 McCaul St<br>Toronto, ON M5T 2W7</span>
+      <a href="tel:4169862677">(416) 986-2677</a>
+      <a href="mailto:info@passportphototoronto.com">info@passportphototoronto.com</a>
+      <span class="contact-line">Mon–Fri: 9 AM – 6 PM<br>Sat–Sun: 12 PM – 6 PM</span>
+    </div>
+  </div>
+  <div class="bottom">© 2026 Passport Photo Toronto. All Rights Reserved.</div>
 </footer>
-<!-- JavaScript -->
+<div class="sticky-bar">
+  <div class="info">
+    <b>From $24.99</b>
+    <span>Ready in 10 minutes · Walk-ins OK</span>
+  </div>
+  <button type="button" class="btn btn-gold" data-book>Book now</button>
+</div>
+<div class="book-overlay" role="dialog" aria-modal="true" aria-label="Book an appointment">
+  <div class="book-backdrop"></div>
+  <div class="book-modal">
+    <div class="book-head">
+      <div>
+        <div class="kicker">Square Appointments</div>
+        <div class="t">Book an appointment</div>
+      </div>
+      <button type="button" class="book-close" aria-label="Close">&#10005;</button>
+    </div>
+    <div class="book-frame">
+      <iframe title="Book an appointment — Square" loading="lazy"></iframe>
+    </div>
+  </div>
+</div>
+<script src="js/redesign.js"></script>
 
-<script>
-   document.addEventListener("DOMContentLoaded", function () {
-    const menuIcon = document.querySelector(".menu-icon");
-    const navLinks = document.querySelector(".nav-links");
-
-    if (menuIcon && navLinks) {
-      menuIcon.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-      });
-    }
-  });
-  </script>
-<script>
-   document.addEventListener("DOMContentLoaded", function () {
-    const currentPath = location.pathname.split("/").pop() || "index.html";
-    const links = document.querySelectorAll(".nav-link");
-    links.forEach(link => {
-      const href = link.getAttribute("href");
-      if (href === currentPath) {
-        link.classList.add("active");
-      }
-    });
-  });
-  </script>
-<script>
-   document.addEventListener("DOMContentLoaded", function () {
-  // Highlight current page link
-  const currentPath = location.pathname.split("/").pop() || "index.html";
-  const links = document.querySelectorAll(".nav-link");
-  links.forEach(link => {
-    const href = link.getAttribute("href");
-    if (href === currentPath) {
-      link.classList.add("active");
-    }
-  });
-
-  // Toggle mobile menu
-  const menuBtn = document.querySelector(".mobile-menu-btn");
-  const navMenu = document.querySelector(".nav-menu");
-  if (menuBtn && navMenu) {
-    menuBtn.addEventListener("click", () => {
-      navMenu.classList.toggle("active");
-    });
-  }
-});
-  </script>
 </body>
 </html>

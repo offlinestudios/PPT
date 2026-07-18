@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <!-- Google Tag Manager -->
@@ -31,235 +30,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta content="https://www.passportphototoronto.com/images/logo.png" name="twitter:image"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="css/styles.css" rel="stylesheet"/>
+<link href="css/redesign.css" rel="stylesheet"/>
 <!-- Favicon -->
 <link href="images/favicon.ico" rel="icon"/>
-<style>
-        /* Samples Page Specific Styles */
-        .samples-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 50px;
-        }
-        
-        .sample-item {
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .sample-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-        }
-        
-        .sample-image {
-            width: 100%;
-            max-width: 200px;
-            height: auto;
-            border-radius: 4px;
-            margin-bottom: 15px;
-            border: 2px solid #e9ecef;
-        }
-        
-        .sample-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--primary-color);
-            margin-bottom: 10px;
-        }
-        
-        .sample-description {
-            color: #666;
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
-        
-        .samples-intro {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 40px;
-        }
-        
-        .samples-intro h2 {
-            margin-bottom: 20px;
-        }
-        
-        .samples-intro p {
-            color: #666;
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-        
-        .quality-features {
-            background-color: #f8f9fa;
-            padding: 50px 0;
-            margin-top: 60px;
-        }
-        
-        .quality-features-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        
-        .quality-feature {
-            text-align: center;
-            padding: 20px;
-        }
-        
-        .quality-feature-icon {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-        
-        .quality-feature h3 {
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-        }
-        
-        .quality-feature p {
-            color: #666;
-            line-height: 1.6;
-        }
-        
-        /* Portfolio Section Styles */
-        .portfolio-container {
-            margin-top: 40px;
-        }
-        
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-        
-        .portfolio-item {
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            background-color: white;
-        }
-        
-        .portfolio-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-        }
-        
-        .portfolio-image {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            display: block;
-        }
-        
-        @media (max-width: 1200px) {
-            .portfolio-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-        
-        @media (max-width: 992px) {
-            .samples-container {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 25px;
-            }
-            
-            .portfolio-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .samples-container {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .sample-item {
-                padding: 15px;
-            }
-            
-            .portfolio-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
-            }
-            
-            .portfolio-image {
-                height: 180px;
-                object-fit: cover;
-            }
-        }
-    
-/* Dropdown Navigation Menu Styles */
-.nav-item.dropdown {
-    position: relative;
-}
 
-.nav-link.dropdown-toggle {
-    cursor: pointer;
-}
-
-.dropdown-menu {
-    display: none !important;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: white;
-    min-width: 250px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    border-radius: 4px;
-    padding: 8px 0;
-    margin-top: 0;
-    z-index: 1000;
-    list-style: none;
-}
-
-.nav-item.dropdown:hover .dropdown-menu {
-    display: block !important;
-}
-
-.dropdown-item {
-    display: block;
-    padding: 10px 20px;
-    color: #333;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    font-size: 0.95rem;
-}
-
-.dropdown-item:hover {
-    background-color: var(--light-color);
-    color: var(--primary-color);
-}
-
-/* Mobile dropdown styles */
-@media (max-width: 768px) {
-    .dropdown-menu {
-        position: static;
-        box-shadow: none;
-        background: var(--light-color);
-        margin-left: 20px;
-        margin-top: 8px;
-        margin-bottom: 8px;
-    }
-    
-    .nav-item.dropdown .dropdown-menu {
-        display: none !important;
-    }
-    
-    .nav-item.dropdown.active .dropdown-menu {
-        display: block;
-    }
-}
-
-</style>
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-11397258552"></script>
 <script>
@@ -281,356 +55,210 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script defer src="js/attribution.js"></script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55RV84CT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-<!-- Header -->
-<header class="header">
-<div class="container header-container">
-<a class="logo" href="/">
-<picture><source srcset="images/logo.webp" type="image/webp"/><img alt="Passport Photo Toronto Logo" loading="lazy" src="images/logo.png"/></picture>
-<span class="logo-text">PASSPORT PHOTO</span>
-</a>
-<nav>
-<ul class="nav-menu">
-<li class="nav-item">
-<a class="nav-link" href="/">Home</a>
-</li>
-<li class="nav-item dropdown">
-<a class="nav-link dropdown-toggle" href="services.html">
-        Services
-       </a>
-<ul class="dropdown-menu">
-<li><a class="dropdown-item" href="services.html">All Services</a></li>
-<li><a class="dropdown-item" href="passport-photos-international.html">Passport Photos by Country</a></li>
-<li><a class="dropdown-item" href="visa-photos-international.html">Visa Photos by Country</a></li>
-<li><a class="dropdown-item" href="professional-license-photos-hub.html">Professional Licenses &amp; IDs</a></li>
-<li><a class="dropdown-item" href="document-services.html">Printing, Scanning &amp; Photocopying</a></li>
-</ul>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="pricing.html">Pricing</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="reviews.html">Reviews</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="faq.html">FAQ</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="location.html">Location</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="about.html">About</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="contact.html">Contact</a>
-</li>
-</ul>
-<button class="mobile-menu-btn">
-<i class="fas fa-bars"></i>
-</button>
-</nav>
-</div>
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-55RV84CT" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<header class="site-header">
+  <div class="shell">
+    <a class="brand" href="index.html">
+      <img src="images/logo.png" alt="Passport Photo Toronto">
+      <span>PASSPORT PHOTO</span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="samples.html" class="active" aria-current="page">Samples</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="faq.html">FAQ</a>
+        <a href="location.html">Location</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-right">
+      <a class="header-phone" href="tel:4169862677">(416) 986-2677</a>
+      <button type="button" class="btn btn-gold" data-book>Book Appointment</button>
+      <button type="button" class="hamburger" aria-label="Open menu">&#9776;</button>
+    </div>
+  </div>
 </header>
-<!-- Page Banner -->
-<section class="page-banner">
-<div class="container">
-        <nav class="breadcrumb-nav">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item">Sample Photos</li>
-            </ol>
-        </nav>
-        <h1>Passport Photo Samples</h1>
-<p>Professional examples of our compliant passport and ID photos</p>
+<div class="drawer-backdrop"></div>
+<nav class="drawer" aria-label="Mobile">
+  <button type="button" class="drawer-close" aria-label="Close menu">&#10005;</button>
+  <a class="drawer-link" href="index.html">Home</a>
+  <a class="drawer-link" href="services.html">Services</a>
+  <a class="drawer-link" href="pricing.html">Pricing</a>
+  <a class="drawer-link" href="samples.html">Samples</a>
+  <a class="drawer-link" href="reviews.html">Reviews</a>
+  <a class="drawer-link" href="faq.html">FAQ</a>
+  <a class="drawer-link" href="location.html">Location</a>
+  <a class="drawer-link" href="blog.html">Blog</a>
+  <a class="drawer-link" href="contact.html">Contact</a>
+  <div class="drawer-contact">
+    <a href="tel:4169862677">(416) 986-2677</a>
+    <a href="mailto:info@passportphototoronto.com">info@passportphototoronto.com</a>
+    <span>Mon–Fri: 9:00 AM – 6:00 PM<br>Sat–Sun: 12:00 PM – 6:00 PM</span>
+    <button type="button" class="btn btn-gold btn-block" data-book>Book Appointment</button>
+  </div>
+</nav>
+<main>
+<div class="page">
+  <div>
+    <h1>Sample photos</h1>
+    <p class="lede">Every sample shown was taken at our 63 McCaul St studio and accepted by the issuing authority.</p>
+  </div>
+  <div class="sample-grid">
+  <div class="sample-tile">
+    <img src="photos/passport-sample-8.jpg" alt="Canadian passport · 50×70mm" loading="lazy">
+    <div class="cap">Canadian passport · 50×70mm</div>
+  </div>
+  <div class="sample-tile">
+    <img src="photos/gbp/passport-sample-1.jpg" alt="Studio sample" loading="lazy">
+    <div class="cap">Studio sample</div>
+  </div>
+  <div class="sample-tile">
+    <img src="photos/gbp/passport-sample-10.jpg" alt="Studio sample" loading="lazy">
+    <div class="cap">Studio sample</div>
+  </div>
+  <div class="sample-tile">
+    <img src="photos/gbp/passport-sample-13.jpg" alt="Studio sample" loading="lazy">
+    <div class="cap">Studio sample</div>
+  </div>
+  <div class="sample-tile">
+    <img src="photos/gbp/passport-sample-15.jpg" alt="Studio sample" loading="lazy">
+    <div class="cap">Studio sample</div>
+  </div>
+  <div class="sample-tile">
+    <img src="photos/gbp/passport-sample-100.jpg" alt="Studio sample" loading="lazy">
+    <div class="cap">Studio sample</div>
+  </div>
+  <div class="sample-tile">
+    <img src="photos/gbp/passport-sample-101.jpg" alt="Studio sample" loading="lazy">
+    <div class="cap">Studio sample</div>
+  </div>
+  <div class="sample-tile">
+    <img src="photos/gbp/passport-sample-104.jpg" alt="Studio sample" loading="lazy">
+    <div class="cap">Studio sample</div>
+  </div>
+  <div class="sample-tile">
+    <img src="photos/gbp/passport-sample-106.jpg" alt="Studio sample" loading="lazy">
+    <div class="cap">Studio sample</div>
+  </div>
+  <div class="sample-tile">
+    <img src="photos/gbp/passport-sample-110.jpg" alt="Studio sample" loading="lazy">
+    <div class="cap">Studio sample</div>
+  </div>
+  <div class="sample-tile">
+    <img src="photos/gbp/passport-sample-111.jpg" alt="Studio sample" loading="lazy">
+    <div class="cap">Studio sample</div>
+  </div>
+  <div class="sample-tile">
+    <img src="photos/gbp/passport-sample-113.jpg" alt="Studio sample" loading="lazy">
+    <div class="cap">Studio sample</div>
+  </div>
+  <div class="sample-tile">
+    <img src="photos/gbp/passport-sample-116.jpg" alt="Studio sample" loading="lazy">
+    <div class="cap">Studio sample</div>
+  </div>
+  <div class="sample-tile">
+    <img src="photos/gbp/passport-sample-119.jpg" alt="Studio sample" loading="lazy">
+    <div class="cap">Studio sample</div>
+  </div>
+  <div class="sample-tile">
+    <img src="photos/gbp/passport-sample-121.jpg" alt="Studio sample" loading="lazy">
+    <div class="cap">Studio sample</div>
+  </div>
+  <div class="sample-tile">
+    <img src="photos/gbp/passport-sample-123.jpg" alt="Studio sample" loading="lazy">
+    <div class="cap">Studio sample</div>
+  </div>
+  <div class="sample-tile">
+    <img src="photos/gbp/passport-sample-125.jpg" alt="Studio sample" loading="lazy">
+    <div class="cap">Studio sample</div>
+  </div>
+  <div class="sample-tile">
+    <img src="photos/gbp/passport-sample-128.jpg" alt="Studio sample" loading="lazy">
+    <div class="cap">Studio sample</div>
+  </div>
+  </div>
 </div>
-</section>
-<!-- Samples Section -->
-<section class="section">
-<div class="container">
-<div class="samples-intro">
-<h2>Professional Photo Examples</h2>
-<p>Browse our collection of professional passport and ID photos that meet all official requirements. Each photo demonstrates proper lighting, positioning, and compliance with Canadian and international standards.</p>
-</div>
-<div class="samples-container">
-<!-- Sample 1 -->
-<div class="sample-item">
-<img alt="Professional Male Passport Photo" class="sample-image" loading="lazy" src="images/passport-sample-man.jpg"/>
-<h3 class="sample-title">Canadian Passport Photo</h3>
-<p class="sample-description">Professional male passport photo with proper neutral expression, correct lighting, and plain background meeting IRCC requirements.</p>
-</div>
-<!-- Sample 2 -->
-<div class="sample-item">
-<img alt="Professional Female Passport Photo" class="sample-image" loading="lazy" src="images/passport-sample-female.jpg"/>
-<h3 class="sample-title">U.S. Visa Photo</h3>
-<p class="sample-description">High-quality female U.S. passport photo with professional studio lighting and compliant head positioning, meeting all U.S. Embassy requirements. .</p>
-</div>
-<!-- Sample 3 -->
-<div class="sample-item">
-<img alt="Canadian PR Card Photo Female" class="sample-image" loading="lazy" src="images/canadian-pr-card-sample.jpg"/>
-<h3 class="sample-title">Canadian PR Card Photo</h3>
-<p class="sample-description">Professional, IRCC-compliant PR card photos with guaranteed acceptance for all Canadian permanent resident card applications.</p>
-</div>
-<!-- Sample 4 -->
-<div class="sample-item">
-<img alt="Schengen Visa Photo Sample" class="sample-image" loading="lazy" src="images/schengen-visa-photo-sample.jpg"/>
-<h3 class="sample-title">Schengen Visa   Photo</h3>
-<p class="sample-description">Professional Schgengen visa photos with precise measurements that meet EU compliance standards.</p>
-</div>
-<!-- Sample 5 -->
-<div class="sample-item">
-<img alt="Chinese Visa Photo Sample" class="sample-image" loading="lazy" src="images/chinese-visa-sample.jpg"/>
-<h3 class="sample-title">Chinese Visa Photo</h3>
-<p class="sample-description">High-resolution Chinese visa photos optimized for printing and digital submissions with perfect clarity.</p>
-</div>
-<!-- Sample 6 -->
-<div class="sample-item">
-<img alt="US Passport Photo" class="sample-image" loading="lazy" src="images/us-passport-sample.jpg"/>
-<h3 class="sample-title">US Passport Photo</h3>
-<p class="sample-description">Professional photo meeting US State Department requirements with proper dimensions and background specifications.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- More Samples Portfolio Section -->
-<section class="section" style="background-color: #f8f9fa;">
-<div class="container">
-<div class="samples-intro">
-<h2>More Samples</h2>
-<p>Explore our extensive portfolio of professional passport and ID photos. Each image showcases our commitment to quality and compliance with various document requirements.</p>
-</div>
-<div class="portfolio-container">
-<div class="portfolio-grid">
-<div class="portfolio-item">
-<img alt="Work Permit Photo" class="portfolio-image" loading="lazy" src="images/work-permit-sample.jpg"/>
-</div>
-<div class="portfolio-item">
-<img alt="Canadian Citizenship Photo" class="portfolio-image" loading="lazy" src="images/canadian-citizenship-sample.jpg"/>
-</div>
-<div class="portfolio-item">
-<img alt="Study Permit Photo" class="portfolio-image" loading="lazy" src="images/study-permit-sample.jpg"/>
-</div>
-<div class="portfolio-item">
-<img alt="Chinese Passport Photo" class="portfolio-image" loading="lazy" src="images/chinese-passport-sample.jpg"/>
-</div>
-<div class="portfolio-item">
-<img alt="US Green Card Photo" class="portfolio-image" loading="lazy" src="images/green-card-sample.jpg"/>
-</div>
-<div class="portfolio-item">
-<img alt="Indian OCI Photo" class="portfolio-image" loading="lazy" src="images/indian-oci-sample.jpg"/>
-</div>
-<div class="portfolio-item">
-<img alt="Digital Passport Photo" class="portfolio-image" loading="lazy" src="images/digital-passport-sample.jpg"/>
-</div>
-<div class="portfolio-item">
-<img alt="UK Passport Photo" class="portfolio-image" loading="lazy" src="images/uk-passport-sample.jpg"/>
-</div>
-<div class="portfolio-item">
-<img alt="Professional Female Passport Photo" class="portfolio-image" loading="lazy" src="images/passport-sample-14.jpg"/>
-</div>
-<div class="portfolio-item">
-<img alt="Professional Female Passport Photo" class="portfolio-image" loading="lazy" src="images/passport-sample-15.jpg"/>
-</div>
-<div class="portfolio-item">
-<img alt="Professional Female Passport Photo" class="portfolio-image" loading="lazy" src="images/passport-sample-16.jpg"/>
-</div>
-<div class="portfolio-item">
-<img alt="Professional Female Passport Photo" class="portfolio-image" loading="lazy" src="images/passport-sample-17.jpg"/>
-</div>
-<div class="portfolio-item">
-<img alt="Professional Female Passport Photo" class="portfolio-image" loading="lazy" src="images/passport-sample-18.jpg"/>
-</div>
-<div class="portfolio-item">
-<img alt="Professional Female Passport Photo" class="portfolio-image" loading="lazy" src="images/passport-sample-19.jpg"/>
-</div>
-<div class="portfolio-item">
-<img alt="Professional Female Passport Photo" class="portfolio-image" loading="lazy" src="images/passport-sample-20.jpg"/>
-</div>
-<div class="portfolio-item">
-<img alt="Professional Male Passport Photo" class="portfolio-image" loading="lazy" src="images/passport-sample-21.jpg"/>
-</div>
-<div class="portfolio-item">
-<img alt="Professional Male Passport Photo" class="portfolio-image" loading="lazy" src="images/passport-sample-22.jpg"/>
-</div>
-<div class="portfolio-item">
-<img alt="Professional Female Passport Photo" class="portfolio-image" loading="lazy" src="images/passport-sample-23.jpg"/>
-</div>
-<div class="portfolio-item">
-<img alt="Professional Female Passport Photo" class="portfolio-image" loading="lazy" src="images/passport-sample-24.jpg"/>
-</div>
-<div class="portfolio-item">
-<img alt="Professional Female Passport Photo" class="portfolio-image" loading="lazy" src="images/passport-sample-25.jpg"/>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Quality Features Section -->
-<section class="quality-features" style="background-color: #ffffff;">
-<div class="container">
-<h2 class="section-title">Why Our Photos Stand Out</h2>
-<div class="quality-features-container">
-<div class="quality-feature">
-<div class="quality-feature-icon">
-<i class="fas fa-camera"></i>
-</div>
-<h3>Professional Equipment</h3>
-<p>We use high-end cameras and professional studio lighting to ensure perfect image quality and compliance with all requirements.</p>
-</div>
-<div class="quality-feature">
-<div class="quality-feature-icon">
-<i class="fas fa-ruler"></i>
-</div>
-<h3>Precise Measurements</h3>
-<p>Every photo is carefully measured and cropped to meet exact specifications for different document types and countries.</p>
-</div>
-<div class="quality-feature">
-<div class="quality-feature-icon">
-<i class="fas fa-shield-alt"></i>
-</div>
-<h3>Guaranteed Acceptance</h3>
-<p>Our photos are guaranteed to be accepted by government agencies. If rejected due to photo quality, we'll retake them for free.</p>
-</div>
-<div class="quality-feature">
-<div class="quality-feature-icon">
-<i class="fas fa-clock"></i>
-</div>
-<h3>Same-Day Service</h3>
-<p>Get your professional photos printed and digital copies delivered immediately. No waiting for processing or development.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Call to Action -->
-<section class="section" style="background-color: #3b5998; color: white; margin-top: 0;">
-<div class="container">
-<div class="text-center">
-<h2 style="color: white;">Ready to Get Your Professional Photos?</h2>
-<p style="margin-bottom: 30px; font-size: 1.1rem;">Book an appointment today and get the same professional quality you see in our samples.</p>
-<a class="btn btn-secondary btn-lg" href="scheduling.html">BOOK APPOINTMENT</a>
-</div>
-</div>
-</section>
-<!-- Footer -->
-<footer class="footer">
-<div class="container">
-<div class="footer-container">
-<div class="footer-about">
-<div class="footer-logo">
-<picture><source srcset="images/logo-white.webp" type="image/webp"/><img alt="Passport Photo Toronto Logo" loading="lazy" src="images/logo-white.png"/></picture>
-</div>
-<p>Professional passport and ID photo services in downtown Toronto. We guarantee compliance with all official requirements.</p>
-</div>
-<div class="footer-links">
-<h3 class="footer-title">Quick Links</h3>
-<ul class="footer-links">
-<li class="footer-link"><a href="/">Home</a></li>
-<li class="footer-link"><a href="services.html">Services</a></li>
-<li class="footer-link"><a href="pricing.html">Pricing</a></li>
-
-<li class="footer-link"><a href="reviews.html">Reviews</a></li>
-<li class="footer-link"><a href="about.html">About</a></li>
-<li class="footer-link"><a href="faq.html">FAQ</a></li>
-<li class="footer-link"><a href="location.html">Location</a></li>
-<li class="footer-link"><a href="contact.html">Contact</a></li>
-<li class="footer-link">
-<a href="jobs.html">
-         Careers
-        </a>
-</li>
-<li class="footer-link">
-<a href="trusted-vendors.html">
-         Trusted Vendors
-        </a>
-</li>
-<li class="footer-link"><a href="blog.html">Blog</a></li>
-<li class="footer-link"><a href="refund-policy.html">Refund Policy</a></li>
-<li class="footer-link"><a href="digital-photo-payment.html">Digital Photo Payment</a></li>
-<li class="footer-link"><a href="sitemap.html">Sitemap</a></li>
-</ul>
-</div>
-<div class="footer-services">
-<h3 class="footer-title">Our Services</h3>
-<ul class="footer-links">
-<li class="footer-link"><a href="canadian-passport-photos.html">Canadian Passport</a></li>
-<li class="footer-link"><a href="pr-card-photos.html">Canadian PR Card</a></li>
-<li class="footer-link"><a href="us-immigration-photos.html">US Visa</a></li>
-<li class="footer-link"><a href="#">Chinese Visa</a></li>
-<li class="footer-link"><a href="#">Schengen Visa</a></li>
-<li class="footer-link"><a href="us-passport-photos.html">US Passport</a></li>
-<li class="footer-link"><a href="oci-photo.html">Indian OCI</a></li>
-<li class="footer-link"><a href="study-permit-photos.html">Study Permit</a></li>
-<li class="footer-link"><a href="work-permit-photo.html">Work Permit</a></li>
-<li class="footer-link"><a href="document-services.html">Printing &amp; Scanning</a></li>
-</ul>
-</div>
-<div class="footer-contact">
-<h3 class="footer-title">Contact Us</h3>
-<div class="footer-contact-item">
-<i class="fas fa-map-marker-alt footer-contact-icon"></i>
-<div>
-<p>63 McCaul St</p>
-<p>Toronto, ON M5T 2W7</p>
-</div>
-</div>
-<div class="footer-contact-item">
-<i class="fas fa-phone footer-contact-icon"></i>
-<p>(416) 986-2677</p>
-</div>
-<div class="footer-contact-item">
-<i class="fas fa-envelope footer-contact-icon">
-</i>
-<p>
-        <a href="mailto:info@passportphototoronto.com" style="color: rgba(255, 255, 255, 0.7); text-decoration: none;">info@passportphototoronto.com</a>
-       </p>
-</div>
-<div class="footer-contact-item">
-<i class="fas fa-clock footer-contact-icon"></i>
-<p>Mon-Fri: 9:00 AM - 6:00 PM<br/>Sat-Sun: 12:00 PM - 6:00 PM</p>
-</div>
-</div>
-</div>
-<div class="footer-bottom">
-<div class="footer-social">
-<h4>Follow Us</h4>
-<div class="social-links">
-<a class="social-link" href="https://instagram.com/passportphototoronto" rel="noopener noreferrer" target="_blank">
-<i class="fab fa-instagram"></i>
-</a>
-
-
-
-</div>
-</div>
-<p>© 2025 Passport Photo Toronto. All Rights Reserved.</p>
-</div>
-</div>
+</main>
+<footer class="site-footer">
+  <div class="shell">
+    <div class="col brand-col">
+      <img class="flogo" src="images/logo-gold.png" alt="Passport Photo Toronto">
+      <span class="blurb">Professional passport and ID photo services in downtown Toronto. We guarantee compliance with all official requirements.</span>
+      <a class="ig" href="https://instagram.com/passportphototoronto" target="_blank" rel="noopener noreferrer">Follow us on Instagram</a>
+    </div>
+    <div class="col">
+      <h3>Quick links</h3>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="services.html">All services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="samples.html">Sample photos</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="faq.html">FAQ</a>
+        <a href="location.html">Location</a>
+        <a href="about.html">About us</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="jobs.html">Careers</a>
+        <a href="trusted-vendors.html">Trusted vendors</a>
+        <a href="refund-policy.html">Refund policy</a>
+        <a href="digital-photo-payment.html">Digital photo payment</a>
+        <a href="passport-photos-chinatown.html">Service areas</a>
+        <a href="sitemap.html">Sitemap</a>
+      </div>
+    </div>
+    <div class="col">
+      <h3>Our services</h3>
+      <div class="links">
+        <a href="passport-photos.html">Passport Photos in Toronto</a>
+        <a href="visa-photos.html">Visa Photos in Toronto</a>
+        <a href="canadian-passport-photos.html">Canadian Passport</a>
+        <a href="us-visa-photos.html">US Visa</a>
+        <a href="us-passport-photos.html">US Passport</a>
+        <a href="uk-passport-photos.html">UK Passport</a>
+        <a href="indian-passport-photos.html">Indian Passport</a>
+        <a href="chinese-passport-photos.html">Chinese Passport</a>
+        <a href="schengen-visa-photos.html">Schengen Visa</a>
+        <a href="chinese-visa-photos.html">Chinese Visa</a>
+        <a href="indian-visa-photos.html">Indian Visa</a>
+        <a href="pr-card-photos.html">PR Card</a>
+        <a href="canadian-citizenship-photo.html">Canadian Citizenship</a>
+        <a href="study-permit-photos.html">Study Permit</a>
+        <a href="work-permit-photo.html">Work Permit</a>
+        <a href="oci-photo.html">Indian OCI</a>
+        <a href="digital-passport-photos.html">Digital Photos</a>
+        <a href="document-services.html">Printing, Scanning &amp; Photocopying</a>
+      </div>
+    </div>
+    <div class="col">
+      <h3>Contact</h3>
+      <span class="contact-line">63 McCaul St<br>Toronto, ON M5T 2W7</span>
+      <a href="tel:4169862677">(416) 986-2677</a>
+      <a href="mailto:info@passportphototoronto.com">info@passportphototoronto.com</a>
+      <span class="contact-line">Mon–Fri: 9 AM – 6 PM<br>Sat–Sun: 12 PM – 6 PM</span>
+    </div>
+  </div>
+  <div class="bottom">© 2026 Passport Photo Toronto. All Rights Reserved.</div>
 </footer>
-<!-- JavaScript -->
 
-<script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Highlight current page link
-            const currentPath = location.pathname.split("/").pop() || "index.html";
-            const links = document.querySelectorAll(".nav-link");
-            links.forEach(link => {
-                const href = link.getAttribute("href");
-                if (href === currentPath) {
-                    link.classList.add("active");
-                }
-            });
+<div class="book-overlay" role="dialog" aria-modal="true" aria-label="Book an appointment">
+  <div class="book-backdrop"></div>
+  <div class="book-modal">
+    <div class="book-head">
+      <div>
+        <div class="kicker">Square Appointments</div>
+        <div class="t">Book an appointment</div>
+      </div>
+      <button type="button" class="book-close" aria-label="Close">&#10005;</button>
+    </div>
+    <div class="book-frame">
+      <iframe title="Book an appointment — Square" loading="lazy"></iframe>
+    </div>
+  </div>
+</div>
+<script src="js/redesign.js"></script>
 
-            // Toggle mobile menu
-            const menuBtn = document.querySelector(".mobile-menu-btn");
-            const navMenu = document.querySelector(".nav-menu");
-            if (menuBtn && navMenu) {
-                menuBtn.addEventListener("click", () => {
-                    navMenu.classList.toggle("active");
-                });
-            }
-        });
-    </script>
 </body>
 </html>

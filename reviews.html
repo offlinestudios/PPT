@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <!-- Google Tag Manager -->
@@ -33,93 +32,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta content="https://www.passportphototoronto.com/images/logo.png" name="twitter:image"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="css/styles.css" rel="stylesheet"/>
+<link href="css/redesign.css" rel="stylesheet"/>
 <!-- Favicon -->
 <link href="images/favicon.ico" rel="icon"/>
-<style>
-   /* Apply consistent testimonial alignment across review page */
-.testimonial-author {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
 
-.testimonial-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.testimonial-info h4,
-.testimonial-info .testimonial-rating,
-.testimonial-info .testimonial-date {
-    margin: 0;
-    line-height: 1.4;
-}
-  
-/* Dropdown Navigation Menu Styles */
-.nav-item.dropdown {
-    position: relative;
-}
-
-.nav-link.dropdown-toggle {
-    cursor: pointer;
-}
-
-.dropdown-menu {
-    display: none !important;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: white;
-    min-width: 250px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    border-radius: 4px;
-    padding: 8px 0;
-    margin-top: 0;
-    z-index: 1000;
-    list-style: none;
-}
-
-.nav-item.dropdown:hover .dropdown-menu {
-    display: block !important;
-}
-
-.dropdown-item {
-    display: block;
-    padding: 10px 20px;
-    color: #333;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    font-size: 0.95rem;
-}
-
-.dropdown-item:hover {
-    background-color: var(--light-color);
-    color: var(--primary-color);
-}
-
-/* Mobile dropdown styles */
-@media (max-width: 768px) {
-    .dropdown-menu {
-        position: static;
-        box-shadow: none;
-        background: var(--light-color);
-        margin-left: 20px;
-        margin-top: 8px;
-        margin-bottom: 8px;
-    }
-    
-    .nav-item.dropdown .dropdown-menu {
-        display: none !important;
-    }
-    
-    .nav-item.dropdown.active .dropdown-menu {
-        display: block;
-    }
-}
-
-</style>
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-11397258552"></script>
 <script>
@@ -141,743 +57,465 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script defer src="js/attribution.js"></script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55RV84CT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-<!-- Header -->
-<header class="header">
-<div class="container header-container">
-<a class="logo" href="/">
-<picture><source srcset="images/logo.webp" type="image/webp"/><img alt="Passport Photo Toronto Logo" loading="lazy" src="images/logo.png"/></picture>
-<span class="logo-text">
-      PASSPORT PHOTO
-     </span>
-</a>
-<nav>
-<ul class="nav-menu">
-<li class="nav-item">
-<a class="nav-link" href="/">
-        Home
-       </a>
-</li>
-<li class="nav-item dropdown">
-<a class="nav-link dropdown-toggle" href="services.html">
-        Services
-       </a>
-<ul class="dropdown-menu">
-<li><a class="dropdown-item" href="services.html">All Services</a></li>
-<li><a class="dropdown-item" href="passport-photos-international.html">Passport Photos by Country</a></li>
-<li><a class="dropdown-item" href="visa-photos-international.html">Visa Photos by Country</a></li>
-<li><a class="dropdown-item" href="professional-license-photos-hub.html">Professional Licenses &amp; IDs</a></li>
-<li><a class="dropdown-item" href="document-services.html">Printing, Scanning &amp; Photocopying</a></li>
-</ul>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="pricing.html">
-        Pricing
-       </a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="reviews.html">
-        Reviews
-       </a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="faq.html">
-        FAQ
-       </a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="location.html">
-        Location
-       </a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="about.html">
-        About
-       </a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="blog.html">
-        Blog
-       </a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="contact.html">
-        Contact
-       </a>
-</li>
-</ul>
-<button class="mobile-menu-btn">
-<i class="fas fa-bars">
-</i>
-</button>
-</nav>
-</div>
-</header>
-<!-- Page Banner -->
-<section class="page-banner">
-<div class="container">
-        <nav class="breadcrumb-nav">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item">Reviews</li>
-            </ol>
-        </nav>
-        <h1>
-     Customer Reviews
-    </h1>
-<p>
-     See what our customers say about our professional passport photo services
-    </p>
-</div>
-</section>
-<!-- Customer Reviews Section -->
-<section class="section testimonials">
-<div class="container">
-<h2 class="section-title">
-     What Our Customers Say
-    </h2>
-<div class="testimonials-container">
-<!-- Testimonial 1 -->
-<div class="testimonial-card">
-<p class="testimonial-content">
-       Absolutely fantastic service! I needed passport photos for my Canadian passport renewal and was worried about getting them right. The staff here are true professionals - they knew exactly what specifications were needed and made sure my photos met all the requirements. The whole process took less than 10 minutes, and I received both printed photos and digital copies immediately. Highly recommend!
-      </p>
-<div class="testimonial-author">
-<div class="testimonial-avatar">
-        AM
-       </div>
-<div class="testimonial-info">
-<h4>
-         Amanda Martinez
-        </h4>
-<div class="testimonial-rating">
-         ★★★★★
-        </div>
-<p class="testimonial-date">
-         December 15, 2024
-        </p>
-</div>
-</div>
-</div>
-<!-- Testimonial 2 -->
-<div class="testimonial-card">
-<p class="testimonial-content">
-       Quick and professional service! I needed photos for my US visa application and they knew exactly what size and specifications were required. The photographer was very patient and took multiple shots to make sure I looked good. The digital copy they provided was perfect for the online application.
-      </p>
-<div class="testimonial-author">
-<div class="testimonial-avatar">
-        DK
-       </div>
-<div class="testimonial-info">
-<h4>
-         David Kim
-        </h4>
-<div class="testimonial-rating">
-         ★★★★★
-        </div>
-<p class="testimonial-date">
-         November 28, 2024
-        </p>
-</div>
-</div>
-</div>
-<!-- Testimonial 3 -->
-<div class="testimonial-card">
-<p class="testimonial-content">
-       Excellent experience! I was nervous about getting my passport photos taken because I've had them rejected before at other places. The team here really knows what they're doing - they explained the requirements clearly and made sure everything was perfect. Worth every penny!
-      </p>
-<div class="testimonial-author">
-<div class="testimonial-avatar">
-        SP
-       </div>
-<div class="testimonial-info">
-<h4>
-         Sarah Patel
-        </h4>
-<div class="testimonial-rating">
-         ★★★★★
-        </div>
-<p class="testimonial-date">
-         November 20, 2024
-        </p>
-</div>
-</div>
-</div>
-<!-- Testimonial 4 -->
-<div class="testimonial-card">
-<p class="testimonial-content">
-       Very good service overall. I needed photos for my PR card application and they handled it professionally. The only minor issue was that I had to wait about 15 minutes because they were busy, but the quality of the photos made it worth the wait.
-      </p>
-<div class="testimonial-author">
-<div class="testimonial-avatar">
-        MR
-       </div>
-<div class="testimonial-info">
-<h4>
-         Michael Rodriguez
-        </h4>
-<div class="testimonial-rating">
-         ★★★★☆
-        </div>
-<p class="testimonial-date">
-         November 12, 2024
-        </p>
-</div>
-</div>
-</div>
-<!-- Testimonial 5 -->
-<div class="testimonial-card">
-<p class="testimonial-content">
-       I've been to several passport photo places in Toronto, and this is by far the best. The photographer took the time to adjust the lighting and positioning to make sure the photos met all the government requirements. The digital copies were delivered instantly via email.
-      </p>
-<div class="testimonial-author">
-<div class="testimonial-avatar">
-        JL
-       </div>
-<div class="testimonial-info">
-<h4>
-         Jennifer Liu
-        </h4>
-<div class="testimonial-rating">
-         ★★★★★
-        </div>
-<p class="testimonial-date">
-         October 30, 2024
-        </p>
-</div>
-</div>
-</div>
-<!-- Testimonial 6 -->
-<div class="testimonial-card">
-<p class="testimonial-content">
-       Fantastic service! I needed photos for my citizenship application and they made sure everything was perfect. The staff was very professional and patient, explaining exactly what was needed for the application. Definitely recommend this place for anyone needing official document photos.
-      </p>
-<div class="testimonial-author">
-<div class="testimonial-avatar">
-        TC
-       </div>
-<div class="testimonial-info">
-<h4>
-         Thomas Chen
-        </h4>
-<div class="testimonial-rating">
-         ★★★★★
-        </div>
-<p class="testimonial-date">
-         October 18, 2024
-        </p>
-</div>
-</div>
-</div>
-<!-- Testimonial 7 -->
-<div class="testimonial-card">
-<p class="testimonial-content">
-       Good experience overall. The location is convenient and the staff knows what they're doing. I needed photos for a Schengen visa and they had the exact specifications ready. The price is a bit higher than some other places, but the quality justifies it.
-      </p>
-<div class="testimonial-author">
-<div class="testimonial-avatar">
-        EB
-       </div>
-<div class="testimonial-info">
-<h4>
-         Emily Brown
-        </h4>
-<div class="testimonial-rating">
-         ★★★★☆
-        </div>
-<p class="testimonial-date">
-         October 5, 2024
-        </p>
-</div>
-</div>
-</div>
-<!-- Testimonial 8 -->
-<div class="testimonial-card">
-<p class="testimonial-content">
-       Excellent service! I was in a rush to get my passport photos done for an urgent travel situation, and they accommodated me right away. The photos were taken professionally and met all the requirements. I received both printed and digital copies immediately.
-      </p>
-<div class="testimonial-author">
-<div class="testimonial-avatar">
-        RJ
-       </div>
-<div class="testimonial-info">
-<h4>
-         Robert Johnson
-        </h4>
-<div class="testimonial-rating">
-         ★★★★★
-        </div>
-<p class="testimonial-date">
-         September 22, 2024
-        </p>
-</div>
-</div>
-</div>
-<!-- Testimonial 9 -->
-<div class="testimonial-card">
-<p class="testimonial-content">
-       Professional and efficient! I needed photos for my Indian OCI application and they knew exactly what was required. The staff was knowledgeable about international requirements and made sure the photos were compliant. Great service!
-      </p>
-<div class="testimonial-author">
-<div class="testimonial-avatar">
-        PG
-       </div>
-<div class="testimonial-info">
-<h4>
-         Priya Gupta
-        </h4>
-<div class="testimonial-rating">
-         ★★★★★
-        </div>
-<p class="testimonial-date">
-         September 10, 2024
-        </p>
-</div>
-</div>
-</div>
-<!-- Testimonial 10 -->
-<div class="testimonial-card">
-<p class="testimonial-content">
-       Amazing quality photos! I needed them for my Chinese visa application and the team made sure everything was perfect. They even retook the photos when I wasn't completely satisfied with the first set. Customer service is top-notch.
-      </p>
-<div class="testimonial-author">
-<div class="testimonial-avatar">
-        LW
-       </div>
-<div class="testimonial-info">
-<h4>
-         Lisa Wang
-        </h4>
-<div class="testimonial-rating">
-         ★★★★★
-        </div>
-<p class="testimonial-date">
-         August 28, 2024
-        </p>
-</div>
-</div>
-</div>
-<!-- Testimonial 11 -->
-<div class="testimonial-card">
-<p class="testimonial-content">
-       Fast and reliable service. I've used them multiple times for different visa applications and they always deliver quality results. The staff remembers returning customers and provides personalized service. Highly recommended!
-      </p>
-<div class="testimonial-author">
-<div class="testimonial-avatar">
-        JS
-       </div>
-<div class="testimonial-info">
-<h4>
-         James Smith
-        </h4>
-<div class="testimonial-rating">
-         ★★★★★
-        </div>
-<p class="testimonial-date">
-         August 15, 2024
-        </p>
-</div>
-</div>
-</div>
-<!-- Testimonial 12 -->
-<div class="testimonial-card">
-<p class="testimonial-content">
-       Great location in downtown Toronto, easy to access by public transit. I needed passport photos for my family of four and they handled everyone efficiently. The kids were a bit restless but the photographer was patient and got great shots.
-      </p>
-<div class="testimonial-author">
-<div class="testimonial-avatar">
-        KT
-       </div>
-<div class="testimonial-info">
-<h4>
-         Karen Thompson
-        </h4>
-<div class="testimonial-rating">
-         ★★★★★
-        </div>
-<p class="testimonial-date">
-         July 30, 2024
-        </p>
-</div>
-</div>
-</div>
-<!-- Testimonial 13 -->
-<div class="testimonial-card">
-<p class="testimonial-content">
-       Professional equipment and setup. You can tell they invest in quality cameras and lighting. The photos came out crisp and clear, exactly what you need for official documents. No issues with my passport application.
-      </p>
-<div class="testimonial-author">
-<div class="testimonial-avatar">
-        AB
-       </div>
-<div class="testimonial-info">
-<h4>
-         Alex Brown
-        </h4>
-<div class="testimonial-rating">
-         ★★★★★
-        </div>
-<p class="testimonial-date">
-         July 18, 2024
-        </p>
-</div>
-</div>
-</div>
-<!-- Testimonial 14 -->
-<div class="testimonial-card">
-<p class="testimonial-content">
-       Excellent customer service! I had specific requirements for my work permit photos and they took the time to understand exactly what was needed. They even called the immigration office to confirm the specifications. Above and beyond!
-      </p>
-<div class="testimonial-author">
-<div class="testimonial-avatar">
-        MN
-       </div>
-<div class="testimonial-info">
-<h4>
-         Maria Nguyen
-        </h4>
-<div class="testimonial-rating">
-         ★★★★★
-        </div>
-<p class="testimonial-date">
-         July 5, 2024
-        </p>
-</div>
-</div>
-</div>
-<!-- Testimonial 15 -->
-<div class="testimonial-card">
-<p class="testimonial-content">
-       Convenient hours and no appointment needed! I was able to walk in during my lunch break and get my passport photos done quickly. The staff was friendly and the whole process was smooth and efficient.
-      </p>
-<div class="testimonial-author">
-<div class="testimonial-avatar">
-        DR
-       </div>
-<div class="testimonial-info">
-<h4>
-         Daniel Rodriguez
-        </h4>
-<div class="testimonial-rating">
-         ★★★★★
-        </div>
-<p class="testimonial-date">
-         June 20, 2024
-        </p>
-</div>
-</div>
-</div>
-<!-- Testimonial 16 -->
-<div class="testimonial-card">
-<p class="testimonial-content">
-       They saved my vacation! I realized last minute that my passport photo didn't meet the new requirements. They fit me in the same day and had my new photos ready in minutes. Professional and accommodating service.
-      </p>
-<div class="testimonial-author">
-<div class="testimonial-avatar">
-        SL
-       </div>
-<div class="testimonial-info">
-<h4>
-         Sophie Lee
-        </h4>
-<div class="testimonial-rating">
-         ★★★★★
-        </div>
-<p class="testimonial-date">
-         June 8, 2024
-        </p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Call to Action Section -->
-<section class="section cta">
-<div class="container">
-<h2 class="cta-title">
-     Ready to Get Your Perfect Passport Photo?
-    </h2>
-<p class="cta-subtitle">
-     Join hundreds of satisfied customers who trust us for their passport and visa photo needs. Professional service, guaranteed compliance, and same-day results.
-    </p>
-<a class="btn btn-secondary btn-lg" href="scheduling.html">
-     BOOK APPOINTMENT
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-55RV84CT" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<header class="site-header">
+  <div class="shell">
+    <a class="brand" href="index.html">
+      <img src="images/logo.png" alt="Passport Photo Toronto">
+      <span>PASSPORT PHOTO</span>
     </a>
+    <nav class="nav-links" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="samples.html">Samples</a>
+        <a href="reviews.html" class="active" aria-current="page">Reviews</a>
+        <a href="faq.html">FAQ</a>
+        <a href="location.html">Location</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-right">
+      <a class="header-phone" href="tel:4169862677">(416) 986-2677</a>
+      <button type="button" class="btn btn-gold" data-book>Book Appointment</button>
+      <button type="button" class="hamburger" aria-label="Open menu">&#9776;</button>
+    </div>
+  </div>
+</header>
+<div class="drawer-backdrop"></div>
+<nav class="drawer" aria-label="Mobile">
+  <button type="button" class="drawer-close" aria-label="Close menu">&#10005;</button>
+  <a class="drawer-link" href="index.html">Home</a>
+  <a class="drawer-link" href="services.html">Services</a>
+  <a class="drawer-link" href="pricing.html">Pricing</a>
+  <a class="drawer-link" href="samples.html">Samples</a>
+  <a class="drawer-link" href="reviews.html">Reviews</a>
+  <a class="drawer-link" href="faq.html">FAQ</a>
+  <a class="drawer-link" href="location.html">Location</a>
+  <a class="drawer-link" href="blog.html">Blog</a>
+  <a class="drawer-link" href="contact.html">Contact</a>
+  <div class="drawer-contact">
+    <a href="tel:4169862677">(416) 986-2677</a>
+    <a href="mailto:info@passportphototoronto.com">info@passportphototoronto.com</a>
+    <span>Mon–Fri: 9:00 AM – 6:00 PM<br>Sat–Sun: 12:00 PM – 6:00 PM</span>
+    <button type="button" class="btn btn-gold btn-block" data-book>Book Appointment</button>
+  </div>
+</nav>
+<main>
+<div class="page">
+  <div class="section-head">
+    <div>
+      <h1>Customer reviews</h1>
+      <div class="rating-big">
+        <span class="num">4.9</span>
+        <div style="display:flex;flex-direction:column;gap:2px">
+          <span class="stars">★★★★★</span>
+          <span style="font-size:13px;color:#888">Based on Google reviews</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="review-masonry">
+  <div class="rcard">
+    <span class="stars">★★★★★</span>
+    <span class="txt">“My son and I came in as walk-ins, needing headshots suitable for Canadian citizenship certificates. At that time in the morning, there was no wait, and everything was quick and professional. Highly recommend!”</span>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="avatar">DD</div>
+      <div style="display:flex;flex-direction:column">
+        <span style="font-size:13.5px;font-weight:700;color:#333">David Dibble</span>
+        <span style="font-size:12px;color:#888">June 2026</span>
+      </div>
+    </div>
+  </div>
+  <div class="rcard">
+    <span class="stars">★★★★★</span>
+    <span class="txt">“Efficient, friendly service in a convenient location. The photos looked good and I got some tips on submitting the photos for the passport service I was taking them for. Recommended!”</span>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="avatar">MB</div>
+      <div style="display:flex;flex-direction:column">
+        <span style="font-size:13.5px;font-weight:700;color:#333">Matt Buckley-Golder</span>
+        <span style="font-size:12px;color:#888">June 2026</span>
+      </div>
+    </div>
+  </div>
+  <div class="rcard">
+    <span class="stars">★★★★★</span>
+    <span class="txt">“Wonderful service! The lady who helped me was very lovely and professional, and she took a passport photo I'm actually happy with, not one I'll dread carrying around for the next 10 years.”</span>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="avatar">A</div>
+      <div style="display:flex;flex-direction:column">
+        <span style="font-size:13.5px;font-weight:700;color:#333">Arman</span>
+        <span style="font-size:12px;color:#888">June 2026</span>
+      </div>
+    </div>
+  </div>
+  <div class="rcard">
+    <span class="stars">★★★★★</span>
+    <span class="txt">“Julian did an excellent job with my passport photo. He uses top-of-the-line equipment and clearly knows the technical requirements inside out. The whole process was smooth, quick, and stress-free, and the pricing was very reasonable for the quality you get. Highly recommend Julian.”</span>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="avatar">MS</div>
+      <div style="display:flex;flex-direction:column">
+        <span style="font-size:13.5px;font-weight:700;color:#333">M S</span>
+        <span style="font-size:12px;color:#888">May 2026</span>
+      </div>
+    </div>
+  </div>
+  <div class="rcard">
+    <span class="stars">★★★★★</span>
+    <span class="txt">“Superb service. Excellent location and studio. Highly efficient. Fair pricing. Got digital and printed passport photos for three family members for Canadian and UK passports. All done in 12 minutes. Outstanding experience on a Sunday afternoon.”</span>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="avatar">RP</div>
+      <div style="display:flex;flex-direction:column">
+        <span style="font-size:13.5px;font-weight:700;color:#333">Rob Prichard</span>
+        <span style="font-size:12px;color:#888">May 2026</span>
+      </div>
+    </div>
+  </div>
+  <div class="rcard">
+    <span class="stars">★★★★★</span>
+    <span class="txt">“I was exceptionally pleased by Passport Photo Toronto. It is convenient to get to and the customer service and professionalism is very welcoming. It was completed very quickly and I highly recommend using their services.”</span>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="avatar">MC</div>
+      <div style="display:flex;flex-direction:column">
+        <span style="font-size:13.5px;font-weight:700;color:#333">Maureen Carey</span>
+        <span style="font-size:12px;color:#888">May 2026</span>
+      </div>
+    </div>
+  </div>
+  <div class="rcard">
+    <span class="stars">★★★★★</span>
+    <span class="txt">“I randomly stopped by after landing from a 21-hour flight. I needed a photo on my way to the hotel. The guy is stylish, calm and professional. Loved the place — reminded me of an old Ethiopian art based interior with vintage objects.”</span>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="avatar">DT</div>
+      <div style="display:flex;flex-direction:column">
+        <span style="font-size:13.5px;font-weight:700;color:#333">DwDw DT</span>
+        <span style="font-size:12px;color:#888">May 2026</span>
+      </div>
+    </div>
+  </div>
+  <div class="rcard">
+    <span class="stars">★★★★★</span>
+    <span class="txt">“Love my photo — which is rare. Good service, quick, felt comfortable, liked that it was a studio environment and quiet, plus we redid the photos until we got it right. Got to choose the photo I liked! No complaints and loved supporting a local business!”</span>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="avatar">KB</div>
+      <div style="display:flex;flex-direction:column">
+        <span style="font-size:13.5px;font-weight:700;color:#333">Kimberley Brown</span>
+        <span style="font-size:12px;color:#888">April 2026</span>
+      </div>
+    </div>
+  </div>
+  <div class="rcard">
+    <span class="stars">★★★★★</span>
+    <span class="txt">“In a world of chaos this little spot is an oasis. I had made an appointment but arrived early, I was greeted professionally and had my pictures in my inbox in minutes. Parking available on the street — a no stress moment in my day.”</span>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="avatar">PG</div>
+      <div style="display:flex;flex-direction:column">
+        <span style="font-size:13.5px;font-weight:700;color:#333">Pauline Gray</span>
+        <span style="font-size:12px;color:#888">April 2026</span>
+      </div>
+    </div>
+  </div>
+  <div class="rcard">
+    <span class="stars">★★★★★</span>
+    <span class="txt">“Julian is a true professional! I had been to 2 other places to get my photos for my Greek passport but the photos were not accepted. I decided to try my luck with Passport Photo Toronto.”</span>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="avatar">L</div>
+      <div style="display:flex;flex-direction:column">
+        <span style="font-size:13.5px;font-weight:700;color:#333">Leonardo</span>
+        <span style="font-size:12px;color:#888">April 2026</span>
+      </div>
+    </div>
+  </div>
+  <div class="rcard">
+    <span class="stars">★★★★★</span>
+    <span class="txt">“Super fast and convenient service. There was an issue with the size of the printed photos but I went back and they reprinted a new set with the correct size for me without any trouble.”</span>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="avatar">AA</div>
+      <div style="display:flex;flex-direction:column">
+        <span style="font-size:13.5px;font-weight:700;color:#333">Amir Ahmadian</span>
+        <span style="font-size:12px;color:#888">April 2026</span>
+      </div>
+    </div>
+  </div>
+  <div class="rcard">
+    <span class="stars">★★★★★</span>
+    <span class="txt">“An overall positive experience. Called and they answered my technical questions. No wait when I showed up 30 minutes later. Knowledgeable, friendly and efficient. Good on ya!”</span>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="avatar">KH</div>
+      <div style="display:flex;flex-direction:column">
+        <span style="font-size:13.5px;font-weight:700;color:#333">Ken Hart</span>
+        <span style="font-size:12px;color:#888">April 2026</span>
+      </div>
+    </div>
+  </div>
+  <div class="rcard">
+    <span class="stars">★★★★★</span>
+    <span class="txt">“Excellent, professional service. Particularly nice that the photo could be checked for acceptability by the UK passport immediately. Highly recommend this business.”</span>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="avatar">RL</div>
+      <div style="display:flex;flex-direction:column">
+        <span style="font-size:13.5px;font-weight:700;color:#333">Robert Lannigan</span>
+        <span style="font-size:12px;color:#888">April 2026</span>
+      </div>
+    </div>
+  </div>
+  <div class="rcard">
+    <span class="stars">★★★★★</span>
+    <span class="txt">“The service was quick and efficient. The photographer kindly took the time to walk me through the application process, much appreciated. Highly recommended.”</span>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="avatar">IM</div>
+      <div style="display:flex;flex-direction:column">
+        <span style="font-size:13.5px;font-weight:700;color:#333">Ian Mason</span>
+        <span style="font-size:12px;color:#888">April 2026</span>
+      </div>
+    </div>
+  </div>
+  <div class="rcard">
+    <span class="stars">★★★★★</span>
+    <span class="txt">“Great place to get your passport photo! Owner accommodated me after the shop was already closed and was patiently retaking the pics until it was perfect!”</span>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="avatar">DX</div>
+      <div style="display:flex;flex-direction:column">
+        <span style="font-size:13.5px;font-weight:700;color:#333">Dancy X</span>
+        <span style="font-size:12px;color:#888">March 2026</span>
+      </div>
+    </div>
+  </div>
+  <div class="rcard">
+    <span class="stars">★★★★★</span>
+    <span class="txt">“I had a great experience with Julian for my PR application photos. I arrived just before closing, yet he was still very patient and attentive. I mistakenly provided the wrong dimensions, but he went the extra mile to verify the correct ones.”</span>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="avatar">GN</div>
+      <div style="display:flex;flex-direction:column">
+        <span style="font-size:13.5px;font-weight:700;color:#333">Gilia Nolasco</span>
+        <span style="font-size:12px;color:#888">December 2025</span>
+      </div>
+    </div>
+  </div>
+  <div class="rcard">
+    <span class="stars">★★★★★</span>
+    <span class="txt">“I've gotten the best passport, visa &amp; PR photo here! Super high quality, and the owner Julian is also a very professional photographer. He always gets the job done, answers quick &amp; makes sure you love your photos. This place is a legit studio and you will have the best experience!”</span>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="avatar">LS</div>
+      <div style="display:flex;flex-direction:column">
+        <span style="font-size:13.5px;font-weight:700;color:#333">Luohan Senatore</span>
+        <span style="font-size:12px;color:#888">July 2025</span>
+      </div>
+    </div>
+  </div>
+  <div class="rcard">
+    <span class="stars">★★★★★</span>
+    <span class="txt">“10 out of 10! Exceptional service and outstanding photography skills. Even though I was the last customer of the day, the photographer kindly stayed open to take my ID photo. Truly professional and passionate about the work.”</span>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="avatar">C</div>
+      <div style="display:flex;flex-direction:column">
+        <span style="font-size:13.5px;font-weight:700;color:#333">Charren</span>
+        <span style="font-size:12px;color:#888">July 2025</span>
+      </div>
+    </div>
+  </div>
+  <div class="rcard">
+    <span class="stars">★★★★★</span>
+    <span class="txt">“Julian is very professional, efficient and takes his time to make sure your pictures are perfect and as per the legal requirements. His photos are excellent quality and very reasonable. We highly recommend for passport or other documents.”</span>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="avatar">BD</div>
+      <div style="display:flex;flex-direction:column">
+        <span style="font-size:13.5px;font-weight:700;color:#333">Billie Davies</span>
+        <span style="font-size:12px;color:#888">July 2025</span>
+      </div>
+    </div>
+  </div>
+  <div class="rcard">
+    <span class="stars">★★★★★</span>
+    <span class="txt">“We needed to get photos for our Chinese visa, which must meet very specific conditions. Julian was very knowledgeable about these rules and many visa/passport photo rules. He even allowed us to see the photos before printing them to make sure we were happy.”</span>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="avatar">WR</div>
+      <div style="display:flex;flex-direction:column">
+        <span style="font-size:13.5px;font-weight:700;color:#333">Wendy &amp; Rodrigo</span>
+        <span style="font-size:12px;color:#888">July 2025</span>
+      </div>
+    </div>
+  </div>
+  <div class="rcard">
+    <span class="stars">★★★★★</span>
+    <span class="txt">“I went in for a Chinese passport photo, and Julian was very professional. The photo quality is top-notch, and the studio environment is extremely clean. The price is very reasonable for such high-quality service. Better than any other places!”</span>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="avatar">LY</div>
+      <div style="display:flex;flex-direction:column">
+        <span style="font-size:13.5px;font-weight:700;color:#333">Luohan Yang</span>
+        <span style="font-size:12px;color:#888">July 2025</span>
+      </div>
+    </div>
+  </div>
+  <div class="rcard">
+    <span class="stars">★★★★★</span>
+    <span class="txt">“Passport Photo Toronto is unbeatable! I popped in for a passport photo and came out looking like a movie star, not a suspect. No appointments, no fuss, just amazing photos at an incredible price. Honestly, why go anywhere else?”</span>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="avatar">SS</div>
+      <div style="display:flex;flex-direction:column">
+        <span style="font-size:13.5px;font-weight:700;color:#333">Sergio Senatore</span>
+        <span style="font-size:12px;color:#888">July 2025</span>
+      </div>
+    </div>
+  </div>
+  <div class="rcard">
+    <span class="stars">★★★★★</span>
+    <span class="txt">“The service here was quick (less than 10 mins) and the owner was extremely patient and professional. I would recommend this studio to anyone who needs their pictures taken.”</span>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="avatar">AL</div>
+      <div style="display:flex;flex-direction:column">
+        <span style="font-size:13.5px;font-weight:700;color:#333">Alexander Liu</span>
+        <span style="font-size:12px;color:#888">July 2025</span>
+      </div>
+    </div>
+  </div>
+  <div class="rcard">
+    <span class="stars">★★★★★</span>
+    <span class="txt">“Hands down the best photography studio and photography experience in the city. I walked in for passport photos and the service was kind, professional, and timely. I couldn't ask for anything more.”</span>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="avatar">UA</div>
+      <div style="display:flex;flex-direction:column">
+        <span style="font-size:13.5px;font-weight:700;color:#333">U A</span>
+        <span style="font-size:12px;color:#888">July 2025</span>
+      </div>
+    </div>
+  </div>
+  <div class="rcard">
+    <span class="stars">★★★★★</span>
+    <span class="txt">“Julian made me feel so comfortable. I specifically drove 1.5 hours to come to Passport Photo Toronto because I knew I'd receive a professional looking photo that I'll feel confident showing when I travel.”</span>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="avatar">MK</div>
+      <div style="display:flex;flex-direction:column">
+        <span style="font-size:13.5px;font-weight:700;color:#333">Mary Beth Kennedy</span>
+        <span style="font-size:12px;color:#888">July 2025</span>
+      </div>
+    </div>
+  </div>
+  <div class="rcard">
+    <span class="stars">★★★★★</span>
+    <span class="txt">“Came here for a digital passport photo for my UK passport renewal, and the representative was immediately aware of the requirements and specifications without me needing to tell him. Super impressed with the service.”</span>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="avatar">MH</div>
+      <div style="display:flex;flex-direction:column">
+        <span style="font-size:13.5px;font-weight:700;color:#333">Matt Humber</span>
+        <span style="font-size:12px;color:#888">July 2025</span>
+      </div>
+    </div>
+  </div>
+  <div class="rcard">
+    <span class="stars">★★★★★</span>
+    <span class="txt">“I had my passport photo taken elsewhere and was so disappointed by the result that I wanted them retaken; this is how I'll look for the next 10 years! I found Passport Photo Toronto through Google Maps and liked what I read in the reviews.”</span>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="avatar">S</div>
+      <div style="display:flex;flex-direction:column">
+        <span style="font-size:13.5px;font-weight:700;color:#333">Steve</span>
+        <span style="font-size:12px;color:#888">July 2025</span>
+      </div>
+    </div>
+  </div>
+  <div class="rcard">
+    <span class="stars">★★★★★</span>
+    <span class="txt">“Booked an appointment for Saturday afternoon and Julian took my photo (walk-ins also accepted). Great attitude, place was also really nice and clean, and I was able to review the photos.”</span>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="avatar">ZH</div>
+      <div style="display:flex;flex-direction:column">
+        <span style="font-size:13.5px;font-weight:700;color:#333">Zi-Bei Han</span>
+        <span style="font-size:12px;color:#888">July 2025</span>
+      </div>
+    </div>
+  </div>
+  <div class="rcard">
+    <span class="stars">★★★★★</span>
+    <span class="txt">“Super fast and amazing service! Julian is a real professional photographer and is happy to make sure you look your best while conforming to passport requirements.”</span>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="avatar">AL</div>
+      <div style="display:flex;flex-direction:column">
+        <span style="font-size:13.5px;font-weight:700;color:#333">Aaron Lam</span>
+        <span style="font-size:12px;color:#888">July 2025</span>
+      </div>
+    </div>
+  </div>
+  </div>
 </div>
-</section>
-<!-- Footer -->
-<footer class="footer">
-<div class="container">
-<div class="footer-container">
-<div class="footer-about">
-<div class="footer-logo">
-<picture><source srcset="images/logo-white.webp" type="image/webp"/><img alt="Passport Photo Toronto Logo" loading="lazy" src="images/logo-white.png"/></picture>
-</div>
-<p>
-       Professional passport and ID photo services in downtown Toronto. We guarantee compliance with all official requirements.
-      </p>
-</div>
-<div class="footer-links">
-<h3 class="footer-title">
-       Quick Links
-      </h3>
-<ul class="footer-links">
-<li class="footer-link">
-<a href="/">
-         Home
-        </a>
-</li>
-<li class="footer-link">
-<a href="services.html">
-         Services
-        </a>
-</li>
-<li class="footer-link">
-<a href="pricing.html">
-         Pricing
-        </a>
-</li>
-
-<li class="footer-link">
-<a href="reviews.html">
-         Reviews
-        </a>
-</li>
-<li class="footer-link">
-<a href="about.html">
-         About
-        </a>
-</li>
-<li class="footer-link">
-<a href="faq.html">
-         FAQ
-        </a>
-</li>
-<li class="footer-link">
-<a href="location.html">
-         Location
-        </a>
-</li>
-<li class="footer-link">
-<a href="contact.html">
-         Contact
-        </a>
-</li>
-<li class="footer-link">
-<a href="jobs.html">
-         Careers
-        </a>
-</li>
-<li class="footer-link">
-<a href="trusted-vendors.html">
-         Trusted Vendors
-        </a>
-</li>
-<li class="footer-link">
-<a href="blog.html">
-         Blog
-        </a>
-</li>
-<li class="footer-link">
-<a href="refund-policy.html">
-         Refund Policy
-        </a>
-</li>
-<li class="footer-link">
-<a href="digital-photo-payment.html">
-         Digital Photo Payment
-        </a>
-</li>
-<li class="footer-link">
-<a href="sitemap.html">
-         Sitemap
-        </a>
-</li>
-</ul>
-</div>
-<div class="footer-services">
-<h3 class="footer-title">
-       Our Services
-      </h3>
-<ul class="footer-links">
-<li class="footer-link">
-<a href="canadian-passport-photos.html">
-         Canadian Passport
-        </a>
-</li>
-<li class="footer-link">
-<a href="pr-card-photos.html">
-         Canadian PR Card
-        </a>
-</li>
-<li class="footer-link">
-<a href="us-immigration-photos.html">
-         US Visa
-        </a>
-</li>
-<li class="footer-link">
-<a href="#">
-         Chinese Visa
-        </a>
-</li>
-<li class="footer-link">
-<a href="#">
-         Schengen Visa
-        </a>
-</li>
-<li class="footer-link">
-<a href="us-passport-photos.html">
-         US Passport
-        </a>
-</li>
-<li class="footer-link">
-<a href="oci-photo.html">
-         Indian OCI
-        </a>
-</li>
-<li class="footer-link">
-<a href="study-permit-photos.html">
-         Study Permit
-        </a>
-</li>
-<li class="footer-link">
-<a href="work-permit-photo.html">
-         Work Permit
-        </a>
-</li>
-</ul>
-</div>
-<div class="footer-contact">
-<h3 class="footer-title">
-       Contact Us
-      </h3>
-<div class="footer-contact-item">
-<i class="fas fa-map-marker-alt footer-contact-icon">
-</i>
-<div>
-<p>
-         63 McCaul St
-        </p>
-<p>
-         Toronto, ON M5T 2W7
-        </p>
-</div>
-</div>
-<div class="footer-contact-item">
-<i class="fas fa-phone footer-contact-icon">
-</i>
-<p>
-        (416) 986-2677
-       </p>
-</div>
-<div class="footer-contact-item">
-<i class="fas fa-envelope footer-contact-icon">
-</i>
-<p>
-        <a href="mailto:info@passportphototoronto.com" style="color: rgba(255, 255, 255, 0.7); text-decoration: none;">info@passportphototoronto.com</a>
-       </p>
-</div>
-<div class="footer-contact-item">
-<i class="fas fa-clock footer-contact-icon">
-</i>
-<p>
-        Mon-Fri: 9:00 AM - 6:00 PM<br/>Sat-Sun: 12:00 PM - 6:00 PM
-       </p>
-</div>
-</div>
-</div>
-<div class="footer-bottom">
-<div class="footer-social">
-<h4>
-       Follow Us
-      </h4>
-<div class="social-links">
-<a class="social-link" href="https://instagram.com/passportphototoronto" rel="noopener noreferrer" target="_blank">
-<i class="fab fa-instagram">
-</i>
-</a>
-
-
-
-</div>
-</div>
-<p>
-      © 2025 Passport Photo Toronto. All Rights Reserved.
-     </p>
-</div>
-</div>
+</main>
+<footer class="site-footer">
+  <div class="shell">
+    <div class="col brand-col">
+      <img class="flogo" src="images/logo-gold.png" alt="Passport Photo Toronto">
+      <span class="blurb">Professional passport and ID photo services in downtown Toronto. We guarantee compliance with all official requirements.</span>
+      <a class="ig" href="https://instagram.com/passportphototoronto" target="_blank" rel="noopener noreferrer">Follow us on Instagram</a>
+    </div>
+    <div class="col">
+      <h3>Quick links</h3>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="services.html">All services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="samples.html">Sample photos</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="faq.html">FAQ</a>
+        <a href="location.html">Location</a>
+        <a href="about.html">About us</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="jobs.html">Careers</a>
+        <a href="trusted-vendors.html">Trusted vendors</a>
+        <a href="refund-policy.html">Refund policy</a>
+        <a href="digital-photo-payment.html">Digital photo payment</a>
+        <a href="passport-photos-chinatown.html">Service areas</a>
+        <a href="sitemap.html">Sitemap</a>
+      </div>
+    </div>
+    <div class="col">
+      <h3>Our services</h3>
+      <div class="links">
+        <a href="passport-photos.html">Passport Photos in Toronto</a>
+        <a href="visa-photos.html">Visa Photos in Toronto</a>
+        <a href="canadian-passport-photos.html">Canadian Passport</a>
+        <a href="us-visa-photos.html">US Visa</a>
+        <a href="us-passport-photos.html">US Passport</a>
+        <a href="uk-passport-photos.html">UK Passport</a>
+        <a href="indian-passport-photos.html">Indian Passport</a>
+        <a href="chinese-passport-photos.html">Chinese Passport</a>
+        <a href="schengen-visa-photos.html">Schengen Visa</a>
+        <a href="chinese-visa-photos.html">Chinese Visa</a>
+        <a href="indian-visa-photos.html">Indian Visa</a>
+        <a href="pr-card-photos.html">PR Card</a>
+        <a href="canadian-citizenship-photo.html">Canadian Citizenship</a>
+        <a href="study-permit-photos.html">Study Permit</a>
+        <a href="work-permit-photo.html">Work Permit</a>
+        <a href="oci-photo.html">Indian OCI</a>
+        <a href="digital-passport-photos.html">Digital Photos</a>
+        <a href="document-services.html">Printing, Scanning &amp; Photocopying</a>
+      </div>
+    </div>
+    <div class="col">
+      <h3>Contact</h3>
+      <span class="contact-line">63 McCaul St<br>Toronto, ON M5T 2W7</span>
+      <a href="tel:4169862677">(416) 986-2677</a>
+      <a href="mailto:info@passportphototoronto.com">info@passportphototoronto.com</a>
+      <span class="contact-line">Mon–Fri: 9 AM – 6 PM<br>Sat–Sun: 12 PM – 6 PM</span>
+    </div>
+  </div>
+  <div class="bottom">© 2026 Passport Photo Toronto. All Rights Reserved.</div>
 </footer>
-<!-- Mobile Menu Script -->
-<script>
-   document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-            const navMenu = document.querySelector('.nav-menu');
-            
-            mobileMenuBtn.addEventListener('click', function() {
-                navMenu.classList.toggle('active');
-            });
-        });
-  </script>
-<script>
-   document.addEventListener("DOMContentLoaded", function () {
-    const menuIcon = document.querySelector(".menu-icon");
-    const navLinks = document.querySelector(".nav-links");
 
-    if (menuIcon && navLinks) {
-      menuIcon.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-      });
-    }
-  });
-  </script>
-<script>
-   document.addEventListener("DOMContentLoaded", function () {
-    const currentPath = location.pathname.split("/").pop() || "index.html";
-    const links = document.querySelectorAll(".nav-link");
-    links.forEach(link => {
-      const href = link.getAttribute("href");
-      if (href === currentPath) {
-        link.classList.add("active");
-      }
-    });
-  });
-  </script>
-<script>
-   document.addEventListener("DOMContentLoaded", function () {
-  // Highlight current page link
-  const currentPath = location.pathname.split("/").pop() || "index.html";
-  const links = document.querySelectorAll(".nav-link");
-  links.forEach(link => {
-    const href = link.getAttribute("href");
-    if (href === currentPath) {
-      link.classList.add("active");
-    }
-  });
+<div class="book-overlay" role="dialog" aria-modal="true" aria-label="Book an appointment">
+  <div class="book-backdrop"></div>
+  <div class="book-modal">
+    <div class="book-head">
+      <div>
+        <div class="kicker">Square Appointments</div>
+        <div class="t">Book an appointment</div>
+      </div>
+      <button type="button" class="book-close" aria-label="Close">&#10005;</button>
+    </div>
+    <div class="book-frame">
+      <iframe title="Book an appointment — Square" loading="lazy"></iframe>
+    </div>
+  </div>
+</div>
+<script src="js/redesign.js"></script>
 
-  // Toggle mobile menu
-  const menuBtn = document.querySelector(".mobile-menu-btn");
-  const navMenu = document.querySelector(".nav-menu");
-  if (menuBtn && navMenu) {
-    menuBtn.addEventListener("click", () => {
-      navMenu.classList.toggle("active");
-    });
-  }
-});
-  </script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const menuBtn = document.querySelector(".mobile-menu-btn");
-    const navMenu = document.querySelector(".nav-menu");
-    if (menuBtn && navMenu) {
-      menuBtn.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-      });
-    }
-  });
-</script>
 </body>
 </html>
