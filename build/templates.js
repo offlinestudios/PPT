@@ -52,13 +52,23 @@ function header(active) {
 </header>
 <div class="drawer-backdrop"></div>
 <nav class="drawer" aria-label="Mobile">
-  <button type="button" class="drawer-close" aria-label="Close menu">&#10005;</button>
-  ${D.nav.map((n) => `<a class="drawer-link" href="${n.href}">${n.label}</a>`).join('\n  ')}
-  <div class="drawer-contact">
-    <a href="${TEL}">${PHONE}</a>
-    <a href="mailto:${EMAIL}">${EMAIL}</a>
-    <span>Mon–Fri: 9:00 AM – 6:00 PM<br>Sat–Sun: 12:00 PM – 6:00 PM</span>
+  <div class="drawer-head">
+    <span class="label">MENU</span>
+    <button type="button" class="drawer-close" aria-label="Close menu">&#10005;</button>
+  </div>
+  ${D.nav
+    .map(
+      (n) =>
+        `<a class="drawer-link${n.href === active ? ' active' : ''}" href="${n.href}">${n.label}</a>`
+    )
+    .join('\n  ')}
+  <div class="drawer-foot">
     ${bookBtn('Book Appointment', 'btn-gold btn-block')}
+    <div class="drawer-contact">
+      <a href="${TEL}">${PHONE}</a>
+      <a href="mailto:${EMAIL}">${EMAIL}</a>
+      <span>Mon–Fri 9–6 · Sat–Sun 12–6</span>
+    </div>
   </div>
 </nav>`;
 }
@@ -206,7 +216,10 @@ function home() {
     </a>`
     )
     .join('\n    ');
-  const areaTiles = D.homeAreaNames
+  const chips = D.homeChips
+    .map((c) => `<a class="chip" href="${D.svcFile[c.key]}">${esc(c.label)}</a>`)
+    .join('\n      ');
+  const areaCards = D.homeAreaNames
     .map(
       (n) => `<a class="area-tile" href="${D.areaFile(n)}">
       <img src="${D.areaImg(n)}" alt="Passport photos near ${esc(n)}, Toronto" loading="lazy">
@@ -218,12 +231,32 @@ function home() {
     .map(
       (s) => `<div class="step">
       <div class="n">${s.n}</div>
-      <span class="t">${esc(s.title)}</span>
-      <span class="b">${esc(s.body)}</span>
+      <div class="step-txt">
+        <span class="t">${esc(s.title)}</span>
+        <span class="b">${esc(s.body)}</span>
+      </div>
     </div>`
     )
     .join('\n    ');
-  const homeReviews = D.topReviews.slice(0, 3).map(reviewCard).join('\n    ');
+  const priceRows = D.tierRows
+    .map(
+      (t) => `<div class="price-line${t.popular ? ' popular' : ''}">
+      <span class="l">
+        <span class="n">${esc(t.name)}${t.popular ? '<em class="tag">Best value</em>' : ''}</span>
+        <span class="s">${esc(t.sub)}</span>
+      </span>
+      <span class="p">${t.price}</span>
+    </div>`
+    )
+    .join('\n    ');
+  const reviews = D.topReviews
+    .slice(0, 3)
+    .map((r, i) => `<div class="review${i > 0 ? ' d-only' : ''}">
+      ${stars(r.stars)}
+      <span class="txt">${esc(r.text)}</span>
+      <span class="who">${esc(r.name)}${i === 0 ? ' · <a href="reviews.html">Read more reviews</a>' : ''}</span>
+    </div>`)
+    .join('\n    ');
 
   return `<section class="hero">
   <div class="shell">
@@ -233,10 +266,14 @@ function home() {
       <p>Guaranteed acceptance for Canadian passports, visas and IDs — or we retake them free.</p>
       <div class="hero-actions">
         ${bookBtn('Book Appointment', 'btn-gold btn-lg')}
-        <a class="btn btn-outline-light" href="services.html">Browse Services</a>
+        <a class="btn btn-outline-light d-only" href="services.html">Browse Services</a>
+        <a class="btn btn-outline-light m-only" href="${TEL}">Call ${PHONE}</a>
+      </div>
+      <div class="trust m-only">
+        <span class="rate">★ 4.9 on Google</span><i></i><span>Walk-ins welcome</span><i></i><span>Same-day</span>
       </div>
     </div>
-    <div>
+    <div class="d-only">
       <div class="hero-art">
         <img class="back" src="images/passport-sample-back.png" alt="Stamped back of a passport photo from our studio">
         <img class="front" src="images/passport-sample-front.png" alt="Real passport photo sample from our studio">
@@ -246,7 +283,7 @@ function home() {
   </div>
 </section>
 
-<div class="band-b">
+<div class="band-b d-only">
   <div class="shell stats">
     <div class="stat"><b>10 min</b><span>in and out,<br>prints in hand</span></div>
     <div class="stat"><b>100%</b><span>acceptance guaranteed<br>or free retake</span></div>
@@ -258,38 +295,41 @@ function home() {
 <div class="shell section">
   <div class="section-head">
     <div>
-      <h2>Photos for every document</h2>
-      <span class="sub">Passports, visas, permits and IDs — 40+ document types, all to exact spec.</span>
+      <h2 class="d-only">Photos for every document</h2>
+      <h2 class="m-only">Which document do you need?</h2>
+      <span class="sub d-only">Passports, visas, permits and IDs — 40+ document types, all to exact spec.</span>
     </div>
-    <a class="btn btn-outline" href="services.html">All services →</a>
+    <a class="btn btn-outline d-only" href="services.html">All services →</a>
   </div>
-  <div class="grid-3">
+  <div class="grid-3 d-only">
     ${svcs}
   </div>
-</div>
-
-<div class="band">
-  <div class="shell section">
-    <div class="split">
-      <img src="images/offline-website-5.jpg" alt="Studio setup at 63 McCaul St" loading="lazy">
-      <div class="hero-col">
-        <h2>Real studio. Real results.</h2>
-        <p>Inside Offline Studios at 63 McCaul St — professional-grade lighting and a calibrated camera. No phone cameras. No drugstore booths.</p>
-        <p>Every photo is checked against the issuing authority's spec before you leave, and you approve your shot before we print.</p>
-        <a class="btn btn-outline" href="samples.html" style="align-self:flex-start">See sample photos →</a>
-        <div class="press">
-          <div class="press-top">
-            <img src="images/blogto-logo.png" alt="blogTO" loading="lazy">
-            <span>As featured in</span>
-          </div>
-          <q>“If you want to visit a local business… Passport Photo Toronto.”</q>
-        </div>
-      </div>
-    </div>
+  <div class="chiplist m-only">
+      ${chips}
+      <a class="chip chip-more" href="services.html">All 30+ documents →</a>
   </div>
 </div>
 
-<div class="band-b">
+<div class="shell section pricing-home">
+  <h2 class="center d-only">Simple pricing</h2>
+  <h2 class="m-only">Simple, transparent pricing</h2>
+  <div class="d-only">${tiersBlock()}</div>
+  <div class="m-only">
+    <div class="price-list">
+    ${priceRows}
+    </div>
+    <p class="fineprint">All prices include guaranteed compliance. <a href="pricing.html">Full pricing →</a></p>
+  </div>
+</div>
+
+<div class="shell section m-only sample-block">
+  <h2>Real photos taken here</h2>
+  <img src="images/passport-scan-sample-square.jpg" alt="Real passport photo sample from our studio">
+  <p class="cap">Actual photo from our studio — professional lighting, white background, accepted every time.</p>
+  <a class="btn btn-outline btn-block" href="samples.html">See more samples</a>
+</div>
+
+<div class="band-b how">
   <div class="shell section">
     <h2 class="center">How it works</h2>
     <div class="steps">
@@ -298,34 +338,54 @@ function home() {
   </div>
 </div>
 
-<div class="shell section">
-  <h2 class="center">Simple pricing</h2>
-  ${tiersBlock()}
-</div>
-
-<div class="band">
+<div class="band studio-band">
   <div class="shell section">
-    <div class="section-head">
-      <div>
-        <h2>What customers say</h2>
-        <div class="rating-big" style="gap:10px">${stars()}<span class="sub">4.9 on Google reviews</span></div>
+    <div class="split">
+      <img src="images/offline-website-5.jpg" alt="Studio setup at 63 McCaul St" loading="lazy">
+      <div class="hero-col">
+        <h2>Real studio. Real results.</h2>
+        <p>Inside Offline Studios at 63 McCaul St — professional-grade lighting and a calibrated camera. No phone cameras. No drugstore booths.</p>
+        <p class="d-only">Every photo is checked against the issuing authority's spec before you leave, and you approve your shot before we print.</p>
+        <a class="btn btn-outline d-only" href="samples.html">See sample photos →</a>
       </div>
-      <a class="btn btn-outline" href="reviews.html">Read all reviews →</a>
-    </div>
-    <div class="grid-3">
-    ${homeReviews}
     </div>
   </div>
 </div>
 
-<div class="shell section">
+<div class="shell section reviews-home">
   <div class="section-head">
-    <h2>Serving all of downtown Toronto</h2>
-    <a class="btn btn-outline" href="sitemap.html">All service areas →</a>
+    <div>
+      <h2 class="d-only">What customers say</h2>
+      <h2 class="m-only">What people say</h2>
+      <div class="rating-line d-only">${stars()}<span class="sub">4.9 on Google reviews</span></div>
+    </div>
+    <a class="btn btn-outline d-only" href="reviews.html">Read all reviews →</a>
+  </div>
+  <div class="press">
+    <div class="press-top">
+      <img src="images/blogto-logo.png" alt="blogTO" loading="lazy">
+      <span>As featured in</span>
+    </div>
+    <q>“If you want to visit a local business… Passport Photo Toronto.”</q>
+  </div>
+  <div class="grid-3">
+    ${reviews}
+  </div>
+</div>
+
+<div class="shell section areas-home">
+  <div class="section-head">
+    <div>
+      <h2 class="d-only">Serving all of downtown Toronto</h2>
+      <h2 class="m-only">Serving all of Toronto</h2>
+      <p class="sub m-only">From the Annex to Yorkville, Kensington Market to the Financial District — clients across the city's neighbourhoods trust us with their photos.</p>
+    </div>
+    <a class="btn btn-outline d-only" href="sitemap.html">All service areas →</a>
   </div>
   <div class="area-tiles">
-    ${areaTiles}
+    ${areaCards}
   </div>
+  <a class="btn btn-outline btn-block m-only" href="sitemap.html">View service areas</a>
 </div>
 
 ${ctaBand()}`;

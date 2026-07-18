@@ -43,6 +43,17 @@ h1, h2, h3 { font-family: var(--font-head); color: var(--navy); margin: 0; }
 
 .shell { max-width: var(--shell); margin: 0 auto; padding: 0 40px; width: 100%; }
 
+/* The prototype's 2a (mobile) and 3a (desktop) are different designs, not one
+   reflowed layout. Blocks that exist in only one of them carry .m-only/.d-only;
+   everything else is restyled at the breakpoint. */
+.m-only { display: none !important; }
+@media (max-width: 899px) {
+  .d-only { display: none !important; }
+  .m-only { display: revert !important; }
+  .m-only.btn { display: inline-flex !important; }
+  .chiplist.m-only, .trust.m-only { display: flex !important; }
+}
+
 /* ---------- buttons ---------- */
 .btn {
   display: inline-flex;
@@ -975,4 +986,230 @@ body.book-open { overflow: hidden; }
   .sticky-bar .info span { font-size: 11.5px; color: var(--text-dim); }
   .sticky-bar .btn { padding: 13px 20px; font-size: 12.5px; }
   body.has-sticky-bar { padding-bottom: 72px; }
+}
+
+/* ==========================================================================
+   Mobile design (prototype 2a) — structural differences from desktop
+   ========================================================================== */
+@media (max-width: 899px) {
+  /* ---- header: hamburger is a bordered tile ---- */
+  .hamburger {
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--navy);
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  .brand img { height: 30px; }
+  .brand span { font-size: 13px; }
+
+  /* ---- hero ---- */
+  .hero .shell { padding: 26px 20px 30px; gap: 14px; }
+  .hero h1 { font-size: 34px; line-height: 1.12; }
+  .hero p { font-size: 15.5px; line-height: 1.55; }
+  .hero-actions { flex-direction: column; gap: 10px; padding-top: 2px; }
+  .hero-actions .btn { width: 100%; align-self: stretch; }
+  .trust {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .trust .rate { color: var(--gold); }
+  .trust i { width: 3px; height: 3px; border-radius: 999px; background: rgba(255, 255, 255, 0.4); }
+
+  /* ---- section rhythm ---- */
+  .section { padding: 24px 20px 6px; gap: 12px; }
+  .section h2 { font-size: 18px; font-weight: 700; color: var(--navy); }
+  .section h2.center { text-align: left; }
+  .section-head { flex-direction: column; align-items: stretch; gap: 8px; }
+  .section-head .sub { font-size: 13.5px; color: var(--text-body); line-height: 1.6; }
+
+  /* ---- document chips ---- */
+  .chiplist { flex-wrap: wrap; gap: 8px; }
+  .chiplist .chip { font-size: 13px; padding: 10px 14px; border-color: #d8ddea; }
+  .chip-more { border: 1px dashed #b8c2d8; color: var(--text-muted); background: transparent; }
+
+  /* ---- pricing as a stacked list ---- */
+  .price-list {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  .price-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 15px 18px;
+    border-bottom: 1px solid var(--divider);
+  }
+  .price-line:last-child { border-bottom: 0; }
+  .price-line.popular { background: #f4f7fc; }
+  .price-line .l { display: flex; flex-direction: column; gap: 2px; }
+  .price-line .n { font-size: 14.5px; font-weight: 700; color: var(--text); display: flex; align-items: center; gap: 8px; }
+  .price-line .tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--on-gold);
+    background: var(--gold);
+    padding: 3px 7px;
+    border-radius: 999px;
+    font-style: normal;
+  }
+  .price-line .s { font-size: 12px; color: var(--text-dim); }
+  .price-line .p { font-family: var(--font-head); font-size: 17px; font-weight: 700; color: var(--navy); }
+  .fineprint { margin: 10px 0 0; font-size: 12px; color: var(--text-dim); }
+  .fineprint a { font-weight: 700; }
+
+  /* ---- "Real photos taken here" (mobile only) ---- */
+  .sample-block img { width: 100%; border-radius: 12px; display: block; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); }
+  .sample-block .cap { margin: 0; font-size: 12.5px; color: var(--text-muted); line-height: 1.5; }
+
+  /* ---- how it works: row cards, not centred columns ---- */
+  .how .steps { display: flex; flex-direction: column; gap: 8px; }
+  .how .step {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    gap: 14px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 16px;
+  }
+  .how .step .n {
+    width: 30px;
+    height: 30px;
+    background: var(--navy);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .how .step-txt { display: flex; flex-direction: column; gap: 2px; }
+  .how .step .t { font-size: 14.5px; }
+  .how .step .b { font-size: 12.5px; max-width: none; }
+
+  /* ---- studio: image above copy ---- */
+  .studio-band { border: 0; background: transparent; }
+  .studio-band .split { display: flex; flex-direction: column; gap: 12px; }
+  .studio-band img { height: 190px; border-radius: 12px; }
+  .studio-band p { font-size: 13.5px; line-height: 1.6; }
+
+  /* ---- press + single review ---- */
+  .reviews-home .press { background: #fff; border-radius: 12px; padding: 18px; margin: 0; }
+  .reviews-home .press q { font-size: 14px; line-height: 1.55; }
+  .reviews-home .review { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 18px; }
+  .reviews-home .review .txt { font-size: 14px; line-height: 1.55; }
+
+  /* ---- areas: horizontal scroller ---- */
+  .areas-home .area-tiles {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    margin: 0 -20px;
+    padding: 0 20px 4px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .areas-home .area-tiles::-webkit-scrollbar { display: none; }
+  .areas-home .area-tile {
+    flex-shrink: 0;
+    width: 130px;
+    height: auto;
+    border: 1px solid var(--border);
+    background: #fff;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+  }
+  .areas-home .area-tile img { height: 84px; }
+  /* label sits below the image on mobile, not overlaid on it */
+  .areas-home .area-tile span {
+    position: static;
+    background: none;
+    inset: auto;
+    padding: 9px 11px;
+    font-size: 12px;
+    color: var(--navy);
+  }
+
+  /* ---- CTA as an inset card ---- */
+  .cta-band { background: transparent; }
+  .cta-band .shell {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    margin: 24px 0 30px;
+    padding: 24px 20px;
+    background: var(--hero-grad);
+    border-radius: 14px;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .cta-band .t { font-size: 20px; }
+  .cta-band .s { font-size: 13.5px; }
+  .cta-band .btn { width: 100%; align-self: stretch; margin-top: 4px; }
+
+  /* ---- drawer per 2a ---- */
+  .drawer { width: 300px; max-width: 86%; padding: 0 0 30px; gap: 0; }
+  .drawer-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 20px 14px;
+  }
+  .drawer-head .label {
+    font-family: var(--font-head);
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--navy);
+    letter-spacing: 0.04em;
+  }
+  .drawer-close { background: #f0f2f7; color: var(--navy); width: 30px; height: 30px; font-size: 14px; }
+  .drawer a.drawer-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-left: 3px solid transparent;
+    border-bottom: 0;
+    padding: 15px 20px;
+    font-size: 14px;
+  }
+  .drawer a.drawer-link.active { border-left-color: var(--gold); background: #f4f7fc; color: var(--navy); }
+  .drawer a.drawer-link::after { content: '→'; font-size: 13px; color: #b8c2d8; }
+  .drawer-foot { margin: 18px 20px 0; display: flex; flex-direction: column; gap: 10px; }
+  .drawer-contact {
+    margin: 0;
+    background: var(--tint);
+    border-radius: 12px;
+    padding: 22px 16px;
+    gap: 6px;
+  }
+  .drawer-contact a { font-size: 12.5px; font-weight: 700; color: var(--navy); }
+  .drawer-contact span { font-size: 11.5px; color: var(--text-muted); }
+
+  /* sticky bar sits above the safe area */
+  .sticky-bar {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+  }
 }

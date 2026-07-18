@@ -62,7 +62,7 @@ function build(file, opts) {
 }
 
 /* ---- core pages ---- */
-build('index.html', { active: 'index.html', body: T.home() });
+build('index.html', { active: 'index.html', body: T.home(), sticky: true });
 build('services.html', { active: 'services.html', body: T.servicesHub() });
 build('pricing.html', { active: 'pricing.html', body: T.pricing() });
 build('reviews.html', { active: 'reviews.html', body: T.reviews() });
