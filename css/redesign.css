@@ -1259,3 +1259,27 @@ body.book-open { overflow: hidden; }
   /* Chips read as pills, so give them height without stretching the label. */
   .chiplist .chip { padding: 12px 16px; }
 }
+
+/* ==========================================================================
+   Mobile hero button + trust row refinements
+   ========================================================================== */
+@media (max-width: 899px) {
+  /* The gold and outlined buttons were rendering 52px and 56px — the outline's
+     2px border adds to its box. Give both a shared min-height so they read as
+     a matched pair, and use the mobile design's tighter type. */
+  .hero-actions .btn {
+    width: 100%;
+    min-height: 52px;
+    padding: 14px 20px;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+  }
+  .hero-actions .btn-outline-light { font-size: 13.5px; }
+
+  /* Centred under the full-width buttons; left-aligned it left a ragged 35px
+     gap on the right and read as misaligned against the block above. */
+  .trust { justify-content: center; text-align: center; }
+
+  /* Footer link rows were flush at 44px with no separation. */
+  .site-footer .links { gap: 2px 16px; }
+}
