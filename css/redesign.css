@@ -334,6 +334,9 @@ a.card:hover { border-color: var(--navy); box-shadow: 0 6px 18px rgba(43, 75, 14
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
 .split img { width: 100%; height: 340px; object-fit: cover; border-radius: 16px; display: block; }
 .split p { margin: 0; font-size: 16px; color: var(--text-body); line-height: 1.7; }
+/* Asymmetric variant (map / booker beside an info column). Kept as a class,
+   not an inline style, so the mobile media query can still collapse it. */
+.split-wide { grid-template-columns: 1.3fr 0.7fr; align-items: stretch; }
 .press {
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -582,6 +585,16 @@ a.card:hover { border-color: var(--navy); box-shadow: 0 6px 18px rgba(43, 75, 14
 .map-card .body { padding: 18px 22px; display: flex; flex-direction: column; gap: 12px; }
 .map-card .addr { font-family: var(--font-head); font-size: 14.5px; font-weight: 800; color: var(--text); }
 .map-card .transit { font-size: 13px; color: var(--text-muted); }
+/* inline Square booker (scheduling page) */
+.booker {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  min-height: 780px;
+}
+.booker iframe { border: 0; width: 100%; height: 100%; min-height: 780px; display: block; }
+
 .map-box { border-radius: 14px; overflow: hidden; background: var(--tint); }
 .map-box iframe { border: 0; width: 100%; height: 100%; display: block; }
 
@@ -883,8 +896,9 @@ body.book-open { overflow: hidden; }
 
   .stats { grid-template-columns: 1fr 1fr; gap: 18px; padding: 22px 20px; }
   .grid-3, .grid-2, .steps, .tiers, .sample-grid { grid-template-columns: 1fr; }
-  .split { grid-template-columns: 1fr; gap: 24px; }
+  .split, .split-wide { grid-template-columns: 1fr; gap: 24px; }
   .split img { height: 220px; }
+  .booker, .booker iframe { min-height: 640px; }
   .area-tiles { grid-template-columns: 1fr 1fr; }
   .area-grid { grid-template-columns: 1fr 1fr; }
   .review-masonry { columns: 1; }

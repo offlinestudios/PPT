@@ -556,7 +556,7 @@ function faq() {
 function location() {
   return `<div class="page">
   <h1>Find our studio</h1>
-  <div class="split" style="align-items:stretch;grid-template-columns:1.3fr 0.7fr">
+  <div class="split split-wide">
     <div class="map-box" style="min-height:440px"><iframe src="${MAP_EMBED}" loading="lazy" title="Map — 63 McCaul St"></iframe></div>
     <div class="hero-col" style="gap:16px">
       <div class="info-card" style="flex:1">
@@ -657,6 +657,29 @@ function blogPost(key) {
       <div class="s">${esc(post.ctaSub)}</div>
     </div>
     <a class="btn btn-gold" href="${D.svcFile[post.ctaSvc] || 'services.html'}">${esc(post.ctaLabel)}</a>
+  </div>
+</div>`;
+}
+
+function booking() {
+  return `<div class="page">
+  <div>
+    <h1>Book your appointment</h1>
+    <p class="lede">Pick a time below, or just walk in — we take walk-ins 7 days a week and most visits take about 10 minutes.</p>
+  </div>
+  <div class="split split-wide">
+    <div class="booker">
+      <iframe src="https://square.site/appointments/buyer/widget/5fkwsauqjb7usp/L7T8SMADNB80P" loading="lazy" title="Book an appointment — Square"></iframe>
+    </div>
+    <div class="hero-col" style="gap:16px">
+      <div class="info-card" style="flex:1">
+        <div class="field"><span class="lbl">Walk in instead</span><span class="txt">No appointment needed. Mon–Fri 9:00 AM – 6:00 PM, Sat–Sun 12:00 PM – 6:00 PM.</span></div>
+        <div class="field"><span class="lbl">Address</span><span class="val">63 McCaul St, Toronto, ON M5T 2W7</span><span class="txt">Steps from OCAD U and the AGO</span></div>
+        <div class="field"><span class="lbl">Call or text</span><a class="val" href="${TEL}">${PHONE}</a></div>
+        <div class="field"><span class="lbl">Getting here</span><span class="txt">${TRANSIT}</span></div>
+      </div>
+      <a class="btn btn-outline" href="${MAP_DIR}" target="_blank" rel="noopener noreferrer">Get directions</a>
+    </div>
   </div>
 </div>`;
 }
@@ -785,6 +808,6 @@ function sitemapPage() {
 module.exports = {
   esc, header, footer, bookingModal, stickyBar,
   home, servicesHub, servicePage, areaPage, pricing, reviews, faq, location,
-  about, blogIndex, blogPost, contact, samples, jobs, vendors, refund, payment,
+  about, blogIndex, blogPost, contact, samples, jobs, vendors, refund, payment, booking,
   sitemapPage,
 };

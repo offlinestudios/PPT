@@ -77,6 +77,15 @@ build('trusted-vendors.html', { active: null, body: T.vendors() });
 build('refund-policy.html', { active: null, body: T.refund() });
 build('digital-photo-payment.html', { active: null, body: T.payment() });
 build('sitemap.html', { active: null, body: T.sitemapPage() });
+build('scheduling.html', { active: null, body: T.booking() });
+
+/* Pre-existing duplicate of the Chinese visa page; its <head> already
+   canonicals to chinese-visa-photos.html, so that posture is preserved. */
+build('test-breadcrumb-chinese-visa.html', {
+  active: 'services.html',
+  body: T.servicePage('chinese-visa'),
+  sticky: true,
+});
 
 /* ---- blog articles ---- */
 for (const b of D.blogDefs) {

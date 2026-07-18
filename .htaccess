@@ -4,3 +4,8 @@
 # Redirect headshot bundle pages to services page
 Redirect 301 /passport-headshot-bundle.html /services.html
 Redirect 301 /bundle-scheduling.html /scheduling.html
+
+# Retired hub pages superseded by the redesign
+Redirect 301 /passport-photos-international.html /services.html
+Redirect 301 /visa-photos-international.html /services.html
+Redirect 301 /professional-license-photos-hub.html /professional-license-photos.html
