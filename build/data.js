@@ -152,6 +152,25 @@ const catDefs = [
 ];
 
 const homeSvcKeys = ['canadian-passport', 'us-visa', 'pr-card', 'citizenship', 'uk-passport', 'indian-passport'];
+
+/* Mobile home shows "Which document do you need?" as chips — the prototype's
+   `services` list (first 7), which is worded differently from svcData names. */
+const homeChips = [
+  { label: 'Canadian Passport', key: 'canadian-passport' },
+  { label: 'US Visa (all types)', key: 'us-visa' },
+  { label: 'PR Card', key: 'pr-card' },
+  { label: 'Canadian Citizenship', key: 'citizenship' },
+  { label: 'US Passport', key: 'us-passport' },
+  { label: 'UK Passport', key: 'uk-passport' },
+  { label: 'Schengen Visa', key: 'schengen-visa' },
+];
+
+/* Mobile pricing is a stacked row list rather than the desktop cards. */
+const tierRows = [
+  { name: 'Printed Photos (×2)', sub: '2 identical prints on photo paper', price: '$24.99', popular: false },
+  { name: 'Digital Copy', sub: 'High-res file sent by email', price: '$24.99', popular: false },
+  { name: 'Prints + Digital', sub: 'Everything included', price: '$39.99', popular: true },
+];
 const homeAreaNames = ['Kensington Market', 'Financial District', 'Chinatown', 'Yorkville', 'Annex', 'Harbourfront'];
 
 const sampleRows = [
@@ -241,6 +260,6 @@ module.exports = {
   areas, svcData, topReviews, faqData, blogPosts,
   svcFile, svcTitleOverride, areaSlug, areaFile, areaImg,
   nav, tierCards, docPriceRows, photoSteps, docHeroSub, photoHeroSub,
-  catDefs, homeSvcKeys, homeAreaNames, sampleRows, blogDefs, vendorRows,
+  catDefs, homeSvcKeys, homeChips, tierRows, homeAreaNames, sampleRows, blogDefs, vendorRows,
   relatedKeys, svcReviews, svcTitle, reqRows,
 };

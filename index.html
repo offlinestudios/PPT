@@ -62,7 +62,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   gtag('config', 'G-EFSCQB4RF3');
 </script>
 </head>
-<body>
+<body class="has-sticky-bar">
 <noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-55RV84CT" style="display:none;visibility:hidden" width="0"></iframe></noscript>
 <header class="site-header">
   <div class="shell">
@@ -90,8 +90,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </header>
 <div class="drawer-backdrop"></div>
 <nav class="drawer" aria-label="Mobile">
-  <button type="button" class="drawer-close" aria-label="Close menu">&#10005;</button>
-  <a class="drawer-link" href="index.html">Home</a>
+  <div class="drawer-head">
+    <span class="label">MENU</span>
+    <button type="button" class="drawer-close" aria-label="Close menu">&#10005;</button>
+  </div>
+  <a class="drawer-link active" href="index.html">Home</a>
   <a class="drawer-link" href="services.html">Services</a>
   <a class="drawer-link" href="pricing.html">Pricing</a>
   <a class="drawer-link" href="samples.html">Samples</a>
@@ -100,11 +103,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <a class="drawer-link" href="location.html">Location</a>
   <a class="drawer-link" href="blog.html">Blog</a>
   <a class="drawer-link" href="contact.html">Contact</a>
-  <div class="drawer-contact">
-    <a href="tel:4169862677">(416) 986-2677</a>
-    <a href="mailto:info@passportphototoronto.com">info@passportphototoronto.com</a>
-    <span>Mon–Fri: 9:00 AM – 6:00 PM<br>Sat–Sun: 12:00 PM – 6:00 PM</span>
+  <div class="drawer-foot">
     <button type="button" class="btn btn-gold btn-block" data-book>Book Appointment</button>
+    <div class="drawer-contact">
+      <a href="tel:4169862677">(416) 986-2677</a>
+      <a href="mailto:info@passportphototoronto.com">info@passportphototoronto.com</a>
+      <span>Mon–Fri 9–6 · Sat–Sun 12–6</span>
+    </div>
   </div>
 </nav>
 <main>
@@ -116,10 +121,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <p>Guaranteed acceptance for Canadian passports, visas and IDs — or we retake them free.</p>
       <div class="hero-actions">
         <button type="button" class="btn btn-gold btn-lg" data-book>Book Appointment</button>
-        <a class="btn btn-outline-light" href="services.html">Browse Services</a>
+        <a class="btn btn-outline-light d-only" href="services.html">Browse Services</a>
+        <a class="btn btn-outline-light m-only" href="tel:4169862677">Call (416) 986-2677</a>
+      </div>
+      <div class="trust m-only">
+        <span class="rate">★ 4.9 on Google</span><i></i><span>Walk-ins welcome</span><i></i><span>Same-day</span>
       </div>
     </div>
-    <div>
+    <div class="d-only">
       <div class="hero-art">
         <img class="back" src="images/passport-sample-back.png" alt="Stamped back of a passport photo from our studio">
         <img class="front" src="images/passport-sample-front.png" alt="Real passport photo sample from our studio">
@@ -129,7 +138,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
 </section>
 
-<div class="band-b">
+<div class="band-b d-only">
   <div class="shell stats">
     <div class="stat"><b>10 min</b><span>in and out,<br>prints in hand</span></div>
     <div class="stat"><b>100%</b><span>acceptance guaranteed<br>or free retake</span></div>
@@ -141,12 +150,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="shell section">
   <div class="section-head">
     <div>
-      <h2>Photos for every document</h2>
-      <span class="sub">Passports, visas, permits and IDs — 40+ document types, all to exact spec.</span>
+      <h2 class="d-only">Photos for every document</h2>
+      <h2 class="m-only">Which document do you need?</h2>
+      <span class="sub d-only">Passports, visas, permits and IDs — 40+ document types, all to exact spec.</span>
     </div>
-    <a class="btn btn-outline" href="services.html">All services →</a>
+    <a class="btn btn-outline d-only" href="services.html">All services →</a>
   </div>
-  <div class="grid-3">
+  <div class="grid-3 d-only">
     <a class="card" href="canadian-passport-photos.html">
       <span class="name">Canadian Passport</span>
       <span class="sub">IRCC-compliant, same-day</span>
@@ -172,55 +182,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <span class="sub">New ICAO format</span>
     </a>
   </div>
-</div>
-
-<div class="band">
-  <div class="shell section">
-    <div class="split">
-      <img src="images/offline-website-5.jpg" alt="Studio setup at 63 McCaul St" loading="lazy">
-      <div class="hero-col">
-        <h2>Real studio. Real results.</h2>
-        <p>Inside Offline Studios at 63 McCaul St — professional-grade lighting and a calibrated camera. No phone cameras. No drugstore booths.</p>
-        <p>Every photo is checked against the issuing authority's spec before you leave, and you approve your shot before we print.</p>
-        <a class="btn btn-outline" href="samples.html" style="align-self:flex-start">See sample photos →</a>
-        <div class="press">
-          <div class="press-top">
-            <img src="images/blogto-logo.png" alt="blogTO" loading="lazy">
-            <span>As featured in</span>
-          </div>
-          <q>“If you want to visit a local business… Passport Photo Toronto.”</q>
-        </div>
-      </div>
-    </div>
+  <div class="chiplist m-only">
+      <a class="chip" href="canadian-passport-photos.html">Canadian Passport</a>
+      <a class="chip" href="us-visa-photos.html">US Visa (all types)</a>
+      <a class="chip" href="pr-card-photos.html">PR Card</a>
+      <a class="chip" href="canadian-citizenship-photo.html">Canadian Citizenship</a>
+      <a class="chip" href="us-passport-photos.html">US Passport</a>
+      <a class="chip" href="uk-passport-photos.html">UK Passport</a>
+      <a class="chip" href="schengen-visa-photos.html">Schengen Visa</a>
+      <a class="chip chip-more" href="services.html">All 30+ documents →</a>
   </div>
 </div>
 
-<div class="band-b">
-  <div class="shell section">
-    <h2 class="center">How it works</h2>
-    <div class="steps">
-    <div class="step">
-      <div class="n">1</div>
-      <span class="t">Book or walk in</span>
-      <span class="b">Book online in seconds, or just show up — no appointment needed.</span>
-    </div>
-    <div class="step">
-      <div class="n">2</div>
-      <span class="t">We take your photo</span>
-      <span class="b">Correct background, lighting and framing for your exact document type.</span>
-    </div>
-    <div class="step">
-      <div class="n">3</div>
-      <span class="t">Out in 10 minutes</span>
-      <span class="b">Leave with prints and digital copy — accepted or retaken free.</span>
-    </div>
-    </div>
-  </div>
-</div>
-
-<div class="shell section">
-  <h2 class="center">Simple pricing</h2>
-  <div class="tiers">
+<div class="shell section pricing-home">
+  <h2 class="center d-only">Simple pricing</h2>
+  <h2 class="m-only">Simple, transparent pricing</h2>
+  <div class="d-only"><div class="tiers">
   <div class="tier">
     
     <span class="tname">Printed Photos (×2)</span>
@@ -242,42 +219,128 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <span class="desc">Everything included — prints for the office, digital for online forms.</span>
     <button type="button" class="btn btn-gold btn-block" data-book>Book now</button>
   </div>
-</div>
+</div></div>
+  <div class="m-only">
+    <div class="price-list">
+    <div class="price-line">
+      <span class="l">
+        <span class="n">Printed Photos (×2)</span>
+        <span class="s">2 identical prints on photo paper</span>
+      </span>
+      <span class="p">$24.99</span>
+    </div>
+    <div class="price-line">
+      <span class="l">
+        <span class="n">Digital Copy</span>
+        <span class="s">High-res file sent by email</span>
+      </span>
+      <span class="p">$24.99</span>
+    </div>
+    <div class="price-line popular">
+      <span class="l">
+        <span class="n">Prints + Digital<em class="tag">Best value</em></span>
+        <span class="s">Everything included</span>
+      </span>
+      <span class="p">$39.99</span>
+    </div>
+    </div>
+    <p class="fineprint">All prices include guaranteed compliance. <a href="pricing.html">Full pricing →</a></p>
+  </div>
 </div>
 
-<div class="band">
+<div class="shell section m-only sample-block">
+  <h2>Real photos taken here</h2>
+  <img src="images/passport-scan-sample-square.jpg" alt="Real passport photo sample from our studio">
+  <p class="cap">Actual photo from our studio — professional lighting, white background, accepted every time.</p>
+  <a class="btn btn-outline btn-block" href="samples.html">See more samples</a>
+</div>
+
+<div class="band-b how">
   <div class="shell section">
-    <div class="section-head">
-      <div>
-        <h2>What customers say</h2>
-        <div class="rating-big" style="gap:10px"><span class="stars">★★★★★</span><span class="sub">4.9 on Google reviews</span></div>
+    <h2 class="center">How it works</h2>
+    <div class="steps">
+    <div class="step">
+      <div class="n">1</div>
+      <div class="step-txt">
+        <span class="t">Book or walk in</span>
+        <span class="b">Book online in seconds, or just show up — no appointment needed.</span>
       </div>
-      <a class="btn btn-outline" href="reviews.html">Read all reviews →</a>
     </div>
-    <div class="grid-3">
-    <div class="review">
-  <span class="stars">★★★★★</span>
-  <span class="txt">“My son and I came in as walk-ins, needing headshots suitable for Canadian citizenship certificates. At that time in the morning, there was no wait, and everything was quick and professional. Highly recommend!”</span>
-  <span class="who">David Dibble · June 2026</span>
-</div>
-    <div class="review">
-  <span class="stars">★★★★★</span>
-  <span class="txt">“Efficient, friendly service in a convenient location. The photos looked good and I got some tips on submitting the photos for the passport service I was taking them for. Recommended!”</span>
-  <span class="who">Matt Buckley-Golder · June 2026</span>
-</div>
-    <div class="review">
-  <span class="stars">★★★★★</span>
-  <span class="txt">“Wonderful service! The lady who helped me was very lovely and professional, and she took a passport photo I'm actually happy with, not one I'll dread carrying around for the next 10 years.”</span>
-  <span class="who">Arman · June 2026</span>
-</div>
+    <div class="step">
+      <div class="n">2</div>
+      <div class="step-txt">
+        <span class="t">We take your photo</span>
+        <span class="b">Correct background, lighting and framing for your exact document type.</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="n">3</div>
+      <div class="step-txt">
+        <span class="t">Out in 10 minutes</span>
+        <span class="b">Leave with prints and digital copy — accepted or retaken free.</span>
+      </div>
+    </div>
     </div>
   </div>
 </div>
 
-<div class="shell section">
+<div class="band studio-band">
+  <div class="shell section">
+    <div class="split">
+      <img src="images/offline-website-5.jpg" alt="Studio setup at 63 McCaul St" loading="lazy">
+      <div class="hero-col">
+        <h2>Real studio. Real results.</h2>
+        <p>Inside Offline Studios at 63 McCaul St — professional-grade lighting and a calibrated camera. No phone cameras. No drugstore booths.</p>
+        <p class="d-only">Every photo is checked against the issuing authority's spec before you leave, and you approve your shot before we print.</p>
+        <a class="btn btn-outline d-only" href="samples.html">See sample photos →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="shell section reviews-home">
   <div class="section-head">
-    <h2>Serving all of downtown Toronto</h2>
-    <a class="btn btn-outline" href="sitemap.html">All service areas →</a>
+    <div>
+      <h2 class="d-only">What customers say</h2>
+      <h2 class="m-only">What people say</h2>
+      <div class="rating-line d-only"><span class="stars">★★★★★</span><span class="sub">4.9 on Google reviews</span></div>
+    </div>
+    <a class="btn btn-outline d-only" href="reviews.html">Read all reviews →</a>
+  </div>
+  <div class="press">
+    <div class="press-top">
+      <img src="images/blogto-logo.png" alt="blogTO" loading="lazy">
+      <span>As featured in</span>
+    </div>
+    <q>“If you want to visit a local business… Passport Photo Toronto.”</q>
+  </div>
+  <div class="grid-3">
+    <div class="review">
+      <span class="stars">★★★★★</span>
+      <span class="txt">“My son and I came in as walk-ins, needing headshots suitable for Canadian citizenship certificates. At that time in the morning, there was no wait, and everything was quick and professional. Highly recommend!”</span>
+      <span class="who">David Dibble · <a href="reviews.html">Read more reviews</a></span>
+    </div>
+    <div class="review d-only">
+      <span class="stars">★★★★★</span>
+      <span class="txt">“Efficient, friendly service in a convenient location. The photos looked good and I got some tips on submitting the photos for the passport service I was taking them for. Recommended!”</span>
+      <span class="who">Matt Buckley-Golder</span>
+    </div>
+    <div class="review d-only">
+      <span class="stars">★★★★★</span>
+      <span class="txt">“Wonderful service! The lady who helped me was very lovely and professional, and she took a passport photo I'm actually happy with, not one I'll dread carrying around for the next 10 years.”</span>
+      <span class="who">Arman</span>
+    </div>
+  </div>
+</div>
+
+<div class="shell section areas-home">
+  <div class="section-head">
+    <div>
+      <h2 class="d-only">Serving all of downtown Toronto</h2>
+      <h2 class="m-only">Serving all of Toronto</h2>
+      <p class="sub m-only">From the Annex to Yorkville, Kensington Market to the Financial District — clients across the city's neighbourhoods trust us with their photos.</p>
+    </div>
+    <a class="btn btn-outline d-only" href="sitemap.html">All service areas →</a>
   </div>
   <div class="area-tiles">
     <a class="area-tile" href="passport-photos-kensington-market.html">
@@ -305,6 +368,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <span>Harbourfront</span>
     </a>
   </div>
+  <a class="btn btn-outline btn-block m-only" href="sitemap.html">View service areas</a>
 </div>
 
 <div class="cta-band">
@@ -378,7 +442,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
   <div class="bottom">© 2026 Passport Photo Toronto. All Rights Reserved.</div>
 </footer>
-
+<div class="sticky-bar">
+  <div class="info">
+    <b>From $24.99</b>
+    <span>Ready in 10 minutes · Walk-ins OK</span>
+  </div>
+  <button type="button" class="btn btn-gold" data-book>Book now</button>
+</div>
 <div class="book-overlay" role="dialog" aria-modal="true" aria-label="Book an appointment">
   <div class="book-backdrop"></div>
   <div class="book-modal">
