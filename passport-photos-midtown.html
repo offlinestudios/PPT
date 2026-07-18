@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <!-- Google Tag Manager -->
@@ -57,454 +56,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="css/styles.css" rel="stylesheet"/>
+<link href="css/redesign.css" rel="stylesheet"/>
 <!-- Favicon -->
 <link href="images/favicon.ico" rel="icon"/>
-<style>
-        /* Service Area Page Specific Styles */
-        
-        
-        
-        
-        
-        
-        /* Neighborhood Hero Section */
-        .neighborhood-hero {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-            margin: 50px 0;
-        }
-        
-        .neighborhood-image {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .neighborhood-image img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            display: block;
-        }
-        
-        .neighborhood-content h2 {
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-        
-        .neighborhood-content p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #666;
-            margin-bottom: 20px;
-        }
-        
-        /* Main content layout */
-        .main-layout {
-            display: grid;
-            grid-template-columns: 2fr 1fr !important;
-            gap: 30px;
-            margin-top: 30px;
-        }
-        
-        .main-content {
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: var(--box-shadow);
-        }
-        
-        .sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        
-        .sidebar-box {
-            background-color: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: var(--box-shadow);
-        }
-        
-        .sidebar-box.blue {
-            background: linear-gradient(135deg, #4a6fa5 0%, #3a5a8a 100%);
-            color: white;
-            border-radius: 12px;
-            padding: 30px;
-        }
-        
-        .sidebar-box.blue h3 {
-            color: white;
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .sidebar-box.blue .grey-icon {
-            color: #999;
-            margin-right: 10px;
-            font-size: 1.2rem;
-        }
-        
-        .sidebar-box.blue p {
-            color: white;
-            margin-bottom: 20px;
-            line-height: 1.5;
-        }
-        
-        .sidebar-box.blue .btn {
-            background-color: #f4c430;
-            color: #333;
-            border: none;
-            padding: 12px 24px;
-            font-weight: 600;
-            border-radius: 6px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-        }
-        
-        .sidebar-box.blue .btn:hover {
-            background-color: #f0b90b;
-            transform: translateY(-2px);
-        }
-        
-        /* Location section styling */
-        .sidebar-box h3 {
-            color: var(--primary-color);
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .location-info {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 15px;
-            padding: 8px 0;
-        }
-        
-        .location-info .icon {
-            margin-right: 12px;
-            color: var(--primary-color);
-            width: 20px;
-            text-align: center;
-            margin-top: 2px;
-        }
-        
-        .location-info span {
-            color: #666;
-            line-height: 1.4;
-        }
-        
-        /* Related services styling */
-        .related-service {
-            display: flex;
-            align-items: center;
-            padding: 12px 0;
-            margin-bottom: 8px;
-            border-bottom: 1px solid #e9ecef;
-            text-decoration: none;
-            color: #666;
-            transition: color 0.3s ease;
-        }
-        
-        .related-service:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-        }
-        
-        .related-service:hover {
-            color: var(--primary-color);
-        }
-        
-        .sidebar-box .btn {
-            background-color: #f4c430;
-            color: #333;
-            border: none;
-            padding: 12px 24px;
-            font-weight: 600;
-            border-radius: 6px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-            display: block;
-            text-align: center;
-            text-decoration: none;
-        }
-        
-        .sidebar-box .btn:hover {
-            background-color: #f0b90b;
-            transform: translateY(-2px);
-            color: #333;
-        }
-                /* Features grid */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-        
-        .turnaround-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 30px;
-            margin-bottom: 40px;
-        }     
-        .feature-item {
-            background-color: #f8f9fa;
-            padding: 25px;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: var(--box-shadow);
-        }
-        
-        .feature-icon {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
-        
-        .feature-title {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            color: var(--primary-color);
-        }
-        
-        /* Testimonials */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
-        }
-        
-        .testimonial-card {
-            background-color: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: var(--box-shadow);
-        }
-        
-        .testimonial-content {
-            font-style: italic;
-            margin-bottom: 20px;
-            color: #666;
-        }
-        
-        .testimonial-author {
-            font-weight: 600;
-            color: var(--primary-color);
-        }
-        
-        .testimonial-location {
-            font-size: 0.9rem;
-            color: #888;
-        }
-        
-        /* Pricing highlight section */
-        .pricing-highlight {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin: 30px 0;
-        }
-        
-        .pricing-item {
-            background-color: #f8f9fa;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: var(--box-shadow);
-        }
-        
-        .pricing-item h4 {
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-        }
-        
-        .pricing-item ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .pricing-item li {
-            padding: 8px 0;
-            border-bottom: 1px solid #e9ecef;
-            color: #666;
-        }
-        
-        .pricing-item li:last-child {
-            border-bottom: none;
-        }
-        
-        .pricing-item li:before {
-            content: "✓";
-            color: var(--accent-color);
-            font-weight: bold;
-            margin-right: 10px;
-        }
-        
-        /* Service areas list */
-        .service-areas {
-            background-color: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 30px 0;
-        }
-        
-        .service-areas h3 {
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
-        
-        .areas-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 10px;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .areas-list li {
-            padding: 8px 0;
-            color: #666;
-        }
-        
-        /* Grey icons */
-        .grey-icon {
-            display: inline-block;
-            width: 24px;
-            height: 24px;
-            margin-right: 10px;
-            color: #666;
-            vertical-align: middle;
-        }
-        
-        /* Location info */
-        .location-info {
-            display: flex;
-            align-items: center;
-            margin-bottom: 8px;
-        }
-        
-        .location-info .icon {
-            margin-right: 8px;
-            color: #666;
-            width: 20px;
-            text-align: center;
-        }
-        
-        /* Responsive design */
-        
-            
-            .neighborhood-hero {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-            
-            .main-layout {
-                grid-template-columns: 1fr;
-            }
-            
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    
-.related-service .icon {
-    margin-right: 10px;
-    color: #666;
-    width: 20px;
-    text-align: center;
-    flex-shrink: 0;
-}
 
-/* Ultra-tight spacing adjustment */
-.neighborhood-hero {
-    margin: 10px 0 0;
-}
-.main-layout {
-    margin-top: 0;
-}
-
-/* Dropdown Navigation Menu Styles */
-.nav-item.dropdown {
-    position: relative;
-}
-
-.nav-link.dropdown-toggle {
-    cursor: pointer;
-}
-
-.dropdown-menu {
-    display: none !important;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: white;
-    min-width: 250px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    border-radius: 4px;
-    padding: 8px 0;
-    margin-top: 0;
-    z-index: 1000;
-    list-style: none;
-}
-
-.nav-item.dropdown:hover .dropdown-menu {
-    display: block !important;
-}
-
-.dropdown-item {
-    display: block;
-    padding: 10px 20px;
-    color: #333;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    font-size: 0.95rem;
-}
-
-.dropdown-item:hover {
-    background-color: var(--light-color);
-    color: var(--primary-color);
-}
-
-/* Mobile dropdown styles */
-@media (max-width: 768px) {
-    .dropdown-menu {
-        position: static;
-        box-shadow: none;
-        background: var(--light-color);
-        margin-left: 20px;
-        margin-top: 8px;
-        margin-bottom: 8px;
-    }
-    
-    .nav-item.dropdown .dropdown-menu {
-        display: none !important;
-    }
-    
-    .nav-item.dropdown.active .dropdown-menu {
-        display: block;
-    }
-}
-
-</style>
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-11397258552"></script>
 <script>
@@ -524,338 +79,170 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </script>
 <script defer src="js/attribution.js"></script>
 </head>
-<body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55RV84CT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-<!-- Header -->
-<header class="header">
-<div class="container header-container">
-<a class="logo" href="/">
-<picture><source srcset="images/logo.webp" type="image/webp"/><img alt="Passport Photo Toronto Logo" loading="lazy" src="images/logo.png"/></picture>
-<span class="logo-text">PASSPORT PHOTO</span>
-</a>
-<nav>
-<ul class="nav-menu">
-<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-<li class="nav-item dropdown">
-<a class="nav-link dropdown-toggle" href="services.html">
-        Services
-       </a>
-<ul class="dropdown-menu">
-<li><a class="dropdown-item" href="services.html">All Services</a></li>
-<li><a class="dropdown-item" href="passport-photos-international.html">Passport Photos by Country</a></li>
-<li><a class="dropdown-item" href="visa-photos-international.html">Visa Photos by Country</a></li>
-<li><a class="dropdown-item" href="professional-license-photos-hub.html">Professional Licenses &amp; IDs</a></li>
-<li><a class="dropdown-item" href="document-services.html">Printing, Scanning &amp; Photocopying</a></li>
-</ul>
-</li>
-<li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
-<li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
-<li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
-<li class="nav-item"><a class="nav-link" href="location.html">Location</a></li>
-<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-</ul>
-<button class="mobile-menu-btn">
-<i class="fas fa-bars"></i>
-</button>
-</nav>
-</div>
+<body class="has-sticky-bar">
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-55RV84CT" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<header class="site-header">
+  <div class="shell">
+    <a class="brand" href="index.html">
+      <img src="images/logo.png" alt="Passport Photo Toronto">
+      <span>PASSPORT PHOTO</span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="samples.html">Samples</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="faq.html">FAQ</a>
+        <a href="location.html">Location</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-right">
+      <a class="header-phone" href="tel:4169862677">(416) 986-2677</a>
+      <button type="button" class="btn btn-gold" data-book>Book Appointment</button>
+      <button type="button" class="hamburger" aria-label="Open menu">&#9776;</button>
+    </div>
+  </div>
 </header>
-<!-- Page Banner -->
-<section class="page-banner">
-<div class="container">
-<h1> Passport &amp; Visa Photo Services in Midtown – Trusted by Locals, Loved by Travelers</h1>
-<p>Professional passport photos serving Midtown and surrounding neighborhoods with government-compliant service and a personal touch</p>
+<div class="drawer-backdrop"></div>
+<nav class="drawer" aria-label="Mobile">
+  <button type="button" class="drawer-close" aria-label="Close menu">&#10005;</button>
+  <a class="drawer-link" href="index.html">Home</a>
+  <a class="drawer-link" href="services.html">Services</a>
+  <a class="drawer-link" href="pricing.html">Pricing</a>
+  <a class="drawer-link" href="samples.html">Samples</a>
+  <a class="drawer-link" href="reviews.html">Reviews</a>
+  <a class="drawer-link" href="faq.html">FAQ</a>
+  <a class="drawer-link" href="location.html">Location</a>
+  <a class="drawer-link" href="blog.html">Blog</a>
+  <a class="drawer-link" href="contact.html">Contact</a>
+  <div class="drawer-contact">
+    <a href="tel:4169862677">(416) 986-2677</a>
+    <a href="mailto:info@passportphototoronto.com">info@passportphototoronto.com</a>
+    <span>Mon–Fri: 9:00 AM – 6:00 PM<br>Sat–Sun: 12:00 PM – 6:00 PM</span>
+    <button type="button" class="btn btn-gold btn-block" data-book>Book Appointment</button>
+  </div>
+</nav>
+<main>
+<div class="page">
+  <div class="breadcrumb"><a href="index.html">Home</a> / <a href="sitemap.html">Service Areas</a> / Midtown</div>
+  <div class="split">
+    <div class="hero-col" style="gap:14px">
+      <h1>Passport Photos in Midtown</h1>
+      <p class="lede">Professional passport, visa and ID photos serving Midtown and surrounding neighbourhoods — government-compliant, ready in 10 minutes at our 63 McCaul St studio.</p>
+      <button type="button" class="btn btn-gold" data-book>Book Appointment</button>
+    </div>
+    <img src="images/midtown-toronto.jpg" alt="Passport photos near Midtown, Toronto" loading="lazy">
+  </div>
+  <div class="split" style="align-items:start">
+    <div>
+      <p>Whether you're renewing your Canadian passport, applying for a U.S. visa, or submitting documents for permanent residency, we offer professionally taken, government-compliant ID photos — right in the heart of the city. Conveniently located inside Offline Studios, we serve clients from Midtown and downtown Toronto with fast, high-quality service that exceeds government standards.</p>
+      <p>Your photo matters. From the lighting to your posture and expression, our experienced photographer ensures you look your best — even on official documents you'll see for the next 10 years.</p>
+    </div>
+    <div class="info-card">
+      <span class="ptitle">Getting here from Midtown</span>
+      <span class="field txt">Our studio at 63 McCaul St is a short trip by TTC, car or foot. St Patrick station (Line 1) and the 505 Dundas and 501 Queen streetcars stop nearby; Green P parking is on McCaul.</span>
+      <span class="field txt">Walk-ins welcome 7 days a week — most visits take about 10 minutes.</span>
+    </div>
+  </div>
+  <div class="map-box" style="height:340px"><iframe src="https://www.google.com/maps?q=63+McCaul+St,+Toronto,+ON+M5T+2W7&amp;output=embed" loading="lazy" title="Map — 63 McCaul St"></iframe></div>
 </div>
-</section>
-<!-- Neighborhood Hero Section -->
-<section class="section">
-<div class="container">
-<div class="neighborhood-hero">
-<div class="neighborhood-image">
-<img alt="Beautiful Midtown neighborhood in Toronto" loading="lazy" src="images/midtown-toronto.jpg"/>
-</div>
-<div class="neighborhood-content">
-<h2>Serving Midtown</h2>
-<p>Whether you're renewing your Canadian passport, applying for a U.S. visa, or submitting documents for permanent residency, Passport Photo Toronto offers professionally taken, government-compliant ID photos with a personal touch—right in the heart of the city.</p>
-<p>Conveniently located inside Offline Studios, we serve clients from Midtown, Yorkville, The Annex, and downtown Toronto with fast, high-quality service that exceeds government standards and flatters your natural appearance.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Main Content -->
-<section class="section">
-<div class="container">
-<div class="main-layout">
-<div class="main-content">
-<h2><i class="fas fa-bullseye"></i> Why Locals Trust Us</h2>
-<div class="features-grid">
-<div class="feature-item">
-<div class="feature-icon">
-<i class="fas fa-camera"></i>
-</div>
-<h3 class="feature-title">Professional Photographer with 7+ Years of Experience</h3>
-<p>Your photo matters. From the lighting to your posture and expression, our experienced photographer ensures you look your best—even on official documents you'll see for the next 10 years.</p>
-</div>
-<div class="feature-item">
-<div class="feature-icon">
-<i class="fas fa-check-circle"></i>
-</div>
-<h3 class="feature-title">100% Government-Compliant</h3>
-<p>We guarantee compliance with all specifications for Canadian passports, U.S. visa and immigration, PR and citizenship photos, international passports, work &amp; study permits, and digital ID photos.</p>
-</div>
-</div>
-<div class="turnaround-grid">
-<div class="feature-item">
-<div class="feature-icon">
-<i class="fas fa-clock"></i>
-</div>
-<h3 class="feature-title">Fast Turnaround – Done in Minutes</h3>
-<p>We offer walk-in or appointment-based sessions with most photos ready in 10–15 minutes. Digital copies available instantly.</p>
-</div>
-</div>
-<div class="pricing-highlight">
-<div class="pricing-item">
-<h4><i class="fas fa-camera"></i> Standard Service - $24.99</h4>
-<ul>
-<li>2 printed photos</li>
-<li>Instant photo review</li>
-<li>Government compliant</li>
-<li>Same-day service</li>
-</ul>
-</div>
-<div class="pricing-item">
-<h4><i class="fas fa-bolt"></i> Digital + Prints - $39.99</h4>
-<ul>
-<li>2 printed photos</li>
-<li>1 digital copy</li>
-<li>Government Compliant</li>
-<li>Same-day service</li>
-</ul>
-</div>
-</div>
-<div class="service-areas">
-<h3><i class="fas fa-compass"></i> Our Clients Come From Across Toronto:</h3>
-<p>We regularly serve professionals, students, and families from:</p>
-<ul class="areas-list">
-<li><strong>Midtown &amp; </strong> – Discerning clients who expect top-tier results</li>
-<li><strong>Yorkville &amp; Bloor Street</strong> – Embassies, notaries, and legal services trust our quality</li>
-<li><strong>Downtown Core</strong> – Busy travelers who need photos done quickly and correctly</li>
-</ul>
-</div>
-<h2><i class="fas fa-star"></i> What People Are Saying</h2>
-<div class="testimonials-grid">
-<div class="testimonial-card">
-<p class="testimonial-content">"Honestly the best passport photo I've ever had. Julian was friendly, fast, and the lighting made a huge difference. It doesn't even feel like a government photo."</p>
-<div class="testimonial-author">— Katherine P.</div>
-<div class="testimonial-location">Toronto</div>
-</div>
-<div class="testimonial-card">
-<p class="testimonial-content">"They knew the exact specs for my Chinese visa photo. In and out in 15 minutes. Great service."</p>
-<div class="testimonial-author">— David L.</div>
-<div class="testimonial-location">Toronto</div>
-</div>
-<div class="testimonial-card">
-<p class="testimonial-content">"Finally, a place that makes passport photos look professional instead of like mugshots."</p>
-<div class="testimonial-author">— Rachel B.</div>
-<div class="testimonial-location">Toronto</div>
-</div>
-<div class="testimonial-card">
-<p class="testimonial-content">"Professional service and perfect photos for my work permit application. The staff really knows what they're doing."</p>
-<div class="testimonial-author">— Michael T.</div>
-<div class="testimonial-location">Toronto</div>
-</div>
-</div>
-<h2><i class="fas fa-plane"></i> Need Multiple Photos?</h2>
-<p>We can take and prepare multiple photo types in one session—perfect for travelers, professionals, or those applying for multiple visas or permits.</p>
-<h2><i class="fas fa-bullseye"></i> Why Our Service Stands Out</h2>
-<ul>
-<li>Personalized lighting and posing</li>
-<li>Digital + print copies available</li>
-<li>Private studio setting</li>
-<li>Last-minute and emergency availability</li>
-<li>Detailed knowledge of over 40+ country requirements</li>
-</ul>
-</div>
-<div class="sidebar">
-<div class="sidebar-box blue">
-<h3><i class="fas fa-camera grey-icon"></i>Get Your Canadian Passport Photos</h3>
-<p>Professional Canadian passport photos that meet all Government of Canada requirements. Guaranteed acceptance or we'll retake them for free.</p>
-<a class="btn btn-secondary btn-lg" href="scheduling.html">BOOK NOW - $24.99</a>
-</div>
-<div class="sidebar-box">
-<h3><i class="fas fa-map-marker-alt grey-icon"></i>Our Location</h3>
-<div class="location-info">
-<i class="fas fa-map-marker-alt icon"></i>
-<span>63 McCaul St, Toronto, ON</span>
-</div>
-<div class="location-info">
-<i class="fas fa-phone icon"></i>
-<span>(416) 986-2677</span>
-</div>
-<div class="location-info">
-<i class="fas fa-clock icon"></i>
-<span>Mon-Fri: 9:00 AM - 6:00 PM<br/>Sat-Sun: 12:00 PM - 6:00 PM</span>
-</div>
-<a class="btn btn-secondary" href="location.html">VIEW MAP</a>
-</div>
-<div class="sidebar-box">
-<h3><i class="fas fa-list grey-icon"></i>Related Services</h3>
-<a class="related-service" href="us-passport-photos.html">
-<i class="fas fa-passport icon"></i>
-<span>U.S. Passport Photos</span>
-</a>
-<a class="related-service" href="#">
-<i class="fas fa-id-card icon"></i>
-<span>U.S. Visa Photos</span>
-</a>
-<a class="related-service" href="#">
-<i class="fas fa-certificate icon"></i>
-<span>Schengen Visa Photos</span>
-</a>
-<a class="related-service" href="#">
-<i class="fas fa-id-badge icon"></i>
-<span>Chinese Visa Photos</span>
-</a>
-<a class="related-service" href="#">
-<i class="fas fa-download icon"></i>
-<span>Digital Photo Services</span>
-</a>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- CTA Section -->
-<section class="section cta">
-<div class="container">
-<h2 class="cta-title">Ready to Visit Us?</h2>
-<p class="cta-subtitle">Book an appointment or walk in during our business hours for fast, professional photo services serving Midtown and surrounding neighborhoods.</p>
-<a class="btn btn-secondary btn-lg" href="scheduling.html"> BOOK ONLINE</a>
-</div>
-</section>
-<!-- Footer -->
-<footer class="footer">
-<div class="container">
-<div class="footer-container">
-<div class="footer-about">
-<div class="footer-logo">
-<picture><source srcset="images/logo-white.webp" type="image/webp"/><img alt="Passport Photo Toronto Logo" loading="lazy" src="images/logo-white.png"/></picture>
-</div>
-<p>Professional passport and ID photo services in downtown Toronto. We guarantee compliance with all official requirements.</p>
-</div>
-<div class="footer-links">
-<h3 class="footer-title">Quick Links</h3>
-<ul class="footer-links">
-<li class="footer-link"><a href="/">Home</a></li>
-<li class="footer-link"><a href="services.html">Services</a></li>
-<li class="footer-link"><a href="pricing.html">Pricing</a></li>
 
-<li class="footer-link"><a href="reviews.html">Reviews</a></li>
-<li class="footer-link"><a href="about.html">About</a></li>
-<li class="footer-link"><a href="faq.html">FAQ</a></li>
-<li class="footer-link"><a href="location.html">Location</a></li>
-<li class="footer-link"><a href="contact.html">Contact</a></li>
-<li class="footer-link">
-<a href="jobs.html">
-         Careers
-        </a>
-</li>
-<li class="footer-link">
-<a href="trusted-vendors.html">
-         Trusted Vendors
-        </a>
-</li>
-<li class="footer-link"><a href="blog.html">Blog</a></li>
-<li class="footer-link"><a href="refund-policy.html">Refund Policy</a></li>
-<li class="footer-link"><a href="digital-photo-payment.html">Digital Photo Payment</a></li>
-<li class="footer-link"><a href="sitemap.html">Sitemap</a></li>
-</ul>
+<div class="cta-band">
+  <div class="shell">
+    <div>
+      <div class="t">Get your photos today.</div>
+      <div class="s">Walk in or book online. Ready in 10 minutes.</div>
+    </div>
+    <button type="button" class="btn btn-gold btn-lg" data-book>Book Appointment</button>
+  </div>
 </div>
-<div class="footer-services">
-<h3 class="footer-title">Our Services</h3>
-<ul class="footer-links">
-<li class="footer-link"><a href="canadian-passport-photos.html">Canadian Passport</a></li>
-<li class="footer-link"><a href="pr-card-photos.html">Canadian PR Card</a></li>
-<li class="footer-link"><a href="us-immigration-photos.html">US Visa</a></li>
-<li class="footer-link"><a href="#">Chinese Visa</a></li>
-<li class="footer-link"><a href="#">Schengen Visa</a></li>
-<li class="footer-link"><a href="us-passport-photos.html">US Passport</a></li>
-<li class="footer-link"><a href="oci-photo.html">Indian OCI</a></li>
-<li class="footer-link"><a href="study-permit-photos.html">Study Permit</a></li>
-<li class="footer-link"><a href="work-permit-photo.html">Work Permit</a></li>
-<li class="footer-link"><a href="document-services.html">Printing &amp; Scanning</a></li>
-</ul>
-</div>
-<div class="footer-contact">
-<h3 class="footer-title">Contact Us</h3>
-<div class="footer-contact-item">
-<i class="fas fa-map-marker-alt footer-contact-icon"></i>
-<div>
-<p>63 McCaul St</p>
-<p>Toronto, ON M5T 2W7</p>
-</div>
-</div>
-<div class="footer-contact-item">
-<i class="fas fa-phone footer-contact-icon"></i>
-<p>(416) 986-2677</p>
-</div>
-<div class="footer-contact-item">
-<i class="fas fa-envelope footer-contact-icon">
-</i>
-<p>
-        <a href="mailto:info@passportphototoronto.com" style="color: rgba(255, 255, 255, 0.7); text-decoration: none;">info@passportphototoronto.com</a>
-       </p>
-</div>
-<div class="footer-contact-item">
-<i class="fas fa-clock footer-contact-icon"></i>
-<p>Mon-Fri: 9:00 AM - 6:00 PM<br/>Sat-Sun: 12:00 PM - 6:00 PM</p>
-</div>
-</div>
-</div>
-<div class="footer-bottom">
-<div class="footer-social">
-<h4>Follow Us</h4>
-<div class="social-links">
-<a class="social-link" href="https://instagram.com/passportphototoronto" rel="noopener noreferrer" target="_blank">
-<i class="fab fa-instagram"></i>
-</a>
-
-
-
-</div>
-</div>
-<p>© 2025 Passport Photo Toronto. All Rights Reserved.</p>
-</div>
-</div>
+</main>
+<footer class="site-footer">
+  <div class="shell">
+    <div class="col brand-col">
+      <img class="flogo" src="images/logo-gold.png" alt="Passport Photo Toronto">
+      <span class="blurb">Professional passport and ID photo services in downtown Toronto. We guarantee compliance with all official requirements.</span>
+      <a class="ig" href="https://instagram.com/passportphototoronto" target="_blank" rel="noopener noreferrer">Follow us on Instagram</a>
+    </div>
+    <div class="col">
+      <h3>Quick links</h3>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="services.html">All services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="samples.html">Sample photos</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="faq.html">FAQ</a>
+        <a href="location.html">Location</a>
+        <a href="about.html">About us</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="jobs.html">Careers</a>
+        <a href="trusted-vendors.html">Trusted vendors</a>
+        <a href="refund-policy.html">Refund policy</a>
+        <a href="digital-photo-payment.html">Digital photo payment</a>
+        <a href="passport-photos-chinatown.html">Service areas</a>
+        <a href="sitemap.html">Sitemap</a>
+      </div>
+    </div>
+    <div class="col">
+      <h3>Our services</h3>
+      <div class="links">
+        <a href="passport-photos.html">Passport Photos in Toronto</a>
+        <a href="visa-photos.html">Visa Photos in Toronto</a>
+        <a href="canadian-passport-photos.html">Canadian Passport</a>
+        <a href="us-visa-photos.html">US Visa</a>
+        <a href="us-passport-photos.html">US Passport</a>
+        <a href="uk-passport-photos.html">UK Passport</a>
+        <a href="indian-passport-photos.html">Indian Passport</a>
+        <a href="chinese-passport-photos.html">Chinese Passport</a>
+        <a href="schengen-visa-photos.html">Schengen Visa</a>
+        <a href="chinese-visa-photos.html">Chinese Visa</a>
+        <a href="indian-visa-photos.html">Indian Visa</a>
+        <a href="pr-card-photos.html">PR Card</a>
+        <a href="canadian-citizenship-photo.html">Canadian Citizenship</a>
+        <a href="study-permit-photos.html">Study Permit</a>
+        <a href="work-permit-photo.html">Work Permit</a>
+        <a href="oci-photo.html">Indian OCI</a>
+        <a href="digital-passport-photos.html">Digital Photos</a>
+        <a href="document-services.html">Printing, Scanning &amp; Photocopying</a>
+      </div>
+    </div>
+    <div class="col">
+      <h3>Contact</h3>
+      <span class="contact-line">63 McCaul St<br>Toronto, ON M5T 2W7</span>
+      <a href="tel:4169862677">(416) 986-2677</a>
+      <a href="mailto:info@passportphototoronto.com">info@passportphototoronto.com</a>
+      <span class="contact-line">Mon–Fri: 9 AM – 6 PM<br>Sat–Sun: 12 PM – 6 PM</span>
+    </div>
+  </div>
+  <div class="bottom">© 2026 Passport Photo Toronto. All Rights Reserved.</div>
 </footer>
-<!-- JavaScript -->
+<div class="sticky-bar">
+  <div class="info">
+    <b>From $24.99</b>
+    <span>Ready in 10 minutes · Walk-ins OK</span>
+  </div>
+  <button type="button" class="btn btn-gold" data-book>Book now</button>
+</div>
+<div class="book-overlay" role="dialog" aria-modal="true" aria-label="Book an appointment">
+  <div class="book-backdrop"></div>
+  <div class="book-modal">
+    <div class="book-head">
+      <div>
+        <div class="kicker">Square Appointments</div>
+        <div class="t">Book an appointment</div>
+      </div>
+      <button type="button" class="book-close" aria-label="Close">&#10005;</button>
+    </div>
+    <div class="book-frame">
+      <iframe title="Book an appointment — Square" loading="lazy"></iframe>
+    </div>
+  </div>
+</div>
+<script src="js/redesign.js"></script>
 
-<script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Highlight current page link
-            const currentPath = location.pathname.split("/").pop() || "index.html";
-            const links = document.querySelectorAll(".nav-link");
-            links.forEach(link => {
-                const href = link.getAttribute("href");
-                if (href === currentPath) {
-                    link.classList.add("active");
-                }
-            });
-
-            // Toggle mobile menu
-            const menuBtn = document.querySelector(".mobile-menu-btn");
-            const navMenu = document.querySelector(".nav-menu");
-            if (menuBtn && navMenu) {
-                menuBtn.addEventListener("click", () => {
-                    navMenu.classList.toggle("active");
-                });
-            }
-        });
-    </script>
 </body>
 </html>

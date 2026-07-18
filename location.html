@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <!-- Google Tag Manager -->
@@ -31,190 +30,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta content="https://www.passportphototoronto.com/images/logo.png" name="twitter:image"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="css/styles.css" rel="stylesheet"/>
+<link href="css/redesign.css" rel="stylesheet"/>
 <!-- Favicon -->
 <link href="images/favicon.ico" rel="icon"/>
-<style>
-   /* Location Page Specific Styles */
-        .location-map-full {
-            height: 450px;
-            border-radius: 8px;
-            overflow: hidden;
-            margin-bottom: 50px;
-            box-shadow: var(--box-shadow);
-        }
-        
-        .location-map-full iframe {
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-        
-        .location-details {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 50px;
-        }
-        
-        .location-detail-card {
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            padding: 30px;
-            box-shadow: var(--box-shadow);
-        }
-        
-        .location-detail-icon {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-        
-        .location-detail-title {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
-        
-        .location-detail-content p {
-            margin-bottom: 10px;
-        }
-        
-        .location-detail-content p:last-child {
-            margin-bottom: 0;
-        }
-        
-        .location-detail-content ul {
-            padding-left: 20px;
-            margin-bottom: 0;
-        }
-        
-        .location-detail-content li {
-            margin-bottom: 8px;
-        }
-        
-        .location-detail-content li:last-child {
-            margin-bottom: 0;
-        }
-        
-        .transportation-options {
-            margin-top: 50px;
-        }
-        
-        .transportation-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
-        }
-        
-        .transportation-item {
-            background-color: white;
-            border-radius: 8px;
-            padding: 25px;
-            box-shadow: var(--box-shadow);
-        }
-        
-        .transportation-icon {
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
-        
-        .transportation-title {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-        }
-        
-        .nearby-landmarks {
-            margin-top: 50px;
-        }
-        
-        .landmarks-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
-        }
-        
-        .landmark-item {
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            padding: 25px;
-            box-shadow: var(--box-shadow);
-        }
-        
-        .landmark-title {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-        }
-        
-        .landmark-distance {
-            color: #666;
-        }
-  
-/* Dropdown Navigation Menu Styles */
-.nav-item.dropdown {
-    position: relative;
-}
 
-.nav-link.dropdown-toggle {
-    cursor: pointer;
-}
-
-.dropdown-menu {
-    display: none !important;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: white;
-    min-width: 250px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    border-radius: 4px;
-    padding: 8px 0;
-    margin-top: 0;
-    z-index: 1000;
-    list-style: none;
-}
-
-.nav-item.dropdown:hover .dropdown-menu {
-    display: block !important;
-}
-
-.dropdown-item {
-    display: block;
-    padding: 10px 20px;
-    color: #333;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    font-size: 0.95rem;
-}
-
-.dropdown-item:hover {
-    background-color: var(--light-color);
-    color: var(--primary-color);
-}
-
-/* Mobile dropdown styles */
-@media (max-width: 768px) {
-    .dropdown-menu {
-        position: static;
-        box-shadow: none;
-        background: var(--light-color);
-        margin-left: 20px;
-        margin-top: 8px;
-        margin-bottom: 8px;
-    }
-    
-    .nav-item.dropdown .dropdown-menu {
-        display: none !important;
-    }
-    
-    .nav-item.dropdown.active .dropdown-menu {
-        display: block;
-    }
-}
-
-</style>
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-11397258552"></script>
 <script>
@@ -236,537 +55,145 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script defer src="js/attribution.js"></script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55RV84CT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-<!-- Header -->
-<header class="header">
-<div class="container header-container">
-<a class="logo" href="/">
-<picture><source srcset="images/logo.webp" type="image/webp"/><img alt="Passport Photo Toronto Logo" loading="lazy" src="images/logo.png"/></picture>
-<span class="logo-text">
-      PASSPORT PHOTO
-     </span>
-</a>
-<nav>
-<ul class="nav-menu">
-<li class="nav-item">
-<a class="nav-link" href="/">
-        Home
-       </a>
-</li>
-<li class="nav-item dropdown">
-<a class="nav-link dropdown-toggle" href="services.html">
-        Services
-       </a>
-<ul class="dropdown-menu">
-<li><a class="dropdown-item" href="services.html">All Services</a></li>
-<li><a class="dropdown-item" href="passport-photos-international.html">Passport Photos by Country</a></li>
-<li><a class="dropdown-item" href="visa-photos-international.html">Visa Photos by Country</a></li>
-<li><a class="dropdown-item" href="professional-license-photos-hub.html">Professional Licenses &amp; IDs</a></li>
-<li><a class="dropdown-item" href="document-services.html">Printing, Scanning &amp; Photocopying</a></li>
-</ul>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="pricing.html">
-        Pricing
-       </a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="reviews.html">
-        Reviews
-       </a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="faq.html">
-        FAQ
-       </a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="location.html">
-        Location
-       </a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="about.html">
-        About
-       </a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="blog.html">
-        Blog
-       </a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="contact.html">
-        Contact
-       </a>
-</li>
-</ul>
-<button class="mobile-menu-btn">
-<i class="fas fa-bars">
-</i>
-</button>
-</nav>
-</div>
-</header>
-<!-- Page Banner -->
-<section class="page-banner">
-<div class="container">
-        <nav class="breadcrumb-nav">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item">Location</li>
-            </ol>
-        </nav>
-        <h1>
-     Find Our Studio
-    </h1>
-<p>
-     Conveniently located in downtown Toronto with easy access and parking
-    </p>
-</div>
-</section>
-<!-- Map Section -->
-<section class="section">
-<div class="container">
-<div class="location-map-full">
-<iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.4702396226897!2d-79.39272812346847!3d43.65364905260046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34c95a8fffff%3A0x2d3f7e6d26c4d79c!2s63%20McCaul%20St%2C%20Toronto%2C%20ON%20M5T%202W7%2C%20Canada!5e0!3m2!1sen!2sus!4v1716925034123!5m2!1sen!2sus">
-</iframe>
-</div>
-<div class="location-details">
-<div class="location-detail-card">
-<div class="location-detail-icon">
-<i class="fas fa-map-marker-alt">
-</i>
-</div>
-<h3 class="location-detail-title">
-       Our Address
-      </h3>
-<div class="location-detail-content">
-<p>
-        63 McCaul St
-       </p>
-<p>
-        Toronto, ON M5T 2W7
-       </p>
-<p>
-<strong>
-         Phone:
-        </strong>
-        (416) 986-2677
-       </p>
-<p>
-<strong>
-         Email:
-        </strong>
-<a href="mailto:info@passportphototoronto.com" style="color: inherit; text-decoration: none;">info@passportphototoronto.com</a>
-       </p>
-<a class="btn btn-secondary" href="https://maps.google.com/?q=63+McCaul+St,+Toronto,+ON+M5T+2W7" style="margin-top: 15px;" target="_blank">
-        Get Directions
-       </a>
-</div>
-</div>
-<div class="location-detail-card">
-<div class="location-detail-icon">
-<i class="fas fa-clock">
-</i>
-</div>
-<h3 class="location-detail-title">
-       Business Hours
-      </h3>
-<div class="location-detail-content">
-<p>
-<strong>Mon-Fri:</strong> 9:00 AM - 6:00 PM<br/>
-<strong>Sat-Sun:</strong> 12:00 PM - 6:00 PM
-       </p>
-<p>
-        We are open seven days a week to accommodate your schedule. No appointment is necessary, but booking in advance is recommended during busy periods.
-       </p>
-</div>
-</div>
-<div class="location-detail-card">
-<div class="location-detail-icon">
-<i class="fas fa-car">
-</i>
-</div>
-<h3 class="location-detail-title">
-       Parking
-      </h3>
-<div class="location-detail-content">
-<p>
-        Metered street parking is available on McCaul Street and nearby streets. There are also several public parking garages within walking distance of our studio, including the one at OCAD University.
-       </p>
-</div>
-</div>
-</div>
-<div class="transportation-options">
-<h2 class="section-title">
-      Getting Here
-     </h2>
-<p class="section-subtitle">
-      Our studio is easily accessible by various transportation methods
-     </p>
-<div class="transportation-container">
-<div class="transportation-item">
-<div class="transportation-icon">
-<i class="fas fa-car">
-</i>
-</div>
-<h3 class="transportation-title">
-        By Car
-       </h3>
-<p>
-        Our studio is easily accessible by car from the Gardiner Expressway and Don Valley Parkway. Street parking and public parking garages are available nearby.
-       </p>
-</div>
-<div class="transportation-item">
-<div class="transportation-icon">
-<i class="fas fa-subway">
-</i>
-</div>
-<h3 class="transportation-title">
-        By Public Transit
-       </h3>
-<p>
-        We are located within a 5-minute walk from St. Patrick Station. Several TTC streetcar and bus routes also stop within a block of our studio.
-       </p>
-</div>
-<div class="transportation-item">
-<div class="transportation-icon">
-<i class="fas fa-bicycle">
-</i>
-</div>
-<h3 class="transportation-title">
-        By Bicycle
-       </h3>
-<p>
-        Bicycle racks are available in front of our building. The area is well-connected to Toronto's bike lane network.
-       </p>
-</div>
-<div class="transportation-item">
-<div class="transportation-icon">
-<i class="fas fa-walking">
-</i>
-</div>
-<h3 class="transportation-title">
-        By Foot
-       </h3>
-<p>
-        Our studio is located in a pedestrian-friendly area of downtown Toronto with wide sidewalks and crosswalks at all major intersections.
-       </p>
-</div>
-</div>
-</div>
-<div class="nearby-landmarks">
-<h2 class="section-title">
-      Nearby Landmarks
-     </h2>
-<p class="section-subtitle">
-      Our studio is conveniently located near several well-known Toronto landmarks
-     </p>
-<div class="landmarks-container">
-<div class="landmark-item">
-<h3 class="landmark-title">
-        OCAD University
-       </h3>
-<p class="landmark-distance">
-        Located just 1 block north of our studio
-       </p>
-</div>
-<div class="landmark-item">
-<h3 class="landmark-title">
-        Art Gallery of Ontario
-       </h3>
-<p class="landmark-distance">
-        Located 2 blocks west of our studio
-       </p>
-</div>
-<div class="landmark-item">
-<h3 class="landmark-title">
-        Eaton Centre
-       </h3>
-<p class="landmark-distance">
-        Located 3 blocks east of our studio
-       </p>
-</div>
-<div class="landmark-item">
-<h3 class="landmark-title">
-        Queen Street West
-       </h3>
-<p class="landmark-distance">
-        Located 5 minutes walking distance
-       </p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- CTA Section -->
-<section class="section cta">
-<div class="container">
-<h2 class="cta-title">
-     Ready to Visit Us?
-    </h2>
-<p class="cta-subtitle">
-     Book an appointment or walk in during our business hours for fast, professional photo services.
-    </p>
-<a class="btn btn-secondary btn-lg" href="scheduling.html">
-     BOOK APPOINTMENT
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-55RV84CT" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<header class="site-header">
+  <div class="shell">
+    <a class="brand" href="index.html">
+      <img src="images/logo.png" alt="Passport Photo Toronto">
+      <span>PASSPORT PHOTO</span>
     </a>
+    <nav class="nav-links" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="samples.html">Samples</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="faq.html">FAQ</a>
+        <a href="location.html" class="active" aria-current="page">Location</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-right">
+      <a class="header-phone" href="tel:4169862677">(416) 986-2677</a>
+      <button type="button" class="btn btn-gold" data-book>Book Appointment</button>
+      <button type="button" class="hamburger" aria-label="Open menu">&#9776;</button>
+    </div>
+  </div>
+</header>
+<div class="drawer-backdrop"></div>
+<nav class="drawer" aria-label="Mobile">
+  <button type="button" class="drawer-close" aria-label="Close menu">&#10005;</button>
+  <a class="drawer-link" href="index.html">Home</a>
+  <a class="drawer-link" href="services.html">Services</a>
+  <a class="drawer-link" href="pricing.html">Pricing</a>
+  <a class="drawer-link" href="samples.html">Samples</a>
+  <a class="drawer-link" href="reviews.html">Reviews</a>
+  <a class="drawer-link" href="faq.html">FAQ</a>
+  <a class="drawer-link" href="location.html">Location</a>
+  <a class="drawer-link" href="blog.html">Blog</a>
+  <a class="drawer-link" href="contact.html">Contact</a>
+  <div class="drawer-contact">
+    <a href="tel:4169862677">(416) 986-2677</a>
+    <a href="mailto:info@passportphototoronto.com">info@passportphototoronto.com</a>
+    <span>Mon–Fri: 9:00 AM – 6:00 PM<br>Sat–Sun: 12:00 PM – 6:00 PM</span>
+    <button type="button" class="btn btn-gold btn-block" data-book>Book Appointment</button>
+  </div>
+</nav>
+<main>
+<div class="page">
+  <h1>Find our studio</h1>
+  <div class="split" style="align-items:stretch;grid-template-columns:1.3fr 0.7fr">
+    <div class="map-box" style="min-height:440px"><iframe src="https://www.google.com/maps?q=63+McCaul+St,+Toronto,+ON+M5T+2W7&amp;output=embed" loading="lazy" title="Map — 63 McCaul St"></iframe></div>
+    <div class="hero-col" style="gap:16px">
+      <div class="info-card" style="flex:1">
+        <div class="field"><span class="lbl">Address</span><span class="val">63 McCaul St, Toronto, ON M5T 2W7</span><span class="txt">Steps from OCAD U and the AGO</span></div>
+        <div class="field"><span class="lbl">Phone</span><a class="val" href="tel:4169862677">(416) 986-2677</a></div>
+        <div class="field"><span class="lbl">Hours</span><span class="txt">Mon–Fri: 9:00 AM – 6:00 PM<br>Sat–Sun: 12:00 PM – 6:00 PM</span></div>
+        <div class="field"><span class="lbl">Getting here</span><span class="txt">St Patrick station (Line 1) · 505 Dundas &amp; 501 Queen streetcars · Green P parking on McCaul</span></div>
+      </div>
+      <button type="button" class="btn btn-gold btn-block" data-book>Book Appointment</button>
+    </div>
+  </div>
 </div>
-</section>
-<!-- Footer -->
-<footer class="footer">
-<div class="container">
-<div class="footer-container">
-<div class="footer-about">
-<div class="footer-logo">
-<picture><source srcset="images/logo-white.webp" type="image/webp"/><img alt="Passport Photo Toronto Logo" loading="lazy" src="images/logo-white.png"/></picture>
-</div>
-<p>
-       Professional passport and ID photo services in downtown Toronto. We guarantee compliance with all official requirements.
-      </p>
-</div>
-<div class="footer-links">
-<h3 class="footer-title">
-       Quick Links
-      </h3>
-<ul class="footer-links">
-<li class="footer-link">
-<a href="/">
-         Home
-        </a>
-</li>
-<li class="footer-link">
-<a href="services.html">
-         Services
-        </a>
-</li>
-<li class="footer-link">
-<a href="pricing.html">
-         Pricing
-        </a>
-</li>
-
-<li class="footer-link">
-<a href="reviews.html">
-         Reviews
-        </a>
-</li>
-<li class="footer-link">
-<a href="about.html">
-         About
-        </a>
-</li>
-<li class="footer-link">
-<a href="faq.html">
-         FAQ
-        </a>
-</li>
-<li class="footer-link">
-<a href="location.html">
-         Location
-        </a>
-</li>
-<li class="footer-link">
-<a href="contact.html">
-         Contact
-        </a>
-</li>
-<li class="footer-link">
-<a href="jobs.html">
-         Careers
-        </a>
-</li>
-<li class="footer-link">
-<a href="trusted-vendors.html">
-         Trusted Vendors
-        </a>
-</li>
-<li class="footer-link">
-<a href="blog.html">
-         Blog
-        </a>
-</li>
-<li class="footer-link">
-<a href="refund-policy.html">
-         Refund Policy
-        </a>
-</li>
-<li class="footer-link">
-<a href="digital-photo-payment.html">
-         Digital Photo Payment
-        </a>
-</li>
-<li class="footer-link">
-<a href="sitemap.html">
-         Sitemap
-        </a>
-</li>
-</ul>
-</div>
-<div class="footer-services">
-<h3 class="footer-title">
-       Our Services
-      </h3>
-<ul class="footer-links">
-<li class="footer-link">
-<a href="canadian-passport-photos.html">
-         Canadian Passport
-        </a>
-</li>
-<li class="footer-link">
-<a href="pr-card-photos.html">
-         Canadian PR Card
-        </a>
-</li>
-<li class="footer-link">
-<a href="us-immigration-photos.html">
-         US Visa
-        </a>
-</li>
-<li class="footer-link">
-<a href="#">
-         Chinese Visa
-        </a>
-</li>
-<li class="footer-link">
-<a href="#">
-         Schengen Visa
-        </a>
-</li>
-<li class="footer-link">
-<a href="us-passport-photos.html">
-         US Passport
-        </a>
-</li>
-<li class="footer-link">
-<a href="oci-photo.html">
-         Indian OCI
-        </a>
-</li>
-<li class="footer-link">
-<a href="study-permit-photos.html">
-         Study Permit
-        </a>
-</li>
-<li class="footer-link">
-<a href="work-permit-photo.html">
-         Work Permit
-        </a>
-</li>
-</ul>
-</div>
-<div class="footer-contact">
-<h3 class="footer-title">
-       Contact Us
-      </h3>
-<div class="footer-contact-item">
-<i class="fas fa-map-marker-alt footer-contact-icon">
-</i>
-<div>
-<p>
-         63 McCaul St
-        </p>
-<p>
-         Toronto, ON M5T 2W7
-        </p>
-</div>
-</div>
-<div class="footer-contact-item">
-<i class="fas fa-phone footer-contact-icon">
-</i>
-<p>
-        (416) 986-2677
-       </p>
-</div>
-<div class="footer-contact-item">
-<i class="fas fa-envelope footer-contact-icon">
-</i>
-<p>
-        <a href="mailto:info@passportphototoronto.com" style="color: rgba(255, 255, 255, 0.7); text-decoration: none;">info@passportphototoronto.com</a>
-       </p>
-</div>
-<div class="footer-contact-item">
-<i class="fas fa-clock footer-contact-icon">
-</i>
-<p>
-        Mon-Fri: 9:00 AM - 6:00 PM<br/>Sat-Sun: 12:00 PM - 6:00 PM
-       </p>
-</div>
-</div>
-</div>
-<div class="footer-bottom">
-<div class="footer-social">
-<h4>
-       Follow Us
-      </h4>
-<div class="social-links">
-<a class="social-link" href="https://instagram.com/passportphototoronto" rel="noopener noreferrer" target="_blank">
-<i class="fab fa-instagram">
-</i>
-</a>
-
-
-
-</div>
-</div>
-<p>
-      © 2025 Passport Photo Toronto. All Rights Reserved.
-     </p>
-</div>
-</div>
+</main>
+<footer class="site-footer">
+  <div class="shell">
+    <div class="col brand-col">
+      <img class="flogo" src="images/logo-gold.png" alt="Passport Photo Toronto">
+      <span class="blurb">Professional passport and ID photo services in downtown Toronto. We guarantee compliance with all official requirements.</span>
+      <a class="ig" href="https://instagram.com/passportphototoronto" target="_blank" rel="noopener noreferrer">Follow us on Instagram</a>
+    </div>
+    <div class="col">
+      <h3>Quick links</h3>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="services.html">All services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="samples.html">Sample photos</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="faq.html">FAQ</a>
+        <a href="location.html">Location</a>
+        <a href="about.html">About us</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="jobs.html">Careers</a>
+        <a href="trusted-vendors.html">Trusted vendors</a>
+        <a href="refund-policy.html">Refund policy</a>
+        <a href="digital-photo-payment.html">Digital photo payment</a>
+        <a href="passport-photos-chinatown.html">Service areas</a>
+        <a href="sitemap.html">Sitemap</a>
+      </div>
+    </div>
+    <div class="col">
+      <h3>Our services</h3>
+      <div class="links">
+        <a href="passport-photos.html">Passport Photos in Toronto</a>
+        <a href="visa-photos.html">Visa Photos in Toronto</a>
+        <a href="canadian-passport-photos.html">Canadian Passport</a>
+        <a href="us-visa-photos.html">US Visa</a>
+        <a href="us-passport-photos.html">US Passport</a>
+        <a href="uk-passport-photos.html">UK Passport</a>
+        <a href="indian-passport-photos.html">Indian Passport</a>
+        <a href="chinese-passport-photos.html">Chinese Passport</a>
+        <a href="schengen-visa-photos.html">Schengen Visa</a>
+        <a href="chinese-visa-photos.html">Chinese Visa</a>
+        <a href="indian-visa-photos.html">Indian Visa</a>
+        <a href="pr-card-photos.html">PR Card</a>
+        <a href="canadian-citizenship-photo.html">Canadian Citizenship</a>
+        <a href="study-permit-photos.html">Study Permit</a>
+        <a href="work-permit-photo.html">Work Permit</a>
+        <a href="oci-photo.html">Indian OCI</a>
+        <a href="digital-passport-photos.html">Digital Photos</a>
+        <a href="document-services.html">Printing, Scanning &amp; Photocopying</a>
+      </div>
+    </div>
+    <div class="col">
+      <h3>Contact</h3>
+      <span class="contact-line">63 McCaul St<br>Toronto, ON M5T 2W7</span>
+      <a href="tel:4169862677">(416) 986-2677</a>
+      <a href="mailto:info@passportphototoronto.com">info@passportphototoronto.com</a>
+      <span class="contact-line">Mon–Fri: 9 AM – 6 PM<br>Sat–Sun: 12 PM – 6 PM</span>
+    </div>
+  </div>
+  <div class="bottom">© 2026 Passport Photo Toronto. All Rights Reserved.</div>
 </footer>
-<!-- JavaScript -->
 
-</script>
-<script>
-   document.addEventListener("DOMContentLoaded", function () {
-    const menuIcon = document.querySelector(".menu-icon");
-    const navLinks = document.querySelector(".nav-links");
+<div class="book-overlay" role="dialog" aria-modal="true" aria-label="Book an appointment">
+  <div class="book-backdrop"></div>
+  <div class="book-modal">
+    <div class="book-head">
+      <div>
+        <div class="kicker">Square Appointments</div>
+        <div class="t">Book an appointment</div>
+      </div>
+      <button type="button" class="book-close" aria-label="Close">&#10005;</button>
+    </div>
+    <div class="book-frame">
+      <iframe title="Book an appointment — Square" loading="lazy"></iframe>
+    </div>
+  </div>
+</div>
+<script src="js/redesign.js"></script>
 
-    if (menuIcon && navLinks) {
-      menuIcon.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-      });
-    }
-  });
-  </script>
-<script>
-   document.addEventListener("DOMContentLoaded", function () {
-    const currentPath = location.pathname.split("/").pop() || "index.html";
-    const links = document.querySelectorAll(".nav-link");
-    links.forEach(link => {
-      const href = link.getAttribute("href");
-      if (href === currentPath) {
-        link.classList.add("active");
-      }
-    });
-  });
-  </script>
-<script>
-   document.addEventListener("DOMContentLoaded", function () {
-  // Highlight current page link
-  const currentPath = location.pathname.split("/").pop() || "index.html";
-  const links = document.querySelectorAll(".nav-link");
-  links.forEach(link => {
-    const href = link.getAttribute("href");
-    if (href === currentPath) {
-      link.classList.add("active");
-    }
-  });
-
-  // Toggle mobile menu
-  const menuBtn = document.querySelector(".mobile-menu-btn");
-  const navMenu = document.querySelector(".nav-menu");
-  if (menuBtn && navMenu) {
-    menuBtn.addEventListener("click", () => {
-      navMenu.classList.toggle("active");
-    });
-  }
-});
-  </script>
 </body>
 </html>

@@ -1,0 +1,902 @@
+{
+  "areas": [
+    "Annex",
+    "Beaches",
+    "Bloor West",
+    "Cabbagetown",
+    "Chinatown",
+    "Church & Wellesley",
+    "Corktown",
+    "Danforth",
+    "Distillery District",
+    "Entertainment District",
+    "Etobicoke",
+    "Financial District",
+    "Forest Hill",
+    "Fort York",
+    "Harbourfront",
+    "High Park",
+    "Junction",
+    "Kensington Market",
+    "Leaside",
+    "Leslieville",
+    "Liberty Village",
+    "Little Italy",
+    "Midtown",
+    "Mimico",
+    "Old Town",
+    "Parkdale",
+    "Portlands",
+    "Roncesvalles",
+    "Rosedale",
+    "St. Lawrence Market",
+    "Toronto Islands",
+    "Trinity Bellwoods",
+    "Yorkville"
+  ],
+  "svcData": {
+    "canadian-passport": {
+      "name": "Canadian Passport",
+      "sub": "IRCC-compliant, same-day",
+      "size": "50mm × 70mm (2\" × 2¾\")",
+      "face": "Face height 31–36mm chin to crown",
+      "sample": "images/passport-scan-sample-square.jpg"
+    },
+    "us-visa": {
+      "name": "US Visa",
+      "sub": "B1/B2, F1, H1B, Green Card & more",
+      "size": "2 × 2 inches (51 × 51mm)",
+      "face": "Head height 25–35mm",
+      "sample": "images/us-passport-sample.jpg"
+    },
+    "pr-card": {
+      "name": "PR Card",
+      "sub": "Canada Permanent Resident",
+      "size": "50mm × 70mm",
+      "face": "Face height 31–36mm chin to crown",
+      "sample": "images/canadian-pr-card-sample.jpg"
+    },
+    "citizenship": {
+      "name": "Canadian Citizenship",
+      "sub": "IRCC citizenship application",
+      "size": "50mm × 70mm",
+      "face": "Face height 31–36mm chin to crown",
+      "sample": "images/canadian-citizenship-sample.jpg"
+    },
+    "us-passport": {
+      "name": "US Passport",
+      "sub": "State Dept. compliant",
+      "size": "2 × 2 inches (51 × 51mm)",
+      "face": "Head height 25–35mm",
+      "sample": "images/us-passport-sample.jpg"
+    },
+    "uk-passport": {
+      "name": "UK Passport",
+      "sub": "UKVI-compliant",
+      "size": "35mm × 45mm",
+      "face": "Head height 29–34mm crown to chin",
+      "sample": "images/uk-passport-sample.jpg"
+    },
+    "irish-passport": {
+      "name": "Irish Passport",
+      "sub": "Dept. of Foreign Affairs spec",
+      "size": "35mm × 45mm",
+      "face": "Head height 29–34mm",
+      "sample": null
+    },
+    "indian-passport": {
+      "name": "Indian Passport",
+      "sub": "New ICAO format",
+      "size": "51mm × 51mm (2 × 2\")",
+      "face": "Face covers 60–70% of frame (ICAO)",
+      "sample": null
+    },
+    "chinese-passport": {
+      "name": "Chinese Passport",
+      "sub": "Consular spec",
+      "size": "33mm × 48mm",
+      "face": "Head height 28–33mm",
+      "sample": "images/chinese-passport-sample.jpg"
+    },
+    "schengen-visa": {
+      "name": "Schengen Visa",
+      "sub": "All 27 EU member states",
+      "size": "35mm × 45mm",
+      "face": "Face covers 70–80% of frame",
+      "sample": "images/schengen-visa-photo-sample.jpg"
+    },
+    "chinese-visa": {
+      "name": "Chinese Visa",
+      "sub": "Consular spec",
+      "size": "33mm × 48mm",
+      "face": "Head height 28–33mm",
+      "sample": "images/chinese-visa-sample.jpg"
+    },
+    "indian-visa": {
+      "name": "Indian Visa",
+      "sub": "Tourist, business & e-visa",
+      "size": "51mm × 51mm (2 × 2\")",
+      "face": "Face covers 60–70% of frame",
+      "sample": null
+    },
+    "oci": {
+      "name": "Indian OCI",
+      "sub": "Overseas Citizen of India card",
+      "size": "51mm × 51mm (2 × 2\")",
+      "face": "ICAO-compliant, face 60–70% of frame",
+      "sample": "images/indian-oci-sample.jpg"
+    },
+    "green-card": {
+      "name": "US Green Card",
+      "sub": "USCIS-compliant",
+      "size": "2 × 2 inches (51 × 51mm)",
+      "face": "Head height 25–35mm",
+      "sample": "images/green-card-sample.jpg"
+    },
+    "study-permit": {
+      "name": "Study Permit",
+      "sub": "IRCC study permit applications",
+      "size": "35mm × 45mm",
+      "face": "Face height 31–36mm",
+      "sample": "images/study-permit-sample.jpg"
+    },
+    "work-permit": {
+      "name": "Work Permit",
+      "sub": "IRCC work permit applications",
+      "size": "35mm × 45mm",
+      "face": "Face height 31–36mm",
+      "sample": "images/work-permit-sample.jpg"
+    },
+    "french-passport": {
+      "name": "French Passport",
+      "sub": "ANTS spec, light grey background",
+      "size": "35mm × 45mm",
+      "face": "Head height 32–36mm",
+      "sample": null
+    },
+    "german-passport": {
+      "name": "German Passport",
+      "sub": "Biometric, German govt spec",
+      "size": "35mm × 45mm",
+      "face": "Biometric framing per template",
+      "sample": null
+    },
+    "italian-passport": {
+      "name": "Italian Passport",
+      "sub": "Consulate ICAO standard",
+      "size": "35mm × 45mm",
+      "face": "Head height 32–36mm",
+      "sample": null
+    },
+    "spanish-passport": {
+      "name": "Spanish Passport",
+      "sub": "Consular spec",
+      "size": "32mm × 26mm",
+      "face": "Plain white background",
+      "sample": null
+    },
+    "polish-passport": {
+      "name": "Polish Passport",
+      "sub": "Biometric, light background",
+      "size": "35mm × 45mm",
+      "face": "Biometric framing per template",
+      "sample": null
+    },
+    "japanese-passport": {
+      "name": "Japanese Passport",
+      "sub": "Embassy of Japan spec",
+      "size": "35mm × 45mm",
+      "face": "Head height 32–36mm",
+      "sample": null
+    },
+    "korean-passport": {
+      "name": "Korean Passport",
+      "sub": "Korean consulate spec",
+      "size": "35mm × 45mm",
+      "face": "Head height 32–36mm",
+      "sample": null
+    },
+    "turkish-passport": {
+      "name": "Turkish Passport",
+      "sub": "Biometric consular spec",
+      "size": "50mm × 60mm",
+      "face": "Biometric framing per template",
+      "sample": null
+    },
+    "iranian-passport": {
+      "name": "Iranian Passport",
+      "sub": "Consular photo, hijab requirements",
+      "size": "2 × 2 inches (51 × 51mm)",
+      "face": "Iran MFA-compliant framing",
+      "sample": null
+    },
+    "nigerian-passport": {
+      "name": "Nigerian Passport",
+      "sub": "NIS digital upload format",
+      "size": "35mm × 45mm + digital file",
+      "face": "White background, even lighting",
+      "sample": null
+    },
+    "brazilian-passport": {
+      "name": "Brazilian Passport",
+      "sub": "Consular format",
+      "size": "50mm × 70mm (5 × 7cm)",
+      "face": "White background, consular framing",
+      "sample": null
+    },
+    "hong-kong-passport": {
+      "name": "Hong Kong Passport",
+      "sub": "HKSAR spec",
+      "size": "40mm × 50mm",
+      "face": "Chin-to-crown 32–36mm",
+      "sample": null
+    },
+    "us-immigration": {
+      "name": "US Immigration (DS-160)",
+      "sub": "DS-160 & USCIS digital format",
+      "size": "2 × 2 inches + 600×600px digital",
+      "face": "Head height 25–35mm",
+      "sample": null
+    },
+    "us-travel-visa": {
+      "name": "US Travel Visa",
+      "sub": "B1/B2 State Dept. spec",
+      "size": "2 × 2 inches (51 × 51mm)",
+      "face": "Head height 25–35mm",
+      "sample": null
+    },
+    "japanese-visa": {
+      "name": "Japanese Visa",
+      "sub": "Consulate of Japan spec",
+      "size": "45mm × 45mm",
+      "face": "Consulate-compliant framing",
+      "sample": null
+    },
+    "korean-visa": {
+      "name": "Korean Visa",
+      "sub": "Korean MOFA spec",
+      "size": "35mm × 45mm",
+      "face": "Head height 32–36mm",
+      "sample": null
+    },
+    "egyptian-visa": {
+      "name": "Egyptian Visa",
+      "sub": "Egyptian Embassy spec",
+      "size": "2 × 2 inches (51 × 51mm)",
+      "face": "Embassy-compliant framing",
+      "sample": null
+    },
+    "vietnam-visa": {
+      "name": "Vietnam Visa",
+      "sub": "eVisa portrait, JPG delivery",
+      "size": "40mm × 60mm (4 × 6cm)",
+      "face": "White background, digital file included",
+      "sample": null
+    },
+    "hong-kong-visa": {
+      "name": "Hong Kong Visa",
+      "sub": "HK Immigration Dept. spec",
+      "size": "40mm × 50mm",
+      "face": "White background, precise framing",
+      "sample": null
+    },
+    "student-visa": {
+      "name": "Student Visa",
+      "sub": "All major destination countries",
+      "size": "Sized per destination country",
+      "face": "Embassy-compliant framing",
+      "sample": null
+    },
+    "indian-pcc": {
+      "name": "Indian PCC",
+      "sub": "Police Clearance Certificate, ICAO",
+      "size": "35mm × 45mm",
+      "face": "ICAO-compliant (Sept 2025 rules)",
+      "sample": null
+    },
+    "refugee-travel": {
+      "name": "Refugee Travel Document",
+      "sub": "IRCC-compliant",
+      "size": "50mm × 70mm",
+      "face": "Face height 31–36mm chin to crown",
+      "sample": null
+    },
+    "immigration-medical": {
+      "name": "Immigration Medical Photos",
+      "sub": "IRCC panel physician appointments",
+      "size": "Sized per IRCC spec",
+      "face": "Accepted at designated panel physicians",
+      "sample": null
+    },
+    "school-id": {
+      "name": "School ID Photo",
+      "sub": "Passport size, kids & teens",
+      "size": "Passport size (35mm × 45mm)",
+      "face": "Standard school ID framing",
+      "sample": null
+    },
+    "university-id": {
+      "name": "University Application Photo",
+      "sub": "Academic programs & internships",
+      "size": "Passport format",
+      "face": "Professional, high-quality framing",
+      "sample": null
+    },
+    "idp": {
+      "name": "International Driver's Permit",
+      "sub": "IDP applications",
+      "size": "Passport size (35mm × 45mm)",
+      "face": "Framing per IDP requirements",
+      "sample": null
+    },
+    "security-guard": {
+      "name": "Security Guard License",
+      "sub": "Ontario / CPIC-compliant",
+      "size": "Sized per CPIC spec",
+      "face": "CPIC-compliant framing",
+      "sample": null
+    },
+    "firearms-pal": {
+      "name": "Firearms / PAL License",
+      "sub": "RCMP-compliant",
+      "size": "25.4mm × 35mm",
+      "face": "RCMP-compliant framing",
+      "sample": null
+    },
+    "licenses": {
+      "name": "Professional Licenses & IDs",
+      "sub": "PAL, medical, drivers permits",
+      "size": "Sized per issuing body",
+      "face": "Framing per license requirements",
+      "sample": null
+    },
+    "digital": {
+      "name": "Digital Photos",
+      "sub": "High-res file for online applications",
+      "size": "Sized per document spec",
+      "face": "Formatted and emailed in minutes",
+      "sample": "images/digital-passport-sample.jpg"
+    },
+    "document-services": {
+      "name": "Printing, Scanning & Photocopying",
+      "sub": "Document services",
+      "size": null,
+      "face": null,
+      "sample": null
+    },
+    "passport-photos": {
+      "name": "Passport Photos in Toronto",
+      "titleAsIs": true,
+      "cta": "Get your passport photos today",
+      "sub": "Any country — done in 10 minutes",
+      "size": "50 × 70mm (Canadian) or 2\" × 2\" (US/international)",
+      "face": "Centred, neutral expression, eyes clearly visible",
+      "sample": null
+    },
+    "visa-photos": {
+      "name": "Visa Photos in Toronto",
+      "titleAsIs": true,
+      "cta": "Get your visa photos today",
+      "sub": "Every visa spec — done in 10 minutes",
+      "size": "Sized to your destination country's exact spec",
+      "face": "Framing per issuing consulate requirements",
+      "sample": null
+    },
+    "digital-id": {
+      "name": "Digital ID Photos",
+      "titleAsIs": true,
+      "cta": "Get your digital ID photo today",
+      "sub": "For online applications",
+      "size": "35mm × 45mm or as specified by the application",
+      "face": "High-resolution JPEG or PNG digital file",
+      "sample": null
+    }
+  },
+  "topReviews": [
+    {
+      "text": "“My son and I came in as walk-ins, needing headshots suitable for Canadian citizenship certificates. At that time in the morning, there was no wait, and everything was quick and professional. Highly recommend!”",
+      "name": "David Dibble",
+      "initials": "DD",
+      "date": "June 2026",
+      "stars": "★★★★★"
+    },
+    {
+      "text": "“Efficient, friendly service in a convenient location. The photos looked good and I got some tips on submitting the photos for the passport service I was taking them for. Recommended!”",
+      "name": "Matt Buckley-Golder",
+      "initials": "MB",
+      "date": "June 2026",
+      "stars": "★★★★★"
+    },
+    {
+      "text": "“Wonderful service! The lady who helped me was very lovely and professional, and she took a passport photo I'm actually happy with, not one I'll dread carrying around for the next 10 years.”",
+      "name": "Arman",
+      "initials": "A",
+      "date": "June 2026",
+      "stars": "★★★★★"
+    },
+    {
+      "text": "“Julian did an excellent job with my passport photo. He uses top-of-the-line equipment and clearly knows the technical requirements inside out. The whole process was smooth, quick, and stress-free, and the pricing was very reasonable for the quality you get. Highly recommend Julian.”",
+      "name": "M S",
+      "initials": "MS",
+      "date": "May 2026",
+      "stars": "★★★★★"
+    },
+    {
+      "text": "“Superb service. Excellent location and studio. Highly efficient. Fair pricing. Got digital and printed passport photos for three family members for Canadian and UK passports. All done in 12 minutes. Outstanding experience on a Sunday afternoon.”",
+      "name": "Rob Prichard",
+      "initials": "RP",
+      "date": "May 2026",
+      "stars": "★★★★★"
+    },
+    {
+      "text": "“I was exceptionally pleased by Passport Photo Toronto. It is convenient to get to and the customer service and professionalism is very welcoming. It was completed very quickly and I highly recommend using their services.”",
+      "name": "Maureen Carey",
+      "initials": "MC",
+      "date": "May 2026",
+      "stars": "★★★★★"
+    },
+    {
+      "text": "“I randomly stopped by after landing from a 21-hour flight. I needed a photo on my way to the hotel. The guy is stylish, calm and professional. Loved the place — reminded me of an old Ethiopian art based interior with vintage objects.”",
+      "name": "DwDw DT",
+      "initials": "DT",
+      "date": "May 2026",
+      "stars": "★★★★★"
+    },
+    {
+      "text": "“Love my photo — which is rare. Good service, quick, felt comfortable, liked that it was a studio environment and quiet, plus we redid the photos until we got it right. Got to choose the photo I liked! No complaints and loved supporting a local business!”",
+      "name": "Kimberley Brown",
+      "initials": "KB",
+      "date": "April 2026",
+      "stars": "★★★★★"
+    },
+    {
+      "text": "“In a world of chaos this little spot is an oasis. I had made an appointment but arrived early, I was greeted professionally and had my pictures in my inbox in minutes. Parking available on the street — a no stress moment in my day.”",
+      "name": "Pauline Gray",
+      "initials": "PG",
+      "date": "April 2026",
+      "stars": "★★★★★"
+    },
+    {
+      "text": "“Julian is a true professional! I had been to 2 other places to get my photos for my Greek passport but the photos were not accepted. I decided to try my luck with Passport Photo Toronto.”",
+      "name": "Leonardo",
+      "initials": "L",
+      "date": "April 2026",
+      "stars": "★★★★★"
+    },
+    {
+      "text": "“Super fast and convenient service. There was an issue with the size of the printed photos but I went back and they reprinted a new set with the correct size for me without any trouble.”",
+      "name": "Amir Ahmadian",
+      "initials": "AA",
+      "date": "April 2026",
+      "stars": "★★★★★"
+    },
+    {
+      "text": "“An overall positive experience. Called and they answered my technical questions. No wait when I showed up 30 minutes later. Knowledgeable, friendly and efficient. Good on ya!”",
+      "name": "Ken Hart",
+      "initials": "KH",
+      "date": "April 2026",
+      "stars": "★★★★★"
+    },
+    {
+      "text": "“Excellent, professional service. Particularly nice that the photo could be checked for acceptability by the UK passport immediately. Highly recommend this business.”",
+      "name": "Robert Lannigan",
+      "initials": "RL",
+      "date": "April 2026",
+      "stars": "★★★★★"
+    },
+    {
+      "text": "“The service was quick and efficient. The photographer kindly took the time to walk me through the application process, much appreciated. Highly recommended.”",
+      "name": "Ian Mason",
+      "initials": "IM",
+      "date": "April 2026",
+      "stars": "★★★★★"
+    },
+    {
+      "text": "“Great place to get your passport photo! Owner accommodated me after the shop was already closed and was patiently retaking the pics until it was perfect!”",
+      "name": "Dancy X",
+      "initials": "DX",
+      "date": "March 2026",
+      "stars": "★★★★★"
+    },
+    {
+      "text": "“I had a great experience with Julian for my PR application photos. I arrived just before closing, yet he was still very patient and attentive. I mistakenly provided the wrong dimensions, but he went the extra mile to verify the correct ones.”",
+      "name": "Gilia Nolasco",
+      "initials": "GN",
+      "date": "December 2025",
+      "stars": "★★★★★"
+    },
+    {
+      "text": "“I've gotten the best passport, visa & PR photo here! Super high quality, and the owner Julian is also a very professional photographer. He always gets the job done, answers quick & makes sure you love your photos. This place is a legit studio and you will have the best experience!”",
+      "name": "Luohan Senatore",
+      "initials": "LS",
+      "date": "July 2025",
+      "stars": "★★★★★"
+    },
+    {
+      "text": "“10 out of 10! Exceptional service and outstanding photography skills. Even though I was the last customer of the day, the photographer kindly stayed open to take my ID photo. Truly professional and passionate about the work.”",
+      "name": "Charren",
+      "initials": "C",
+      "date": "July 2025",
+      "stars": "★★★★★"
+    },
+    {
+      "text": "“Julian is very professional, efficient and takes his time to make sure your pictures are perfect and as per the legal requirements. His photos are excellent quality and very reasonable. We highly recommend for passport or other documents.”",
+      "name": "Billie Davies",
+      "initials": "BD",
+      "date": "July 2025",
+      "stars": "★★★★★"
+    },
+    {
+      "text": "“We needed to get photos for our Chinese visa, which must meet very specific conditions. Julian was very knowledgeable about these rules and many visa/passport photo rules. He even allowed us to see the photos before printing them to make sure we were happy.”",
+      "name": "Wendy & Rodrigo",
+      "initials": "WR",
+      "date": "July 2025",
+      "stars": "★★★★★"
+    },
+    {
+      "text": "“I went in for a Chinese passport photo, and Julian was very professional. The photo quality is top-notch, and the studio environment is extremely clean. The price is very reasonable for such high-quality service. Better than any other places!”",
+      "name": "Luohan Yang",
+      "initials": "LY",
+      "date": "July 2025",
+      "stars": "★★★★★"
+    },
+    {
+      "text": "“Passport Photo Toronto is unbeatable! I popped in for a passport photo and came out looking like a movie star, not a suspect. No appointments, no fuss, just amazing photos at an incredible price. Honestly, why go anywhere else?”",
+      "name": "Sergio Senatore",
+      "initials": "SS",
+      "date": "July 2025",
+      "stars": "★★★★★"
+    },
+    {
+      "text": "“The service here was quick (less than 10 mins) and the owner was extremely patient and professional. I would recommend this studio to anyone who needs their pictures taken.”",
+      "name": "Alexander Liu",
+      "initials": "AL",
+      "date": "July 2025",
+      "stars": "★★★★★"
+    },
+    {
+      "text": "“Hands down the best photography studio and photography experience in the city. I walked in for passport photos and the service was kind, professional, and timely. I couldn't ask for anything more.”",
+      "name": "U A",
+      "initials": "UA",
+      "date": "July 2025",
+      "stars": "★★★★★"
+    },
+    {
+      "text": "“Julian made me feel so comfortable. I specifically drove 1.5 hours to come to Passport Photo Toronto because I knew I'd receive a professional looking photo that I'll feel confident showing when I travel.”",
+      "name": "Mary Beth Kennedy",
+      "initials": "MK",
+      "date": "July 2025",
+      "stars": "★★★★★"
+    },
+    {
+      "text": "“Came here for a digital passport photo for my UK passport renewal, and the representative was immediately aware of the requirements and specifications without me needing to tell him. Super impressed with the service.”",
+      "name": "Matt Humber",
+      "initials": "MH",
+      "date": "July 2025",
+      "stars": "★★★★★"
+    },
+    {
+      "text": "“I had my passport photo taken elsewhere and was so disappointed by the result that I wanted them retaken; this is how I'll look for the next 10 years! I found Passport Photo Toronto through Google Maps and liked what I read in the reviews.”",
+      "name": "Steve",
+      "initials": "S",
+      "date": "July 2025",
+      "stars": "★★★★★"
+    },
+    {
+      "text": "“Booked an appointment for Saturday afternoon and Julian took my photo (walk-ins also accepted). Great attitude, place was also really nice and clean, and I was able to review the photos.”",
+      "name": "Zi-Bei Han",
+      "initials": "ZH",
+      "date": "July 2025",
+      "stars": "★★★★★"
+    },
+    {
+      "text": "“Super fast and amazing service! Julian is a real professional photographer and is happy to make sure you look your best while conforming to passport requirements.”",
+      "name": "Aaron Lam",
+      "initials": "AL",
+      "date": "July 2025",
+      "stars": "★★★★★"
+    }
+  ],
+  "faqData": [
+    {
+      "q": "How long does the photo session take?",
+      "a": "Most sessions take about 10 minutes, including reviewing and selecting your photo. Arrival to walking out with prints and digital copies is typically 15–20 minutes."
+    },
+    {
+      "q": "Are your photos guaranteed to be accepted?",
+      "a": "Yes. If your photos are rejected by any official agency due to non-compliance with their photo requirements, we retake them at no additional cost."
+    },
+    {
+      "q": "Do I need an appointment?",
+      "a": "Appointments are recommended but not required — walk-ins are welcome during business hours. Booking online ensures minimal waiting time during busy periods."
+    },
+    {
+      "q": "What should I wear?",
+      "a": "Everyday clothing in solid colours. Avoid white or very light tops that blend with the background. Religious attire is permitted as long as your face is fully visible."
+    },
+    {
+      "q": "Can I wear glasses?",
+      "a": "For most passports (Canadian, US, UK) glasses are no longer allowed. If medically necessary for other documents, ensure no glare and that your eyes are clearly visible."
+    },
+    {
+      "q": "Do you provide digital copies?",
+      "a": "Yes — every service includes properly formatted digital files for online applications, emailed to you immediately after your session."
+    },
+    {
+      "q": "Can I smile?",
+      "a": "A neutral expression with a closed mouth is required for most passport and visa photos. We recommend neutral to ensure acceptance for all document types."
+    },
+    {
+      "q": "What payment methods do you accept?",
+      "a": "All major credit cards (Visa, Mastercard, Amex), debit cards."
+    }
+  ],
+  "blogPosts": {
+    "uk": {
+      "badge": "UK Travel",
+      "title": "British-Canadian Dual Citizens Must Now Use a UK Passport to Enter the United Kingdom",
+      "date": "February 25, 2026",
+      "read": "6 min read",
+      "ctaTitle": "Ready to renew your British passport?",
+      "ctaSub": "We produce compliant UK passport photos in minutes. No appointment needed — walk in to our downtown Toronto studio today.",
+      "ctaLabel": "UK Passport Photos",
+      "ctaSvc": "uk-passport",
+      "blocks": [
+        {
+          "t": "alert",
+          "tone": "warning",
+          "text": "Important notice: As of February 25, 2026, British-Canadian dual citizens can no longer enter the United Kingdom using only a Canadian passport. A valid British passport or a certificate of entitlement is now required. Failure to comply may result in being denied boarding by the airline."
+        },
+        {
+          "t": "p",
+          "text": "A significant change to UK border entry rules took effect on February 25, 2026, catching many British-Canadian dual citizens off guard. Under the updated enforcement framework tied to the UK's new Electronic Travel Authorisation (ETA) system, anyone who holds British or Irish citizenship is now required to present a valid British or Irish passport when travelling to the United Kingdom. A Canadian passport alone will no longer be accepted."
+        },
+        {
+          "t": "p",
+          "text": "This change has caused considerable disruption for the estimated 460,000+ Canadian residents born in the United Kingdom, many of whom had allowed their British passports to expire and had been travelling on their Canadian documents for years without issue."
+        },
+        {
+          "t": "h2",
+          "text": "What is the Electronic Travel Authorisation (ETA) and why does it matter?"
+        },
+        {
+          "t": "p",
+          "text": "The UK's ETA system is a digital pre-screening programme that requires visitors from visa-exempt countries — including Canada — to obtain a £16 electronic travel authorisation before travelling to the UK. The ETA is linked to the traveller's passport and is checked by airlines at the point of departure."
+        },
+        {
+          "t": "p",
+          "text": "The critical issue for dual citizens: British and Irish citizens are not eligible to apply for an ETA because they are not considered foreign visitors. If a dual citizen attempts to travel on their Canadian passport, airline systems may flag them as a British national — and without a British passport, they could be refused boarding."
+        },
+        {
+          "t": "h2",
+          "text": "Who is affected?"
+        },
+        {
+          "t": "ul",
+          "items": [
+            "You were born in the United Kingdom and later became a Canadian citizen",
+            "You were born in Canada to one or more British parents and automatically acquired British citizenship at birth",
+            "You became a British citizen through naturalisation, marriage, or registration at any point in your life",
+            "Your British passport has expired and you have been travelling on your Canadian passport instead"
+          ]
+        },
+        {
+          "t": "h2",
+          "text": "What documents are accepted to enter the UK?"
+        },
+        {
+          "t": "table",
+          "head": [
+            "Document",
+            "Accepted?",
+            "Notes"
+          ],
+          "rows": [
+            [
+              "Valid British passport",
+              "Yes",
+              "Primary recommended document"
+            ],
+            [
+              "Valid Irish passport",
+              "Yes",
+              "Irish citizens are exempt from the ETA requirement"
+            ],
+            [
+              "Foreign passport + Certificate of Entitlement",
+              "Yes",
+              "Costs £589 and takes several weeks to obtain"
+            ],
+            [
+              "Canadian passport alone (dual citizen)",
+              "No",
+              "No longer accepted from Feb 25, 2026"
+            ],
+            [
+              "ETA on a Canadian passport (dual citizen)",
+              "No",
+              "British dual nationals are ineligible to apply for an ETA"
+            ]
+          ]
+        },
+        {
+          "t": "h2",
+          "text": "How to renew your British passport from Canada"
+        },
+        {
+          "t": "p",
+          "text": "Renewing a British passport from overseas costs approximately £100 (roughly CAD $185) for an adult, plus secure tracked postage. Processing typically takes 6 to 10 weeks from Canada — the UK government strongly recommends not booking travel until your new passport has been received."
+        },
+        {
+          "t": "ol",
+          "items": [
+            "Visit gov.uk/overseas-passports to begin your online application",
+            "Complete the online form and pay the fee",
+            "Send your expired British passport (and birth certificate if requested) by secure tracked post to the UK Passport Office",
+            "Wait for your new passport to be returned by post — allow 6 to 10 weeks from Canada"
+          ]
+        },
+        {
+          "t": "alert",
+          "tone": "warning",
+          "text": "Do not book travel until your new passport arrives. The UK government explicitly advises against booking flights or accommodation before you have received your renewed British passport in hand."
+        },
+        {
+          "t": "h2",
+          "text": "Carrying two passports: what you need to know"
+        },
+        {
+          "t": "ul",
+          "items": [
+            "British passport: required to board your flight to the UK and to enter the UK at the border",
+            "Canadian passport: required to re-enter Canada by air — Canada requires its citizens to use a Canadian passport to return"
+          ]
+        },
+        {
+          "t": "h2",
+          "text": "How Passport Photo Toronto can help"
+        },
+        {
+          "t": "p",
+          "text": "A British passport renewal requires two compliant photos: 35mm × 45mm, plain white or off-white background, neutral expression with mouth closed, eyes open and clearly visible, no glasses, taken within the last month. At Passport Photo Toronto we produce UK passport photos that meet all HM Passport Office specifications, plus a digital file for online applications. Walk-ins are welcome at 63 McCaul St."
+        }
+      ]
+    },
+    "india": {
+      "badge": "India Travel",
+      "title": "India's New ICAO Passport Photo Rules: What Changed for Passport, PCC, and OCI Applications",
+      "date": "September 1, 2025",
+      "read": "8 min read",
+      "ctaTitle": "Need ICAO-compliant Indian document photos?",
+      "ctaSub": "We produce passport, PCC and OCI photos that meet all current Indian consulate requirements. Walk in to our downtown Toronto studio — no appointment needed.",
+      "ctaLabel": "Indian Passport Photos",
+      "ctaSvc": "indian-passport",
+      "blocks": [
+        {
+          "t": "alert",
+          "tone": "warning",
+          "text": "Rule change in effect: As of September 1, 2025 (with mandatory digital upload enforcement from December 1, 2025), the Government of India requires ICAO-compliant photographs for all passport-related applications submitted through Indian consulates and embassies worldwide — including those in Canada."
+        },
+        {
+          "t": "p",
+          "text": "The Government of India's Ministry of External Affairs issued a landmark directive in August 2025 requiring all Indian consulates and embassies to accept only ICAO-compliant photographs for passport-related applications. This is the most significant overhaul of Indian passport photo requirements in decades and directly affects three document types: the Indian Passport, the Police Clearance Certificate (PCC), and the Overseas Citizen of India (OCI) card."
+        },
+        {
+          "t": "p",
+          "text": "The change is driven by India's transition to electronic chip-based e-passports, which require biometric-grade facial data meeting the standards of ICAO Document 9303 — the same international standard used by over 190 countries for machine-readable travel documents."
+        },
+        {
+          "t": "h2",
+          "text": "What exactly changed?"
+        },
+        {
+          "t": "table",
+          "head": [
+            "Requirement",
+            "Old rules",
+            "New ICAO rules"
+          ],
+          "rows": [
+            [
+              "Physical size (Passport & PCC)",
+              "2 × 2 in (51 × 51 mm)",
+              "35 × 45 mm (portrait)"
+            ],
+            [
+              "Digital dimensions",
+              "Not consistently enforced",
+              "630 × 810 px (mandatory)"
+            ],
+            [
+              "Background colour",
+              "White or light-coloured",
+              "Plain white only"
+            ],
+            [
+              "Face coverage",
+              "Approximately 70–80%",
+              "80–85% of frame"
+            ],
+            [
+              "Glasses",
+              "Permitted in some cases",
+              "Not permitted"
+            ],
+            [
+              "Digital upload",
+              "Optional",
+              "Mandatory (from Dec 1, 2025)"
+            ],
+            [
+              "Photo editing / filters",
+              "Minor corrections accepted",
+              "Strictly not permitted"
+            ],
+            [
+              "OCI card size",
+              "2 × 2 in (51 × 51 mm)",
+              "Unchanged — still 2 × 2 in"
+            ]
+          ]
+        },
+        {
+          "t": "h2",
+          "text": "Indian Passport & PCC: what you need to know"
+        },
+        {
+          "t": "ul",
+          "items": [
+            "Size: 35mm × 45mm portrait — this replaces the old 51×51mm square",
+            "Digital file: 630 × 810 pixels, JPEG, 10KB–1MB, full colour, no editing or filters",
+            "Plain white background only — no off-white, cream or grey",
+            "Face coverage 80–85% of the frame, neutral expression, eyes open, no glasses",
+            "Taken within 6 months of the application date"
+          ]
+        },
+        {
+          "t": "p",
+          "text": "PCC applications in Canada are processed through BLS International (for most provinces) and the Consulate General of India in Toronto. Both now require the ICAO-compliant photo to be uploaded digitally before the application is submitted."
+        },
+        {
+          "t": "alert",
+          "tone": "warning",
+          "text": "Important: If you bring old-format 2×2 inch square photos to your PCC appointment, your application will be rejected. The 35×45mm portrait format is now mandatory for all PCC applications."
+        },
+        {
+          "t": "h2",
+          "text": "OCI card: what changed (and what did not)"
+        },
+        {
+          "t": "p",
+          "text": "The OCI card keeps the 2×2 inch (51×51mm) square format with a 600×600 pixel digital file — but all other ICAO facial standards now apply: plain white background (strictly enforced), 50–70% face coverage, no glasses under any circumstances, neutral expression, taken within 6 months."
+        },
+        {
+          "t": "alert",
+          "tone": "success",
+          "text": "Key distinction: the passport and PCC now use the 35×45mm portrait format; the OCI card still uses the 2×2 inch square format. These are different sizes — do not use the same photos for both document types."
+        },
+        {
+          "t": "h2",
+          "text": "What this means for Canadians of Indian origin"
+        },
+        {
+          "t": "ul",
+          "items": [
+            "Photos taken before September 2025 may be the old 51×51mm square format and will be rejected for passport or PCC applications",
+            "Applying for both a passport and an OCI card requires two different photo formats",
+            "You must upload your photo digitally to the Passport Seva portal before your appointment — a printed photo alone is no longer sufficient",
+            "Studio photos are strongly recommended given the strict face-coverage, background and no-glasses rules"
+          ]
+        },
+        {
+          "t": "h2",
+          "text": "How Passport Photo Toronto can help"
+        },
+        {
+          "t": "p",
+          "text": "We produce ICAO-compliant photos for all three Indian document types: Indian Passport and PCC (35×45mm prints + 630×810px digital file) and OCI card (2×2 inch prints + 600×600px digital file) — meeting the precise specifications of the Consulate General of India in Toronto, BLS International and the Passport Seva portal. Walk-ins welcome at 63 McCaul St, same-day service available."
+        }
+      ]
+    }
+  }
+}

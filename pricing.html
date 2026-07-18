@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <!-- Google Tag Manager -->
@@ -33,123 +32,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta content="https://www.passportphototoronto.com/images/logo.png" name="twitter:image"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="css/styles.css" rel="stylesheet"/>
+<link href="css/redesign.css" rel="stylesheet"/>
 <!-- Favicon -->
 <link href="images/favicon.ico" rel="icon"/>
-<style>
-   .pricing-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
 
-.pricing-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex: 1 1 30%;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    min-height: 500px;
-    padding: 0;
-}
-
-.pricing-header {
-    background-color: #1e4a92;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-.pricing-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex: 1;
-    padding: 20px;
-}
-
-.pricing-features {
-    flex-grow: 1;
-    margin-bottom: 20px;
-}
-
-.pricing-content .btn {
-    align-self: center;
-    margin-top: auto;
-}
-  
-@media (max-width: 768px) {
-  .pricing-card {
-    flex: 1 1 100%;
-  }
-}
-
-
-/* Dropdown Navigation Menu Styles */
-.nav-item.dropdown {
-    position: relative;
-}
-
-.nav-link.dropdown-toggle {
-    cursor: pointer;
-}
-
-.dropdown-menu {
-    display: none !important;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: white;
-    min-width: 250px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    border-radius: 4px;
-    padding: 8px 0;
-    margin-top: 0;
-    z-index: 1000;
-    list-style: none;
-}
-
-.nav-item.dropdown:hover .dropdown-menu {
-    display: block !important;
-}
-
-.dropdown-item {
-    display: block;
-    padding: 10px 20px;
-    color: #333;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    font-size: 0.95rem;
-}
-
-.dropdown-item:hover {
-    background-color: var(--light-color);
-    color: var(--primary-color);
-}
-
-/* Mobile dropdown styles */
-@media (max-width: 768px) {
-    .dropdown-menu {
-        position: static;
-        box-shadow: none;
-        background: var(--light-color);
-        margin-left: 20px;
-        margin-top: 8px;
-        margin-bottom: 8px;
-    }
-    
-    .nav-item.dropdown .dropdown-menu {
-        display: none !important;
-    }
-    
-    .nav-item.dropdown.active .dropdown-menu {
-        display: block;
-    }
-}
-
-</style>
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-11397258552"></script>
 <script>
@@ -171,809 +57,162 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script defer src="js/attribution.js"></script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55RV84CT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-<!-- Header -->
-<header class="header">
-<div class="container header-container">
-<a class="logo" href="/">
-<picture><source srcset="images/logo.webp" type="image/webp"/><img alt="Passport Photo Toronto Logo" loading="lazy" src="images/logo.png"/></picture>
-<span class="logo-text">
-      PASSPORT PHOTO
-     </span>
-</a>
-<nav>
-<ul class="nav-menu">
-<li class="nav-item">
-<a class="nav-link" href="/">
-        Home
-       </a>
-</li>
-<li class="nav-item dropdown">
-<a class="nav-link dropdown-toggle" href="services.html">
-        Services
-       </a>
-<ul class="dropdown-menu">
-<li><a class="dropdown-item" href="services.html">All Services</a></li>
-<li><a class="dropdown-item" href="passport-photos-international.html">Passport Photos by Country</a></li>
-<li><a class="dropdown-item" href="visa-photos-international.html">Visa Photos by Country</a></li>
-<li><a class="dropdown-item" href="professional-license-photos-hub.html">Professional Licenses &amp; IDs</a></li>
-<li><a class="dropdown-item" href="document-services.html">Printing, Scanning &amp; Photocopying</a></li>
-</ul>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="pricing.html">
-        Pricing
-       </a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="reviews.html">
-        Reviews
-       </a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="faq.html">
-        FAQ
-       </a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="location.html">
-        Location
-       </a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="about.html">
-        About
-       </a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="blog.html">
-        Blog
-       </a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="contact.html">
-        Contact
-       </a>
-</li>
-</ul>
-<button class="mobile-menu-btn">
-<i class="fas fa-bars">
-</i>
-</button>
-</nav>
-</div>
-</header>
-<!-- Page Banner -->
-<section class="page-banner">
-<div class="container">
-        <nav class="breadcrumb-nav">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item">Pricing</li>
-            </ol>
-        </nav>
-        <h1>
-     Our Pricing
-    </h1>
-<p>
-     Transparent pricing for all your photo needs
-    </p>
-</div>
-</section>
-<!-- Flat Rate Pricing Section -->
-<section class="section pricing-intro">
-<div class="container">
-<h2 class="section-title">
-     Simple Flat Rate Pricing
-    </h2>
-<p class="section-subtitle">
-     We offer a straightforward $24.99 flat rate for all our passport photo services.
-    </p>
-<div class="pricing-container">
-<!-- Standard Passport Photos -->
-<div class="pricing-card">
-<div class="pricing-header">
-<h3 class="pricing-title">
-        Standard Passport Photos
-       </h3>
-<p class="pricing-price">
-        $24.99
-       </p>
-</div>
-<div class="pricing-content">
-<ul class="pricing-features">
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         2 Printed Photos
-        </li>
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         IRCC Compliant
-        </li>
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         Same-Day Service
-        </li>
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         Guaranteed Acceptance
-        </li>
-</ul>
-<a class="btn" href="scheduling.html">
-        Book Appointment
-       </a>
-</div>
-</div>
-<!-- Digital Only Passport Photo -->
-<div class="pricing-card">
-<div class="pricing-header">
-<h3 class="pricing-title">
-        Digital Only Passport Photo
-       </h3>
-<p class="pricing-price">
-        $24.99
-       </p>
-</div>
-<div class="pricing-content">
-<ul class="pricing-features">
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         High Resolution Digital File
-        </li>
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         Formatted for Online Applications
-        </li>
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         Guaranteed Acceptance
-        </li>
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         Email Delivery
-        </li>
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         Technical Support
-        </li>
-</ul>
-<a class="btn" href="scheduling.html">
-        Book Appointment
-       </a>
-</div>
-</div>
-<!-- International Passport Photos -->
-<div class="pricing-card">
-<div class="pricing-header">
-<h3 class="pricing-title">
-        International Passport Photos
-       </h3>
-<p class="pricing-price">
-        $24.99
-       </p>
-</div>
-<div class="pricing-content">
-<ul class="pricing-features">
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         2 Printed Photos
-        </li>
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         Country-Specific Requirements
-        </li>
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         Guaranteed Compliance
-        </li>
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         Expert Guidance
-        </li>
-</ul>
-<a class="btn" href="scheduling.html">
-        Book Appointment
-       </a>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Visa & Immigration Photo Pricing Section -->
-<section class="section pricing-visa bg-light">
-<div class="container">
-<h2 class="section-title">
-     Visa &amp; Immigration Photo Pricing
-    </h2>
-<p class="section-subtitle">
-     Our visa and immigration photo services are designed to meet the specific requirements of various countries and application types, all at our standard flat rate.
-    </p>
-<div class="pricing-container">
-<!-- Standard Visa Photos -->
-<div class="pricing-card">
-<div class="pricing-header">
-<h3 class="pricing-title">
-        Standard Visa Photos
-       </h3>
-<p class="pricing-price">
-        $24.99
-       </p>
-</div>
-<div class="pricing-content">
-<ul class="pricing-features">
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         2 Printed Photos
-        </li>
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         Country-Specific Requirements
-        </li>
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         Same-Day Service
-        </li>
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         Guaranteed Acceptance
-        </li>
-</ul>
-<a class="btn" href="scheduling.html">
-        Book Appointment
-       </a>
-</div>
-</div>
-<!-- PR Card & Citizenship Photos -->
-<div class="pricing-card">
-<div class="pricing-header">
-<h3 class="pricing-title">
-        PR Card &amp; Citizenship Photos
-       </h3>
-<p class="pricing-price">
-        $24.99
-       </p>
-</div>
-<div class="pricing-content">
-<ul class="pricing-features">
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         2 Printed Photos
-        </li>
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         IRCC Compliant
-        </li>
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         Same-Day Service
-        </li>
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         Guaranteed Acceptance
-        </li>
-</ul>
-<a class="btn" href="scheduling.html">
-        Book Appointment
-       </a>
-</div>
-</div>
-<!-- Specialized Visa Photos -->
-<div class="pricing-card">
-<div class="pricing-header">
-<h3 class="pricing-title">
-        Specialized Visa Photos
-       </h3>
-<p class="pricing-price">
-        $24.99
-       </p>
-</div>
-<div class="pricing-content">
-<ul class="pricing-features">
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         2 Printed Photos
-        </li>
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         Special Requirements
-        </li>
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         Expert Guidance
-        </li>
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         Guaranteed Compliance
-        </li>
-</ul>
-<a class="btn" href="scheduling.html">
-        Book Appointment
-       </a>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- ID & License Photo Pricing Section -->
-<section class="section pricing-id">
-<div class="container">
-<h2 class="section-title">
-     ID &amp; License Photo Pricing
-    </h2>
-<p class="section-subtitle">
-     We offer our standard flat rate for all types of identification and license photos.
-    </p>
-<div class="pricing-container">
-<!-- Standard ID Photos -->
-<div class="pricing-card">
-<div class="pricing-header">
-<h3 class="pricing-title">
-        Standard ID Photos
-       </h3>
-<p class="pricing-price">
-        $24.99
-       </p>
-</div>
-<div class="pricing-content">
-<ul class="pricing-features">
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         2 Printed Photos
-        </li>
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         Various ID Types
-        </li>
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         Same-Day Service
-        </li>
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         Guaranteed Acceptance
-        </li>
-</ul>
-<a class="btn" href="scheduling.html">
-        Book Appointment
-       </a>
-</div>
-</div>
-<!-- Professional License Photos -->
-<div class="pricing-card">
-<div class="pricing-header">
-<h3 class="pricing-title">
-        Professional License Photos
-       </h3>
-<p class="pricing-price">
-        $24.99
-       </p>
-</div>
-<div class="pricing-content">
-<ul class="pricing-features">
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         2 Printed Photos
-        </li>
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         License-Specific Requirements
-        </li>
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         Same-Day Service
-        </li>
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         Guaranteed Acceptance
-        </li>
-</ul>
-<a class="btn" href="scheduling.html">
-        Book Appointment
-       </a>
-</div>
-</div>
-<!-- Digital ID Photos -->
-<div class="pricing-card">
-<div class="pricing-header">
-<h3 class="pricing-title">
-        Digital ID Photos
-       </h3>
-<p class="pricing-price">
-        $24.99
-       </p>
-</div>
-<div class="pricing-content">
-<ul class="pricing-features">
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         High Resolution Digital File
-        </li>
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         Formatted for Online Applications
-        </li>
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         Guaranteed Acceptance
-        </li>
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         Email Delivery
-        </li>
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         Technical Support
-        </li>
-</ul>
-<a class="btn" href="scheduling.html">
-        Book Appointment
-       </a>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Rush Service Section -->
-<section class="section pricing-rush bg-light">
-<div class="container">
-<h2 class="section-title">
-     Prints + Digital
-    </h2>
-<p class="section-subtitle">
-     Get both printed photos and digital copies with our comprehensive package.
-    </p>
-<div class="pricing-container">
-<!-- Prints + Digital -->
-<div class="pricing-card" style="max-width: 400px; margin: 0 auto;">
-<div class="pricing-header">
-<h3 class="pricing-title">
-        Prints + Digital
-       </h3>
-<p class="pricing-price">
-        $39.99
-       </p>
-</div>
-<div class="pricing-content">
-<ul class="pricing-features">
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         2 Printed Photos
-        </li>
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         1 Digital Copy
-        </li>
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         Same-Day Service
-        </li>
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         Email Delivery 
-        </li>
-<li class="pricing-feature">
-<i class="fas fa-check">
-</i>
-         Guaranteed Acceptance
-        </li>
-</ul>
-<a class="btn" href="scheduling.html">
-        Book Appointment
-       </a>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- CTA Section -->
-<section class="section cta">
-<div class="container">
-<h2 class="cta-title">
-     Ready to Get Your Photos?
-    </h2>
-<p class="cta-subtitle">
-     Book an appointment or visit our studio today for fast, professional photo services.
-    </p>
-<a class="btn btn-secondary btn-lg" href="scheduling.html">
-     BOOK APPOINTMENT
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-55RV84CT" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<header class="site-header">
+  <div class="shell">
+    <a class="brand" href="index.html">
+      <img src="images/logo.png" alt="Passport Photo Toronto">
+      <span>PASSPORT PHOTO</span>
     </a>
+    <nav class="nav-links" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html" class="active" aria-current="page">Pricing</a>
+        <a href="samples.html">Samples</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="faq.html">FAQ</a>
+        <a href="location.html">Location</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-right">
+      <a class="header-phone" href="tel:4169862677">(416) 986-2677</a>
+      <button type="button" class="btn btn-gold" data-book>Book Appointment</button>
+      <button type="button" class="hamburger" aria-label="Open menu">&#9776;</button>
+    </div>
+  </div>
+</header>
+<div class="drawer-backdrop"></div>
+<nav class="drawer" aria-label="Mobile">
+  <button type="button" class="drawer-close" aria-label="Close menu">&#10005;</button>
+  <a class="drawer-link" href="index.html">Home</a>
+  <a class="drawer-link" href="services.html">Services</a>
+  <a class="drawer-link" href="pricing.html">Pricing</a>
+  <a class="drawer-link" href="samples.html">Samples</a>
+  <a class="drawer-link" href="reviews.html">Reviews</a>
+  <a class="drawer-link" href="faq.html">FAQ</a>
+  <a class="drawer-link" href="location.html">Location</a>
+  <a class="drawer-link" href="blog.html">Blog</a>
+  <a class="drawer-link" href="contact.html">Contact</a>
+  <div class="drawer-contact">
+    <a href="tel:4169862677">(416) 986-2677</a>
+    <a href="mailto:info@passportphototoronto.com">info@passportphototoronto.com</a>
+    <span>Mon–Fri: 9:00 AM – 6:00 PM<br>Sat–Sun: 12:00 PM – 6:00 PM</span>
+    <button type="button" class="btn btn-gold btn-block" data-book>Book Appointment</button>
+  </div>
+</nav>
+<main>
+<div class="page">
+  <div class="center">
+    <h1>Pricing</h1>
+    <p class="lede" style="max-width:560px;margin:8px auto 0">One flat price for any document type. Every session includes retakes — and a free redo if any agency rejects your photo.</p>
+  </div>
+  <div style="max-width:1000px;margin:0 auto;width:100%">
+    <div class="tiers">
+  <div class="tier">
+    
+    <span class="tname">Printed Photos (×2)</span>
+    <span class="price">$24.99</span>
+    <span class="desc">Two identical prints on professional photo paper, cut to spec.</span>
+    <button type="button" class="btn btn-navy btn-block" data-book>Book now</button>
+  </div>
+  <div class="tier">
+    
+    <span class="tname">Digital Copy</span>
+    <span class="price">$24.99</span>
+    <span class="desc">High-resolution file formatted for online applications, sent by email.</span>
+    <button type="button" class="btn btn-navy btn-block" data-book>Book now</button>
+  </div>
+  <div class="tier popular">
+    <span class="tag">Most popular</span>
+    <span class="tname">Prints + Digital</span>
+    <span class="price">$39.99</span>
+    <span class="desc">Everything included — prints for the office, digital for online forms.</span>
+    <button type="button" class="btn btn-gold btn-block" data-book>Book now</button>
+  </div>
 </div>
-</section>
-<!-- Footer -->
-<footer class="footer">
-<div class="container">
-<div class="footer-container">
-<div class="footer-about">
-<div class="footer-logo">
-<picture><source srcset="images/logo-white.webp" type="image/webp"/><img alt="Passport Photo Toronto Logo" loading="lazy" src="images/logo-white.png"/></picture>
+  </div>
+  <div class="note" style="max-width:1000px;margin:0 auto;width:100%">All prices in CAD, taxes extra.</div>
 </div>
-<p>
-       Professional passport and ID photo services in downtown Toronto. We guarantee compliance with all official requirements.
-      </p>
-</div>
-<div class="footer-links">
-<h3 class="footer-title">
-       Quick Links
-      </h3>
-<ul class="footer-links">
-<li class="footer-link">
-<a href="/">
-         Home
-        </a>
-</li>
-<li class="footer-link">
-<a href="services.html">
-         Services
-        </a>
-</li>
-<li class="footer-link">
-<a href="pricing.html">
-         Pricing
-        </a>
-</li>
-
-<li class="footer-link">
-<a href="reviews.html">
-         Reviews
-        </a>
-</li>
-<li class="footer-link">
-<a href="about.html">
-         About
-        </a>
-</li>
-<li class="footer-link">
-<a href="faq.html">
-         FAQ
-        </a>
-</li>
-<li class="footer-link">
-<a href="location.html">
-         Location
-        </a>
-</li>
-<li class="footer-link">
-<a href="contact.html">
-         Contact
-        </a>
-</li>
-<li class="footer-link">
-<a href="jobs.html">
-         Careers
-        </a>
-</li>
-<li class="footer-link">
-<a href="trusted-vendors.html">
-         Trusted Vendors
-        </a>
-</li>
-<li class="footer-link">
-<a href="blog.html">
-         Blog
-        </a>
-</li>
-<li class="footer-link">
-<a href="refund-policy.html">
-         Refund Policy
-        </a>
-</li>
-<li class="footer-link">
-<a href="digital-photo-payment.html">
-         Digital Photo Payment
-        </a>
-</li>
-<li class="footer-link">
-<a href="sitemap.html">
-         Sitemap
-        </a>
-</li>
-</ul>
-</div>
-<div class="footer-services">
-<h3 class="footer-title">
-       Our Services
-      </h3>
-<ul class="footer-links">
-<li class="footer-link">
-<a href="canadian-passport-photos.html">
-         Canadian Passport
-        </a>
-</li>
-<li class="footer-link">
-<a href="pr-card-photos.html">
-         Canadian PR Card
-        </a>
-</li>
-<li class="footer-link">
-<a href="us-immigration-photos.html">
-         US Visa
-        </a>
-</li>
-<li class="footer-link">
-<a href="#">
-         Chinese Visa
-        </a>
-</li>
-<li class="footer-link">
-<a href="#">
-         Schengen Visa
-        </a>
-</li>
-<li class="footer-link">
-<a href="us-passport-photos.html">
-         US Passport
-        </a>
-</li>
-<li class="footer-link">
-<a href="oci-photo.html">
-         Indian OCI
-        </a>
-</li>
-<li class="footer-link">
-<a href="study-permit-photos.html">
-         Study Permit
-        </a>
-</li>
-<li class="footer-link">
-<a href="work-permit-photo.html">
-         Work Permit
-        </a>
-</li>
-</ul>
-</div>
-<div class="footer-contact">
-<h3 class="footer-title">
-       Contact Us
-      </h3>
-<div class="footer-contact-item">
-<i class="fas fa-map-marker-alt footer-contact-icon">
-</i>
-<div>
-<p>
-         63 McCaul St
-        </p>
-<p>
-         Toronto, ON M5T 2W7
-        </p>
-</div>
-</div>
-<div class="footer-contact-item">
-<i class="fas fa-phone footer-contact-icon">
-</i>
-<p>
-        (416) 986-2677
-       </p>
-</div>
-<div class="footer-contact-item">
-<i class="fas fa-envelope footer-contact-icon">
-</i>
-<p>
-        <a href="mailto:info@passportphototoronto.com" style="color: rgba(255, 255, 255, 0.7); text-decoration: none;">info@passportphototoronto.com</a>
-       </p>
-</div>
-<div class="footer-contact-item">
-<i class="fas fa-clock footer-contact-icon">
-</i>
-<p>
-        Mon-Fri: 9:00 AM - 6:00 PM<br/>Sat-Sun: 12:00 PM - 6:00 PM
-       </p>
-</div>
-</div>
-</div>
-<div class="footer-bottom">
-<div class="footer-social">
-<h4>
-       Follow Us
-      </h4>
-<div class="social-links">
-<a class="social-link" href="https://instagram.com/passportphototoronto" rel="noopener noreferrer" target="_blank">
-<i class="fab fa-instagram">
-</i>
-</a>
-
-
-
-</div>
-</div>
-<p>
-      © 2025 Passport Photo Toronto. All Rights Reserved.
-     </p>
-</div>
-</div>
+</main>
+<footer class="site-footer">
+  <div class="shell">
+    <div class="col brand-col">
+      <img class="flogo" src="images/logo-gold.png" alt="Passport Photo Toronto">
+      <span class="blurb">Professional passport and ID photo services in downtown Toronto. We guarantee compliance with all official requirements.</span>
+      <a class="ig" href="https://instagram.com/passportphototoronto" target="_blank" rel="noopener noreferrer">Follow us on Instagram</a>
+    </div>
+    <div class="col">
+      <h3>Quick links</h3>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="services.html">All services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="samples.html">Sample photos</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="faq.html">FAQ</a>
+        <a href="location.html">Location</a>
+        <a href="about.html">About us</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="jobs.html">Careers</a>
+        <a href="trusted-vendors.html">Trusted vendors</a>
+        <a href="refund-policy.html">Refund policy</a>
+        <a href="digital-photo-payment.html">Digital photo payment</a>
+        <a href="passport-photos-chinatown.html">Service areas</a>
+        <a href="sitemap.html">Sitemap</a>
+      </div>
+    </div>
+    <div class="col">
+      <h3>Our services</h3>
+      <div class="links">
+        <a href="passport-photos.html">Passport Photos in Toronto</a>
+        <a href="visa-photos.html">Visa Photos in Toronto</a>
+        <a href="canadian-passport-photos.html">Canadian Passport</a>
+        <a href="us-visa-photos.html">US Visa</a>
+        <a href="us-passport-photos.html">US Passport</a>
+        <a href="uk-passport-photos.html">UK Passport</a>
+        <a href="indian-passport-photos.html">Indian Passport</a>
+        <a href="chinese-passport-photos.html">Chinese Passport</a>
+        <a href="schengen-visa-photos.html">Schengen Visa</a>
+        <a href="chinese-visa-photos.html">Chinese Visa</a>
+        <a href="indian-visa-photos.html">Indian Visa</a>
+        <a href="pr-card-photos.html">PR Card</a>
+        <a href="canadian-citizenship-photo.html">Canadian Citizenship</a>
+        <a href="study-permit-photos.html">Study Permit</a>
+        <a href="work-permit-photo.html">Work Permit</a>
+        <a href="oci-photo.html">Indian OCI</a>
+        <a href="digital-passport-photos.html">Digital Photos</a>
+        <a href="document-services.html">Printing, Scanning &amp; Photocopying</a>
+      </div>
+    </div>
+    <div class="col">
+      <h3>Contact</h3>
+      <span class="contact-line">63 McCaul St<br>Toronto, ON M5T 2W7</span>
+      <a href="tel:4169862677">(416) 986-2677</a>
+      <a href="mailto:info@passportphototoronto.com">info@passportphototoronto.com</a>
+      <span class="contact-line">Mon–Fri: 9 AM – 6 PM<br>Sat–Sun: 12 PM – 6 PM</span>
+    </div>
+  </div>
+  <div class="bottom">© 2026 Passport Photo Toronto. All Rights Reserved.</div>
 </footer>
-<!-- JavaScript -->
 
-</script>
-<script>
-   document.addEventListener("DOMContentLoaded", function () {
-    const menuIcon = document.querySelector(".menu-icon");
-    const navLinks = document.querySelector(".nav-links");
+<div class="book-overlay" role="dialog" aria-modal="true" aria-label="Book an appointment">
+  <div class="book-backdrop"></div>
+  <div class="book-modal">
+    <div class="book-head">
+      <div>
+        <div class="kicker">Square Appointments</div>
+        <div class="t">Book an appointment</div>
+      </div>
+      <button type="button" class="book-close" aria-label="Close">&#10005;</button>
+    </div>
+    <div class="book-frame">
+      <iframe title="Book an appointment — Square" loading="lazy"></iframe>
+    </div>
+  </div>
+</div>
+<script src="js/redesign.js"></script>
 
-    if (menuIcon && navLinks) {
-      menuIcon.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-      });
-    }
-  });
-  </script>
-<script>
-   document.addEventListener("DOMContentLoaded", function () {
-    const currentPath = location.pathname.split("/").pop() || "index.html";
-    const links = document.querySelectorAll(".nav-link");
-    links.forEach(link => {
-      const href = link.getAttribute("href");
-      if (href === currentPath) {
-        link.classList.add("active");
-      }
-    });
-  });
-  </script>
-<script>
-   document.addEventListener("DOMContentLoaded", function () {
-  // Highlight current page link
-  const currentPath = location.pathname.split("/").pop() || "index.html";
-  const links = document.querySelectorAll(".nav-link");
-  links.forEach(link => {
-    const href = link.getAttribute("href");
-    if (href === currentPath) {
-      link.classList.add("active");
-    }
-  });
-
-  // Toggle mobile menu
-  const menuBtn = document.querySelector(".mobile-menu-btn");
-  const navMenu = document.querySelector(".nav-menu");
-  if (menuBtn && navMenu) {
-    menuBtn.addEventListener("click", () => {
-      navMenu.classList.toggle("active");
-    });
-  }
-});
-  </script>
 </body>
 </html>
