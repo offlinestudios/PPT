@@ -1309,3 +1309,61 @@ body.book-open { overflow: hidden; }
      steadier rhythm (38px between sections) without drifting from the design. */
   .section { padding: 24px 20px 14px; }
 }
+
+/* ==========================================================================
+   Header chrome breakpoint
+   The desktop nav (8 links + phone + CTA) needs ~1276px. The layout breakpoint
+   is 900px, so between 900 and 1279 the header overflowed its viewport and
+   forced the whole page to scroll sideways. Header chrome therefore switches
+   to the drawer at 1279px, independently of the body layout breakpoint.
+   ========================================================================== */
+@media (max-width: 1279px) {
+  .nav-links,
+  .header-phone,
+  .header-right .btn { display: none !important; }
+
+  .hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--navy);
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    font-size: 22px;
+    padding: 0;
+  }
+
+  /* drawer chrome must come along, or it renders unstyled above 900px */
+  .drawer { width: 300px; max-width: 86%; padding: 0 0 30px; gap: 0; }
+  .drawer-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 20px 14px;
+  }
+  .drawer-head .label {
+    font-family: var(--font-head);
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--navy);
+    letter-spacing: 0.04em;
+  }
+  .drawer-close { background: #f0f2f7; color: var(--navy); width: 44px; height: 44px; font-size: 15px; }
+  .drawer a.drawer-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-left: 3px solid transparent;
+    border-bottom: 0;
+    padding: 15px 20px;
+    font-size: 14px;
+    min-height: 44px;
+  }
+  .drawer a.drawer-link.active { border-left-color: var(--gold); background: #f4f7fc; color: var(--navy); }
+  .drawer a.drawer-link::after { content: '→'; font-size: 13px; color: #b8c2d8; }
+  .drawer-foot { margin: 18px 20px 0; display: flex; flex-direction: column; gap: 10px; }
+  .drawer-contact { margin: 0; background: var(--tint); border-radius: 12px; padding: 22px 16px; gap: 6px; }
+}
