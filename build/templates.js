@@ -389,7 +389,7 @@ function home() {
       <h2 class="m-only">Serving all of Toronto</h2>
       <p class="sub m-only">From the Annex to Yorkville, Kensington Market to the Financial District — clients across the city's neighbourhoods trust us with their photos.</p>
     </div>
-    <a class="btn btn-outline d-only" href="sitemap.html">All service areas →</a>
+    <a class="textlink d-only" href="sitemap.html">All service areas →</a>
   </div>
   <div class="area-tiles">
     ${areaCards}

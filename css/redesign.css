@@ -1449,3 +1449,14 @@ body.book-open { overflow: hidden; }
   .s-how .step .t { font-size: 14.5px; }
   .s-how .step .b { font-size: 12.5px; max-width: none; }
 }
+
+/* 3a renders "All service areas →" as a plain text link, not an outlined
+   button (unlike the "All services" and "Read all reviews" section actions). */
+.textlink {
+  font-family: var(--font-head);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy);
+  flex-shrink: 0;
+}
+.textlink:hover { color: var(--navy-dark); }

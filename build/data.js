@@ -81,10 +81,10 @@ const nav = [
   { label: 'Home', href: 'index.html' },
   { label: 'Services', href: 'services.html' },
   { label: 'Pricing', href: 'pricing.html' },
-  { label: 'Samples', href: 'samples.html' },
   { label: 'Reviews', href: 'reviews.html' },
   { label: 'FAQ', href: 'faq.html' },
   { label: 'Location', href: 'location.html' },
+  { label: 'About', href: 'about.html' },
   { label: 'Blog', href: 'blog.html' },
   { label: 'Contact', href: 'contact.html' },
 ];
@@ -151,7 +151,7 @@ const catDefs = [
   ['Other services', ['digital', 'digital-id', 'document-services']],
 ];
 
-const homeSvcKeys = ['canadian-passport', 'us-visa', 'pr-card', 'citizenship', 'uk-passport', 'indian-passport'];
+const homeSvcKeys = ['canadian-passport', 'us-visa', 'pr-card', 'citizenship', 'schengen-visa', 'digital'];
 
 /* Mobile home shows "Which document do you need?" as chips — the prototype's
    `services` list (first 7), which is worded differently from svcData names. */
