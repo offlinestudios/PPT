@@ -1367,3 +1367,85 @@ body.book-open { overflow: hidden; }
   .drawer-foot { margin: 18px 20px 0; display: flex; flex-direction: column; gap: 10px; }
   .drawer-contact { margin: 0; background: var(--tint); border-radius: 12px; padding: 22px 16px; gap: 6px; }
 }
+
+/* ==========================================================================
+   Home section ordering + bands
+   3a and 2a run the home sections in different orders. The DOM follows 3a
+   (services -> studio -> how -> pricing -> reviews -> areas); mobile reorders
+   with flex `order` rather than duplicating the markup.
+   ========================================================================== */
+.reviews-band { background: #fff; border-top: 1px solid var(--border-soft); border-bottom: 1px solid var(--border-soft); }
+/* 3a tints the review cards against the white band */
+.reviews-band .review { background: var(--page-bg); border: 1px solid var(--border-soft); }
+/* press box inside the studio column (3a) */
+.studio-band .press { border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; margin-top: 6px; background: transparent; }
+
+@media (max-width: 899px) {
+  main { display: flex; flex-direction: column; }
+  .ord-svcs    { order: 1; }
+  .ord-price   { order: 2; }
+  .ord-sample  { order: 3; }
+  .ord-how     { order: 4; }
+  .ord-studio  { order: 5; }
+  .ord-reviews { order: 6; }
+  .ord-areas   { order: 7; }
+  .cta-band    { order: 8; }
+  /* 2a has no white bands — keep the flat canvas */
+  .reviews-band { background: transparent; border-top: 0; border-bottom: 0; }
+  .reviews-band .review { background: #fff; border: 1px solid var(--border); }
+}
+
+/* ==========================================================================
+   Service page — mobile (2a) section order and requirement tiles
+   2a runs the service page as: hero, sample, requirements, pricing, studio,
+   reviews, how it works, map, related, CTA. The DOM follows the desktop 3a
+   order, so mobile reorders with flex `order` (.detail is already a flex
+   column below 900px, with .detail-main/.detail-side using display:contents).
+   ========================================================================== */
+@media (max-width: 899px) {
+  .s-hero    { order: 1; }
+  .s-sample  { order: 2; }
+  .s-req     { order: 3; }
+  .s-price   { order: 4; }
+  .s-studio  { order: 5; }
+  .s-reviews { order: 6; }
+  .s-how     { order: 7; }
+  .s-map     { order: 8; }
+  .s-related { order: 9; }
+  .s-cta     { order: 10; }
+
+  /* 2a lays requirements out as a 2-up grid of compact tiles */
+  .s-req { background: transparent; border: 0; padding: 0; }
+  .s-req .req-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .s-req .req {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 10px;
+    padding: 11px 12px;
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .s-how { display: flex; flex-direction: column; gap: 10px; }
+  .s-how h2 { font-family: var(--font-head); font-size: 17px; font-weight: 700; color: var(--navy); }
+  .s-how .steps { display: flex; flex-direction: column; gap: 8px; }
+  .s-how .step {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    gap: 14px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 16px;
+  }
+  .s-how .step .n {
+    width: 30px; height: 30px; flex-shrink: 0;
+    background: var(--navy); color: #fff;
+    font-size: 13px; font-weight: 700;
+  }
+  .s-how .step-txt { display: flex; flex-direction: column; gap: 2px; }
+  .s-how .step .t { font-size: 14.5px; }
+  .s-how .step .b { font-size: 12.5px; max-width: none; }
+}

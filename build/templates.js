@@ -292,7 +292,7 @@ function home() {
   </div>
 </div>
 
-<div class="shell section">
+<div class="ord-svcs shell section">
   <div class="section-head">
     <div>
       <h2 class="d-only">Photos for every document</h2>
@@ -310,7 +310,37 @@ function home() {
   </div>
 </div>
 
-<div class="shell section pricing-home">
+<div class="ord-studio band studio-band">
+  <div class="shell section">
+    <div class="split">
+      <img src="images/offline-website-5.jpg" alt="Studio setup at 63 McCaul St" loading="lazy">
+      <div class="hero-col">
+        <h2>Real studio. Real results.</h2>
+        <p>Inside Offline Studios at 63 McCaul St — professional-grade lighting and a calibrated camera. No phone cameras. No drugstore booths.</p>
+        <p class="d-only">Every photo is checked against the issuing authority's spec before you leave, and you approve your shot before we print.</p>
+        <a class="btn btn-outline d-only" href="samples.html">See sample photos →</a>
+        <div class="press d-only">
+          <div class="press-top">
+            <img src="images/blogto-logo.png" alt="blogTO" loading="lazy">
+            <span>As featured in</span>
+          </div>
+          <q>“If you want to visit a local business… Passport Photo Toronto.”</q>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ord-how band-b how">
+  <div class="shell section">
+    <h2 class="center">How it works</h2>
+    <div class="steps">
+    ${steps}
+    </div>
+  </div>
+</div>
+
+<div class="ord-price shell section pricing-home">
   <h2 class="center d-only">Simple pricing</h2>
   <h2 class="m-only">Simple, transparent pricing</h2>
   <div class="d-only">${tiersBlock()}</div>
@@ -322,37 +352,14 @@ function home() {
   </div>
 </div>
 
-<div class="shell section m-only sample-block">
+<div class="ord-sample shell section m-only sample-block">
   <h2>Real photos taken here</h2>
   <img src="images/passport-scan-sample-square.jpg" alt="Real passport photo sample from our studio">
   <p class="cap">Actual photo from our studio — professional lighting, white background, accepted every time.</p>
   <a class="btn btn-outline btn-block" href="samples.html">See more samples</a>
 </div>
 
-<div class="band-b how">
-  <div class="shell section">
-    <h2 class="center">How it works</h2>
-    <div class="steps">
-    ${steps}
-    </div>
-  </div>
-</div>
-
-<div class="band studio-band">
-  <div class="shell section">
-    <div class="split">
-      <img src="images/offline-website-5.jpg" alt="Studio setup at 63 McCaul St" loading="lazy">
-      <div class="hero-col">
-        <h2>Real studio. Real results.</h2>
-        <p>Inside Offline Studios at 63 McCaul St — professional-grade lighting and a calibrated camera. No phone cameras. No drugstore booths.</p>
-        <p class="d-only">Every photo is checked against the issuing authority's spec before you leave, and you approve your shot before we print.</p>
-        <a class="btn btn-outline d-only" href="samples.html">See sample photos →</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="shell section reviews-home">
+<div class="ord-reviews band reviews-band"><div class="shell section reviews-home">
   <div class="section-head">
     <div>
       <h2 class="d-only">What customers say</h2>
@@ -361,7 +368,7 @@ function home() {
     </div>
     <a class="btn btn-outline d-only" href="reviews.html">Read all reviews →</a>
   </div>
-  <div class="press">
+  <div class="press m-only">
     <div class="press-top">
       <img src="images/blogto-logo.png" alt="blogTO" loading="lazy">
       <span>As featured in</span>
@@ -373,7 +380,9 @@ function home() {
   </div>
 </div>
 
-<div class="shell section areas-home">
+</div>
+
+<div class="ord-areas shell section areas-home">
   <div class="section-head">
     <div>
       <h2 class="d-only">Serving all of downtown Toronto</h2>
@@ -505,6 +514,18 @@ function servicePage(key) {
         <span class="t">Need your ${esc(s.name)} photo today?</span>
         <span class="s">Walk in or book online — ready in 10 minutes, guaranteed accepted.</span>
         ${bookBtn('Book Appointment', 'btn-gold btn-block')}
+      </div>
+      <div class="s-how m-only">
+        <h2>How it works</h2>
+        <div class="steps">
+${D.photoSteps.map((st)=>`          <div class="step">
+            <div class="n">${st.n}</div>
+            <div class="step-txt">
+              <span class="t">${esc(st.title)}</span>
+              <span class="b">${esc(st.body)}</span>
+            </div>
+          </div>`).join('\n')}
+        </div>
       </div>
       <div class="s-related">
         <span class="ptitle">Related services</span>
