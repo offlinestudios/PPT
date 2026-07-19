@@ -536,9 +536,11 @@ a.card:hover { border-color: var(--navy); box-shadow: 0 6px 18px rgba(43, 75, 14
   color: #444;
   line-height: 1.5;
 }
-.price-row { display: flex; justify-content: space-between; font-size: 14px; }
+/* gap + nowrap so a long label can never collide with the price; at mobile
+   panel widths "Printed photos (×2)" ran straight into "$24.99". */
+.price-row { display: flex; justify-content: space-between; gap: 16px; font-size: 14px; }
 .price-row span:first-child { color: var(--text-muted); }
-.price-row span:last-child { font-weight: 700; color: var(--navy); }
+.price-row span:last-child { font-weight: 700; color: var(--navy); white-space: nowrap; }
 .price-row.total { border-top: 1px solid #eee; padding-top: 12px; }
 .price-row.total span:first-child { color: var(--text); font-weight: 700; }
 .price-row.total span:last-child { font-weight: 800; }
