@@ -19,6 +19,16 @@ const GTM_NOSCRIPT =
 
 const HEADS = require('./heads.json');
 
+/* Meta (Facebook) Pixel — tracks ad conversions site-wide. Injected at the top
+   of every generated page's <head> per Meta's "as high as possible" guidance.
+   Fires a single PageView; standard events can be layered on later. */
+const META_PIXEL = `<!-- Meta Pixel Code -->
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1269166778491566');
+fbq('track', 'PageView');</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1269166778491566&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->`;
+
 function page({ file, active, body, sticky }) {
   const entry = HEADS[file];
   if (!entry) throw new Error(`no head captured for ${file} — run build/extract-heads.js`);
@@ -27,6 +37,7 @@ function page({ file, active, body, sticky }) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
+${META_PIXEL}
 ${head}
 </head>
 <body${bodyClass}>
