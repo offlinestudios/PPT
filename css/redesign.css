@@ -942,7 +942,9 @@ body.book-open { overflow: hidden; }
   /* Approved mobile section order: H1 → sample → requirements → pricing →
      studio → reviews → CTA → related → map. Flattening both columns into one
      flex context lets the sidebar blocks interleave with the main ones. */
-  .detail { display: flex; flex-direction: column; gap: 28px; }
+  /* The desktop grid uses `align-items: start`; reset it when this becomes a
+     mobile column so every flattened service section spans the content width. */
+  .detail { display: flex; flex-direction: column; gap: 28px; align-items: stretch; }
   .detail-main, .detail-side { display: contents; }
   .s-hero { order: 1; }
   .s-sample { order: 2; }
@@ -1086,7 +1088,10 @@ body.book-open { overflow: hidden; }
   .fineprint { margin: 10px 0 0; font-size: 12px; color: var(--text-dim); }
   .fineprint a { font-weight: 700; }
 
-  /* ---- "Real photos taken here" (mobile only) ---- */
+  /* ---- "Real photos taken here" (mobile only) ----
+     `.m-only` resets display to a block, so restore the section's column layout
+     explicitly and give each element the same intentional breathing room. */
+  .sample-block { display: flex !important; flex-direction: column; gap: 16px; }
   .sample-block img { width: 100%; border-radius: 12px; display: block; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); }
   .sample-block .cap { margin: 0; font-size: 12.5px; color: var(--text-muted); line-height: 1.5; }
 
@@ -1408,7 +1413,7 @@ body.book-open { overflow: hidden; }
   .s-hero    { order: 1; }
   .s-sample  { order: 2; }
   .s-req     { order: 3; }
-  .s-price   { order: 4; }
+  .s-price   { order: 4; width: 100%; }
   .s-studio  { order: 5; }
   .s-reviews { order: 6; }
   .s-how     { order: 7; }
