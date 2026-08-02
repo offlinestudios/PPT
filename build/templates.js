@@ -67,7 +67,7 @@ function header(active) {
     <div class="drawer-contact">
       <a href="${TEL}">${PHONE}</a>
       <a href="mailto:${EMAIL}">${EMAIL}</a>
-      <span>Mon–Fri 9–6 · Sat–Sun 12–6</span>
+      <span>Mon–Fri 9–7 · Sat–Sun 12–6</span>
     </div>
   </div>
 </nav>`;
@@ -117,7 +117,7 @@ function footer() {
       <span class="contact-line">63 McCaul St<br>Toronto, ON M5T 2W7</span>
       <a href="${TEL}">${PHONE}</a>
       <a href="mailto:${EMAIL}">${EMAIL}</a>
-      <span class="contact-line">Mon–Fri: 9 AM – 6 PM<br>Sat–Sun: 12 PM – 6 PM</span>
+      <span class="contact-line">Mon–Fri: 9 AM – 7 PM<br>Sat–Sun: 12 PM – 6 PM</span>
     </div>
   </div>
   <div class="bottom">© 2026 Passport Photo Toronto. All Rights Reserved.</div>
@@ -643,7 +643,7 @@ function location() {
       <div class="info-card" style="flex:1">
         <div class="field"><span class="lbl">Address</span><span class="val">63 McCaul St, Toronto, ON M5T 2W7</span><span class="txt">Steps from OCAD U and the AGO</span></div>
         <div class="field"><span class="lbl">Phone</span><a class="val" href="${TEL}">${PHONE}</a></div>
-        <div class="field"><span class="lbl">Hours</span><span class="txt">Mon–Fri: 9:00 AM – 6:00 PM<br>Sat–Sun: 12:00 PM – 6:00 PM</span></div>
+        <div class="field"><span class="lbl">Hours</span><span class="txt">Mon–Fri: 9:00 AM – 7:00 PM<br>Sat–Sun: 12:00 PM – 6:00 PM</span></div>
         <div class="field"><span class="lbl">Getting here</span><span class="txt">St Patrick station (Line 1) · 505 Dundas &amp; 501 Queen streetcars · Green P parking on McCaul</span></div>
       </div>
       ${bookBtn('Book Appointment', 'btn-gold btn-block')}
@@ -754,7 +754,7 @@ function booking() {
     </div>
     <div class="hero-col" style="gap:16px">
       <div class="info-card" style="flex:1">
-        <div class="field"><span class="lbl">Walk in instead</span><span class="txt">No appointment needed. Mon–Fri 9:00 AM – 6:00 PM, Sat–Sun 12:00 PM – 6:00 PM.</span></div>
+        <div class="field"><span class="lbl">Walk in instead</span><span class="txt">No appointment needed. Mon–Fri 9:00 AM – 7:00 PM, Sat–Sun 12:00 PM – 6:00 PM.</span></div>
         <div class="field"><span class="lbl">Address</span><span class="val">63 McCaul St, Toronto, ON M5T 2W7</span><span class="txt">Steps from OCAD U and the AGO</span></div>
         <div class="field"><span class="lbl">Call or text</span><a class="val" href="${TEL}">${PHONE}</a></div>
         <div class="field"><span class="lbl">Getting here</span><span class="txt">${TRANSIT}</span></div>
@@ -773,7 +773,7 @@ function contact() {
       <div class="field"><span class="lbl">Call or text</span><a href="${TEL}" style="font-family:Montserrat,sans-serif;font-size:20px;font-weight:800">${PHONE}</a></div>
       <div class="field"><span class="lbl">Email</span><a href="mailto:${EMAIL}" style="font-size:15px;font-weight:700">${EMAIL}</a></div>
       <div class="field"><span class="lbl">Visit</span><span class="txt" style="font-size:15px">63 McCaul St, Toronto, ON M5T 2W7</span></div>
-      <div class="field"><span class="lbl">Hours</span><span class="txt">Mon–Fri: 9:00 AM – 6:00 PM<br>Sat–Sun: 12:00 PM – 6:00 PM</span></div>
+      <div class="field"><span class="lbl">Hours</span><span class="txt">Mon–Fri: 9:00 AM – 7:00 PM<br>Sat–Sun: 12:00 PM – 6:00 PM</span></div>
       ${bookBtn('Book Appointment', 'btn-gold btn-block')}
     </div>
     <div class="map-box" style="min-height:380px"><iframe src="${MAP_EMBED}" loading="lazy" title="Map — 63 McCaul St"></iframe></div>
