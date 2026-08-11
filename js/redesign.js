@@ -5,6 +5,10 @@
 
   var WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/27340760/uvu4hlz/';
   var SQUARE_SRC = 'https://square.site/appointments/buyer/widget/5fkwsauqjb7usp/L7T8SMADNB80P';
+  var ATTRIBUTION_STORAGE_KEY = 'pptAttribution';
+  var CLICK_ID_KEYS = ['gclid', 'gbraid', 'wbraid'];
+  var CAMPAIGN_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+  var ATTRIBUTION_KEYS = CLICK_ID_KEYS.concat(CAMPAIGN_KEYS);
   var SESSION_KEY = 'pptSquareBookingSessionId';
   var STATE_KEY = 'pptSquareBookingIntentState';
   var PAGE_VIEW_TTL_MS = 30 * 60 * 1000;
@@ -72,8 +76,73 @@
     writeState(state);
   }
 
+  function getSearchParams() {
+    try {
+      return new URLSearchParams(window.location.search || '');
+    } catch (error) {
+      return new URLSearchParams();
+    }
+  }
+
+  function readStoredAttribution() {
+    try {
+      return JSON.parse(localStorage.getItem(ATTRIBUTION_STORAGE_KEY) || 'null') || {};
+    } catch (error) {
+      return {};
+    }
+  }
+
+  function readAttribution() {
+    var live = window.pptAttribution || {};
+    var stored = readStoredAttribution();
+    var params = getSearchParams();
+    var incoming = {};
+
+    ATTRIBUTION_KEYS.forEach(function (key) {
+      var value = params.get(key);
+      if (value) incoming[key] = value;
+    });
+
+    var attribution = {};
+
+    ATTRIBUTION_KEYS.forEach(function (key) {
+      attribution[key] = live[key] || incoming[key] || stored[key] || '';
+    });
+
+    attribution.firstLandingPage =
+      live.firstLandingPage ||
+      stored.firstLandingPage ||
+      window.location.href;
+    attribution.latestLandingPage =
+      live.latestLandingPage ||
+      window.location.href;
+    attribution.firstSeenAt =
+      live.firstSeenAt ||
+      stored.firstSeenAt ||
+      '';
+    attribution.lastSeenAt =
+      live.lastSeenAt ||
+      stored.lastSeenAt ||
+      '';
+    attribution.referrer =
+      live.referrer ||
+      stored.referrer ||
+      document.referrer ||
+      '';
+
+    if (!attribution.utm_source && attribution.gclid) {
+      attribution.utm_source = 'google';
+    }
+
+    if (!attribution.utm_medium && (attribution.gclid || attribution.gbraid || attribution.wbraid)) {
+      attribution.utm_medium = 'cpc';
+    }
+
+    return attribution;
+  }
+
   function basePayload(sessionId) {
-    var attribution = window.pptAttribution || {};
+    var attribution = readAttribution();
 
     return {
       source: 'passport-photo-toronto-site',
