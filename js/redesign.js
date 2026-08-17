@@ -3,7 +3,11 @@
 (function () {
   'use strict';
 
-  var WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/27340760/uvu4hlz/';
+  var CONFIG = window.PPT_BOOKING_INTENTS_CONFIG || {};
+  var WEBHOOK_URL =
+    CONFIG.endpointUrl ||
+    'https://busicenter-o8ktpijm.manus.space/api/passport-photo/booking-intents';
+  var WEBHOOK_TOKEN = CONFIG.token || '';
   var SQUARE_SRC = 'https://square.site/appointments/buyer/widget/5fkwsauqjb7usp/L7T8SMADNB80P';
   var ATTRIBUTION_STORAGE_KEY = 'pptAttribution';
   var CLICK_ID_KEYS = ['gclid', 'gbraid', 'wbraid'];
@@ -20,6 +24,10 @@
   var inlineFrame = document.querySelector('.booker iframe[src*="square.site/appointments/buyer/widget/"]');
   var lastFocus = null;
   var bookingSessionId = null;
+
+  function isConfigured() {
+    return Boolean(WEBHOOK_URL);
+  }
 
   function uuid() {
     if (window.crypto && typeof window.crypto.randomUUID === 'function') {
@@ -145,6 +153,7 @@
     var attribution = readAttribution();
 
     return {
+      token: WEBHOOK_TOKEN || undefined,
       source: 'passport-photo-toronto-site',
       booking_platform: 'square_appointments',
       matching_strategy: 'time_window_approximation',
@@ -172,17 +181,17 @@
   }
 
   function sendPayload(payload) {
-    var formBody = new URLSearchParams();
-
-    Object.keys(payload).forEach(function (key) {
-      var value = payload[key];
-      if (value === undefined || value === null) return;
-      formBody.append(key, String(value));
-    });
+    if (!isConfigured()) {
+      console.warn('PPT booking intents endpoint is not configured.');
+      return Promise.resolve(false);
+    }
 
     return fetch(WEBHOOK_URL, {
       method: 'POST',
-      body: formBody,
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload),
       mode: 'cors',
       keepalive: true
     })
@@ -192,6 +201,19 @@
         return false;
       });
   }
+
+  function sendCustomEvent(sessionId, eventName, reason) {
+    var payload = basePayload(sessionId);
+    payload.event = eventName;
+    payload.interaction_reason = reason || '';
+    return sendPayload(payload);
+  }
+
+  window.pptBookingIntents = {
+    getSessionId: getSessionId,
+    isConfigured: isConfigured,
+    sendCustomEvent: sendCustomEvent
+  };
 
   function sendPageView(sessionId, surface) {
     var payload = basePayload(sessionId);
