@@ -6,8 +6,7 @@
   var CONFIG = window.PPT_BOOKING_INTENTS_CONFIG || {};
   var WEBHOOK_URL =
     CONFIG.endpointUrl ||
-    'https://busicenter-o8ktpijm.manus.space/api/passport-photo/booking-intents';
-  var WEBHOOK_TOKEN = CONFIG.token || '';
+    'https://ppt-booking-intents.summer-frog-a66e.workers.dev/';
   var SQUARE_SRC = 'https://square.site/appointments/buyer/widget/5fkwsauqjb7usp/L7T8SMADNB80P';
   var ATTRIBUTION_STORAGE_KEY = 'pptAttribution';
   var CLICK_ID_KEYS = ['gclid', 'gbraid', 'wbraid'];
@@ -153,7 +152,6 @@
     var attribution = readAttribution();
 
     return {
-      token: WEBHOOK_TOKEN || undefined,
       source: 'passport-photo-toronto-site',
       booking_platform: 'square_appointments',
       matching_strategy: 'time_window_approximation',
@@ -195,7 +193,12 @@
       mode: 'cors',
       keepalive: true
     })
-      .then(function () { return true; })
+      .then(function (response) {
+        if (!response.ok) {
+          throw new Error('Booking-intent endpoint returned HTTP ' + response.status);
+        }
+        return true;
+      })
       .catch(function (error) {
         console.warn('Unable to send Square booking payload', error);
         return false;
@@ -219,12 +222,15 @@
     var payload = basePayload(sessionId);
     payload.event = 'square_booking_page_view';
 
-    return sendPayload(payload).then(function () {
-      markEvent('pageView', {
-        sessionId: sessionId,
-        sentAt: payload.captured_at,
-        surface: surface
-      });
+    return sendPayload(payload).then(function (sent) {
+      if (sent) {
+        markEvent('pageView', {
+          sessionId: sessionId,
+          sentAt: payload.captured_at,
+          surface: surface
+        });
+      }
+      return sent;
     });
   }
 
@@ -239,13 +245,15 @@
     payload.event = 'square_booking_widget_interaction';
     payload.interaction_reason = reason;
 
-    return sendPayload(payload).then(function () {
-      markEvent('firstInteraction', {
-        sessionId: sessionId,
-        sentAt: payload.captured_at,
-        reason: reason
-      });
-      return true;
+    return sendPayload(payload).then(function (sent) {
+      if (sent) {
+        markEvent('firstInteraction', {
+          sessionId: sessionId,
+          sentAt: payload.captured_at,
+          reason: reason
+        });
+      }
+      return sent;
     });
   }
 
