@@ -1,6 +1,6 @@
 (function () {
   const STORAGE_KEY = 'pptAttribution';
-  const CLICK_ID_KEYS = ['gclid', 'gbraid', 'wbraid'];
+  const CLICK_ID_KEYS = ['gclid', 'gbraid', 'wbraid', 'fbclid'];
   const CAMPAIGN_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
   const ATTRIBUTION_KEYS = CLICK_ID_KEYS.concat(CAMPAIGN_KEYS);
 
@@ -41,6 +41,30 @@
     return ATTRIBUTION_KEYS.some((key) => incoming[key] && incoming[key] !== (stored[key] || ''));
   }
 
+  function normalizeMarketingChannel(attribution) {
+    const source = String(attribution.utm_source || '').trim().toLowerCase();
+    const referrer = String(attribution.referrer || '').toLowerCase();
+
+    if (source === 'ig' || source === 'instagram' || referrer.includes('instagram.com')) {
+      return 'Instagram';
+    }
+    if (
+      source === 'fb' ||
+      source === 'facebook' ||
+      source === 'meta' ||
+      referrer.includes('facebook.com') ||
+      attribution.fbclid
+    ) {
+      return 'Facebook';
+    }
+    if (source === 'google' || attribution.gclid || attribution.gbraid || attribution.wbraid) {
+      return 'Google';
+    }
+    if (source) return source;
+    if (referrer) return 'Other referral';
+    return 'Direct / unknown';
+  }
+
   const params = getParams();
   const stored = readStored();
   const incoming = buildIncomingAttribution(params);
@@ -63,6 +87,8 @@
   if (!next.utm_medium && (next.gclid || next.gbraid || next.wbraid)) {
     next.utm_medium = 'cpc';
   }
+
+  next.marketingChannel = normalizeMarketingChannel(next);
 
   if (shouldReset || Object.keys(incoming).length || !stored.firstLandingPage) {
     writeStored(next);
