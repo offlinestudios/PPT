@@ -9,7 +9,7 @@
     'https://ppt-booking-intents.summer-frog-a66e.workers.dev/';
   var SQUARE_SRC = 'https://square.site/appointments/buyer/widget/5fkwsauqjb7usp/L7T8SMADNB80P';
   var ATTRIBUTION_STORAGE_KEY = 'pptAttribution';
-  var CLICK_ID_KEYS = ['gclid', 'gbraid', 'wbraid'];
+  var CLICK_ID_KEYS = ['gclid', 'gbraid', 'wbraid', 'fbclid'];
   var CAMPAIGN_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
   var ATTRIBUTION_KEYS = CLICK_ID_KEYS.concat(CAMPAIGN_KEYS);
   var SESSION_KEY = 'pptSquareBookingSessionId';
@@ -148,6 +148,31 @@
     return attribution;
   }
 
+  function normalizeMarketingChannel(attribution) {
+    var source = String(attribution.utm_source || '').trim().toLowerCase();
+    var referrer = String(attribution.referrer || '').toLowerCase();
+
+    if (attribution.marketingChannel) return attribution.marketingChannel;
+    if (source === 'ig' || source === 'instagram' || referrer.indexOf('instagram.com') !== -1) {
+      return 'Instagram';
+    }
+    if (
+      source === 'fb' ||
+      source === 'facebook' ||
+      source === 'meta' ||
+      referrer.indexOf('facebook.com') !== -1 ||
+      attribution.fbclid
+    ) {
+      return 'Facebook';
+    }
+    if (source === 'google' || attribution.gclid || attribution.gbraid || attribution.wbraid) {
+      return 'Google';
+    }
+    if (source) return source;
+    if (referrer) return 'Other referral';
+    return 'Direct / unknown';
+  }
+
   function basePayload(sessionId) {
     var attribution = readAttribution();
 
@@ -165,6 +190,8 @@
       gclid: attribution.gclid || '',
       gbraid: attribution.gbraid || '',
       wbraid: attribution.wbraid || '',
+      fbclid: attribution.fbclid || '',
+      marketing_channel: normalizeMarketingChannel(attribution),
       utm_source: attribution.utm_source || '',
       utm_medium: attribution.utm_medium || '',
       utm_campaign: attribution.utm_campaign || '',
