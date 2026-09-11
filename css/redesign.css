@@ -801,6 +801,17 @@ a.card:hover { border-color: var(--navy); box-shadow: 0 6px 18px rgba(43, 75, 14
   text-align: center;
 }
 .pay-card .big { font-family: var(--font-head); font-size: 42px; font-weight: 800; color: var(--navy); }
+.pay-card .payment-cta { align-self: center; }
+.payment-security-note {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: #888;
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+.payment-security-note .fa-lock { color: var(--gold); font-size: 11px; }
 .sitemap-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; align-items: start; }
 .sitemap-col { display: flex; flex-direction: column; gap: 10px; }
 .sitemap-col .h {
