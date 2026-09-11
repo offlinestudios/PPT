@@ -29,6 +29,33 @@ fbq('track', 'PageView');</script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1269166778491566&ev=PageView&noscript=1"/></noscript>
 <!-- End Meta Pixel Code -->`;
 
+const LINKEDIN_INSIGHT_TAG = `<!-- LinkedIn Insight Tag -->
+<script type="text/javascript">
+_linkedin_partner_id = "10022532";
+window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script>
+<script type="text/javascript">
+(function(l) {
+  if (!l) {
+    window.lintrk = function(a, b) {
+      window.lintrk.q.push([a, b]);
+    };
+    window.lintrk.q = [];
+  }
+  var s = document.getElementsByTagName("script")[0];
+  var b = document.createElement("script");
+  b.type = "text/javascript";
+  b.async = true;
+  b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+  s.parentNode.insertBefore(b, s);
+})(window.lintrk);
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=10022532&fmt=gif" />
+</noscript>
+<!-- End LinkedIn Insight Tag -->`;
+
 function page({ file, active, body, sticky }) {
   const entry = HEADS[file];
   if (!entry) throw new Error(`no head captured for ${file} — run build/extract-heads.js`);
@@ -51,6 +78,7 @@ ${sticky ? T.stickyBar() : ''}
 ${T.bookingModal()}
 <script src="js/redesign.js"></script>
 ${tail}
+${LINKEDIN_INSIGHT_TAG}
 </body>
 </html>
 `;
