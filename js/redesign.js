@@ -17,6 +17,85 @@
   var PAGE_VIEW_TTL_MS = 30 * 60 * 1000;
   var body = document.body;
 
+  /* ---- Toronto operating status ---- */
+  var TORONTO_TIME_ZONE = 'America/Toronto';
+  var OPERATING_HOURS = {
+    Sunday: { opensAt: 12 * 60, closesAt: 18 * 60, opensLabel: '12 PM', closesLabel: '6 PM' },
+    Monday: { opensAt: 9 * 60, closesAt: 19 * 60, opensLabel: '9 AM', closesLabel: '7 PM' },
+    Tuesday: { opensAt: 9 * 60, closesAt: 19 * 60, opensLabel: '9 AM', closesLabel: '7 PM' },
+    Wednesday: { opensAt: 9 * 60, closesAt: 19 * 60, opensLabel: '9 AM', closesLabel: '7 PM' },
+    Thursday: { opensAt: 9 * 60, closesAt: 19 * 60, opensLabel: '9 AM', closesLabel: '7 PM' },
+    Friday: { opensAt: 9 * 60, closesAt: 19 * 60, opensLabel: '9 AM', closesLabel: '7 PM' },
+    Saturday: { opensAt: 12 * 60, closesAt: 18 * 60, opensLabel: '12 PM', closesLabel: '6 PM' }
+  };
+  var DAYS = Object.keys(OPERATING_HOURS);
+
+  function getTorontoTime(now) {
+    var parts = new Intl.DateTimeFormat('en-CA', {
+      timeZone: TORONTO_TIME_ZONE,
+      weekday: 'long',
+      hour: '2-digit',
+      minute: '2-digit',
+      hourCycle: 'h23'
+    }).formatToParts(now);
+    var values = {};
+
+    parts.forEach(function (part) {
+      values[part.type] = part.value;
+    });
+
+    return {
+      day: values.weekday,
+      minutes: Number(values.hour) * 60 + Number(values.minute)
+    };
+  }
+
+  function getOperatingStatus(now) {
+    var torontoTime = getTorontoTime(now || new Date());
+    var hours = OPERATING_HOURS[torontoTime.day];
+    if (!hours) return null;
+
+    if (torontoTime.minutes >= hours.opensAt && torontoTime.minutes < hours.closesAt) {
+      return {
+        isOpen: true,
+        text: 'Open now · Closes at ' + hours.closesLabel
+      };
+    }
+
+    if (torontoTime.minutes < hours.opensAt) {
+      return {
+        isOpen: false,
+        text: 'Closed now · Opens today at ' + hours.opensLabel
+      };
+    }
+
+    var nextDay = DAYS[(DAYS.indexOf(torontoTime.day) + 1) % DAYS.length];
+    return {
+      isOpen: false,
+      text: 'Closed now · Opens tomorrow at ' + OPERATING_HOURS[nextDay].opensLabel
+    };
+  }
+
+  function updateOperatingStatus() {
+    var badge = document.querySelector('[data-business-status]');
+    if (!badge || !window.Intl || !Intl.DateTimeFormat) return;
+
+    try {
+      var status = getOperatingStatus(new Date());
+      var text = badge.querySelector('[data-business-status-text]');
+      if (!status || !text) return;
+
+      badge.classList.toggle('is-open', status.isOpen);
+      badge.classList.toggle('is-closed', !status.isOpen);
+      text.textContent = status.text;
+    } catch (error) {
+      // The static hours remain visible if the browser cannot resolve Toronto time.
+    }
+  }
+
+  updateOperatingStatus();
+  window.setInterval(updateOperatingStatus, 60 * 1000);
+
   /* ---- booking modal ---- */
   var overlay = document.querySelector('.book-overlay');
   var frame = overlay && overlay.querySelector('iframe');

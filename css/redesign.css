@@ -259,6 +259,7 @@ body.drawer-open { overflow: hidden; }
   background: var(--gold);
   display: inline-block;
 }
+.hero-badge.is-closed i { background: #ef8b80; }
 .hero-actions { display: flex; gap: 14px; padding-top: 6px; flex-wrap: wrap; }
 .hero-art { position: relative; width: 100%; height: 420px; }
 .hero-art img { position: absolute; border-radius: 6px; display: block; }
