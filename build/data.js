@@ -69,6 +69,11 @@ const svcTitleOverride = {
   'passport-photos': 'Passport Photos in Toronto',
   'visa-photos': 'Visa Photos in Toronto',
   'document-services': 'Printing, Scanning & Photocopying',
+  digital: 'Digital Passport Photos in Toronto',
+  'digital-id': 'Digital ID Photos in Toronto',
+  'immigration-medical': 'Immigration Medical Photos',
+  'school-id': 'School ID Photo',
+  'university-id': 'University Application Photo',
 };
 
 const areaSlug = (name) =>
@@ -229,7 +234,12 @@ function svcReviews(key) {
 }
 
 function svcTitle(key) {
-  return svcTitleOverride[key] || `${svcData[key].name} Photos`;
+  const s = svcData[key];
+  if (svcTitleOverride[key]) return svcTitleOverride[key];
+  /* Never append " Photos" to a name that already ends in Photo/Photos
+     (e.g. "School ID Photo" produced "School ID Photo Photos"). */
+  if (s.titleAsIs || /photos?$/i.test(s.name.trim())) return s.name;
+  return `${s.name} Photos`;
 }
 
 function reqRows(key) {
