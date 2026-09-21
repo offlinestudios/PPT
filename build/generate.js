@@ -64,6 +64,7 @@ function page({ file, active, body, sticky }) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="utf-8">
 ${META_PIXEL}
 ${head}
 </head>

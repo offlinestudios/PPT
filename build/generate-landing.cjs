@@ -32,7 +32,7 @@ for(const [key,item] of Object.entries(catalog)){
  d.body.insertAdjacentHTML('beforeend',T.bookingModal());
  // Keep production tail tracking tags from the existing page.
  const tail=existing.slice(existing.lastIndexOf('<script src="js/redesign.js"></script>')+ '<script src="js/redesign.js"></script>'.length).replace(/<\/body>[\s\S]*$/i,'');
- for(const name of Object.keys(scripts))d.body.insertAdjacentHTML('beforeend','<script charset="utf-8" src="js/landing-'+name+'.js?v=4"></script>');
+ for(const name of Object.keys(scripts))d.body.insertAdjacentHTML('beforeend','<script charset="utf-8" src="js/landing-'+name+'.js?v=5"></script>');
  d.body.insertAdjacentHTML('beforeend','<script src="js/redesign.js"></script>'+tail);
  fs.writeFileSync(path.join(root,item.file),doc.serialize());w.close();
 }

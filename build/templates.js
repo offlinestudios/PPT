@@ -10,7 +10,7 @@ const IG = 'https://instagram.com/passportphototoronto';
 const SQUARE_CHECKOUT =
   'https://checkout.square.site/merchant/MLZHP4C4D1VRR/checkout/LBL5U33JWMKUN7NCOWWADCEQ';
 const MAP_EMBED =
-  'https://www.google.com/maps?q=63+McCaul+St,+Toronto,+ON+M5T+2W7&amp;output=embed';
+  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.797431777024!2d-79.3903965!3d43.6523827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b35e2adf6b047%3A0x8e7de0915bb7272!2sPassport%20Photo%20Toronto!5e0!3m2!1sen!2sca!4v1790020015936!5m2!1sen!2sca';
 const MAP_DIR =
   'https://www.google.com/maps/dir/?api=1&amp;destination=63+McCaul+St,+Toronto,+ON+M5T+2W7';
 const TRANSIT = 'St Patrick station · 505 Dundas &amp; 501 Queen streetcars · Green P on McCaul';
@@ -194,7 +194,7 @@ function ctaBand() {
 
 function mapCard(extra) {
   return `<div class="map-card ${extra || ''}">
-  <div class="frame"><iframe src="${MAP_EMBED}" loading="lazy" title="Map — 63 McCaul St"></iframe></div>
+  <div class="frame"><iframe src="${MAP_EMBED}" loading="lazy" title="Passport Photo Toronto — 63 McCaul St, Toronto"></iframe></div>
   <div class="body">
     <div>
       <div class="addr">63 McCaul St, Toronto</div>
@@ -563,7 +563,7 @@ function areaPage(name) {
       <span class="field txt">Walk-ins welcome 7 days a week — most visits take about 10 minutes.</span>
     </div>
   </div>
-  <div class="map-box" style="height:340px"><iframe src="${MAP_EMBED}" loading="lazy" title="Map — 63 McCaul St"></iframe></div>
+  <div class="map-box" style="height:340px"><iframe src="${MAP_EMBED}" loading="lazy" title="Passport Photo Toronto — 63 McCaul St, Toronto"></iframe></div>
 </div>
 
 ${ctaBand()}`;
@@ -640,7 +640,7 @@ function location() {
   return `<div class="page">
   <h1>Find our studio</h1>
   <div class="split split-wide">
-    <div class="map-box" style="min-height:440px"><iframe src="${MAP_EMBED}" loading="lazy" title="Map — 63 McCaul St"></iframe></div>
+    <div class="map-box" style="min-height:440px"><iframe src="${MAP_EMBED}" loading="lazy" title="Passport Photo Toronto — 63 McCaul St, Toronto"></iframe></div>
     <div class="hero-col" style="gap:16px">
       <div class="info-card" style="flex:1">
         <div class="field"><span class="lbl">Address</span><span class="val">63 McCaul St, Toronto, ON M5T 2W7</span><span class="txt">Steps from OCAD U and the AGO</span></div>
@@ -778,7 +778,7 @@ function contact() {
       <div class="field"><span class="lbl">Hours</span><span class="txt">Mon–Fri: 9:00 AM – 7:00 PM<br>Sat–Sun: 12:00 PM – 6:00 PM</span></div>
       ${bookBtn('Book Appointment', 'btn-gold btn-block')}
     </div>
-    <div class="map-box" style="min-height:380px"><iframe src="${MAP_EMBED}" loading="lazy" title="Map — 63 McCaul St"></iframe></div>
+    <div class="map-box" style="min-height:380px"><iframe src="${MAP_EMBED}" loading="lazy" title="Passport Photo Toronto — 63 McCaul St, Toronto"></iframe></div>
   </div>
 </div>`;
 }
