@@ -12,7 +12,7 @@ Selection does not pre-fill Square; customers choose their service in its schedu
 No prototype booking dialog or noindex directive is shipped on service pages.
 
 Edit app.js, page.html, style.css, choices.js and requirements.js here, then build.
-Choices are three-item campaign lists. Related links use the existing five-page
+Choices are three-item campaign lists, except the digital passport and passport hub pages, which show all passport countries (Canada, US and UK first; others alphabetically). Related links use the existing five-page
 rotation from build/data.js. Requirement fallback data is the existing site's copy;
 it is not a new independent audit of every country's specifications. Rating/review
 count is the observed September 21, 2026 snapshot (4.9 / 372).

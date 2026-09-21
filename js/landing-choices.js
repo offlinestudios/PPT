@@ -1,14 +1,19 @@
 // Campaign-specific shortlist; edit these groups as ad landing pages are rolled out.
-// The preview toolbar remains the full catalog, separate from the customer chooser.
+// Broad passport landing pages offer every passport country in the service catalog.
 window.PHOTO_CHOICE_GROUPS = {
-  'passport-photos': ['canadian-passport', 'us-passport', 'uk-passport'],
-  digital: ['uk-passport', 'us-visa', 'indian-visa'],
   'visa-photos': ['us-visa', 'schengen-visa', 'chinese-visa'],
   'digital-id': ['school-id', 'university-id', 'licenses'],
   oci: ['oci', 'indian-passport', 'indian-visa'],
   'indian-pcc': ['indian-pcc', 'indian-passport', 'oci']
 };
 window.getLandingChoices = function(key) {
+  if (key === 'passport-photos' || key === 'digital') {
+    const popular = ['canadian-passport', 'us-passport', 'uk-passport'];
+    const countries = Object.keys(window.PHOTO_CATALOG)
+      .filter(k => k.endsWith('-passport') && !popular.includes(k))
+      .sort((a, b) => window.PHOTO_CATALOG[a].name.localeCompare(window.PHOTO_CATALOG[b].name));
+    return [...popular, ...countries];
+  }
   if (window.PHOTO_CHOICE_GROUPS[key]) return window.PHOTO_CHOICE_GROUPS[key];
   const related = key.includes('passport') ? ['canadian-passport', 'us-passport', 'uk-passport']
     : /visa|immigration|green-card/.test(key) ? ['us-visa', 'schengen-visa', 'chinese-visa']

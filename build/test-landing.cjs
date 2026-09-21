@@ -9,7 +9,11 @@ for(const key of Object.keys(D.svcData).filter(k=>k!=='document-services')){
  assert.equal(d.querySelector('meta[name=description]')?.content,old.document.querySelector('meta[name=description]')?.content,file+' description');
  assert(!/noindex|Prototype preview|Design B/.test(html),file+' production content');
  assert.equal(d.querySelectorAll('h1').length,1,file+' static h1');
- assert.equal(d.querySelectorAll('#document option:not([value=""])').length,3);
+ const options=[...d.querySelectorAll('#document option:not([value=""])')].map(o=>o.value);
+ if(['digital','passport-photos'].includes(key)){
+   const countries=Object.keys(D.svcData).filter(k=>k.endsWith('-passport'));
+   assert.deepEqual([...options].sort(),countries.sort(),file+' all passport countries');
+ }else assert.equal(options.length,3,file+' focused shortlist');
  assert(d.querySelector('.book-overlay'));assert(d.querySelector('script[src="js/redesign.js"]'));
  for(const n of d.querySelectorAll('img[src],script[src],link[rel=stylesheet]')){const url=n.getAttribute('src')||n.getAttribute('href');if(!/^(https?:|\/\/|data:)/.test(url))assert(fs.existsSync(path.join(root,url.split('?')[0])),file+' '+url)}
  const links=[...d.querySelectorAll('.service-links a')].map(a=>a.href);assert.equal(new Set(links).size,5);assert(!links.some(a=>a.endsWith('/'+file)));
