@@ -1,0 +1,21 @@
+{
+  "name": "ppt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node build/generate-landing.cjs",
+    "test": "node build/test-landing.cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "/Users/ross/.openclaw/workspace/ppt-site"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jsdom": "^26.1.0"
+  },
+  "private": true
+}

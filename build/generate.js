@@ -146,3 +146,6 @@ if (missing.length) {
   console.error(`\nWARNING — expected files not found in repo (skipped):\n  ${missing.join('\n  ')}`);
   process.exitCode = 1;
 }
+
+// Apply the approved guided layout to photo services after the shared build.
+require('./generate-landing.cjs');
