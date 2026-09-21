@@ -38,6 +38,21 @@
 
 .site-footer .bottom{text-align:center}
 
+/* Consistent vector icons and readable mobile body typography. */
+.ui-icon{display:inline-block;width:1em;height:1em;vertical-align:-.12em;flex-shrink:0}
+@media(max-width:700px){
+ body{font-size:16px;line-height:1.6}
+ .card p,.faq p,.sample-module p,.sample-module .micro,.requirements p,.requirements ul,.rail-reviews blockquote,.press q,.visit-map p,.travel-note,.closing-cta p,.split p,.hours,.spec{font-size:16px;line-height:1.6}
+ .b .spec{font-size:16px;line-height:1.55}
+ .selector label,.selector select{font-size:16px}
+ .choice{font-size:14px}.choice b{font-size:16px}
+ .requirements h4{font-size:15px}
+ .sample-expand,.requirements>a,.all-reviews,.service-links a{font-size:15px;line-height:1.5}
+ .review-author b,.review-author small,.proof-metrics>div>span,.retake-proof,.price-note,.walkin-option,.walkin-option span{font-size:13px;line-height:1.5}
+ .site-footer .blurb,.site-footer .contact-line,.site-footer a{font-size:14px;line-height:1.65}
+ .site-footer .bottom{font-size:12px}
+}
+
 .book-overlay { position: fixed; inset: 0; z-index: 80; display: none; }
 body.book-open .book-overlay { display: block; }
 body.book-open { overflow: hidden; }

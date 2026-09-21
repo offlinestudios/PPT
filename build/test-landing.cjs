@@ -11,8 +11,8 @@ for(const key of Object.keys(D.svcData).filter(k=>k!=='document-services')){
  assert.equal(d.querySelectorAll('h1').length,1,file+' static h1');
  const options=[...d.querySelectorAll('#document option:not([value=""])')].map(o=>o.value);
  if(['digital','passport-photos'].includes(key)){
-   const countries=Object.keys(D.svcData).filter(k=>k.endsWith('-passport'));
-   assert.deepEqual([...options].sort(),countries.sort(),file+' all passport countries');
+   const countries=['canadian-passport','us-passport','uk-passport','indian-passport','chinese-passport','french-passport','german-passport','unlisted'];
+   assert.deepEqual([...options].sort(),countries.sort(),file+' seven countries and unlisted option');
  }else assert.equal(options.length,3,file+' focused shortlist');
  assert(d.querySelector('.book-overlay'));assert(d.querySelector('script[src="js/redesign.js"]'));
  for(const n of d.querySelectorAll('img[src],script[src],link[rel=stylesheet]')){const url=n.getAttribute('src')||n.getAttribute('href');if(!/^(https?:|\/\/|data:)/.test(url))assert(fs.existsSync(path.join(root,url.split('?')[0])),file+' '+url)}
@@ -20,7 +20,7 @@ for(const key of Object.keys(D.svcData).filter(k=>k!=='document-services')){
  for(const name of ['catalog','choices','requirements','app'])w.eval(fs.readFileSync(path.join(root,'js/landing-'+name+'.js'),'utf8'));
  assert.equal(d.querySelectorAll('#sample-dialog').length,1);
  const choice=d.querySelector('#document');choice.value=[...choice.options].find(o=>o.value).value;choice.dispatchEvent(new w.Event('change'));
- d.querySelector('[data-format=Both]').click();assert.equal(d.querySelector('[data-format=Both]').getAttribute('aria-pressed'),'true');assert(d.querySelector('#sample-format').textContent.includes('DIGITAL'));assert(!d.querySelector('#spec').textContent.includes('$'));
+ d.querySelector('[data-format=Both]').click();assert.equal(d.querySelector('[data-format=Both]').getAttribute('aria-pressed'),'true');assert(d.querySelector('#sample-format').textContent.includes('DIGITAL'));if(options.includes('unlisted')){choice.value='unlisted';choice.dispatchEvent(new w.Event('change'));assert(!d.querySelector('#requirements').innerHTML.includes('undefined'));assert(d.querySelector('#requirements').textContent.includes('Photos for your application'));}assert(!d.body.textContent.includes('↗'));assert(d.querySelector('.ui-icon'));assert(!d.querySelector('#spec').textContent.includes('$'));
  assert(d.querySelector('[data-book]').getAttribute('href')==='scheduling.html');
  w.close();old.close();count++;
 }

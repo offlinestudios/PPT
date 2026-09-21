@@ -1,5 +1,6 @@
+window.PHOTO_CATALOG.unlisted={name:'My document isn’t listed'};
 // Campaign-specific shortlist; edit these groups as ad landing pages are rolled out.
-// Broad passport landing pages offer every passport country in the service catalog.
+// Broad passport landing pages offer seven countries and an unlisted-document option.
 window.PHOTO_CHOICE_GROUPS = {
   'visa-photos': ['us-visa', 'schengen-visa', 'chinese-visa'],
   'digital-id': ['school-id', 'university-id', 'licenses'],
@@ -8,11 +9,7 @@ window.PHOTO_CHOICE_GROUPS = {
 };
 window.getLandingChoices = function(key) {
   if (key === 'passport-photos' || key === 'digital') {
-    const popular = ['canadian-passport', 'us-passport', 'uk-passport'];
-    const countries = Object.keys(window.PHOTO_CATALOG)
-      .filter(k => k.endsWith('-passport') && !popular.includes(k))
-      .sort((a, b) => window.PHOTO_CATALOG[a].name.localeCompare(window.PHOTO_CATALOG[b].name));
-    return [...popular, ...countries];
+    return ['canadian-passport','us-passport','uk-passport','indian-passport','chinese-passport','french-passport','german-passport','unlisted'];
   }
   if (window.PHOTO_CHOICE_GROUPS[key]) return window.PHOTO_CHOICE_GROUPS[key];
   const related = key.includes('passport') ? ['canadian-passport', 'us-passport', 'uk-passport']
