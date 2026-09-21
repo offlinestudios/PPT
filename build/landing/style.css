@@ -52,3 +52,13 @@
  .site-footer .blurb,.site-footer .contact-line,.site-footer a{font-size:14px;line-height:1.65}
  .site-footer .bottom{font-size:12px}
 }
+
+/* Header proportions and responsive behaviour match the core website. */
+.full-header{height:76px;min-height:76px;position:sticky;top:0;z-index:30;background:white}
+.header-shell{height:100%;padding:0 44px;gap:24px}
+.full-header .brand span{font-size:15px;letter-spacing:.04em}.full-header .brand{gap:10px}
+.desktop-nav{gap:4px}.desktop-nav a{padding:8px 11px;font-size:14px}
+.header-actions{gap:16px}.header-phone{font-size:14px}
+.header-actions .small{font-size:12.5px;padding:13px 22px}
+@media(max-width:1279px){.full-header .desktop-nav,.full-header .header-phone,.full-header .header-actions .small{display:none}.full-header .header-actions .menu-toggle{display:block}}
+@media(max-width:899px){.header-shell{padding:0 18px}.full-header .brand span{font-size:15px;letter-spacing:.03em}.brand img{height:34px}.full-header{min-height:76px}}

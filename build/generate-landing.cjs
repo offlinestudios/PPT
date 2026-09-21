@@ -19,7 +19,7 @@ for(const [key,item] of Object.entries(catalog)){
  const head=existing.match(/<head[^>]*>([\s\S]*?)<\/head>/i)[1].replace(/<link[^>]+href=["']css\/(?:redesign|landing)\.css[^>]*>/g,'');
  const doc=new JSDOM(read('page.html'),{url:'https://www.passportphototoronto.com/'+item.file,runScripts:'outside-only'});
  const w=doc.window,d=w.document;
- d.head.innerHTML='<meta charset="utf-8">'+head+'<link rel="stylesheet" href="css/landing.css?v=2">';
+ d.head.innerHTML='<meta charset="utf-8">'+head+'<link rel="stylesheet" href="css/landing.css?v=3">';
  d.body.dataset.photoService=key;
  d.querySelectorAll('script').forEach(n=>{if(n.closest('body'))n.remove()});
  d.querySelector('#booking').remove();
