@@ -56,13 +56,10 @@ if(v==='b'){
 }
 function updateSample(key){
  const img=document.querySelector('#sample-image');if(!img)return;
- const item=window.PHOTO_CATALOG[key];
- const scannedPassport=key?.includes('passport');
- img.src=scannedPassport?'images/passport-scan-sample-square.jpg':(item?.sample||'images/passport-scan-sample-square.jpg');
- img.alt=item?.sample?item.name+' photo sample':'Example studio photo; not a document-specific sample';
- document.querySelector('#sample-format').textContent=format==='Both'?'PRINTS + DIGITAL FILE':format==='Digital'?'DIGITAL FILE BY EMAIL':'TWO PRINTED PHOTOS';
- document.querySelector('#sample-caption').textContent=(item?.sample?item.name+' photo example. ':'Example studio photography. ')+(format==='Digital'?'Your file is formatted for your application.':format==='Both'?'Two prints and a digital file by email.':'Two prints, cut to the required size.');
- if(scannedPassport){img.alt='Scanned studio print sample; final dimensions and background vary by application';document.querySelector('#sample-format').textContent='STUDIO PRINT SAMPLE';document.querySelector('#sample-caption').textContent='Studio print sample. Your photo is prepared for your selected application.';}
+ img.src='images/passport-scan-sample-square.jpg';
+ img.alt='Scanned studio print sample; final dimensions and background vary by application';
+ document.querySelector('#sample-format').textContent='STUDIO PRINT SAMPLE';
+ document.querySelector('#sample-caption').textContent='Studio print sample. Your photo is prepared for your selected application.';
  const req=document.querySelector('#requirements');if(req)req.innerHTML=window.renderPhotoRequirements(key,'Both');
 }
 function spec(){const el=document.querySelector('#spec');if(!el)return;const key=document.querySelector('#document').value;const item=window.PHOTO_CATALOG[key];updateSample(key);const verified=window.REQUIREMENTS[key];const size=verified?.printSize||item?.size;
