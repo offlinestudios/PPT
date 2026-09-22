@@ -9,8 +9,8 @@ for(const [key,s] of Object.entries(D.svcData)){
  if(key==='document-services')continue;
  catalog[key]={name:s.name,title:/Toronto/i.test(D.svcTitle(key))?D.svcTitle(key):D.svcTitle(key)+' in Toronto',file:D.svcFile[key],size:s.size,face:s.face,sample:s.sample&&fs.existsSync(path.join(root,s.sample))?s.sample:null};
 }
-const scripts={catalog:'window.PHOTO_CATALOG='+JSON.stringify(catalog)+';\nwindow.PHOTO_RELATED='+JSON.stringify(related)+';',choices:read('choices.js'),requirements:read('requirements.js'),app:read('app.js')};
-let css=read('style.css');const siteCss=fs.readFileSync(path.join(root,'css/redesign.css'),'utf8');
+const scripts={catalog:'window.PHOTO_CATALOG='+JSON.stringify(catalog)+';\nwindow.PHOTO_RELATED='+JSON.stringify(related)+';',choices:read('choices.js'),requirements:'window.REQUIREMENTS='+read('requirements-data.json')+';\n'+read('requirements.js'),app:read('app.js'),refinements:read('refinements.js')};
+let css=read('style.css')+'\n'+read('refinements.css');const siteCss=fs.readFileSync(path.join(root,'css/redesign.css'),'utf8');
 css+='\n'+siteCss.slice(siteCss.indexOf('.book-overlay {'),siteCss.indexOf('.book-frame iframe {'))+'.book-frame iframe{border:0;width:100%;height:100%;background:white;display:block}\n.book-modal{width:min(560px,96vw)}.book-close{width:44px;height:44px}.choice:focus-visible{outline:3px solid var(--navy);outline-offset:3px}\n';
 fs.writeFileSync(path.join(root,'css/landing.css'),css);
 for(const [name,code] of Object.entries(scripts))fs.writeFileSync(path.join(root,'js/landing-'+name+'.js'),code);
@@ -19,7 +19,7 @@ for(const [key,item] of Object.entries(catalog)){
  const head=existing.match(/<head[^>]*>([\s\S]*?)<\/head>/i)[1].replace(/<link[^>]+href=["']css\/(?:redesign|landing)\.css[^>]*>/g,'');
  const doc=new JSDOM(read('page.html'),{url:'https://www.passportphototoronto.com/'+item.file,runScripts:'outside-only'});
  const w=doc.window,d=w.document;
- d.head.innerHTML='<meta charset="utf-8">'+head+'<link rel="stylesheet" href="css/landing.css?v=3">';
+ d.head.innerHTML='<meta charset="utf-8">'+head+'<link rel="stylesheet" href="css/landing.css?v=4">';
  d.body.dataset.photoService=key;
  d.querySelectorAll('script').forEach(n=>{if(n.closest('body'))n.remove()});
  d.querySelector('#booking').remove();
@@ -32,8 +32,8 @@ for(const [key,item] of Object.entries(catalog)){
  d.body.insertAdjacentHTML('beforeend',T.bookingModal());
  // Keep production tail tracking tags from the existing page.
  const tail=existing.slice(existing.lastIndexOf('<script src="js/redesign.js"></script>')+ '<script src="js/redesign.js"></script>'.length).replace(/<\/body>[\s\S]*$/i,'');
- for(const name of Object.keys(scripts))d.body.insertAdjacentHTML('beforeend','<script charset="utf-8" src="js/landing-'+name+'.js?v=6"></script>');
- d.body.insertAdjacentHTML('beforeend','<script src="js/redesign.js"></script>'+tail);
- fs.writeFileSync(path.join(root,item.file),doc.serialize());w.close();
+ for(const name of Object.keys(scripts))d.body.insertAdjacentHTML('beforeend','<script charset="utf-8" src="js/landing-'+name+'.js?v=8"></script>');
+ d.body.insertAdjacentHTML('beforeend','<script src="js/booking-feedback.js?v=2"></script><script src="js/redesign.js"></script>'+tail);
+ fs.writeFileSync(path.join(root,item.file),doc.serialize().replace(/[ \t]+$/gm,''));w.close();
 }
 console.log('Generated '+Object.keys(catalog).length+' guided photo pages.');

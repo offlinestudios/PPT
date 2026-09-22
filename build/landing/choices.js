@@ -1,4 +1,4 @@
-window.PHOTO_CATALOG.unlisted={name:'My document isn’t listed'};
+window.PHOTO_CATALOG.unlisted={name:'Other'};
 // Campaign-specific shortlist; edit these groups as ad landing pages are rolled out.
 // Broad passport landing pages offer seven countries and an unlisted-document option.
 window.PHOTO_CHOICE_GROUPS = {

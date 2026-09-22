@@ -378,13 +378,14 @@
   function openBooking(e) {
     if (e) e.preventDefault();
     if (!overlay) return;
-    trackBookingEntry('booking_modal', 'open_button_click');
-    lastFocus = document.activeElement;
+    lastFocus = overlay._bookingOpener || document.activeElement;
     // Lazy-load the Square widget on first open so it never blocks page load.
     if (frame && !frame.getAttribute('src')) frame.setAttribute('src', SQUARE_SRC);
     body.classList.add('book-open');
     var close = overlay.querySelector('.book-close');
     if (close) close.focus();
+    // Attribution is independent of rendering the booking UI.
+    window.setTimeout(function () { trackBookingEntry('booking_modal', 'open_button_click'); }, 0);
   }
 
   function closeBooking() {

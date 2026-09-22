@@ -1,4 +1,4 @@
-window.REQUIREMENTS={
+{
   "uk-passport": {
     "printSize": "35 × 45 mm",
     "print": [
@@ -925,13 +925,3 @@ window.REQUIREMENTS={
     ]
   }
 }
-;
-window.renderPhotoRequirements=function(key,format){
- if(key==='unlisted')return '<h3>Photos for your application</h3><p>Bring the requirements from your application form or issuing authority. We’ll confirm the dimensions, background and delivery format with you.</p>';
- const item=window.PHOTO_CATALOG[key];if(!item)return '<h3>Photo requirements</h3><p>Choose a country or document above to see the matching requirements here.</p>';
- const r=window.REQUIREMENTS[key];let sections='';
- if(format!=='Digital')sections+='<h4>Printed photo</h4><ul><li>Size: '+(r?.printSize||item.size||'As specified by your application')+'</li>'+(r?.print?r.print.map(x=>'<li>'+x+'</li>').join(''):'<li>'+item.face+'</li>')+'</ul>';
- if(format!=='Prints')sections+='<h4>Digital photo</h4><ul>'+(r?r.digital:['Bring your application’s pixel dimensions, file format and upload limit.','We format your digital file to those application instructions.']).map(x=>'<li>'+x+'</li>').join('')+'</ul>';
- const extras=(r?.sources||[]).map(s=>'<a class="official-source" href="'+s.url+'" target="_blank" rel="noopener">'+s.label+'</a>').join('');
- return '<h3>'+item.name+' photo requirements</h3>'+sections+(r?.source?'<a href="'+r.source+'" target="_blank" rel="noopener">'+r.label+' <svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a>':'<a href="https://www.passportphototoronto.com/'+item.file+'">View '+item.name+' service details <svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a>')+extras;
-};

@@ -77,7 +77,7 @@ ${body}
 ${T.footer()}
 ${sticky ? T.stickyBar() : ''}
 ${T.bookingModal()}
-<script src="js/redesign.js"></script>
+<script src="js/booking-feedback.js?v=2"></script><script src="js/redesign.js"></script>
 ${tail}
 ${LINKEDIN_INSIGHT_TAG}
 </body>
