@@ -19,7 +19,7 @@ for(const [key,item] of Object.entries(catalog)){
  const head=existing.match(/<head[^>]*>([\s\S]*?)<\/head>/i)[1].replace(/<link[^>]+href=["']css\/(?:redesign|landing)\.css[^>]*>/g,'');
  const doc=new JSDOM(read('page.html'),{url:'https://www.passportphototoronto.com/'+item.file,runScripts:'outside-only'});
  const w=doc.window,d=w.document;
- d.head.innerHTML='<meta charset="utf-8">'+head+'<link rel="stylesheet" href="css/landing.css?v=5">';
+ d.head.innerHTML='<meta charset="utf-8">'+head+'<link rel="stylesheet" href="css/landing.css?v=6">';
  d.body.dataset.photoService=key;
  d.querySelectorAll('script').forEach(n=>{if(n.closest('body'))n.remove()});
  d.querySelector('#booking').remove();
@@ -32,7 +32,7 @@ for(const [key,item] of Object.entries(catalog)){
  d.body.insertAdjacentHTML('beforeend',T.bookingModal());
  // Keep production tail tracking tags from the existing page.
  const tail=existing.slice(existing.lastIndexOf('<script src="js/redesign.js"></script>')+ '<script src="js/redesign.js"></script>'.length).replace(/<\/body>[\s\S]*$/i,'');
- for(const name of Object.keys(scripts))d.body.insertAdjacentHTML('beforeend','<script charset="utf-8" src="js/landing-'+name+'.js?v=10"></script>');
+ for(const name of Object.keys(scripts))d.body.insertAdjacentHTML('beforeend','<script charset="utf-8" src="js/landing-'+name+'.js?v=11"></script>');
  d.body.insertAdjacentHTML('beforeend','<script src="js/booking-feedback.js?v=2"></script><script src="js/redesign.js"></script>'+tail);
  fs.writeFileSync(path.join(root,item.file),doc.serialize().replace(/[ \t]+$/gm,''));w.close();
 }

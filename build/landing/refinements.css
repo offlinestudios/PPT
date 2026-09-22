@@ -88,3 +88,6 @@
  .site-footer .footer-address a{display:block}
  .site-footer .footer-hours p{line-height:1.8}
 }
+
+.selector .option-intro{margin:0 0 18px;font-size:15px;line-height:1.5}
+@media(max-width:700px){.selector .option-intro{font-size:16px}.choice.best-deal{overflow-wrap:normal}}

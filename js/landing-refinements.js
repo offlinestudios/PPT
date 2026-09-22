@@ -2,7 +2,7 @@
 const headline=document.querySelector('.guided-intro h1');
 headline.insertAdjacentHTML('afterend','<div class="arrival-info"><a class="arrival-rating" href="reviews.html"><span aria-hidden="true">★</span> <strong>4.9</strong> <span>Google · 372 reviews</span></a><div class="arrival-visit"><a class="arrival-address" href="#visit">63 McCaul St<span>Downtown Toronto</span></a><div class="arrival-availability"><strong>Walk-ins welcome</strong><span class="arrival-status" data-business-status><span data-business-status-text>Mon–Fri 9–7 · Sat–Sun 12–6</span></span></div></div></div>');
 const key=document.body.dataset.photoService;
-document.querySelector('.selector h2').textContent=!['digital','visa-photos','passport-photos','digital-id'].includes(key)?'Choose your format':key==='digital'?'Choose your digital photo':key==='visa-photos'?'Choose your visa photo':key==='digital-id'?'Choose your ID photo':'Choose your passport photo';
+document.querySelector('.selector h2').textContent=!['digital','visa-photos','passport-photos','digital-id'].includes(key)?'Choose your photo option':key==='digital'?'Choose your digital photo':key==='visa-photos'?'Choose your visa photo':key==='digital-id'?'Choose your ID photo':'Choose your passport photo';
 const arrow='<svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg>';
 document.querySelector('.sticky').innerHTML='<a class="button outline" href="https://www.google.com/maps/dir/?api=1&destination=Passport+Photo+Toronto,+63+McCaul+St,+Toronto,+ON+M5T+2W7" target="_blank" rel="noopener">Directions '+arrow+'</a><a class="button" href="scheduling.html" data-book>Book now '+arrow+'</a>';
 
