@@ -13,7 +13,8 @@ for(const key of Object.keys(D.svcData).filter(k=>k!=='document-services')){
  if(['digital','passport-photos'].includes(key)){
    const countries=['canadian-passport','us-passport','uk-passport','indian-passport','chinese-passport','french-passport','german-passport','unlisted'];
    assert.deepEqual([...options].sort(),countries.sort(),file+' seven countries and unlisted option');
- }else if(['visa-photos','digital-id'].includes(key)) assert.equal(options.length,3,file+' focused shortlist');
+ }else if(key==='visa-photos') assert.deepEqual(options,['us-visa','schengen-visa','chinese-visa','indian-visa','japanese-visa','korean-visa','vietnam-visa','unlisted']);
+ else if(key==='digital-id') assert.equal(options.length,3,file+' focused shortlist');
  else {assert.equal(options.length,0);assert.equal(d.querySelector('#document').type,'hidden');assert.equal(d.querySelector('#document').value,key);}
  assert(d.querySelector('.book-overlay'));assert(d.querySelector('script[src="js/redesign.js"]'));
  for(const n of d.querySelectorAll('img[src],script[src],link[rel=stylesheet]')){const url=n.getAttribute('src')||n.getAttribute('href');if(!/^(https?:|\/\/|data:)/.test(url))assert(fs.existsSync(path.join(root,url.split('?')[0])),file+' '+url)}

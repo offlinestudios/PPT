@@ -2,7 +2,7 @@ window.PHOTO_CATALOG.unlisted={name:'Other'};
 // Campaign-specific shortlist; edit these groups as ad landing pages are rolled out.
 // Broad passport landing pages offer seven countries and an unlisted-document option.
 window.PHOTO_CHOICE_GROUPS = {
-  'visa-photos': ['us-visa', 'schengen-visa', 'chinese-visa'],
+  'visa-photos': ['us-visa', 'schengen-visa', 'chinese-visa', 'indian-visa', 'japanese-visa', 'korean-visa', 'vietnam-visa', 'unlisted'],
   'digital-id': ['school-id', 'university-id', 'licenses'],
   oci: ['oci', 'indian-passport', 'indian-visa'],
   'indian-pcc': ['indian-pcc', 'indian-passport', 'oci']
