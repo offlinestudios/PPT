@@ -14,8 +14,9 @@ No prototype booking dialog or noindex directive is shipped on service pages.
 Edit app.js, page.html, style.css, choices.js and requirements.js here, then build.
 Choices are three-item campaign lists, except the digital passport and passport hub pages, which show seven main countries plus “My document isn’t listed.” Related links use the existing five-page
 rotation from build/data.js. Requirement fallback data is the existing site's copy;
-it is not a new independent audit of every country's specifications. Rating/review
-count is the observed September 21, 2026 snapshot (4.9 / 372).
+it is not a new independent audit of every country's specifications. All 49 photo-service pages use the approved 4.9 rating and 400+ review count.
+Selecting a format opens the existing booking modal once a hub document is selected.
+The summary shows the service, format and current price; it does not pre-fill Square.
 
 The main legacy build also invokes this generator last. The focused npm build
 avoids rewriting unrelated core pages.

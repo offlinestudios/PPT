@@ -3,7 +3,7 @@ const content={digital:{label:'Digital passport photos',head:'Your next chapter.
 const book='<a class="button" href="scheduling.html" data-book>Book appointment <span><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a>';
 const visual=v==='c'?'<div class="visual"><img src="images/offline-website-5.webp" width="900" height="700" alt="The real photo studio inside Offline Studios"><div class="photo-label">YOUR NEIGHBOURHOOD PHOTO STUDIO<b>63 McCaul St · Downtown Toronto</b></div></div>':'<div class="visual"><span class="ruler">PASSPORT PHOTO TORONTO</span><img class="photo" src="images/'+d.image+'" width="300" height="380" alt="Example '+d.label.toLowerCase()+' from the studio"><div class="photo-label">ACTUAL PHOTO FROM OUR STUDIO<b>'+d.format+'</b></div></div>';
 const aliases={uk:'uk-passport',visa:'visa-photos'};const selectedKey=aliases[service]||service;
-const instantPassportBooking=(window.PASSPORT_PHOTO_PAGES||[]).includes(selectedKey);
+const instantPhotoBooking=(window.PHOTO_SERVICE_PAGES||[]).includes(selectedKey);
 const hubs=['digital','visa-photos','passport-photos','digital-id'];
 const isHub=hubs.includes(selectedKey);
 const documentControl=isHub?'<label for="document">1. Which document is it for?</label><select id="document"><option value="">Choose your application</option>'+window.getLandingChoices(selectedKey).map(k=>'<option value="'+k+'">'+window.PHOTO_CATALOG[k].name+'</option>').join('')+'</select>':'<input type="hidden" id="document" value="'+selectedKey+'">';
@@ -50,7 +50,7 @@ if(v==='b'){
  document.querySelector('.selector h2').textContent='Choose your photo';
  const trust=document.querySelector('.trust');trust.remove();
  const proof=document.createElement('aside');proof.className='review-rail';proof.id='customer-reviews';
- proof.innerHTML='<div class="review-panel"><span class="eyebrow">TRUSTED AT 63 MCCAUL ST</span><h2>What our customers say.</h2><div class="rail-reviews">'+reviews.map(r=>'<article><span class="review-stars" aria-label="5 out of 5 stars">'+r.stars+'</span><blockquote>'+r.text+'</blockquote><div class="review-author"><b>'+r.name+'</b><small>'+r.date+'</small></div></article>').join('')+'</div><a class="all-reviews" href="https://www.passportphototoronto.com/reviews.html" target="_blank" rel="noopener">Read customer reviews <svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div><div class="proof-metrics"><div><b>4.9 <span aria-label="stars">★</span></b><span>from '+(instantPassportBooking?'400+':'372')+' Google reviews</span></div><div><b>500</b><span>passport photo customers / month</span></div></div><p class="retake-proof">✓ Accepted or retaken free · Walk-ins welcome</p><div class="press"><div class="press-top"><img src="images/blogto-logo.png" alt="blogTO" width="88" height="32"><span>As featured in</span></div><q>If you want to visit a local business… Passport Photo Toronto.</q></div>';
+ proof.innerHTML='<div class="review-panel"><span class="eyebrow">TRUSTED AT 63 MCCAUL ST</span><h2>What our customers say.</h2><div class="rail-reviews">'+reviews.map(r=>'<article><span class="review-stars" aria-label="5 out of 5 stars">'+r.stars+'</span><blockquote>'+r.text+'</blockquote><div class="review-author"><b>'+r.name+'</b><small>'+r.date+'</small></div></article>').join('')+'</div><a class="all-reviews" href="https://www.passportphototoronto.com/reviews.html" target="_blank" rel="noopener">Read customer reviews <svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div><div class="proof-metrics"><div><b>4.9 <span aria-label="stars">★</span></b><span>from '+(instantPhotoBooking?'400+':'372')+' Google reviews</span></div><div><b>500</b><span>passport photo customers / month</span></div></div><p class="retake-proof">✓ Accepted or retaken free · Walk-ins welcome</p><div class="press"><div class="press-top"><img src="images/blogto-logo.png" alt="blogTO" width="88" height="32"><span>As featured in</span></div><q>If you want to visit a local business… Passport Photo Toronto.</q></div>';
  hero.append(proof);
  const sampleDialog=document.createElement('dialog');sampleDialog.id='sample-dialog';sampleDialog.innerHTML='<button class="sample-close close" aria-label="Close sample">×</button><h2>Photo sample</h2><img id="large-sample" alt="Enlarged studio photo sample"><p>Example photography from our studio. Your photo is formatted for your selected application.</p>';document.body.append(sampleDialog);
  document.querySelector('#expand-sample').onclick=()=>{document.querySelector('#large-sample').src=document.querySelector('#sample-image').src;sampleDialog.showModal()};document.querySelector('.sample-close').onclick=()=>sampleDialog.close();
@@ -69,14 +69,14 @@ function spec(){const el=document.querySelector('#spec');if(!el)return;const key
  const walkin=document.querySelector('.walkin-option');if(walkin)walkin.setAttribute('aria-label','Walk-ins welcome. View opening hours and directions');
 }
 document.querySelectorAll('[data-format]').forEach(b=>{
- if(instantPassportBooking)b.setAttribute('aria-haspopup','dialog');
+ if(instantPhotoBooking)b.setAttribute('aria-haspopup','dialog');
  b.onclick=()=>{
   format=b.dataset.format;
   document.querySelectorAll('[data-format]').forEach(x=>x.setAttribute('aria-pressed',x===b));
   spec();
   // Reuse the existing booking entry exactly once, after selection is current.
   // Explicit focus also returns touch users to the selected card on dismissal.
-  if(instantPassportBooking && (!isHub || document.querySelector('#document').value)){
+  if(instantPhotoBooking && (!isHub || document.querySelector('#document').value)){
    b.focus({preventScroll:true});
    document.querySelector('.selector [data-book]')?.click();
   }

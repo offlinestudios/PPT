@@ -8,9 +8,9 @@
   var host = overlay.querySelector('.book-frame');
   var src = 'https://square.site/appointments/buyer/widget/5fkwsauqjb7usp/L7T8SMADNB80P';
   var opener, timer;
-  var isPassportPage = (window.PASSPORT_PHOTO_PAGES || []).includes(document.body.dataset.photoService);
+  var isPhotoServicePage = (window.PHOTO_SERVICE_PAGES || []).includes(document.body.dataset.photoService);
   var summary, background = [];
-  if (isPassportPage) {
+  if (isPhotoServicePage) {
     summary = document.createElement('div');
     summary.className = 'booking-selection';
     summary.id = 'booking-selection';
@@ -20,10 +20,12 @@
     overlay.setAttribute('aria-describedby', summary.id);
   }
   function prepareSelection() {
-    if (!isPassportPage) return;
+    if (!isPhotoServicePage) return;
     var key = document.querySelector('#document')?.value || document.body.dataset.photoService;
     var item = window.PHOTO_CATALOG && window.PHOTO_CATALOG[key];
-    var name = key === 'unlisted' ? 'Other passport application' : key === 'passport-photos' ? 'Passport photos' : key === 'digital' ? 'Digital passport photos' : (item?.name || 'Passport photos');
+    var service = document.body.dataset.photoService;
+    var hubNames = {'passport-photos':'Passport photos', digital:'Digital passport photos', 'visa-photos':'Visa photos', 'digital-id':'Digital ID photos'};
+    var name = key === 'unlisted' ? (service === 'visa-photos' ? 'Other visa application' : 'Other passport application') : (hubNames[key] || item?.name || 'Document photos');
     summary.querySelector('[data-booking-service]').textContent = /photos?$/i.test(name) ? name : name + ' photos';
     var selected = document.querySelector('[data-format][aria-pressed="true"]');
     var format = selected ? selected.dataset.format : 'Prints';
@@ -55,11 +57,11 @@
   function open(e) {
     var trigger=e.target.closest('[data-book]');if(!trigger)return;
     e.preventDefault();opener=document.activeElement;
-    if(isPassportPage && opener?.closest('#mobile-menu'))opener=document.querySelector('.menu-toggle');
+    if(isPhotoServicePage && opener?.closest('#mobile-menu'))opener=document.querySelector('.menu-toggle');
     overlay._bookingOpener=opener;warmConnection();prepareSelection();
-    if(!isPassportPage)document.body.classList.add('book-open');
+    if(!isPhotoServicePage)document.body.classList.add('book-open');
     if(!frame.getAttribute('src')){startLoading();frame.loading='eager';frame.src=src;}
-    if(!isPassportPage)overlay.querySelector('.book-close')?.focus();
+    if(!isPhotoServicePage)overlay.querySelector('.book-close')?.focus();
   }
   function close(){document.body.classList.remove('book-open');background.forEach(function(el){el.inert=false;});background=[];if(opener)opener.focus();}
   document.addEventListener('click',open,true);

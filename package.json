@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "node build/generate-landing.cjs",
-    "test": "node build/test-landing.cjs"
+    "test": "node build/test-landing.cjs && node build/test-passport-booking.cjs"
   },
   "repository": {
     "type": "git",
