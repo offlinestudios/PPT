@@ -18,3 +18,6 @@ window.getLandingChoices = function(key) {
     : ['school-id', 'university-id', 'licenses'];
   return [...new Set([key, ...related])].filter(k => window.PHOTO_CATALOG[k]).slice(0, 3);
 };
+
+// Scope the reviewed one-click booking flow to passport photo services only.
+window.PASSPORT_PHOTO_PAGES = ['canadian-passport', 'us-passport', 'uk-passport', 'irish-passport', 'indian-passport', 'chinese-passport', 'french-passport', 'german-passport', 'italian-passport', 'spanish-passport', 'polish-passport', 'japanese-passport', 'korean-passport', 'turkish-passport', 'iranian-passport', 'nigerian-passport', 'brazilian-passport', 'hong-kong-passport', 'passport-photos', 'digital'];
