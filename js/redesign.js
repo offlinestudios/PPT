@@ -383,10 +383,11 @@
     }
 
     var payload = basePayload(sessionId);
-    payload.event = 'square_booking_confirmed';
+    payload.event = 'square_booking_page_view';
+    payload.matching_strategy = 'booking_confirmed_exact';
     payload.confirmation_source = source;
     payload.confirmation_detail = String(detail || '').slice(0, 300);
-    payload.matching_strategy = 'session_id_exact';
+    payload.page_url = window.location.href;
 
     return sendPayload(payload).then(function (sent) {
       if (sent) {
