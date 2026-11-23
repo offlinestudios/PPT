@@ -363,6 +363,68 @@
     });
   }
 
+  function hasClickId(attribution) {
+    return Boolean(attribution.gclid || attribution.gbraid || attribution.wbraid || attribution.fbclid);
+  }
+
+  function isSquareOrigin(origin) {
+    try {
+      var host = new URL(origin).hostname;
+      return host.indexOf('square.site') !== -1 || host.indexOf('squareup.com') !== -1;
+    } catch (error) {
+      return false;
+    }
+  }
+
+  function sendBookingConfirmed(sessionId, source, detail) {
+    var state = readState();
+    if (state.confirmed && state.confirmed.sessionId === sessionId) {
+      return Promise.resolve(false);
+    }
+
+    var payload = basePayload(sessionId);
+    payload.event = 'square_booking_confirmed';
+    payload.confirmation_source = source;
+    payload.confirmation_detail = String(detail || '').slice(0, 300);
+    payload.matching_strategy = 'session_id_exact';
+
+    return sendPayload(payload).then(function (sent) {
+      if (sent) {
+        markEvent('confirmed', {
+          sessionId: sessionId,
+          sentAt: payload.captured_at,
+          source: source
+        });
+      }
+      return sent;
+    });
+  }
+
+  function sendLandingPageView(sessionId) {
+    var attribution = window.pptAttribution || {};
+    if (!hasClickId(attribution)) return Promise.resolve(false);
+
+    var key = window.location.pathname + (window.location.search || '');
+    var state = readState();
+    var seen = state.pageViews || {};
+    var paths = seen.sessionId === sessionId && Array.isArray(seen.paths) ? seen.paths : [];
+    if (paths.indexOf(key) !== -1) return Promise.resolve(false);
+
+    var payload = basePayload(sessionId);
+    payload.event = 'site_page_view';
+    payload.page_path = key;
+
+    return sendPayload(payload).then(function (sent) {
+      if (sent) {
+        markEvent('pageViews', {
+          sessionId: sessionId,
+          paths: paths.concat([key]).slice(-20)
+        });
+      }
+      return sent;
+    });
+  }
+
   function trackBookingEntry(surface, reason) {
     var sessionId = getSessionId();
 
@@ -430,6 +492,57 @@
     q.setAttribute('aria-expanded', open ? 'true' : 'false');
     var icon = q.querySelector('.icon');
     if (icon) icon.textContent = open ? '−' : '+';
+  });
+
+  /* ---- booking confirmation + paid landing page capture ---- */
+  window.addEventListener('message', function (event) {
+    if (!isSquareOrigin(event.origin)) return;
+
+    var sessionId = getSessionId();
+    var text = '';
+    try {
+      text = typeof event.data === 'string' ? event.data : JSON.stringify(event.data);
+    } catch (error) {
+      return;
+    }
+    if (!text) return;
+
+    var lower = text.toLowerCase();
+    if (
+      lower.indexOf('booking') !== -1 &&
+      (lower.indexOf('confirm') !== -1 || lower.indexOf('complete') !== -1 || lower.indexOf('success') !== -1)
+    ) {
+      sendBookingConfirmed(sessionId, 'widget_message', text);
+      return;
+    }
+
+    var debugState = readState();
+    var debug = debugState.debug || {};
+    var count = debug.sessionId === sessionId ? debug.count || 0 : 0;
+    if (count < 2) {
+      var debugPayload = basePayload(sessionId);
+      debugPayload.event = 'square_widget_message';
+      debugPayload.message_sample = text.slice(0, 300);
+      sendPayload(debugPayload);
+      markEvent('debug', { sessionId: sessionId, count: count + 1 });
+    }
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var sessionId = getSessionId();
+
+    try {
+      var params = new URLSearchParams(window.location.search || '');
+      if (params.get('ppt_test_booking') === '1') {
+        sendBookingConfirmed(sessionId, 'manual_test', 'ppt_test_booking=1');
+      }
+    } catch (error) {
+      console.warn('Unable to read test booking flag', error);
+    }
+
+    if (window.location.pathname.indexOf('scheduling.html') === -1) {
+      sendLandingPageView(sessionId);
+    }
   });
 
   /* ---- escape closes whatever is open ---- */
