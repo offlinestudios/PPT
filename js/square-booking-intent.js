@@ -105,6 +105,67 @@
       });
   }
 
+  function sendBookingConfirmed(sessionId, source, detail) {
+    const state = readState();
+    if (state.confirmed && state.confirmed.sessionId === sessionId) {
+      return Promise.resolve(false);
+    }
+
+    const payload = {
+      event: 'square_booking_confirmed',
+      confirmation_source: source,
+      confirmation_detail: detail || '',
+      ...basePayload(sessionId)
+    };
+    payload.matching_strategy = 'session_id_exact';
+
+    return sendPayload(payload).then(() => {
+      markEvent('confirmed', {
+        sessionId,
+        sentAt: payload.captured_at,
+        source
+      });
+      return true;
+    });
+  }
+
+  function hasClickId(attribution) {
+    return !!(attribution.gclid || attribution.gbraid || attribution.wbraid || attribution.fbclid);
+  }
+
+  function sendLandingPageView(sessionId) {
+    const attribution = window.pptAttribution || {};
+    if (!hasClickId(attribution)) return Promise.resolve(false);
+
+    const key = window.location.pathname + (window.location.search || '');
+    const state = readState();
+    const seen = state.pageViews || {};
+    const paths = seen.sessionId === sessionId && Array.isArray(seen.paths) ? seen.paths : [];
+    if (paths.indexOf(key) !== -1) return Promise.resolve(false);
+
+    const payload = {
+      event: 'site_page_view',
+      page_path: key,
+      ...basePayload(sessionId),
+      scheduling_page_url: ''
+    };
+
+    return sendPayload(payload).then(() => {
+      const nextPaths = paths.concat([key]).slice(-20);
+      markEvent('pageViews', { sessionId, paths: nextPaths });
+      return true;
+    });
+  }
+
+  function isSquareOrigin(origin) {
+    try {
+      const host = new URL(origin).hostname;
+      return host.endsWith('square.site') || host.endsWith('squareup.com');
+    } catch (error) {
+      return false;
+    }
+  }
+
   function sendPageView(sessionId) {
     const payload = {
       event: 'square_booking_page_view',
@@ -141,11 +202,56 @@
     });
   }
 
-  document.addEventListener('DOMContentLoaded', function () {
-    const container = document.getElementById('square-booking-root');
-    if (!container) return;
+  window.addEventListener('message', function (event) {
+    if (!isSquareOrigin(event.origin)) return;
 
     const sessionId = getSessionId();
+    let text = '';
+    try {
+      text = typeof event.data === 'string' ? event.data : JSON.stringify(event.data);
+    } catch (error) {
+      return;
+    }
+    if (!text) return;
+
+    const lower = text.toLowerCase();
+    if (lower.indexOf('booking') !== -1 &&
+        (lower.indexOf('confirm') !== -1 || lower.indexOf('complete') !== -1 || lower.indexOf('success') !== -1)) {
+      sendBookingConfirmed(sessionId, 'widget_message', text.slice(0, 300));
+      return;
+    }
+
+    const state = readState();
+    const debug = state.debug || {};
+    const count = debug.sessionId === sessionId ? (debug.count || 0) : 0;
+    if (count < 2) {
+      const payload = {
+        event: 'square_widget_message',
+        message_sample: text.slice(0, 300),
+        ...basePayload(sessionId)
+      };
+      sendPayload(payload);
+      markEvent('debug', { sessionId, count: count + 1 });
+    }
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const container = document.getElementById('square-booking-root');
+    if (!container) {
+      sendLandingPageView(getSessionId());
+      return;
+    }
+
+    const sessionId = getSessionId();
+
+    try {
+      const params = new URLSearchParams(window.location.search || '');
+      if (params.get('ppt_test_booking') === '1') {
+        sendBookingConfirmed(sessionId, 'manual_test', 'ppt_test_booking=1');
+      }
+    } catch (error) {
+      console.warn('Unable to read test booking flag', error);
+    }
 
     if (shouldSendPageView(sessionId)) {
       sendPageView(sessionId);
