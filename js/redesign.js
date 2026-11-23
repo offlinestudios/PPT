@@ -495,6 +495,65 @@
     if (icon) icon.textContent = open ? '−' : '+';
   });
 
+  /* ---- behaviour events (GA4 only) ---- */
+  function gaEvent(name, params) {
+    try {
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', name, params || {});
+      }
+    } catch (error) {
+      /* analytics must never break the page */
+    }
+  }
+
+  document.addEventListener('click', function (event) {
+    var link = event.target && event.target.closest ? event.target.closest('a,button') : null;
+    if (!link) return;
+
+    var href = (link.getAttribute('href') || '').toLowerCase();
+    var text = (link.textContent || '').trim().slice(0, 60);
+    var name = '';
+
+    if (href.indexOf('tel:') === 0) {
+      name = 'call_click';
+    } else if (href.indexOf('wa.me') !== -1 || href.indexOf('whatsapp') !== -1) {
+      name = 'whatsapp_click';
+    } else if (href.indexOf('google.com/maps') !== -1 || href.indexOf('maps.google') !== -1 || href.indexOf('maps.apple') !== -1) {
+      name = 'directions_click';
+    } else if (href.indexOf('square.site/appointments') !== -1 || href.indexOf('scheduling.html') !== -1) {
+      name = 'book_click';
+    } else if (link.closest('.services, .service-grid, .cards, .service-list')) {
+      name = 'service_click';
+    }
+
+    if (!name) return;
+    gaEvent(name, {
+      link_url: href.slice(0, 200),
+      link_text: text,
+      page_path: window.location.pathname
+    });
+  }, true);
+
+  (function () {
+    if (window.location.pathname.indexOf('scheduling') === -1) return;
+
+    var startedAt = Date.now();
+    var sent = false;
+
+    function sendDwell() {
+      if (sent) return;
+      sent = true;
+      var seconds = Math.round((Date.now() - startedAt) / 1000);
+      if (seconds < 1 || seconds > 3600) return;
+      gaEvent('booking_page_dwell', {
+        value: seconds,
+        page_path: window.location.pathname
+      });
+    }
+
+    window.addEventListener('pagehide', sendDwell);
+  })();
+
   /* ---- booking confirmation + paid landing page capture ---- */
   window.addEventListener('message', function (event) {
     if (!isSquareOrigin(event.origin)) return;
